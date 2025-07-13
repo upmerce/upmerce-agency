@@ -1,0 +1,65 @@
+{
+  "AgencyHeader": {
+    "siteTitle": "upmerce",
+    "ctaButton": "Get a Free Quote"
+  },
+   "AgencyHero": {
+    "title": "Turn Your Tourism Business into an <span>Online Powerhouse</span>",
+    "subtitle": "We build professional, multilingual websites for Moroccan tour operators, riads, and local guides, designed to increase your direct bookings and grow your profits.",
+    "ctaButton": "View Our Product"
+  },
+  "AgencyProblemSolution": {
+    "problemTitle": "Stop Losing Money to High Commissions.",
+    "problemText": "Are you tired of relying on international booking platforms that take a huge cut of your profits? Do you have an outdated website that doesn't attract customers? It's time to take back control of your business.",
+    "solutionTitle": "The Solution: Your Own Professional Website.",
+    "solutionText": "We provide you with a powerful, modern website complete with a full admin panel. You control your content, you manage your bookings, and most importantly, you keep 100% of your profits."
+  },
+   "AgencyPortfolio": {
+    "title": "Our Flagship Product",
+    "subtitle": "We've built a world-class, feature-rich tourism website template. This is the foundation we use to launch your professional online presence in record time.",
+    "ctaButton": "View Live Demo"
+  },
+  "AgencyFeatures": {
+    "title": "Packed with Professional Features",
+    "coreTitle": "Core Application",
+    "coreSubtitle": "Every website includes a powerful foundation built for success.",
+    "coreFeature1": "Full Admin Panel (CRUD)",
+    "coreFeature2": "Multilingual Content (EN/FR)",
+    "coreFeature3": "Image Optimization (WebP)",
+    "coreFeature4": "Fully Responsive Design",
+    "pluginsTitle": "Optional Plugins",
+    "pluginsSubtitle": "Add powerful features as your business grows.",
+    "plugin1": "Blog & Content System",
+    "plugin2": "Customer Review System",
+    "plugin3": "Direct Booking Engine",
+    "plugin4": "Online Payment Integration"
+  },
+  "AgencyPricing": {
+    "title": "Simple, Transparent Packages",
+    "subtitle": "Choose the package that's right for your business. No hidden fees, just pure value.",
+    "popular": "Most Popular",
+    "package1_name": "Digital Presence",
+    "package1_desc": "The perfect start for a professional online presence. Ideal for new businesses and local guides.",
+    "package1_note": "*Includes a small 'Website by upmerce' link in the footer.",
+    "package2_name": "Business Growth",
+    "package2_desc": "For established businesses looking to attract more customers and build a strong brand.",
+    "package2_note": "Remove 'Website by upmerce' link.",
+    "package3_name": "Direct Bookings",
+    "package3_desc": "The ultimate solution to automate sales, capture leads, and maximize revenue.",
+    "feature_core": "Complete Core Website",
+    "feature_admin": "Full Admin Panel",
+    "feature_reviews": "Customer Review System",
+    "feature_blog": "Blog & Content System",
+    "feature_booking": "Direct Booking Engine",
+    "cta_contact": "Contact Us",
+    "cta_quote": "Get a Quote"
+  },
+   "AgencyContact": {
+    "title": "Ready to Grow Your Business?",
+    "subtitle": "Let's talk about your project. Contact me today for a free, no-obligation quote and a personalized demo.",
+    "ctaButton": "Contact Me"
+  },
+  "AgencyFooter": {
+    "copyright": "upmerce. All Rights Reserved."
+  }
+}
