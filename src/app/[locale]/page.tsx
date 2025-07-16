@@ -2,7 +2,7 @@
 // 2. UPDATED FILE: /src/app/[locale]/page.tsx
 // Update your homepage to render the new HeroSection.
 // -------------------------------------------------------------------------
-import Header from "@/components/layout/Header";
+
 import ContactSection from "@/components/sections/ContactSection";
 import FeaturesSection from "@/components/sections/FeaturesSection";
 import HeroSection from "@/components/sections/HeroSection"; // <-- Import the new section

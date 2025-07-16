@@ -12,14 +12,18 @@ export const metadata: Metadata = {
   description: "We build professional, multilingual websites for Moroccan tour operators, riads, and local guides, designed to increase your direct bookings and grow your profits.",
 };
 
+type Props = {
+  children: React.ReactNode;
+  params: Promise<{ locale: string }>;
+}
+
 export default async function RootLayout({
   children,
-  params: { locale }
-}: Readonly<{
-  children: React.ReactNode;
-  params: { locale: string };
-}>) {
+  params,
+}: Readonly<Props>) {
+
   const messages = await getMessages();
+  const {locale} = await params;
 
   return (
     <html lang={locale}>

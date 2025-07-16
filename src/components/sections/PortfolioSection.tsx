@@ -7,6 +7,7 @@
 import React from 'react';
 import { Link } from '@/i18n/navigation';
 import { useTranslations } from 'next-intl';
+import Image from 'next/image';
 
 export default function PortfolioSection() {
   const t = useTranslations('AgencyPortfolio');
@@ -23,11 +24,12 @@ export default function PortfolioSection() {
             
             {/* Screenshot of your tourism template */}
             <div className="bg-gray-800 rounded-lg shadow-2xl p-4 border border-gray-700">
-                <img 
-                    // IMPORTANT: Replace this placeholder with a real, high-quality screenshot of your tourism website.
+                <Image 
                     src="https://placehold.co/1200x675/111827/FFFFFF?text=Your+Beautiful+Website+Screenshot" 
                     alt="Screenshot of the tourism website template" 
                     className="rounded-md"
+                    width={1200}
+                    height={675}
                 />
             </div>
 
