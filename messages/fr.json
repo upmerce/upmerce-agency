@@ -1,6 +1,65 @@
 {
   "AgencyHeader": {
     "siteTitle": "upmerce",
-    "ctaButton": "Get a Free Quote"
+    "ctaButton": "Obtenir un Devis Gratuit"
+  },
+  "AgencyHero": {
+    "title": "Transformez Votre Activité Touristique en une <span>Puissance en Ligne</span>",
+    "subtitle": "Nous créons des sites web professionnels et multilingues pour les tours opérateurs, riads et guides locaux au Maroc, conçus pour augmenter vos réservations directes et accroître vos bénéfices.",
+    "ctaButton": "Découvrir Notre Produit"
+  },
+  "AgencyProblemSolution": {
+    "problemTitle": "Arrêtez de Perdre de l'Argent à Cause des Commissions.",
+    "problemText": "Vous en avez assez de dépendre des plateformes de réservation internationales qui prélèvent une part importante de vos bénéfices ? Votre site web est obsolète et n'attire pas les clients ? Il est temps de reprendre le contrôle.",
+    "solutionTitle": "La Solution : Votre Propre Site Web Professionnel.",
+    "solutionText": "Nous vous fournissons un site web puissant et moderne avec un panneau d'administration complet. Vous contrôlez votre contenu, gérez vos réservations et, plus important encore, vous conservez 100% de vos bénéfices."
+  },
+  "AgencyPortfolio": {
+    "title": "Notre Produit Phare",
+    "subtitle": "Nous avons conçu un modèle de site web touristique de classe mondiale, riche en fonctionnalités. C'est la base que nous utilisons pour lancer votre présence professionnelle en ligne en un temps record.",
+    "ctaButton": "Voir la Démo"
+  },
+  "AgencyFeatures": {
+    "title": "Un Concentré de Fonctionnalités Professionnelles",
+    "coreTitle": "Application de Base",
+    "coreSubtitle": "Chaque site web inclut une base solide conçue pour la réussite.",
+    "coreFeature1": "Panneau d'Administration Complet (CRUD)",
+    "coreFeature2": "Contenu Multilingue (FR/EN)",
+    "coreFeature3": "Optimisation des Images (WebP)",
+    "coreFeature4": "Design Entièrement Adaptatif (Responsive)",
+    "pluginsTitle": "Plugins Optionnels",
+    "pluginsSubtitle": "Ajoutez des fonctionnalités puissantes au fur et à mesure que votre activité se développe.",
+    "plugin1": "Système de Blog et de Contenu",
+    "plugin2": "Système d'Avis Clients",
+    "plugin3": "Moteur de Réservation Directe",
+    "plugin4": "Intégration des Paiements en Ligne"
+  },
+  "AgencyPricing": {
+    "title": "Des Formules Simples et Transparentes",
+    "subtitle": "Choisissez la formule adaptée à votre entreprise. Pas de frais cachés, juste de la valeur pure.",
+    "popular": "Le plus populaire",
+    "package1_name": "Présence Digitale",
+    "package1_desc": "Le point de départ idéal pour une présence en ligne professionnelle. Parfait pour les nouvelles entreprises et les guides locaux.",
+    "package1_note": "*Inclut un petit lien 'Site par upmerce' dans le pied de page.",
+    "package2_name": "Croissance d'Entreprise",
+    "package2_desc": "Pour les entreprises établies cherchant à attirer plus de clients et à construire une marque forte.",
+    "package2_note": "Retrait du lien 'Site par upmerce'.",
+    "package3_name": "Réservations Directes",
+    "package3_desc": "La solution ultime pour automatiser les ventes, capturer des prospects et maximiser les revenus.",
+    "feature_core": "Site Web de Base Complet",
+    "feature_admin": "Panneau d'Administration Complet",
+    "feature_reviews": "Système d'Avis Clients",
+    "feature_blog": "Système de Blog et Contenu",
+    "feature_booking": "Moteur de Réservation Directe",
+    "cta_contact": "Nous Contacter",
+    "cta_quote": "Obtenir un Devis"
+  },
+  "AgencyContact": {
+    "title": "Prêt(e) à Développer Votre Activité ?",
+    "subtitle": "Discutons de votre projet. Contactez-moi dès aujourd'hui pour un devis gratuit, sans engagement, et une démo personnalisée.",
+    "ctaButton": "Me Contacter"
+  },
+  "AgencyFooter": {
+    "copyright": "upmerce. Tous Droits Réservés."
   }
 }
