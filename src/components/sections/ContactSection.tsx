@@ -43,8 +43,13 @@ export default function ContactSection() {
       setEmail('');
       setMessage('');
 
-    } catch (err: any) {
-      setStatus({ type: 'error', message: err.message });
+    } catch (err: unknown) {
+      if(err instanceof Error) {
+        setStatus({ type: 'error', message: err.message });
+      } else {
+        setStatus({ type: 'error', message: 'An unknown error occurred.' });
+      }
+      
     } finally {
       setLoading(false);
     }
