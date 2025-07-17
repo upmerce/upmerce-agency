@@ -14,11 +14,14 @@
     "solutionTitle": "The Solution: Your Own Professional Website.",
     "solutionText": "We provide you with a powerful, modern website complete with a full admin panel. You control your content, you manage your bookings, and most importantly, you keep 100% of your profits."
   },
-   "AgencyPortfolio": {
-    "title": "Our Flagship Product",
-    "subtitle": "We've built a world-class, feature-rich tourism website template. This is the foundation we use to launch your professional online presence in record time.",
-    "ctaButton": "View Live Demo"
-  },
+  "AgencyPortfolio": {
+  "title": "Our Flagship Product",
+  "subtitle": "We've designed a world-class, feature-rich tourism website template. This is the foundation we use to launch your professional online presence in record time.",
+  "ctaButton": "View Live Demo",
+  "showcase_homepage_name": "Homepage",
+  "showcase_experiences_name": "Experiences Page",
+  "showcase_blog_name": "Blog Page"
+},
   "AgencyFeatures": {
     "title": "Packed with Professional Features",
     "coreTitle": "Core Application",
@@ -54,12 +57,17 @@
     "cta_contact": "Contact Us",
     "cta_quote": "Get a Quote"
   },
-   "AgencyContact": {
+  "AgencyContact": {
     "title": "Ready to Grow Your Business?",
     "subtitle": "Let's talk about your project. Contact me today for a free, no-obligation quote and a personalized demo.",
-    "ctaButton": "Contact Me"
+    "ctaButton": "Send Message",
+    "formNameLabel": "Your Name",
+    "formEmailLabel": "Your Email Address",
+    "formMessageLabel": "Tell me about your project",
+    "loadingButton": "Sending...",
+    "errorGeneric": "Something went wrong. Please try again later."
   },
   "AgencyFooter": {
-    "copyright": "upmerce. All Rights Reserved."
+    "copyright": "Upmerce Solutions. All Rights Reserved."
   }
 }

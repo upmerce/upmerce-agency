@@ -15,9 +15,12 @@
     "solutionText": "Nous vous fournissons un site web puissant et moderne avec un panneau d'administration complet. Vous contrôlez votre contenu, gérez vos réservations et, plus important encore, vous conservez 100% de vos bénéfices."
   },
   "AgencyPortfolio": {
-    "title": "Notre Produit Phare",
-    "subtitle": "Nous avons conçu un modèle de site web touristique de classe mondiale, riche en fonctionnalités. C'est la base que nous utilisons pour lancer votre présence professionnelle en ligne en un temps record.",
-    "ctaButton": "Voir la Démo"
+   "title": "Notre Produit Phare",
+    "subtitle": "Nous avons conçu un modèle de site web touristique de classe mondiale, riche en fonctionnalités. C'est la base que nous utilisons pour lancer votre présence en ligne professionnelle en un temps record.",
+    "ctaButton": "Voir la Démo en Direct",
+    "showcase_homepage_name": "Page d'Accueil",
+    "showcase_experiences_name": "Page Expériences",
+    "showcase_blog_name": "Page Blog"
   },
   "AgencyFeatures": {
     "title": "Un Concentré de Fonctionnalités Professionnelles",
@@ -54,12 +57,17 @@
     "cta_contact": "Nous Contacter",
     "cta_quote": "Obtenir un Devis"
   },
-  "AgencyContact": {
-    "title": "Prêt(e) à Développer Votre Activité ?",
-    "subtitle": "Discutons de votre projet. Contactez-moi dès aujourd'hui pour un devis gratuit, sans engagement, et une démo personnalisée.",
-    "ctaButton": "Me Contacter"
-  },
+ "AgencyContact": {
+  "title": "Prêt(e) à développer votre activité ?",
+  "subtitle": "Discutons de votre projet. Contactez-moi dès aujourd'hui pour un devis gratuit, sans engagement, et une démo personnalisée.",
+  "ctaButton": "Envoyer le Message",
+  "formNameLabel": "Votre Nom",
+  "formEmailLabel": "Votre Adresse E-mail",
+  "formMessageLabel": "Parlez-moi de votre projet",
+  "loadingButton": "Envoi en cours...",
+  "errorGeneric": "Une erreur est survenue. Veuillez réessayer plus tard."
+},
   "AgencyFooter": {
-    "copyright": "upmerce. Tous Droits Réservés."
+    "copyright": "Upmerce Solutions. Tous Droits Réservés."
   }
 }
