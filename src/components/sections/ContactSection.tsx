@@ -1,14 +1,15 @@
 // -------------------------------------------------------------------------
-// 2. UPDATED FILE: /src/components/sections/ContactSection.tsx
-// This component is now a fully functional contact form.
+// 1. UPDATED FILE: /src/components/sections/ContactSection.tsx
+// This form now sends the current locale to the API.
 // -------------------------------------------------------------------------
 'use client';
 
 import React, { useState } from 'react';
-import { useTranslations } from 'next-intl';
+import { useTranslations, useLocale } from 'next-intl'; // <-- 1. Import useLocale
 
 export default function ContactSection() {
   const t = useTranslations('AgencyContact');
+  const locale = useLocale(); // <-- 2. Get the current language ('en' or 'fr')
   
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
@@ -25,26 +26,25 @@ export default function ContactSection() {
       const response = await fetch('/api/agency-contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ name, email, message }),
+        // --- 3. Send the locale along with the form data ---
+        body: JSON.stringify({ name, email, message, locale }),
       });
 
       const result = await response.json();
 
       if (!response.ok) {
-        throw new Error(result.error || t('errorGeneric'));
+        // The error message now comes directly from the API, already translated.
+        throw new Error(result.error || 'An unexpected error occurred.');
       }
 
+      // The success message also comes directly from the API.
       setStatus({ type: 'success', message: result.message });
       setName('');
       setEmail('');
       setMessage('');
 
-    } catch (err: unknown) {
-      let errorMessage = t('errorGeneric');
-      if (err instanceof Error) {
-        errorMessage = err.message;
-      }
-      setStatus({ type: 'error', message: errorMessage });
+    } catch (err: any) {
+      setStatus({ type: 'error', message: err.message });
     } finally {
       setLoading(false);
     }
@@ -52,7 +52,7 @@ export default function ContactSection() {
 
   return (
     <section id="contact" className="py-20 bg-gray-800">
-        <div className="container mx-auto px-6 text-center">
+       <div className="container mx-auto px-6 text-center">
              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 {t('title')}
              </h2>

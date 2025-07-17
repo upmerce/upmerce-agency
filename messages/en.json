@@ -39,17 +39,20 @@
     "plugin3": "Direct Booking Engine",
     "plugin4": "Online Payment Integration"
   },
-  "AgencyPricing": {
+ "AgencyPricing": {
     "title": "Simple, Transparent Packages",
     "subtitle": "Choose the package that's right for your business. No hidden fees, just pure value.",
     "popular": "Most Popular",
     "package1_name": "Digital Presence",
+    "package1_price": "Free*",
     "package1_desc": "The perfect start for a professional online presence. Ideal for new businesses and local guides.",
-    "package1_note": "*Includes a small 'Website by upmerce' link in the footer.",
+    "package1_note": "*Includes a 'Website by upmerce' link in the footer.",
     "package2_name": "Business Growth",
+    "package2_price": "1999 DH",
     "package2_desc": "For established businesses looking to attract more customers and build a strong brand.",
-    "package2_note": "Remove 'Website by upmerce' link.",
+    "package2_note": "No 'upmerce' branding.",
     "package3_name": "Direct Bookings",
+    "package3_price": "2999 DH",
     "package3_desc": "The ultimate solution to automate sales, capture leads, and maximize revenue.",
     "feature_core": "Complete Core Website",
     "feature_admin": "Full Admin Panel",
@@ -59,7 +62,7 @@
     "cta_contact": "Contact Us",
     "cta_quote": "Get a Quote"
   },
-  "AgencyContact": {
+"AgencyContact": {
     "title": "Ready to Grow Your Business?",
     "subtitle": "Let's talk about your project. Contact me today for a free, no-obligation quote and a personalized demo.",
     "ctaButton": "Send Message",
@@ -67,6 +70,8 @@
     "formEmailLabel": "Your Email Address",
     "formMessageLabel": "Tell me about your project",
     "loadingButton": "Sending...",
+    "alertSuccess": "Thank you for your message! I will get back to you shortly.",
+    "errorMissingFields": "All fields are required. Please fill out the entire form.",
     "errorGeneric": "Something went wrong. Please try again later."
   },
   "AgencyFooter": {

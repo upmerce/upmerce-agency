@@ -72,7 +72,7 @@ export async function generateMetadata({
 
 type Props = {
   children: React.ReactNode;
-  params: { locale: string };
+  params: Promise<{ locale: string }>;
 }
 
 export default async function RootLayout({
@@ -81,7 +81,7 @@ export default async function RootLayout({
 }: Readonly<Props>) {
 
   const messages = await getMessages();
-  const {locale} = params;
+  const {locale} = await params;
 
   return (
     <html lang={locale}>

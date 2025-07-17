@@ -1,16 +1,22 @@
 // -------------------------------------------------------------------------
-// 3. NEW FILE: /src/app/api/agency-contact/route.ts
-// This new API route handles sending the email for your agency website.
+// 2. UPDATED FILE: /src/app/api/agency-contact/route.ts
+// This API route is now "locale-aware" and sends back translated messages.
 // -------------------------------------------------------------------------
 import { NextResponse } from 'next/server';
 import nodemailer from 'nodemailer';
+import { getTranslations } from 'next-intl/server'; // <-- 1. Import getTranslations
 
 export async function POST(request: Request) {
   try {
-    const { name, email, message } = await request.json();
+    const body = await request.json();
+    const { name, email, message, locale } = body;
+
+    // 2. Initialize the translation function for the given locale
+    const t = await getTranslations({ locale, namespace: 'AgencyContact' });
 
     if (!name || !email || !message) {
-      return NextResponse.json({ error: 'Missing required fields' }, { status: 400 });
+      // 3. Use the t() function to get the translated error message
+      return NextResponse.json({ error: t('errorMissingFields') }, { status: 400 });
     }
 
     const transporter = nodemailer.createTransport({
@@ -34,16 +40,19 @@ export async function POST(request: Request) {
           <h3>Message:</h3>
           <p>${message}</p>
         </div>
-      `,
+      `, // Email HTML remains the same
     };
 
     await transporter.sendMail(mailOptions);
     console.log('✅ Agency contact email sent successfully!');
 
-    return NextResponse.json({ message: 'Thank you for your message! I will get back to you shortly.' }, { status: 200 });
+    // 4. Use the t() function to get the translated success message
+    return NextResponse.json({ message: t('alertSuccess') }, { status: 200 });
 
   } catch (error) {
     console.error(error);
-    return NextResponse.json({ error: 'An unexpected error occurred.' }, { status: 500 });
+    // You can even translate the generic error
+    const t = await getTranslations({ locale: 'en', namespace: 'AgencyContact' });
+    return NextResponse.json({ error: t('errorGeneric') }, { status: 500 });
   }
 }
