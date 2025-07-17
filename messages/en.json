@@ -1,7 +1,9 @@
 {
   "AgencyHeader": {
     "siteTitle": "upmerce",
-    "ctaButton": "Get a Free Quote"
+    "ctaButton": "Get a Free Quote",
+    "home": "Home",
+    "our-process": "Our Process"
   },
    "AgencyHero": {
     "title": "Turn Your Tourism Business into an <span>Online Powerhouse</span>",
@@ -69,5 +71,24 @@
   },
   "AgencyFooter": {
     "copyright": "Upmerce Solutions. All Rights Reserved."
+  },
+  "AgencyMetadata": {
+    "title": "Upmerce Solutions - Professional Websites for Tourism Businesses",
+    "description": "We build professional, multilingual websites for Moroccan tour operators, riads, and local guides, designed to increase your direct bookings and grow your profits."
+  },
+  "AgencyProcess": {
+    "title": "Our Strategic Process",
+    "subtitle": "We don't just build websites; we build business solutions. Our process is designed to understand your market and deliver a product that gives you a competitive advantage.",
+    "step1_title": "Market Analysis",
+    "step1_desc": "We start by analyzing the best local and international competitors in your specific niche to identify winning strategies and opportunities.",
+    "step2_title": "Feature Blueprint",
+    "step2_desc": "We break down all features into a 'Core vs. Plugin' model, allowing you to start with a powerful foundation and add new capabilities as your business grows.",
+    "step3_title": "Full-Stack Development",
+    "step3_desc": "We build your website using modern, high-performance technology (Next.js, Firebase) with a complete admin panel for you to manage your content.",
+    "step4_title": "Launch & Grow",
+    "step4_desc": "We deploy your website on a world-class hosting platform and provide the strategy you need to attract your first customers and grow your direct bookings.",
+    "step5_title": "Launch & Grow",
+    "step5_desc": "We deploy your website on a world-class hosting platform (Vercel) and provide the strategy you need to attract your first customers and grow your direct bookings."
+    
   }
 }

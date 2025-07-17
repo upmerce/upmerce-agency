@@ -1,7 +1,9 @@
 {
   "AgencyHeader": {
     "siteTitle": "upmerce",
-    "ctaButton": "Obtenir un Devis Gratuit"
+    "ctaButton": "Obtenir un Devis Gratuit",
+    "home": "Accueil",
+    "our-process": "Notre Processus"
   },
   "AgencyHero": {
     "title": "Transformez Votre Activité Touristique en une <span>Puissance en Ligne</span>",
@@ -69,5 +71,24 @@
 },
   "AgencyFooter": {
     "copyright": "Upmerce Solutions. Tous Droits Réservés."
+  },
+  "AgencyMetadata": {
+    "title": "Upmerce Solutions - Sites Web Professionnels pour les Entreprises de Tourisme",
+    "description": "Nous créons des sites web professionnels et multilingues pour les tours opérateurs, riads et guides locaux au Maroc, conçus pour augmenter vos réservations directes et accroître vos bénéfices."
+  },
+  "AgencyProcess": {
+    "title": "Notre Processus Stratégique",
+    "subtitle": "Nous ne construisons pas simplement des sites web ; nous construisons des solutions commerciales. Notre processus est conçu pour comprendre votre marché et fournir un produit qui vous donne un avantage concurrentiel.",
+    "step1_title": "Analyse du Marché",
+    "step1_desc": "Nous commençons par analyser les meilleurs concurrents locaux et internationaux dans votre niche spécifique pour identifier les stratégies gagnantes et les opportunités.",
+    "step2_title": "Plan de Fonctionnalités",
+    "step2_desc": "Nous décomposons toutes les fonctionnalités en un modèle 'Base vs. Plugin', vous permettant de commencer avec une base solide et d'ajouter de nouvelles capacités à mesure que votre entreprise se développe.",
+    "step3_title": "Développement Full-Stack",
+    "step3_desc": "Nous construisons votre site web en utilisant des technologies modernes et performantes (Next.js, Firebase) avec un panneau d'administration complet pour que vous puissiez gérer votre contenu.",
+    "step4_title": "Lancement et Croissance",
+    "step4_desc": "Nous déployons votre site web sur une plateforme d'hébergement de classe mondiale et vous fournissons la stratégie dont vous avez besoin pour attirer vos premiers clients et accroître vos réservations directes.",
+     "step5_title": "Lancement & Croissance",
+    "step5_desc": "Nous déployons votre site web sur une plateforme d'hébergement de classe mondiale (Vercel) et fournissons la stratégie dont vous avez besoin pour attirer vos premiers clients et augmenter vos réservations directes."
+    
   }
 }

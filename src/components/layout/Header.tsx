@@ -19,11 +19,15 @@ export default function Header() {
                 <Image src="/icons/logo.webp" alt="Logo" width={32} height={32} />
                 <Link href="/">{SITE_NAME}</Link>
             </div>
-            <div className="flex justify-center md:justify-end">
-                <Link href="#contact" className="bg-purple-600 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded-lg transition duration-300 text-sm md:text-base">
+                {/* --- NEW: Add navigation links --- */}
+                <div className="hidden md:flex items-center space-x-6">
+                    <Link href="/" className="text-gray-300 hover:text-white transition-colors">{t('home')} </Link>
+                <Link href="/process" className="text-gray-300 hover:text-white transition-colors">{t('our-process')}</Link>
+                <Link href="#contact" className="bg-purple-600 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded-lg transition duration-300">
                     {t('ctaButton')}
                 </Link>
             </div>
+            {/* Mobile menu button can be added here later if needed */}
         </nav>
     </header>
   );
