@@ -5,6 +5,7 @@ import React, { useState } from 'react';
 import { Link } from '@/i18n/navigation';
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
+import { TOURISM_DEMO } from '@/config/site';
 
 // Define the structure for our portfolio items
 const portfolioItems = [
@@ -37,7 +38,7 @@ export default function PortfolioSection() {
 
   const activeItem = portfolioItems.find(item => item.id === activeTab) || portfolioItems[0];
 
-  const liveDemoUrl = "https://tourism-template.vercel.app/";
+  const liveDemoUrl = TOURISM_DEMO;
 
   return (
     <section id="portfolio" className="py-20 bg-gray-800 overflow-x-hidden ">
