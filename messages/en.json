@@ -16,13 +16,17 @@
     "solutionTitle": "The Solution: Your Own Professional Website.",
     "solutionText": "We provide you with a powerful, modern website complete with a full admin panel. You control your content, you manage your bookings, and most importantly, you keep 100% of your profits."
   },
-  "AgencyPortfolio": {
+ "AgencyPortfolio": {
   "title": "Our Flagship Product",
-  "subtitle": "We've designed a world-class, feature-rich tourism website template. This is the foundation we use to launch your professional online presence in record time.",
+  "subtitle": "We have designed a world-class, feature-rich tourism website template. This is the foundation we use to launch your professional online presence in record time.",
   "ctaButton": "View Live Demo",
   "showcase_homepage_name": "Homepage",
   "showcase_experiences_name": "Experiences Page",
-  "showcase_blog_name": "Blog Page"
+  "showcase_blog_name": "Blog Page",
+  "showcase_homepage_top_name": "Home (Top)",
+  "showcase_homepage_middle_name": "Home (Middle)",
+  "showcase_homepage_bottom_name": "Home (Bottom)",
+  "showcase_admin_name": "Admin Panel"
 },
   "AgencyFeatures": {
     "title": "Packed with Professional Features",

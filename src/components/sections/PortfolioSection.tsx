@@ -7,34 +7,42 @@ import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 import { TOURISM_DEMO } from '@/config/site';
 
-// Define the structure for our portfolio items
+// --- UPDATED: The new, more detailed showcase structure ---
 const portfolioItems = [
   {
-    id: 'homepage',
-    nameKey: 'showcase_homepage_name',
-    desktopImg: '/images/showcase/homepage-desktop.png',
-    tabletImg: '/images/showcase/homepage-tablet.png',
-    mobileImg: '/images/showcase/homepage-mobile.png',
+    id: 'homepageTop',
+    nameKey: 'showcase_homepage_top_name',
+    desktopImg: '/images/showcase/homepage-top-desktop.png',
+    tabletImg: '/images/showcase/homepage-top-tablet.png',
+    mobileImg: '/images/showcase/homepage-top-mobile.png',
   },
   {
-    id: 'experiences',
-    nameKey: 'showcase_experiences_name',
-    desktopImg: '/images/showcase/experiences-desktop.png',
-    tabletImg: '/images/showcase/experiences-tablet.png',
-    mobileImg: '/images/showcase/experiences-mobile.png',
+    id: 'homepageMiddle',
+    nameKey: 'showcase_homepage_middle_name',
+    desktopImg: '/images/showcase/homepage-middle-desktop.png',
+    tabletImg: '/images/showcase/homepage-middle-tablet.png',
+    mobileImg: '/images/showcase/homepage-middle-mobile.png',
   },
   {
-    id: 'blog',
-    nameKey: 'showcase_blog_name',
-    desktopImg: '/images/showcase/blog-desktop.png',
-    tabletImg: '/images/showcase/blog-tablet.png',
-    mobileImg: '/images/showcase/blog-mobile.png',
+    id: 'homepageBottom',
+    nameKey: 'showcase_homepage_bottom_name',
+    desktopImg: '/images/showcase/homepage-bottom-desktop.png',
+    tabletImg: '/images/showcase/homepage-bottom-tablet.png',
+    mobileImg: '/images/showcase/homepage-bottom-mobile.png',
+  },
+  {
+    id: 'adminPanel',
+    nameKey: 'showcase_admin_name',
+    // Use the three different admin screenshots you took
+    desktopImg: '/images/showcase/admin-panel-experiences.png',
+    tabletImg: '/images/showcase/admin-panel-blog.png', // This will now be used for the tablet mockup
+    mobileImg: '/images/showcase/admin-panel-bookings.png', // This will now be used for the mobile mockup
   },
 ];
 
 export default function PortfolioSection() {
   const t = useTranslations('AgencyPortfolio');
-  const [activeTab, setActiveTab] = useState('homepage');
+  const [activeTab, setActiveTab] = useState('homepageTop');
 
   const activeItem = portfolioItems.find(item => item.id === activeTab) || portfolioItems[0];
 
@@ -50,7 +58,6 @@ export default function PortfolioSection() {
                 {t('subtitle')}
             </p>
 
-            {/* --- Tab-like buttons to switch views --- */}
             <div className="flex justify-center space-x-2 md:space-x-4 mb-10">
                 {portfolioItems.map((item) => (
                     <button
@@ -67,27 +74,33 @@ export default function PortfolioSection() {
                 ))}
             </div>
 
-            {/* --- Multi-device mockup display --- */}
             <div className="flex items-end justify-center">
-                <div className="relative h-[300px] md:h-[500px] lg:h-[600px] scale-90  origin-bottom w-full">
+                <div className="relative h-[300px] md:h-[500px] lg:h-[600px] scale-90 origin-bottom w-full">
                 {/* Desktop */}
                 <div className="absolute z-10 w-full aspect-video bg-gray-900 rounded-t-lg p-2 shadow-2xl">
                     <div className="relative w-full h-full rounded-sm overflow-hidden">
                         <Image src={activeItem.desktopImg} alt="Desktop view" fill style={{ objectFit: 'cover', objectPosition: 'top' }} sizes="80vw" />
                     </div>
                 </div>
-                {/* Tablet */}
-                <div className="absolute z-20 w-1/3 max-w-[250px] -bottom-4 -right-4 md:-right-8 lg:-right-12 aspect-[3/4] bg-gray-900 rounded-lg p-1.5 shadow-xl border-4 border-gray-800">
-                     <div className="relative w-full h-full rounded-sm overflow-hidden">
-                        <Image src={activeItem.tabletImg} alt="Tablet view" fill style={{ objectFit: 'cover', objectPosition: 'top' }} sizes="33vw" />
-                    </div>
-                </div>
-                {/* Mobile */}
-                <div className="absolute z-20 w-1/5 max-w-[120px] -bottom-2 -left-2 md:-left-4 lg:-left-6 aspect-[9/19] bg-gray-900 rounded-lg p-1 shadow-xl border-2 border-gray-800">
-                    <div className="relative w-full h-full rounded-sm overflow-hidden">
-                        <Image src={activeItem.mobileImg} alt="Mobile view" fill style={{ objectFit: 'cover', objectPosition: 'top' }} sizes="20vw" />
-                    </div>
-                </div>
+                
+                {/* --- THIS IS THE KEY FIX --- */}
+                {/* Only show the tablet and mobile mockups if the active tab is NOT 'adminPanel' */}
+                {activeTab !== 'adminPanel' && (
+                    <>
+                        {/* Tablet */}
+                        <div className="absolute z-20 w-1/3 max-w-[250px] -bottom-4 -right-4 md:-right-8 lg:-right-12 aspect-[3/4] bg-gray-900 rounded-lg p-1.5 shadow-xl border-4 border-gray-800">
+                             <div className="relative w-full h-full rounded-sm overflow-hidden">
+                                <Image src={activeItem.tabletImg} alt="Tablet view" fill style={{ objectFit: 'cover', objectPosition: 'top' }} sizes="33vw" />
+                            </div>
+                        </div>
+                        {/* Mobile */}
+                        <div className="absolute z-20 w-1/5 max-w-[120px] -bottom-2 -left-2 md:-left-4 lg:-left-6 aspect-[9/19] bg-gray-900 rounded-lg p-1 shadow-xl border-2 border-gray-800">
+                            <div className="relative w-full h-full rounded-sm overflow-hidden">
+                                <Image src={activeItem.mobileImg} alt="Mobile view" fill style={{ objectFit: 'cover', objectPosition: 'top' }} sizes="20vw" />
+                            </div>
+                        </div>
+                    </>
+                )}
                 </div>
             </div>
 

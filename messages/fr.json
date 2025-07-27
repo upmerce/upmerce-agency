@@ -22,7 +22,11 @@
     "ctaButton": "Voir la Démo en Direct",
     "showcase_homepage_name": "Page d'Accueil",
     "showcase_experiences_name": "Page Expériences",
-    "showcase_blog_name": "Page Blog"
+    "showcase_blog_name": "Page Blog",
+    "showcase_homepage_top_name": "Accueil (Haut)",
+    "showcase_homepage_middle_name": "Accueil (Milieu)",
+    "showcase_homepage_bottom_name": "Accueil (Bas)",
+    "showcase_admin_name": "Panneau d'Admin"
   },
   "AgencyFeatures": {
     "title": "Un Concentré de Fonctionnalités Professionnelles",

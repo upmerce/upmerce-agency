@@ -68,7 +68,7 @@ export default function PricingSection() {
   ];
 
   return (
-    <section id="pricing" className="py-20">
+    <section id="pricing" className="py-20 bg-gray-900 dark:bg-gray-900">
       <div className="container mx-auto px-6 text-center">
         <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">{t('title')}</h2>
         <p className="text-gray-400 max-w-2xl mx-auto mb-12">{t('subtitle')}</p>
@@ -78,10 +78,10 @@ export default function PricingSection() {
               {pkg.isPopular && <span className="bg-purple-500 text-white text-xs font-bold px-3 py-1 rounded-full self-center mb-4 -mt-12">{t('popular')}</span>}
               <h3 className="text-2xl font-bold text-white mb-2">{pkg.name}</h3>
               <p className="text-4xl font-bold text-white mb-4">{pkg.price}</p>
-              <p className="text-gray-400 mb-6 flex-grow">{pkg.description}</p>
+              <p className="text-gray-200 mb-6 flex-grow">{pkg.description}</p>
               <ul className="text-left space-y-2 mb-8">
                 {pkg.features.map((feature, fIndex) => (
-                  <li key={fIndex} className="flex items-center">
+                  <li key={fIndex} className="flex items-center text-gray-200">
                     {feature.included ? <CheckIcon /> : <CrossIcon />}
                     <span>{feature.text}</span>
                   </li>
