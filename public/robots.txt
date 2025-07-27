@@ -1,0 +1,8 @@
+// -------------------------------------------------------------------------
+// 1. NEW FILE: /public/robots.txt
+// This file tells search engines the rules for crawling your site.
+// -------------------------------------------------------------------------
+User-agent: *
+Allow: /
+
+Sitemap: https://upmerce.com/sitemap.xml
