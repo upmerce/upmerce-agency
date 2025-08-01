@@ -1,10 +1,10 @@
 import { Inter } from "next/font/google";
 import "@/app/globals.css";
-import { getMessages, getTranslations } from "next-intl/server";
+import { getMessages } from "next-intl/server";
 import { NextIntlClientProvider } from "next-intl";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
-import { SITE_NAME } from "@/config/site";
+import { getMainJsonLd, metadataStore, siteConfig } from "../config/site";
 const inter = Inter({ subsets: ["latin"] });
 
 // --- 1. This is the new, advanced metadata function ---
@@ -15,29 +15,30 @@ export async function generateMetadata({
   params,
 }: MetadataProps) {
   const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: 'AgencyMetadata' });
-  const siteName = SITE_NAME;
-  const siteUrl = 'https://upmerce-agency.vercel.app'; // IMPORTANT: Use your live Vercel URL
+  const pageMetadata = metadataStore.homepage[locale] || metadataStore.homepage.en;
+ // const t = await getTranslations({ locale, namespace: 'AgencyMetadata' });
+  const siteName = siteConfig.siteName || 'Upmerce Solutions'; // Fallback to a default name if not set
+  const siteUrl = process.env.NEXT_PUBLIC_API_URL || 'upmerce.com'; // IMPORTANT: Use your live Vercel URL
 
   return {
     title: {
-      default: t('title'),
+      default: pageMetadata.title,
       template: `%s | ${siteName}`,
     },
-    description: t('description'),
+    description:pageMetadata.description,
     
     // --- Open Graph (for social media cards) ---
     openGraph: {
-      title: t('title'),
-      description: t('description'),
+      title: pageMetadata.title,
+      description: pageMetadata.description,
       url: siteUrl,
       siteName: siteName,
       images: [
         {
-          url: `${siteUrl}/images/homepage-desktop.png`, // IMPORTANT: Create this image
+          url: `${siteUrl}/${pageMetadata.ogImage.src}`, // IMPORTANT: Create this image
           width: 1200,
           height: 630,
-          alt: 'upmerce.com - Professional Websites for Tourism',
+          alt: pageMetadata.ogImage.alt || pageMetadata.title,
         },
       ],
       locale: locale,
@@ -47,9 +48,9 @@ export async function generateMetadata({
     // --- Twitter Card ---
     twitter: {
       card: 'summary_large_image',
-      title: t('title'),
-      description: t('description'),
-      images: [`${siteUrl}/images/homepage-desktop.png`], // Must be an absolute URL
+      title: pageMetadata.title,
+      description: pageMetadata.description,
+      images: [`${siteUrl}/${pageMetadata.ogImage.src}`], // Must be an absolute URL
     },
 
     // --- JSON-LD Structured Data (for Google Brand Presence) ---
@@ -82,9 +83,13 @@ export default async function RootLayout({
 
   const messages = await getMessages();
   const {locale} = await params;
-
+  const jsonLd = getMainJsonLd({ url: process.env.NEXT_PUBLIC_API_URL || 'https://upmerce.com', locale });
+ 
   return (
     <html lang={locale}>
+      <head>
+        <script type="application/ld+json" suppressHydrationWarning dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      </head>
       <body className={`${inter.className} bg-gray-900 text-gray-200`}>
         <NextIntlClientProvider locale={locale} messages={messages}>
           <div className="flex flex-col min-h-screen">
@@ -92,7 +97,7 @@ export default async function RootLayout({
             <main className="flex-grow">
               {children}
             </main>
-            <Footer /> {/* <-- 2. Add the Footer component here */}
+            <Footer />
           </div>
         </NextIntlClientProvider>
       </body>
