@@ -9,10 +9,7 @@ import { generateCustomMetadata } from '../../../../../lib/metadata';
 
 // The type represents the resolved object, which includes locale.
 type PostPageProps = {
-  params: {
-    id: string;
-    locale: string;
-  };
+  params: Promise<{ id: string; locale: string }>;
 };
 
 export async function generateStaticParams() {
@@ -33,13 +30,11 @@ export async function generateMetadata({ params }: PostPageProps): Promise<Metad
       title: postData.title,
       description: postData.description,
       pathname: `/blog/${id}`,
-      // Pass the specific image for this blog post's social card
       images: [{ src: postData.image, alt: postData.title }],
-      // Add article-specific details for richer metadata
       type: 'article',
       publishedTime: postData.date,
-      author: { name: postData.author }, // Pass author as an object
-      keywords: postData.tags || [], // Add the post's tags to the default keywords
+      author: { name: postData.author },
+      keywords: postData.tags || [],
     });
   } catch {
     return {
