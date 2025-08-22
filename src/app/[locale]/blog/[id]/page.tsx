@@ -4,6 +4,7 @@ import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import {getAllPostIds, getPostData } from '../../../../../lib/blog';
 import mediumStyles from './MediumPost.module.css';
+import Image from 'next/image';
 import { generateCustomMetadata } from '../../../../../lib/metadata';
 
 // The type represents the resolved object, which includes locale.
@@ -40,7 +41,7 @@ export async function generateMetadata({ params }: PostPageProps): Promise<Metad
       author: { name: postData.author }, // Pass author as an object
       keywords: postData.tags || [], // Add the post's tags to the default keywords
     });
-  } catch (error) {
+  } catch {
     return {
       title: 'Post not found',
     };
@@ -91,11 +92,14 @@ export default async function PostPage({ params }: PostPageProps) {
             <span>{postData.date}</span>
           </div>
           {postData.image && (
-            <img
+            <Image
               src={postData.image}
               alt={postData.title}
               className={`${mediumStyles["medium-post-image"]} mb-8 rounded-md w-full object-cover`}
               style={{ maxHeight: '340px', background: '#f6f6f6' }}
+              width={800}
+              height={340}
+              priority
             />
           )}
           <div
@@ -106,7 +110,7 @@ export default async function PostPage({ params }: PostPageProps) {
         </article>
       </section>
     );
-  } catch (error) {
+  } catch {
     notFound();
   }
 }

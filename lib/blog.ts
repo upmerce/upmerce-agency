@@ -83,7 +83,7 @@ export async function getPostData(id: string) {
   const contentHtml = processedContent.toString();
 
   // Combine the data with the id and contentHtml
-  const { id: _ignoredId, ...restData } = matterResult.data as PostData;
+  const restData = matterResult.data as Omit<PostData, 'id'>;
   return {
     id,
     contentHtml,

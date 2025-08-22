@@ -21,7 +21,6 @@ export async function generateMetadata({
   const { locale } = await params;
   const pageMetadata = metadataStore.homepage[locale] || metadataStore.homepage.en;
  // const t = await getTranslations({ locale, namespace: 'AgencyMetadata' });
-  const siteName = siteConfig.siteName || 'Upmerce Solutions'; // Fallback to a default name if not set
   const siteUrl = process.env.NEXT_PUBLIC_API_URL || 'upmerce.com'; // IMPORTANT: Use your live Vercel URL
   
     return generateCustomMetadata({
