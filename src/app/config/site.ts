@@ -21,7 +21,7 @@ type MetadataStore = {
 export const metadataStore: MetadataStore = {
   homepage: {
     en: {
-      title: "Turn Your Tourism Business into an <span>Online Powerhouse</span>",
+      title: "Turn Your Tourism Business into an Online Powerhouse",
       description: "We build professional, multilingual websites for Moroccan tour operators, riads, and local guides, designed to increase your direct bookings and grow your profits.",
       ogImage: { 
         src: "/images/og/og-main.webp",
@@ -29,7 +29,7 @@ export const metadataStore: MetadataStore = {
       }
     },
     fr: {
-      title: "Faites de votre activité touristique une <span>référence en ligne</span>",
+      title: "Faites de votre activité touristique une référence en ligne",
       description: "Nous créons des sites web professionnels et multilingues pour les tours-opérateurs marocains, les riads et les guides locaux, conçus pour augmenter vos réservations directes et accroître vos bénéfices.",
       ogImage: {
         src: "/images/og/og-main.webp",
@@ -61,6 +61,7 @@ export type SiteConfig = {
   // Brand & SEO
   brandName: string;
   siteName: string;
+  ownerName?: string; // Optional, can be used for SEO
   businessType: string; // e.g., 'Travel Agency', 'Tour Operator'
   addressLocality?: string; // e.g., 'Agadir'
   addressRegion?: string; // e.g., 'Souss-Massa'
@@ -68,7 +69,7 @@ export type SiteConfig = {
   logo: string; // Path to the logo image, e.g., "/images/logo.png"
  // siteDescription: string;
   keywords: string[];
-  
+  defaultLocale: string; // Default locale for the site, e.g., 'en'
   // Contact & Social
   contact: {
     email: string;
@@ -77,6 +78,7 @@ export type SiteConfig = {
   };
   social: {
     twitter: string;
+    twitterId: string; // Twitter handle, e.g., '@upmerce'
     instagram: string;
     facebook: string;
   };
@@ -94,13 +96,14 @@ export const siteConfig: SiteConfig = {
   // Brand & SEO
   brandName: "Upmerce Solutions", // The official business name
   siteName: "Upmerce Solutions", // The name displayed on the site
+  ownerName: "Mustapha Ouazza", // Optional, can be used for SEO
   businessType: "Organization",
   addressLocality: "Agadir", // Locality for SEO
   addressRegion: "Souss-Massa",
   addressCountry: "MA", // ISO code for Morocco
   logo: "/favicon.ico", // Path to the logo image
   keywords: keywords,
-  
+  defaultLocale: "en", // Default locale for the site
  
 
   // Contact & Social
@@ -111,6 +114,7 @@ export const siteConfig: SiteConfig = {
   },
   social: {
     twitter: "https://twitter.com/upmerce",
+    twitterId: "@upmerce",
     instagram: "https://instagram.com/upmerce",
     facebook: "https://facebook.com/upmerce",
   },

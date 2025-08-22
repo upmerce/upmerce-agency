@@ -6,6 +6,9 @@ import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import { getMainJsonLd, metadataStore, siteConfig } from "../config/site";
 import GoogleAnalytics from "@/components/analytics/GoogleAnalytics";
+import ThemeRegistry from "@/components/ThemeRegistry";
+import { generateCustomMetadata } from "../../../lib/metadata";
+import { AUTHORS } from "@/config/site";
 const inter = Inter({ subsets: ["latin"] });
 
 // --- 1. This is the new, advanced metadata function ---
@@ -20,8 +23,27 @@ export async function generateMetadata({
  // const t = await getTranslations({ locale, namespace: 'AgencyMetadata' });
   const siteName = siteConfig.siteName || 'Upmerce Solutions'; // Fallback to a default name if not set
   const siteUrl = process.env.NEXT_PUBLIC_API_URL || 'upmerce.com'; // IMPORTANT: Use your live Vercel URL
-
-  return {
+  
+    return generateCustomMetadata({
+    title: pageMetadata.title,
+    description: pageMetadata.description,
+    pathname: `/`,
+    // Pass specific images for this blog post
+    images: [
+        {
+          src: `${siteUrl}/${pageMetadata.ogImage.src}`, // IMPORTANT: Create this image
+          width: 1200,
+          height: 630,
+          alt: pageMetadata.ogImage.alt || pageMetadata.title,
+        },
+      ],
+    // Add article-specific details
+    type: 'website',
+  //  publishedTime: post.date,
+    author: AUTHORS, // Assuming your post data includes author info
+    keywords: siteConfig.keywords, // Add post-specific tags to the default keywords
+  });
+  /* return {
     title: {
       default: pageMetadata.title,
       template: `%s | ${siteName}`,
@@ -69,7 +91,7 @@ export async function generateMetadata({
         }
       })
     }
-  };
+  }; */
 }
 
 type Props = {
@@ -92,7 +114,8 @@ export default async function RootLayout({
         <script type="application/ld+json" suppressHydrationWarning dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       </head>
       <body className={`${inter.className} bg-gray-900 text-gray-200`}>
-        <NextIntlClientProvider locale={locale} messages={messages}>
+          <ThemeRegistry>
+             <NextIntlClientProvider locale={locale} messages={messages}>
           <div className="flex flex-col min-h-screen">
             <Header />
             <main className="flex-grow">
@@ -101,6 +124,7 @@ export default async function RootLayout({
             <Footer />
           </div>
         </NextIntlClientProvider>
+          </ThemeRegistry>
          {/* --- 2. Add the Google Analytics component here --- */}
          {/* It will only render in production if the ID is set */}
          {process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID && (
