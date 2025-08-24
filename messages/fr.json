@@ -100,5 +100,13 @@
      "step5_title": "Lancement & Croissance",
     "step5_desc": "Nous déployons votre site web sur une plateforme d'hébergement de classe mondiale (Vercel) et fournissons la stratégie dont vous avez besoin pour attirer vos premiers clients et augmenter vos réservations directes."
     
-  }
+  },
+"StatsSection": {
+  "title": "Une Architecture d'Excellence",
+  "subtitle": "Chaque site que nous concevons est conçu pour une performance d'élite, garantissant que votre nouvelle présence en ligne obtienne des scores optimaux dans les domaines clés qui génèrent des réservations et de la visibilité.",
+  "performance": "Performance",
+  "accessibility": "Accessibilité",
+  "bestPractices": "Bonnes Pratiques",
+  "seo": "SEO"
+}
 }

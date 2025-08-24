@@ -9,6 +9,7 @@ import HeroSection from "@/components/sections/HeroSection"; // <-- Import the n
 import PortfolioSection from "@/components/sections/PortfolioSection";
 import PricingSection from "@/components/sections/PricingSection";
 import ProblemSolutionSection from "@/components/sections/ProblemSolutionSection";
+import StatsSection from "@/components/sections/StatsSection";
 
 export default function HomePage() {
   return (
@@ -16,6 +17,7 @@ export default function HomePage() {
     <main>
         <HeroSection />
         <ProblemSolutionSection /> 
+        <StatsSection /> {/* <-- 2. Add the component here */}
         <PortfolioSection />
         <FeaturesSection />
         <PricingSection /> 

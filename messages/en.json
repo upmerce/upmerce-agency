@@ -100,5 +100,13 @@
     "step5_title": "Launch & Grow",
     "step5_desc": "We deploy your website on a world-class hosting platform (Vercel) and provide the strategy you need to attract your first customers and grow your direct bookings."
     
-  }
+  },
+  "StatsSection": {
+  "title": "An Architecture of Excellence",
+  "subtitle": "Each website we build is engineered for elite performance, ensuring your new online presence achieves top scores in the key areas that drive bookings and visibility.",
+  "performance": "Performance",
+  "accessibility": "Accessibility",
+  "bestPractices": "Best Practices",
+  "seo": "SEO"
+}
 }
