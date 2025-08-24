@@ -19,7 +19,13 @@ export function getSortedPostsData(): Omit<PostData, 'contentHtml'>[] {
     const fullPath = path.join(postsDirectory, fileName);
     const fileContents = fs.readFileSync(fullPath, 'utf8');
     const matterResult = matter(fileContents);
-    const data = matterResult.data as { [key: string]: any };
+    const data = matterResult.data as {
+      title?: string;
+      date?: string;
+      author?: string;
+      description?: string;
+      image?: string;
+    };
 
     const baseUrl = process.env.NEXT_PUBLIC_API_URL || 'https://www.upmerce.com';
     const imagePath = data.image || '';

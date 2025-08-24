@@ -100,7 +100,7 @@ export default async function PostPage({ params }: PostPageProps) {
           <div
             className={mediumStyles["medium-post-content"]}
             style={{ fontSize: '1.18rem', color: '#222', lineHeight: '1.8', letterSpacing: '0.01em' }}
-            dangerouslySetInnerHTML={{ __html: postData.contentHtml }}
+            dangerouslySetInnerHTML={{ __html: postData.contentHtml || '' }}
           />
         </article>
       </section>
