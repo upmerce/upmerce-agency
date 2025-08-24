@@ -35,26 +35,45 @@ export const metadataStore: MetadataStore = {
         src: "/images/og/og-main.webp",
         alt: "Vue d'ensemble des tarifs et fonctionnalités de nos offres de développement web."
       }
-}
+    }
+  },
+  blog: {
+    // --- ADDED SECTION FOR THE BLOG PAGE ---
+    en: {
+      title: "The Upmerce Blog | Insights on Web & Tourism in Morocco",
+      description: "Explore expert articles on web development, SEO, and digital strategy for the Moroccan tourism industry. From Agadir to the world.",
+      ogImage: {
+        src: "/images/og/og-blog.webp",
+        alt: "A laptop displaying a modern website with a Moroccan-themed background."
+      }
+    },
+    fr: {
+      title: "Le Blog Upmerce | Stratégies Web & Tourisme au Maroc",
+      description: "Découvrez nos articles d'experts sur le développement web, le SEO et la stratégie digitale pour l'industrie touristique marocaine. D'Agadir au monde entier.",
+      ogImage: {
+        src: "/images/og/og-blog.webp",
+        alt: "Un ordinateur portable affichant un site web moderne avec un arrière-plan sur le thème du Maroc."
+      }
+    }
   },
   process: {
-  en: {
-    title: "Our Strategic Web Development Process",
-    description: "We go beyond websites to build business solutions. Our process begins with in-depth market analysis and a feature blueprint, followed by high-performance development, and ends with a successful launch and a strategy to grow your direct bookings.",
-    ogImage: {
-      src: "/images/og/og-process.webp",
-      alt: "A flowchart showing the 4 stages of our process: Market Analysis, Feature Blueprint, Full-Stack Development, and Launch & Grow."
-    }
-  },
-  fr: {
-    title: "Notre Processus Stratégique de Développement Web",
-    description: "Nous allons au-delà des sites web pour bâtir des solutions commerciales. Notre processus débute par une analyse de marché et un plan fonctionnel, suivi d'un développement haute performance, et se termine par un lancement réussi et une stratégie pour accroître vos réservations directes.",
-    ogImage: {
-      src: "/images/og/og-process.webp",
-      alt: "Organigramme montrant les 4 étapes de notre processus : Analyse de Marché, Plan Fonctionnel, Développement Full-Stack, et Lancement & Croissance."
+    en: {
+      title: "Our Strategic Web Development Process",
+      description: "We go beyond websites to build business solutions. Our process begins with in-depth market analysis and a feature blueprint, followed by high-performance development, and ends with a successful launch and a strategy to grow your direct bookings.",
+      ogImage: {
+        src: "/images/og/og-process.webp",
+        alt: "A flowchart showing the 4 stages of our process: Market Analysis, Feature Blueprint, Full-Stack Development, and Launch & Grow."
+      }
+    },
+    fr: {
+      title: "Notre Processus Stratégique de Développement Web",
+      description: "Nous allons au-delà des sites web pour bâtir des solutions commerciales. Notre processus débute par une analyse de marché et un plan fonctionnel, suivi d'un développement haute performance, et se termine par un lancement réussi et une stratégie pour accroître vos réservations directes.",
+      ogImage: {
+        src: "/images/og/og-process.webp",
+        alt: "Organigramme montrant les 4 étapes de notre processus : Analyse de Marché, Plan Fonctionnel, Développement Full-Stack, et Lancement & Croissance."
+      }
     }
   }
-}
 }
 
 export type SiteConfig = {
