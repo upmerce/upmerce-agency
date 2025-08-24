@@ -22,6 +22,7 @@ export default function Header() {
                 {/* --- NEW: Add navigation links --- */}
                 <div className="hidden md:flex items-center space-x-6">
                     <Link href="/" className="text-gray-300 hover:text-white transition-colors">{t('home')} </Link>
+                <Link href="/blog" className="text-gray-300 hover:text-white transition-colors">{t('blog')}</Link>
                 <Link href="/process" className="text-gray-300 hover:text-white transition-colors">{t('our-process')}</Link>
                 <Link href="#contact" className="bg-purple-600 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded-lg transition duration-300">
                     {t('ctaButton')}
