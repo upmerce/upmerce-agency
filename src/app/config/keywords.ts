@@ -40,5 +40,24 @@ export const frenchKeywords: string[] = [
   'Upmerce Solutions',
 ];
 
+export const darijaKeywords: string[] = [
+  'تصايب سيت ويب فأكادير',
+  'برمجة مواقع فالمغرب',
+  'سيت ويب لوكالة أسفار',
+  'تصميم موقع ويب لرياض',
+  'زيادة الحجوزات المباشرة',
+  'أجونس ويب سياحة المغرب',
+  'ديفلوبر Next.js فأكادير',
+  'موقع لمرشد سياحي',
+  'نظام الحجز فالمواقع',
+  'سيت ويب متعدد اللغات',
+  'تصميم مواقع سوس ماسة',
+  'تجارة إلكترونية للسياحة',
+  'موقع خاص بالأوتيلات',
+  'السيو لشركات السياحة',
+  'ديفلوبر Vercel فالمغرب',
+  'Upmerce Solutions',
+];
+
 // This combines both lists for the meta keywords tag.
-export const keywords: string[] = [...englishKeywords, ...frenchKeywords];
+export const keywords: string[] = [...englishKeywords, ...frenchKeywords, ...darijaKeywords];

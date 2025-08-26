@@ -108,7 +108,7 @@ export default async function RootLayout({
   const jsonLd = getMainJsonLd({ url: process.env.NEXT_PUBLIC_API_URL || 'https://upmerce.com', locale });
  
   return (
-    <html lang={locale}>
+    <html lang={locale} dir={locale === 'ar' ? 'rtl' : 'ltr'}>
       <head>
         <script type="application/ld+json" suppressHydrationWarning dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       </head>

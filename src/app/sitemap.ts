@@ -12,9 +12,11 @@ const escapeXml = (url: string) => {
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = process.env.NEXT_PUBLIC_API_URL || 'https://upmerce.com';
 
-  const posts = getSortedPostsData();
 
   const allUrls = locales.flatMap((locale) => {
+     // --- THIS IS THE KEY FIX ---
+    // Fetch the posts specifically for the current locale in the loop.
+    const posts = getSortedPostsData(locale);
     const staticPages = [
       {
         url: `${baseUrl}/${locale}`,

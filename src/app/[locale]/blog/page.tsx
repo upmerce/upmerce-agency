@@ -6,9 +6,11 @@ export const metadata: Metadata = {
   title: 'The Upmerce Agency Blog',
   description: 'Articles and insights from the Upmerce team.',
 };
+type BlogProps = Promise<{ locale: string }>;
 
-export default function BlogPage() {
-  const allPostsData = getSortedPostsData();
+export default async function BlogPage({ params }: { params: BlogProps }) {
+  const { locale } = await params;
+  const allPostsData = getSortedPostsData(locale);
 
   return (
     <section style={{ padding: '2rem' }}>

@@ -3,7 +3,7 @@ title: "Escape the Commission Trap: A New Vision for Tourism Websites"
 date: '2025-08-20'
 author: 'Mustapha Ouazza'
 description: "My final goal is not just selling a product, but helping tourism owners in Agadir and Souss-Massa have high-performance websites that increase their direct bookings."
-image: '[https://images.unsplash.com/photo-1579292481075-27b47b473784?q=80&w=1964&auto-format&fit=crop](https://images.unsplash.com/photo-1579292481075-27b47b473784?q=80&w=1964&auto-format&fit=crop)'
+image: ''
 ---
 
 As a web specialist and Google Local Guide based here in the heart of Souss-Massa, I've had a front-row seat to the incredible beauty and hospitality our region offers. I've helped our local gems achieve over 3 million online views. But I've also seen a recurring problem: so many of our best riads, tour operators, and hotels are trapped.

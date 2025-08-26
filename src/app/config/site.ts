@@ -35,10 +35,17 @@ export const metadataStore: MetadataStore = {
         src: "/images/og/og-main.webp",
         alt: "Vue d'ensemble des tarifs et fonctionnalités de nos offres de développement web."
       }
+    },
+    ar: {
+      title: "حوّل مشروعك السياحي إلى قوة رقمية مهيمنة على الإنترنت",
+      description: "كنصايبو مواقع ويب احترافية ومتعددة اللغات للمقاولين السياحيين، الرياضات، والمرشدين المحليين فالمغرب. مصممة باش تزيد من حجوزاتك المباشرة وتكبر الأرباح ديالك.",
+      ogImage: {
+        src: "/images/og/og-main.webp",
+        alt: "نظرة عامة على أثمنة ومميزات عروض تطوير الويب ديالنا."
+      }
     }
   },
   blog: {
-    // --- ADDED SECTION FOR THE BLOG PAGE ---
     en: {
       title: "The Upmerce Blog | Insights on Web & Tourism in Morocco",
       description: "Explore expert articles on web development, SEO, and digital strategy for the Moroccan tourism industry. From Agadir to the world.",
@@ -53,6 +60,14 @@ export const metadataStore: MetadataStore = {
       ogImage: {
         src: "/images/og/og-blog.webp",
         alt: "Un ordinateur portable affichant un site web moderne avec un arrière-plan sur le thème du Maroc."
+      }
+    },
+    ar: {
+      title: "مدونة Upmerce | أفكار حول الويب والسياحة في المغرب",
+      description: "اكتشف مقالات الخبراء حول تطوير الويب، السيو، والاستراتيجية الرقمية لقطاع السياحة المغربي. من أكادير إلى العالم.",
+      ogImage: {
+        src: "/images/og/og-blog.webp",
+        alt: "حاسوب محمول يعرض موقع ويب عصري بخلفية ذات طابع مغربي."
       }
     }
   },
@@ -71,6 +86,14 @@ export const metadataStore: MetadataStore = {
       ogImage: {
         src: "/images/og/og-process.webp",
         alt: "Organigramme montrant les 4 étapes de notre processus : Analyse de Marché, Plan Fonctionnel, Développement Full-Stack, et Lancement & Croissance."
+      }
+    },
+    ar: {
+      title: "المنهجية الاستراتيجية ديالنا لتطوير الويب",
+      description: "حنا كنمشيو بعيد على مجرد مواقع ويب باش نبنيو حلول تجارية. المنهجية ديالنا كتبدا بتحليل معمق للسوق وخطة للمميزات، متبوعة بتطوير عالي الأداء، وكتسالي بإطلاق ناجح واستراتيجية لزيادة حجوزاتك المباشرة.",
+      ogImage: {
+        src: "/images/og/og-process.webp",
+        alt: "خطاطة كتبين المراحل الأربعة ديال العملية ديالنا: تحليل السوق، خطة المميزات، تطوير شامل، والإطلاق والنمو."
       }
     }
   }

@@ -13,18 +13,15 @@ type PostPageProps = {
 };
 
 export async function generateStaticParams() {
-  const paths = getAllPostIds();
-  // Ensure the static paths include the locale
-  return paths.map((path) => ({
-    id: path.params.id,
-    locale: 'en', // Assuming 'en' as a default or you can generate for all locales
-  }));
+  const paths = getAllPostIds(['en', 'fr', 'ar']);
+  // This now correctly returns all combinations of id and locale.
+  return paths.map(path => path.params);
 }
 
 export async function generateMetadata({ params }: PostPageProps): Promise<Metadata> {
   try {
-    const { id } = await params;
-    const postData = await getPostData(id);
+    const { id, locale } = await params;
+    const postData = await getPostData(id, locale);
 
     return generateCustomMetadata({
       title: postData.title,
@@ -45,8 +42,8 @@ export async function generateMetadata({ params }: PostPageProps): Promise<Metad
 
 export default async function PostPage({ params }: PostPageProps) {
   try {
-    const { id } = await params;
-    const postData = await getPostData(id);
+    const { id, locale } = await params;
+    const postData = await getPostData(id, locale);
 
     const jsonLd = {
       '@context': 'https://schema.org',
