@@ -16,9 +16,10 @@ const nextConfig = {
       },
       {
         protocol: 'https',
-        hostname: 'upmerce.com',
-        pathname: '/**',
-      }
+        hostname: 'www.upmerce.com',
+        port: '',
+        pathname: '/images/**', // Or '/**' to allow all images from the domain
+      },
     ],
      minimumCacheTTL: 60 * 60 * 24 * 30, // Cache for 30 days
   },
