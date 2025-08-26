@@ -13,6 +13,11 @@ const nextConfig = {
         protocol: 'http',
         hostname: 'localhost',
         pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'upmerce.com',
+        pathname: '/**',
       }
     ],
      minimumCacheTTL: 60 * 60 * 24 * 30, // Cache for 30 days
