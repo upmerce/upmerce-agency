@@ -173,7 +173,7 @@ export function getMainJsonLd({url, locale}: { url: string, locale: string }) {
     '@context': 'https://schema.org',
     '@type': siteConfig.businessType,
     name: siteConfig.brandName,
-    description: metadataStore.homepage[locale].description || metadataStore.homepage.en.description,
+    description: metadataStore.homepage[locale]?.description || metadataStore.homepage.en.description,
     url: url,
     logo: `${url}${siteConfig.logo}`,
     contactPoint: {

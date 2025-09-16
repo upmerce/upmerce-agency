@@ -1,112 +1,198 @@
 {
   "AgencyHeader": {
-    "siteTitle": "upmerce",
-    "ctaButton": "Get a Free Quote",
+    "siteTitle": "Upmerce Solutions",
+    "ctaButton": "Get Free Quote",
     "home": "Home",
     "our-process": "Our Process",
     "blog": "Blog"
   },
-   "AgencyHero": {
-    "title": "Turn Your Tourism Business into an Online Powerhouse ",
-    "subtitle": "We build professional, multilingual websites for Moroccan tour operators, riads, and local guides, designed to increase your direct bookings and grow your profits.",
-    "ctaButton": "View Our Product"
-  },
-  "AgencyProblemSolution": {
-    "problemTitle": "Stop Losing Money to High Commissions.",
-    "problemText": "Are you tired of relying on international booking platforms that take a huge cut of your profits? Do you have an outdated website that doesn't attract customers? It's time to take back control of your business.",
-    "solutionTitle": "The Solution: Your Own Professional Website.",
-    "solutionText": "We provide you with a powerful, modern website complete with a full admin panel. You control your content, you manage your bookings, and most importantly, you keep 100% of your profits."
-  },
- "AgencyPortfolio": {
-  "title": "Our Flagship Product",
-  "subtitle": "We have designed a world-class, feature-rich tourism website template. This is the foundation we use to launch your professional online presence in record time.",
-  "ctaButton": "View Live Demo",
-  "showcase_homepage_name": "Homepage",
-  "showcase_experiences_name": "Experiences Page",
-  "showcase_blog_name": "Blog Page",
-  "showcase_homepage_top_name": "Home (Top)",
-  "showcase_homepage_middle_name": "Home (Middle)",
-  "showcase_homepage_bottom_name": "Home (Bottom)",
-  "showcase_admin_name": "Admin Panel"
+ "AgencyHero": {
+  "title_part1": "Own Your Success.",
+  "title_part2": "Stop Renting It.",
+  "subtitle": "We build high-performance websites for Moroccan tourism businesses, giving you a beautiful, commission-free platform that you truly own.",
+  "ctaButton": "Explore Our Themes"
 },
-  "AgencyFeatures": {
-    "title": "Packed with Professional Features",
-    "coreTitle": "Core Application",
-    "coreSubtitle": "Every website includes a powerful foundation built for success.",
-    "coreFeature1": "Full Admin Panel (CRUD)",
-    "coreFeature2": "Multilingual Content (EN/FR)",
-    "coreFeature3": "Image Optimization (WebP)",
-    "coreFeature4": "Fully Responsive Design",
-    "pluginsTitle": "Optional Plugins",
-    "pluginsSubtitle": "Add powerful features as your business grows.",
-    "plugin1": "Blog & Content System",
-    "plugin2": "Customer Review System",
-    "plugin3": "Direct Booking Engine",
-    "plugin4": "Online Payment Integration"
+  "AgencyProblemSolution": {
+  "problemTitle": "The Old Way is Broken",
+  "problems": [
+    {
+      "title": "The Commission Trap",
+      "description": "You're stuck paying 15-25% of your revenue to booking platforms that control your customer relationships and dictate your pricing."
+    },
+    {
+      "title": "The WordPress & Wix Problem",
+      "description": "You get a slow, generic template site that's vulnerable to security threats from outdated plugins and invisible on Google."
+    },
+    {
+      "title": "The Management Headache",
+      "description": "Simple updates become a technical chore, forcing you to waste time on a clunky system instead of focusing on your guests."
+    }
+  ],
+  "solutionTitle": "Your Digital Foundation",
+  "solutionText": "We provide a complete, high-performance digital asset you truly own. One payment, zero monthly fees. It's an independent platform engineered to increase your direct bookings and secure your financial freedom."
+},
+  "AgencyPortfolio": {
+  "title": "A Design for Every Business",
+  "subtitle": "Your brand is unique. Choose a theme that matches your story, all built on a foundation of elite performance and ready for your personal touch.",
+  "theme_default_name": "Default",
+  "theme_default_tags": "Tour Operators • Boutique Hotels • Professional",
+  "theme_adventure_name": "Adventure",
+  "theme_adventure_tags": "Trekking • Surfing • Excursions • Dynamic",
+  "theme_luxury_name": "Luxury",
+  "theme_luxury_tags": "Riads • Private Villas • Bespoke Travel • Elegant",
+  "ctaButton": "View Live Demo"
+},
+ "AgencyFeatures": {
+  "title": "Your Complete Toolkit for Growth",
+  "subtitle": "Your website is more than a brochure; it's a powerful engine for every part of your business.",
+  "increaseBookings": {
+    "title": "Increase Your Bookings",
+    "subtitle": "Tools designed to convert visitors into paying customers and boost your direct revenue.",
+    "items": [
+      "Commission-Free Direct Booking",
+      "Integrated Customer Reviews",
+      "SEO-Optimized Blog & Experiences",
+      "Advanced Image Optimization"
+    ]
   },
+  "effortlessManagement": {
+    "title": "Effortless Management",
+    "subtitle": "A simple, powerful dashboard that puts you in complete control of your business.",
+    "items": [
+      "Custom Admin Panel (Full CRUD)",
+      "Secure Google Firebase Backend",
+      "Easy Content Updates (Markdown)",
+      "Automated Scalability"
+    ]
+  },
+  "premiumExperience": {
+    "title": "A Premium Brand Experience",
+    "subtitle": "Delight your guests with a beautiful, professional, and accessible user experience.",
+    "items": [
+      "Multi-Theme Architecture",
+      "Dynamic Colors & Typography",
+      "Full Multilingual Support",
+      "Light & Dark Modes"
+    ]
+  }
+},
  "AgencyPricing": {
-    "title": "Simple, Transparent Packages",
-    "subtitle": "Choose the package that's right for your business. No hidden fees, just pure value.",
-    "popular": "Most Popular",
-    "package1_name": "Digital Presence",
-    "package1_price": "Free*",
-    "package1_desc": "The perfect start for a professional online presence. Ideal for new businesses and local guides.",
-    "package1_note": "*Includes a 'Website by upmerce' link in the footer.",
-    "package2_name": "Business Growth",
-    "package2_price": "1999 DH",
-    "package2_desc": "For established businesses looking to attract more customers and build a strong brand.",
-    "package2_note": "No 'upmerce' branding.",
-    "package3_name": "Direct Bookings",
-    "package3_price": "2999 DH",
-    "package3_desc": "The ultimate solution to automate sales, capture leads, and maximize revenue.",
-    "feature_core": "Complete Core Website",
-    "feature_admin": "Full Admin Panel",
-    "feature_reviews": "Customer Review System",
-    "feature_blog": "Blog & Content System",
-    "feature_booking": "Direct Booking Engine",
-    "cta_contact": "Contact Us",
-    "cta_quote": "Get a Quote"
-  },
-"AgencyContact": {
-    "title": "Ready to Grow Your Business?",
-    "subtitle": "Let's talk about your project. Contact me today for a free, no-obligation quote and a personalized demo.",
+  "title": "Simple, Transparent Ownership",
+  "subtitle": "One investment for a lifetime asset. No monthly fees. No hidden costs. Choose the foundation that's right for you.",
+  "popular": "Most Popular",
+  "packages": [
+    {
+      "name": "Digital Foundation",
+      "price": "Free*",
+      "description": "The perfect start for a professional online presence. Ideal for new businesses and local guides.",
+      "note": "*Includes a 'Website by Upmerce' link in the footer.",
+      "features": [
+        "High-Performance Website",
+        "Full Admin Panel"
+      ],
+      "cta": "Contact Us",
+      "isPopular": false
+    },
+    {
+      "name": "Business Growth",
+      "price": "1999 DH",
+      "description": "For established businesses looking to attract more customers and build a strong brand.",
+      "note": "No 'Upmerce' branding.",
+      "isPopular": true,
+      "features": [
+        "High-Performance Website",
+        "Full Admin Panel",
+        "Blog & Content System",
+        "Customer Review System"
+      ],
+      "cta": "Get a Quote"
+    },
+    {
+      "name": "Booking Engine",
+      "price": "2999 DH",
+      "description": "The ultimate solution to automate sales, capture leads, and maximize your direct revenue.",
+      "features": [
+        "High-Performance Website",
+        "Full Admin Panel",
+        "Blog & Content System",
+        "Customer Review System",
+        "Direct Booking Engine"
+      ],
+      "cta": "Get a Quote",
+      "note": "",
+      "isPopular": false
+    }
+  ]
+},
+  "AgencyProcess": {
+  "metadataTitle": "Our Process | Upmerce Solutions",
+  "title": "Our Strategic Partnership",
+  "subtitle": "We don't just build websites; we build business solutions. Our process is a transparent and collaborative journey designed for your success.",
+  "steps": [
+    {
+      "title": "1. Discovery & Strategy",
+      "description": "We start with a deep dive into your business goals and conduct a market analysis to build a winning strategy."
+    },
+    {
+      "title": "2. High-Performance Build",
+      "description": "We develop your website on a modern tech stack, providing you with a private preview link to watch the progress live."
+    },
+    {
+      "title": "3. Launch & SEO",
+      "description": "We implement the foundational SEO strategy and deploy your site to a world-class network for optimal speed and reliability."
+    },
+    {
+      "title": "4. Handoff & Training",
+      "description": "We transfer 100% ownership and provide a personalized training session on your new admin panel, ensuring you are fully in control."
+    }
+  ]
+},
+  "AgencyContact": {
+    "title": "Ready to Own Your Online Presence?",
+    "subtitle": "Let's discuss how a high-performance website can increase your direct bookings and secure your independence. Contact me for a free consultation.",
     "ctaButton": "Send Message",
     "formNameLabel": "Your Name",
     "formEmailLabel": "Your Email Address",
     "formMessageLabel": "Tell me about your project",
     "loadingButton": "Sending...",
-    "alertSuccess": "Thank you for your message! I will get back to you shortly.",
-    "errorMissingFields": "All fields are required. Please fill out the entire form.",
-    "errorGeneric": "Something went wrong. Please try again later."
+    "alertSuccess": "Message sent! I will get back to you shortly.",
+    "errorMissingFields": "Please fill out all required fields.",
+    "errorGeneric": "An error occurred. Please try again."
   },
   "AgencyFooter": {
     "copyright": "Upmerce Solutions. All Rights Reserved."
   },
   "AgencyMetadata": {
-    "title": "Upmerce Solutions - Professional Websites for Tourism Businesses",
-    "description": "We build professional, multilingual websites for Moroccan tour operators, riads, and local guides, designed to increase your direct bookings and grow your profits."
+    "title": "Upmerce Solutions | High-Performance Websites for Moroccan Tourism",
+    "description": "We build fast, secure, multi-theme websites for riads, tour operators, and guides in Morocco. Increase your direct bookings and escape commission fees."
   },
-  "AgencyProcess": {
-    "title": "Our Strategic Process",
-    "subtitle": "We don't just build websites; we build business solutions. Our process is designed to understand your market and deliver a product that gives you a competitive advantage.",
-    "step1_title": "Market Analysis",
-    "step1_desc": "We start by analyzing the best local and international competitors in your specific niche to identify winning strategies and opportunities.",
-    "step2_title": "Feature Blueprint",
-    "step2_desc": "We break down all features into a 'Core vs. Plugin' model, allowing you to start with a powerful foundation and add new capabilities as your business grows.",
-    "step3_title": "Full-Stack Development",
-    "step3_desc": "We build your website using modern, high-performance technology (Next.js, Firebase) with a complete admin panel for you to manage your content.",
-    "step4_title": "Launch & Grow",
-    "step4_desc": "We deploy your website on a world-class hosting platform and provide the strategy you need to attract your first customers and grow your direct bookings.",
-    "step5_title": "Launch & Grow",
-    "step5_desc": "We deploy your website on a world-class hosting platform (Vercel) and provide the strategy you need to attract your first customers and grow your direct bookings."
-    
-  },
-  "StatsSection": {
-  "title": "An Architecture of Excellence",
-  "subtitle": "Each website we build is engineered for elite performance, ensuring your new online presence achieves top scores in the key areas that drive bookings and visibility.",
+ "StatsSection": {
+  "title": "Results You Can Measure",
+  "subtitle": "We engineer every website to achieve elite Google PageSpeed scores. Better performance doesn't just look good—it means higher search rankings and more visitors converting into customers.",
   "performance": "Performance",
   "accessibility": "Accessibility",
   "bestPractices": "Best Practices",
   "seo": "SEO"
+},
+  "AgencyTechnology": {
+  "title": "The Technology Advantage",
+  "subtitle": "Your website is a business asset, not just a brochure. We build on a modern foundation to deliver results that older platforms can't match.",
+  "labels": {
+    "performance": "Performance:",
+    "security": "Security:",
+    "cost": "Cost:"
+  },
+  "oldWay": {
+    "title": "The Old Way (WordPress)",
+    "performance": "Slow and clunky due to a bloated core and a patchwork of plugins, leading to poor user experience and lower SEO rankings.",
+    "security": "Vulnerable to attacks through outdated plugins from countless third-party developers, putting your data and reputation at risk.",
+    "cost": "Deceptively expensive with hidden costs for premium plugins, security fixes, and constant developer maintenance."
+  },
+  "newWay": {
+    "title": "The Upmerce Way",
+    "performance": "Lightning-fast and smooth, providing a 'native app-like' experience that delights users and is favored by Google.",
+    "security": "A fortress built on Google's Firebase platform. A unified, modern system that eliminates plugin vulnerabilities.",
+    "cost": "Transparent one-time pricing. No mandatory monthly fees, with a scalable pay-as-you-grow model for large-scale businesses."
+  }
 }
 }

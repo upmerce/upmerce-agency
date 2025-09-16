@@ -1,3 +1,5 @@
+// src/app/[locale]/layout.tsx
+
 import { Inter } from "next/font/google";
 import "@/app/globals.css";
 import { getMessages } from "next-intl/server";
@@ -15,6 +17,7 @@ const inter = Inter({ subsets: ["latin"] });
 type MetadataProps = {
   params: Promise<{ locale: string }>;
 }
+
 export async function generateMetadata({
   params,
 }: MetadataProps) {
@@ -106,7 +109,7 @@ export default async function RootLayout({
   const messages = await getMessages();
   const {locale} = await params;
   const jsonLd = getMainJsonLd({ url: process.env.NEXT_PUBLIC_API_URL || 'https://upmerce.com', locale });
- 
+ // console.log('--- MESSAGES LOADED ---', messages);
   return (
     <html lang={locale} dir={locale === 'ar' ? 'rtl' : 'ltr'}>
       <head>
@@ -114,7 +117,7 @@ export default async function RootLayout({
       </head>
       <body className={`${inter.className} bg-gray-900 text-gray-200`}>
           <ThemeRegistry>
-             <NextIntlClientProvider locale={locale} messages={messages}>
+             <NextIntlClientProvider locale={locale || 'en'} messages={messages}>
           <div className="flex flex-col min-h-screen">
             <Header />
             <main className="flex-grow">

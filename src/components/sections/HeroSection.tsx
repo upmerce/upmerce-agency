@@ -1,7 +1,3 @@
-// -------------------------------------------------------------------------
-// 1. NEW FILE: /src/components/sections/HeroSection.tsx
-// Create a 'sections' folder in your 'src/components' directory for this file.
-// -------------------------------------------------------------------------
 'use client';
 
 import React from 'react';
@@ -15,9 +11,10 @@ export default function HeroSection() {
     <section className="py-20 md:py-32 bg-gray-800">
         <div className="container mx-auto px-6 text-center">
             <h1 className="text-4xl md:text-6xl font-extrabold text-gray-100 leading-tight mb-4">
-                {t.rich('title', {
-                    span: (chunks) => <span className="block bg-gradient-to-r from-purple-300 to-indigo-400 bg-clip-text text-transparent">{chunks}</span>
-                })}
+                {t('title_part1')}
+                <span className="block bg-gradient-to-r from-purple-300 to-indigo-400 bg-clip-text text-transparent">
+                  {t('title_part2')}
+                </span>
             </h1>
             <p className="text-lg md:text-xl text-gray-200 max-w-3xl mx-auto mb-8">
                 {t('subtitle')}

@@ -1,27 +1,23 @@
-// -------------------------------------------------------------------------
-// 2. UPDATED FILE: /src/app/[locale]/page.tsx
-// Update your homepage to render the new HeroSection.
-// -------------------------------------------------------------------------
-
 import ContactSection from "@/components/sections/ContactSection";
 import FeaturesSection from "@/components/sections/FeaturesSection";
-import HeroSection from "@/components/sections/HeroSection"; // <-- Import the new section
+import HeroSection from "@/components/sections/HeroSection";
 import PortfolioSection from "@/components/sections/PortfolioSection";
 import PricingSection from "@/components/sections/PricingSection";
 import ProblemSolutionSection from "@/components/sections/ProblemSolutionSection";
 import StatsSection from "@/components/sections/StatsSection";
+import TechnologyAdvantageSection from "@/components/sections/TechnologyAdvantageSection"; // 1. Import new component
 
 export default function HomePage() {
   return (
-    // The main layout is handled by layout.tsx, so we only need the content here.
     <main>
-        <HeroSection />
-        <ProblemSolutionSection /> 
-        <StatsSection /> {/* <-- 2. Add the component here */}
-        <PortfolioSection />
-        <FeaturesSection />
-        <PricingSection /> 
-        <ContactSection />
+      <HeroSection />
+      <ProblemSolutionSection /> 
+      <StatsSection />
+      <FeaturesSection /> {/* 2. Moved Features before Portfolio */}
+      <PortfolioSection />
+      <TechnologyAdvantageSection /> {/* 3. Add new component */}
+      <PricingSection /> 
+      <ContactSection />
     </main>
   );
 }

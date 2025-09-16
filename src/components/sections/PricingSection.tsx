@@ -1,7 +1,3 @@
-// -------------------------------------------------------------------------
-// 1. UPDATED FILE: /src/components/sections/PricingSection.tsx
-// This component now uses the new pricing text. The structure remains the same.
-// -------------------------------------------------------------------------
 'use client';
 
 import React from 'react';
@@ -12,60 +8,26 @@ const CheckIcon = () => (
     <svg className="w-5 h-5 text-green-400 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path></svg>
 );
 
-const CrossIcon = () => (
-    <svg className="w-5 h-5 text-gray-500 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12"></path></svg>
-);
-
 export default function PricingSection() {
   const t = useTranslations('AgencyPricing');
+  
+  const packages = [0, 1, 2].map(index => {
+    const featureLengths = [2, 4, 5];
+    const features = Array.from({ length: featureLengths[index] }, (_, i) => 
+        t(`packages.${index}.features.${i}`)
+    );
 
-  const packages = [
-    {
-      name: t('package1_name'),
-      price: t('package1_price'),
-      description: t('package1_desc'),
-      features: [
-        { text: t('feature_core'), included: true },
-        { text: t('feature_admin'), included: true },
-        { text: t('feature_reviews'), included: false },
-        { text: t('feature_blog'), included: false },
-        { text: t('feature_booking'), included: false },
-      ],
-      cta: t('cta_contact'),
-      specialNote: t('package1_note'),
-      isPopular: false,
-    },
-    {
-      name: t('package2_name'),
-      price: t('package2_price'),
-      description: t('package2_desc'),
-      features: [
-        { text: t('feature_core'), included: true },
-        { text: t('feature_admin'), included: true },
-        { text: t('feature_reviews'), included: true },
-        { text: t('feature_blog'), included: true },
-        { text: t('feature_booking'), included: false },
-      ],
-      cta: t('cta_quote'),
-      specialNote: t('package2_note'),
-      isPopular: true,
-    },
-    {
-      name: t('package3_name'),
-      price: t('package3_price'),
-      description: t('package3_desc'),
-      features: [
-        { text: t('feature_core'), included: true },
-        { text: t('feature_admin'), included: true },
-        { text: t('feature_reviews'), included: true },
-        { text: t('feature_blog'), included: true },
-        { text: t('feature_booking'), included: true },
-      ],
-      cta: t('cta_quote'),
-      specialNote: '',
-      isPopular: false,
-    },
-  ];
+    return {
+      name: t(`packages.${index}.name`),
+      price: t(`packages.${index}.price`),
+      description: t(`packages.${index}.description`),
+      features: features,
+      cta: t(`packages.${index}.cta`),
+      // FINAL FIX: Manually handle the empty string for the last package's note to bypass the bug.
+      specialNote: index === 2 ? '' : t(`packages.${index}.note`),
+      isPopular: t.raw(`packages.${index}.isPopular`),
+    };
+  });
 
   return (
     <section id="pricing" className="py-20 bg-gray-900 dark:bg-gray-900">
@@ -82,8 +44,8 @@ export default function PricingSection() {
               <ul className="text-left space-y-2 mb-8">
                 {pkg.features.map((feature, fIndex) => (
                   <li key={fIndex} className="flex items-center text-gray-200">
-                    {feature.included ? <CheckIcon /> : <CrossIcon />}
-                    <span>{feature.text}</span>
+                    <CheckIcon />
+                    <span>{feature}</span>
                   </li>
                 ))}
               </ul>

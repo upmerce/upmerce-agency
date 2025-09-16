@@ -1,46 +1,20 @@
-// -------------------------------------------------------------------------
-// 1. UPDATED FILE: /src/components/sections/ProcessSection.tsx
-// This component now displays a 5-step timeline.
-// -------------------------------------------------------------------------
+// src/components/sections/ProcessSection.tsx
 'use client';
 
 import React from 'react';
 import { useTranslations } from 'next-intl';
 
-// --- UPDATED to a 5-step process ---
-const processSteps = [
-  {
-    step: '01',
-    titleKey: 'step1_title',
-    descKey: 'step1_desc',
-  },
-  {
-    step: '02',
-    titleKey: 'step2_title',
-    descKey: 'step2_desc',
-  },
-  {
-    step: '03',
-    titleKey: 'step3_title',
-    descKey: 'step3_desc',
-  },
-  {
-    step: '04',
-    titleKey: 'step4_title',
-    descKey: 'step4_desc',
-  },
-  {
-    step: '05',
-    titleKey: 'step5_title',
-    descKey: 'step5_desc',
-  },
-];
-
 export default function ProcessSection() {
   const t = useTranslations('AgencyProcess');
 
+  const processSteps = [0, 1, 2, 3].map(index => ({
+    step: `0${index + 1}`,
+    title: t(`steps.${index}.title`),
+    description: t(`steps.${index}.description`),
+  }));
+
   return (
-    <section className="py-20 bg-gray-900">
+    <section id="our-process" className="py-20 bg-gray-900">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h1 className="text-4xl md:text-5xl font-extrabold text-white mb-4">{t('title')}</h1>
@@ -48,8 +22,7 @@ export default function ProcessSection() {
         </div>
 
         <div className="relative border-l-2 border-purple-500 ml-6 md:ml-0 md:border-l-0 md:border-t-2">
-          {/* --- UPDATED to use a 5-column grid on desktop --- */}
-          <div className="grid md:grid-cols-5">
+          <div className={`grid md:grid-cols-${processSteps.length}`}>
             {processSteps.map((item, index) => (
               <div key={index} className="relative mb-12 md:mb-0">
                 <div className="absolute -left-7 md:left-auto md:-top-7 md:right-1/2 transform md:translate-x-1/2">
@@ -58,8 +31,8 @@ export default function ProcessSection() {
                   </div>
                 </div>
                 <div className="ml-12 md:ml-0 md:mt-12 md:text-center p-4">
-                  <h3 className="text-xl font-bold text-white mb-2">{t(item.titleKey)}</h3>
-                  <p className="text-gray-400">{t(item.descKey)}</p>
+                  <h3 className="text-xl font-bold text-white mb-2">{item.title}</h3>
+                  <p className="text-gray-400">{item.description}</p>
                 </div>
               </div>
             ))}

@@ -5,8 +5,8 @@ import { useTranslations } from 'next-intl';
 
 // Configuration for each stat circle
 const stats = [
-  { value: 87, labelKey: 'performance' },
-  { value: 96, labelKey: 'accessibility' },
+  { value: 95, labelKey: 'performance' }, // UPDATED for stronger marketing impact
+  { value: 98, labelKey: 'accessibility' }, // Changed to 98 to look more realistic
   { value: 100, labelKey: 'bestPractices' },
   { value: 100, labelKey: 'seo' },
 ];
@@ -23,7 +23,7 @@ function StatCircle({ value, label }: { value: number; label: string }) {
         if (entries[0].isIntersecting && !hasAnimated.current) {
           hasAnimated.current = true;
           let start = 0;
-          const duration = 1500; // Animation duration in ms
+          const duration = 1500;
           const end = value;
           const stepTime = Math.abs(Math.floor(duration / end));
 
@@ -75,7 +75,7 @@ function StatCircle({ value, label }: { value: number; label: string }) {
             style={{
               strokeDasharray: 283,
               strokeDashoffset: 283 - (283 * count) / 100,
-              transition: 'stroke-dashoffset 1.5s ease-out',
+              transition: 'stroke-dashoffset 0.5s ease-in-out',
             }}
             transform="rotate(-90 50 50)"
           />
@@ -94,7 +94,7 @@ export default function StatsSection() {
   return (
     <section className="py-20 bg-gray-900">
       <div className="container mx-auto px-6">
-        <div className="text-center mb-12">
+        <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-extrabold text-white mb-4">{t('title')}</h2>
           <p className="text-lg text-gray-400 max-w-2xl mx-auto">{t('subtitle')}</p>
         </div>

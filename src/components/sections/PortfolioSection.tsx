@@ -1,118 +1,109 @@
-// /src/components/sections/PortfolioSection.tsx
 'use client';
 
 import React, { useState } from 'react';
-import { Link } from '@/i18n/navigation';
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
-import { TOURISM_DEMO } from '@/config/site';
+import { Link } from '@/i18n/navigation';
 
-// --- UPDATED: The new, more detailed showcase structure ---
-const portfolioItems = [
+const themes = [
   {
-    id: 'homepageTop',
-    nameKey: 'showcase_homepage_top_name',
-    desktopImg: '/images/showcase/homepage-top-desktop.png',
-    tabletImg: '/images/showcase/homepage-top-tablet.png',
-    mobileImg: '/images/showcase/homepage-top-mobile.png',
+    id: 'default',
+    nameKey: 'theme_default_name',
+    tagsKey: 'theme_default_tags', // UPDATED from descriptionKey
+    liveDemoUrl: 'https://upmerce-default-demo.vercel.app/',
+    desktopImg: '/images/themes/default-desktop.webp',
+    tabletImg: '/images/themes/default-tablet.webp',
+    mobileImg: '/images/themes/default-mobile.webp',
   },
   {
-    id: 'homepageMiddle',
-    nameKey: 'showcase_homepage_middle_name',
-    desktopImg: '/images/showcase/homepage-middle-desktop.png',
-    tabletImg: '/images/showcase/homepage-middle-tablet.png',
-    mobileImg: '/images/showcase/homepage-middle-mobile.png',
+    id: 'adventure',
+    nameKey: 'theme_adventure_name',
+    tagsKey: 'theme_adventure_tags', // UPDATED from descriptionKey
+    liveDemoUrl: 'https://upmerce-adventure-demo.vercel.app/',
+    desktopImg: '/images/themes/adventure-desktop.webp',
+    tabletImg: '/images/themes/adventure-tablet.webp',
+    mobileImg: '/images/themes/adventure-mobile.webp',
   },
   {
-    id: 'homepageBottom',
-    nameKey: 'showcase_homepage_bottom_name',
-    desktopImg: '/images/showcase/homepage-bottom-desktop.png',
-    tabletImg: '/images/showcase/homepage-bottom-tablet.png',
-    mobileImg: '/images/showcase/homepage-bottom-mobile.png',
-  },
-  {
-    id: 'adminPanel',
-    nameKey: 'showcase_admin_name',
-    // Use the three different admin screenshots you took
-    desktopImg: '/images/showcase/admin-panel-experiences.png',
-    tabletImg: '/images/showcase/admin-panel-blog.png', // This will now be used for the tablet mockup
-    mobileImg: '/images/showcase/admin-panel-bookings.png', // This will now be used for the mobile mockup
+    id: 'luxury',
+    nameKey: 'theme_luxury_name',
+    tagsKey: 'theme_luxury_tags', // UPDATED from descriptionKey
+    liveDemoUrl: 'https://upmerce-luxury-demo.vercel.app/',
+    desktopImg: '/images/themes/luxury-desktop.webp',
+    tabletImg: '/images/themes/luxury-tablet.webp',
+    mobileImg: '/images/themes/luxury-mobile.webp',
   },
 ];
 
 export default function PortfolioSection() {
   const t = useTranslations('AgencyPortfolio');
-  const [activeTab, setActiveTab] = useState('homepageTop');
+  const [activeThemeId, setActiveThemeId] = useState('default');
 
-  const activeItem = portfolioItems.find(item => item.id === activeTab) || portfolioItems[0];
-
-  const liveDemoUrl = TOURISM_DEMO;
+  const activeTheme = themes.find(theme => theme.id === activeThemeId) || themes[0];
 
   return (
-    <section id="portfolio" className="py-20 bg-gray-800 overflow-x-hidden ">
-        <div className="container mx-auto px-6 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                {t('title')}
-            </h2>
-            <p className="text-gray-400 max-w-2xl mx-auto mb-8">
-                {t('subtitle')}
-            </p>
-
-            <div className="flex justify-center space-x-2 md:space-x-4 mb-10">
-                {portfolioItems.map((item) => (
-                    <button
-                        key={item.id}
-                        onClick={() => setActiveTab(item.id)}
-                        className={`px-4 py-2 text-xs md:text-base font-semibold rounded-lg transition-colors duration-300 ${
-                            activeTab === item.id 
-                            ? 'bg-purple-600 text-white' 
-                            : 'bg-gray-700 text-gray-300 hover:bg-gray-600'
-                        }`}
-                    >
-                        {t(item.nameKey)}
-                    </button>
-                ))}
-            </div>
-
-            <div className="flex items-end justify-center">
-                <div className="relative h-[300px] md:h-[500px] lg:h-[600px] scale-90 origin-bottom w-full">
-                {/* Desktop */}
-                <div className="absolute z-10 w-full aspect-video bg-gray-900 rounded-t-lg p-2 shadow-2xl">
-                    <div className="relative w-full h-full rounded-sm overflow-hidden">
-                        <Image src={activeItem.desktopImg} alt="Desktop view" fill style={{ objectFit: 'cover', objectPosition: 'top' }} sizes="80vw" />
-                    </div>
-                </div>
-                
-                {/* --- THIS IS THE KEY FIX --- */}
-                {/* Only show the tablet and mobile mockups if the active tab is NOT 'adminPanel' */}
-                {activeTab !== 'adminPanel' && (
-                    <>
-                        {/* Tablet */}
-                        <div className="absolute z-20 w-1/3 max-w-[250px] -bottom-4 -right-4 md:-right-8 lg:-right-12 aspect-[3/4] bg-gray-900 rounded-lg p-1.5 shadow-xl border-4 border-gray-800">
-                             <div className="relative w-full h-full rounded-sm overflow-hidden">
-                                <Image src={activeItem.tabletImg} alt="Tablet view" fill style={{ objectFit: 'cover', objectPosition: 'top' }} sizes="33vw" />
-                            </div>
-                        </div>
-                        {/* Mobile */}
-                        <div className="absolute z-20 w-1/5 max-w-[120px] -bottom-2 -left-2 md:-left-4 lg:-left-6 aspect-[9/19] bg-gray-900 rounded-lg p-1 shadow-xl border-2 border-gray-800">
-                            <div className="relative w-full h-full rounded-sm overflow-hidden">
-                                <Image src={activeItem.mobileImg} alt="Mobile view" fill style={{ objectFit: 'cover', objectPosition: 'top' }} sizes="20vw" />
-                            </div>
-                        </div>
-                    </>
-                )}
-                </div>
-            </div>
-
-            <Link 
-                href={liveDemoUrl}
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="mt-20 inline-block bg-white text-purple-700 font-bold py-3 px-8 rounded-lg hover:bg-gray-200 transition duration-300 text-lg"
+    <section id="portfolio" className="py-20 bg-gray-800 overflow-x-hidden">
+      <div className="container mx-auto px-6">
+        <div className="text-center mb-16">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            {t('title')}
+          </h2>
+          <p className="text-gray-400 max-w-3xl mx-auto">
+            {t('subtitle')}
+          </p>
+        </div>
+        
+        {/* UPDATED: Theme selectors now use tags for a cleaner look */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+          {themes.map((theme) => (
+            <div
+              key={theme.id}
+              onClick={() => setActiveThemeId(theme.id)}
+              className={`p-6 rounded-lg cursor-pointer transition-all duration-300 border ${
+                activeThemeId === theme.id 
+                ? 'bg-gray-700 border-purple-500' 
+                : 'bg-gray-900 border-gray-700 hover:border-gray-500'
+              }`}
             >
-                {t('ctaButton')}
+              <h3 className="text-xl font-bold text-white mb-2">{t(theme.nameKey)}</h3>
+              <p className="text-purple-400 text-sm font-medium">{t(theme.tagsKey)}</p>
+            </div>
+          ))}
+        </div>
+        
+        <div className="flex items-end justify-center">
+          <div className="relative h-[300px] md:h-[500px] lg:h-[600px] w-full">
+            <div className="absolute z-10 w-[90%] left-[5%] aspect-video bg-gray-900 rounded-t-lg p-2 shadow-2xl">
+              <div className="relative w-full h-full rounded-sm overflow-hidden">
+                <Image src={activeTheme.desktopImg} alt="Desktop view of the selected theme" fill style={{ objectFit: 'cover', objectPosition: 'top' }} sizes="80vw" key={`${activeTheme.id}-desktop`} priority />
+              </div>
+            </div>
+            
+            <div className="absolute z-20 w-1/3 max-w-[250px] bottom-0 right-0 aspect-[3/4] bg-gray-900 rounded-lg p-1.5 shadow-xl border-4 border-gray-800">
+                <div className="relative w-full h-full rounded-sm overflow-hidden">
+                  <Image src={activeTheme.tabletImg} alt="Tablet view of the selected theme" fill style={{ objectFit: 'cover', objectPosition: 'top' }} sizes="33vw" key={`${activeTheme.id}-tablet`} />
+                </div>
+            </div>
+
+            <div className="absolute z-20 w-1/5 max-w-[120px] bottom-2 left-0 aspect-[9/19] bg-gray-900 rounded-lg p-1 shadow-xl border-2 border-gray-800">
+                <div className="relative w-full h-full rounded-sm overflow-hidden">
+                  <Image src={activeTheme.mobileImg} alt="Mobile view of the selected theme" fill style={{ objectFit: 'cover', objectPosition: 'top' }} sizes="20vw" key={`${activeTheme.id}-mobile`} />
+                </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="text-center mt-12">
+            <Link
+              href={activeTheme.liveDemoUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block bg-white text-purple-700 font-bold py-3 px-8 rounded-lg hover:bg-gray-200 transition duration-300 text-lg"
+            >
+              {t('ctaButton')}: {t(activeTheme.nameKey)}
             </Link>
         </div>
+      </div>
     </section>
   );
 }
