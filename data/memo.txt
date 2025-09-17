@@ -1,0 +1,2 @@
+first color = "#bf41fa"
+second color = "#960dfc"
