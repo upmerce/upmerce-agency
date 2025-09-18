@@ -174,25 +174,27 @@
     "bestPractices": "Bonnes Pratiques",
     "seo": "SEO"
   },
+  
   "AgencyTechnology": {
     "title": "L'Avantage Technologique",
-    "subtitle": "Votre site web est un atout commercial, pas seulement une brochure. Nous construisons sur une base moderne pour fournir des résultats que les anciennes plateformes ne peuvent égaler.",
-   "labels": {
-    "performance": "Performance :",
-    "security": "Sécurité :",
-    "cost": "Coût :"
-  },
+    "subtitle": "Votre site web est un actif commercial, pas une simple brochure. Nous construisons sur une base moderne pour fournir des résultats que les anciennes plateformes ne peuvent égaler.",
+    "labels": {
+      "performance": "Performance :",
+      "security": "Sécurité :",
+      "cost": "Coût :"
+    },
     "oldWay": {
       "title": "L'Ancienne Méthode (WordPress)",
-      "performance": "Lent et lourd à cause d'un noyau surchargé et d'un assemblage de plugins, entraînant une mauvaise expérience utilisateur et un classement SEO inférieur.",
+      "performance": "Lent et lourd en raison d'un noyau surchargé et d'un assemblage de plugins, entraînant une mauvaise expérience utilisateur et un classement SEO inférieur.",
       "security": "Vulnérable aux attaques via des plugins obsolètes provenant d'innombrables développeurs tiers, mettant vos données et votre réputation en danger.",
-      "cost": "Faible coût en apparence, mais avec des frais cachés pour les plugins premium, les correctifs de sécurité et la maintenance constante par des développeurs."
+      "cost": "Coûteux de manière trompeuse avec des frais cachés pour les plugins premium, les correctifs de sécurité et la maintenance constante par des développeurs."
     },
     "newWay": {
       "title": "La Méthode Upmerce",
-      "performance": "Ultra-rapide et fluide, offrant une expérience 'similaire à une application native' qui ravit les utilisateurs et est favorisée par Google.",
-      "security": "Une forteresse construite sur la plateforme Firebase de Google. Un système unifié et moderne qui élimine les vulnérabilités des plugins.",
-      "cost": "Un prix unique et transparent. Pas de frais mensuels obligatoires, avec un modèle évolutif 'pay-as-you-grow' pour les entreprises à grande échelle."
+      "performance": "Ultra-rapide et fluide. Nous utilisons Next.js — la même technologie moderne utilisée par les plus grandes plateformes marocaines — pour offrir une expérience professionnelle qui ravit les utilisateurs et est privilégiée par Google.",
+      "security": "Une forteresse construite sur la plateforme Firebase de Google. Un système unifié et moderne qui élimine le risque constant des plugins obsolètes et vulnérables.",
+      "cost": "Tarification transparente en un seul paiement. Pas de frais mensuels obligatoires, avec un modèle évolutif 'payez-selon-votre-croissance' pour les grandes entreprises."
     }
   }
+
 }

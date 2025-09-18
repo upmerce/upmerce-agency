@@ -11,6 +11,7 @@ import GoogleAnalytics from "@/components/analytics/GoogleAnalytics";
 import ThemeRegistry from "@/components/ThemeRegistry";
 import { generateCustomMetadata } from "../../../lib/metadata";
 import { AUTHORS } from "@/config/site";
+import MetaPixel from "@/components/analytics/MetaPixel";
 const inter = Inter({ subsets: ["latin"] });
 
 // --- 1. This is the new, advanced metadata function ---
@@ -131,7 +132,11 @@ export default async function RootLayout({
          {/* It will only render in production if the ID is set */}
          {process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID && (
            <GoogleAnalytics measurementId={process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID} />
+           
         )}
+         {process.env.NEXT_PUBLIC_META_PIXEL_ID && (
+            <MetaPixel />
+          )}
       </body>
     </html>
   );

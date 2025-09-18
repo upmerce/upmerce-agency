@@ -190,8 +190,8 @@
   },
   "newWay": {
     "title": "The Upmerce Way",
-    "performance": "Lightning-fast and smooth, providing a 'native app-like' experience that delights users and is favored by Google.",
-    "security": "A fortress built on Google's Firebase platform. A unified, modern system that eliminates plugin vulnerabilities.",
+    "performance": "Lightning-fast and smooth. We use Next.js—the same modern technology trusted by leading Moroccan platforms—to deliver a professional experience that delights users and is favored by Google.",
+    "security": "A fortress built on Google's Firebase platform. A unified, modern system that eliminates the constant risk of outdated and vulnerable plugins.",
     "cost": "Transparent one-time pricing. No mandatory monthly fees, with a scalable pay-as-you-grow model for large-scale businesses."
   }
 }
