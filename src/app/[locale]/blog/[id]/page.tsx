@@ -6,6 +6,7 @@ import {getAllPostIds, getPostData } from '../../../../../lib/blog';
 import mediumStyles from './MediumPost.module.css';
 import Image from 'next/image';
 import { generateCustomMetadata } from '../../../../../lib/metadata';
+import { siteConfig } from '@/app/config/site';
 
 // The type represents the resolved object, which includes locale.
 type PostPageProps = {
@@ -22,8 +23,35 @@ export async function generateMetadata({ params }: PostPageProps): Promise<Metad
   try {
     const { id, locale } = await params;
     const postData = await getPostData(id, locale);
-
-    return generateCustomMetadata({
+    const siteUrl = process.env.NEXT_PUBLIC_API_URL || 'https://upmerce.com';
+    // jsonLd can be added here if needed for metadata
+     // 2. Create the complete JSON-LD object here
+    const jsonLd = {
+      '@context': 'https://schema.org',
+      '@type': 'Article',
+      'mainEntityOfPage': {
+        '@type': 'WebPage',
+        '@id': `${siteUrl}/blog/${id}`, // The canonical URL of the page
+      },
+      'headline': postData.title,
+      'description': postData.description,
+      'image': `${siteUrl}${postData.image}`, // Use the absolute URL for the image
+      'author': {
+        '@type': 'Organization', // Use 'Organization' for your business
+        'name': postData.author,
+      },
+      'publisher': { // Add publisher info to build authority
+        '@type': 'Organization',
+        'name': siteConfig.brandName,
+        'logo': {
+          '@type': 'ImageObject',
+          'url': `${siteUrl}${siteConfig.logo}`, // Use the logo from your site config
+        }
+      },
+      'datePublished': postData.date,
+    };
+    // 3. Generate your base metadata using your existing helper
+    const baseMetadata = generateCustomMetadata({
       title: postData.title,
       description: postData.description,
       pathname: `/blog/${id}`,
@@ -33,6 +61,13 @@ export async function generateMetadata({ params }: PostPageProps): Promise<Metad
       author: { name: postData.author },
       keywords: postData.tags || [],
     });
+   // 4. Merge the JSON-LD script into the final metadata object
+    return {
+      ...baseMetadata,
+      other: {
+        'script[type="application/ld+json"]': JSON.stringify(jsonLd),
+      },
+    };
   } catch {
     return {
       title: 'Post not found',
@@ -44,8 +79,8 @@ export default async function PostPage({ params }: PostPageProps) {
   try {
     const { id, locale } = await params;
     const postData = await getPostData(id, locale);
-
-    const jsonLd = {
+    {/*
+       const jsonLd = {
       '@context': 'https://schema.org',
       '@type': 'Article',
       headline: postData.title,
@@ -56,15 +91,17 @@ export default async function PostPage({ params }: PostPageProps) {
         name: postData.author,
       },
       datePublished: postData.date,
-    };
+    }; 
+       */}
+   
 
     return (
       <section className={`${mediumStyles["medium-post-bg"]} min-h-screen flex justify-center items-start py-12 px-4`}>
-        {/* Add JSON-LD script to the head */}
-        <script
+        {/* <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-        />
+        /> */}
+        
         <article
           className={`${mediumStyles["medium-post-container"]} bg-white shadow-md rounded-lg max-w-2xl w-full mx-auto px-8 py-10`}
           style={{ fontFamily: 'Georgia, Times, serif', boxShadow: '0 2px 32px rgba(0,0,0,0.08)', borderRadius: '8px' }}
