@@ -194,5 +194,13 @@
     "security": "A fortress built on Google's Firebase platform. A unified, modern system that eliminates the constant risk of outdated and vulnerable plugins.",
     "cost": "Transparent one-time pricing. No mandatory monthly fees, with a scalable pay-as-you-grow model for large-scale businesses."
   }
+},
+"AgencyOwnership": {
+  "title": "Stop Renting. Start Owning.",
+  "subtitle": "When you work with us, you're not just a client—you're the owner. We build your asset and then hand you all the keys.",
+  "item1": "Your Firebase & Vercel Configs",
+  "item2": "The Complete GitHub Codebase",
+  "item3": "Full Admin Access",
+  "item4": "Zero Monthly Fees or Lock-in"
 }
 }

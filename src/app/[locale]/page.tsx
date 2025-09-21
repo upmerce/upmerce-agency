@@ -1,3 +1,4 @@
+import OwnershipSection from "@/components/OwnershipSection";
 import ContactSection from "@/components/sections/ContactSection";
 import FeaturesSection from "@/components/sections/FeaturesSection";
 import HeroSection from "@/components/sections/HeroSection";
@@ -16,6 +17,7 @@ export default function HomePage() {
       <FeaturesSection /> {/* 2. Moved Features before Portfolio */}
       <PortfolioSection />
       <TechnologyAdvantageSection /> {/* 3. Add new component */}
+      <OwnershipSection />
       <PricingSection /> 
       <ContactSection />
     </main>
