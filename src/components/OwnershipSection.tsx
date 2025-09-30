@@ -32,7 +32,7 @@ export default function OwnershipSection() {
         <div className="max-w-md mx-auto bg-gray-900 border border-gray-700 rounded-lg p-8">
           <ul className="space-y-4 text-left">
             {items.map((item, index) => (
-              <li key={index} className="flex items-center text-lg"><CheckIcon /> {item}</li>
+              <li key={index} className="flex items-center text-lg text-gray-200"><CheckIcon /> {item}</li>
             ))}
           </ul>
         </div>
