@@ -203,6 +203,11 @@
   "item2": "Le Code Complet sur GitHub",
   "item3": "Accès Complet à l'Administration",
   "item4": "Zéro Frais Mensuels ou Engagement"
+},
+"FaqHub": {
+  "title": "Explorez Notre Expertise",
+  "subtitle": "Nous répondons aux questions les plus urgentes des opérateurs touristiques au Maroc.",
+  "browseAllButton": "Parcourir Tous les Articles"
 }
 
 }

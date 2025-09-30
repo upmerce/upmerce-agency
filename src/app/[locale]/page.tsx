@@ -1,5 +1,6 @@
 import OwnershipSection from "@/components/OwnershipSection";
 import ContactSection from "@/components/sections/ContactSection";
+import FaqHubSection from "@/components/sections/FaqHubSection";
 import FeaturesSection from "@/components/sections/FeaturesSection";
 import HeroSection from "@/components/sections/HeroSection";
 import PortfolioSection from "@/components/sections/PortfolioSection";
@@ -19,6 +20,7 @@ export default function HomePage() {
       <TechnologyAdvantageSection /> {/* 3. Add new component */}
       <OwnershipSection />
       <PricingSection /> 
+      <FaqHubSection /> {/* 2. Add the component here */}
       <ContactSection />
     </main>
   );

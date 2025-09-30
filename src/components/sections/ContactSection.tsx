@@ -65,7 +65,7 @@ export default function ContactSection() {
                 {t('subtitle')}
              </p>
              
-             <form onSubmit={handleSubmit} className="max-w-xl mx-auto text-left space-y-4">
+             <form onSubmit={handleSubmit} className="max-w-xl mx-auto text-start space-y-4">
                 <div>
                     <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-1">{t('formNameLabel')}</label>
                     <input type="text" id="name" value={name} onChange={(e) => setName(e.target.value)} required className="w-full bg-gray-700 text-white rounded-md border-gray-600 focus:ring-purple-500 focus:border-purple-500 p-3" />
