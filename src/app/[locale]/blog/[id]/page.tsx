@@ -121,14 +121,20 @@ export default async function PostPage({ params }: PostPageProps) {
             <span>{postData.date}</span>
           </div>
           {postData.image && (
-            <Image
+           <Image
               src={postData.image}
               alt={postData.title}
               className={`${mediumStyles["medium-post-image"]} mb-8 rounded-md w-full object-cover`}
               style={{ maxHeight: '340px', background: '#f6f6f6' }}
-              width={800}
-              height={340}
-              priority
+              width={800} // Keep specified width
+              height={340} // Keep specified height
+              priority // This is good, as it's the main image above the fold
+              // ADDED/MODIFIED: The 'sizes' prop is crucial here
+              sizes="(max-width: 768px) 100vw, 800px" 
+              // Explanation for sizes:
+              // (max-width: 768px) 100vw: On screens up to 768px wide (typical mobile/small tablet), 
+              //                            the image takes up 100% of the viewport width.
+              // 800px: On larger screens, it will be 800px wide (or up to its container max-width, which is 800px here).
             />
           )}
           <div

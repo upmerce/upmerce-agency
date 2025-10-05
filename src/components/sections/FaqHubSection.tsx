@@ -3,7 +3,6 @@
 import { useLocale, useTranslations } from 'next-intl';
 import { Link } from '@/i18n/navigation';
 
-// UPDATED: This list now consists ONLY of real search queries you found.
 const hubData = {
   en: [
     { question: "What is the best alternative to WordPress?", slug: "/blog/badil-wordpress-haloul-asriya" },
@@ -26,8 +25,8 @@ const hubData = {
     { question: "Pourquoi la vitesse est-elle si importante sur un site Web ?", slug: "/blog/pourquoi-vitesse-site-web-importante" },
     { question: "Quel est le montant de la commission sur Booking.com ?", slug: "/blog/calcul-commission-booking-alternative" },
     { question: "Comment améliorer le SEO d'un site web à Agadir ?", slug: "/blog/creation-site-web-agadir-secrets-hotel-pro" },
-    { question: "Quel est le meilleur site pour créer un site web pour un hôtel ?", slug: "/blog" }, // Article to be written
-    { question: "Comment répondre à un avis client (positif ou négatif) ?", slug: "/blog" } // Article to be written
+    { question: "Quel est le meilleur site pour créer un site web pour un hôtel ?", slug: "/blog/meilleur-site-creation-web-hotel" },
+    { question: "Comment répondre à un avis client (positif ou négatif) ?", slug: "/blog/repondre-avis-client-positif-negatif" }
   ],
   ar: [
     { question: "ما هو بديل ووردبريس لموقع احترافي؟", slug: "/blog/badil-wordpress-haloul-asriya" },
@@ -38,33 +37,43 @@ const hubData = {
     { question: "كيفية تسريع موقع ووردبريس؟", slug: "/blog/limaza-mawqie-wordpress-batee-wal-hal" },
     { question: "ما هي عيوب ووردبريس؟", slug: "/blog/badil-wordpress-haloul-asriya" },
     { question: "هل يمكن إنشاء موقع الكتروني مجاني واحترافي؟", slug: "/blog/thaman-inshaa-mawqi-electroni-bil-maghrib-dalil" },
-    { question: "كيف يتم تسويق الفنادق عبر الإنترنت؟", slug: "/blog" }, // Article to be written
-    { question: "ما هي أنواع الحجوزات في الفنادق؟", slug: "/blog" } // Article to be written
+    { question: "كيف يتم تسويق الفنادق عبر الإنترنت؟", slug: "/blog/kayfa-yatem-taswiq-alfanadiq-online" },
+    { question: "ما هي أنواع الحجوزات في الفنادق؟", slug: "/blog/anwaa-alhujuzat-fi-alfanadiq" }
   ]
 };
 
-export default function FaqHubSection() {
+export default function FaqHubSection({ id }: { id?: string }) {
   const t = useTranslations('FaqHub');
   const locale = useLocale() as 'en' | 'fr' | 'ar';
 
   const questions = hubData[locale] || hubData.en;
 
- return (
-    <section className="bg-gray-900 py-20">
+  return (
+    // Accessibility: Use aria-labelledby to link the section to its heading.
+    <section id={id} className="bg-gray-900 py-20" aria-labelledby="faq-hub-title">
       <div className="container mx-auto px-6">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">{t('title')}</h2>
+          {/* Accessibility: Add a unique ID to the heading so aria-labelledby can reference it. */}
+          <h2 id="faq-hub-title" className="text-3xl md:text-4xl font-bold text-white mb-4">{t('title')}</h2>
           <p className="text-gray-400 max-w-2xl mx-auto">
             {t('subtitle')}
           </p>
         </div>
         <div className="max-w-4xl mx-auto">
+          {/* Accessibility: The <ul> and <li> elements are correctly used for a list of items. */}
+          {/* Each <li> contains a single <Link> element, which is good semantic structure. */}
           <ul className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {questions.map((item, index) => (
               <li key={index}>
-                <Link 
-                  href={item.slug} 
+                {/* Accessibility: The Link component is inherently accessible for navigation. */}
+                {/* The entire <li> is clickable via the Link, which is good. */}
+                {/* The text content within the <span> is sufficient as the accessible name for the link. */}
+                <Link
+                  href={item.slug}
                   className="block w-full h-full text-start p-6 bg-gray-800 border border-gray-700 rounded-lg hover:bg-gray-700 hover:border-purple-500 transition-all duration-300"
+                  // Optional: Add a more descriptive aria-label if the question itself isn't fully clear
+                  // For example, if "question" was too short, you might add:
+                  // aria-label={t('readMoreAbout') + item.question} // e.g., "Read more about What is the best alternative to WordPress?"
                 >
                   <span className="text-lg font-semibold text-white">{item.question}</span>
                 </Link>
@@ -72,16 +81,16 @@ export default function FaqHubSection() {
             ))}
           </ul>
 
-          {/* --- NEW BUTTON ADDED HERE --- */}
           <div className="text-center mt-12">
-            <Link 
+            {/* Accessibility: Standard Link for navigation. The text content is a good accessible name. */}
+            <Link
               href="/blog"
               className="inline-block bg-purple-600 text-white font-bold py-3 px-8 rounded-lg hover:bg-purple-700 transition-colors duration-300"
             >
               {t('browseAllButton')}
             </Link>
           </div>
-          
+
         </div>
       </div>
     </section>

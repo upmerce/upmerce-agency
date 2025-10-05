@@ -1,17 +1,17 @@
+// src/components/sections/StatsSection.tsx
+
 'use client';
 
 import React, { useEffect, useRef, useState } from 'react';
 import { useTranslations } from 'next-intl';
 
-// Configuration for each stat circle
 const stats = [
-  { value: 95, labelKey: 'performance' }, // UPDATED for stronger marketing impact
-  { value: 98, labelKey: 'accessibility' }, // Changed to 98 to look more realistic
+  { value: 95, labelKey: 'performance' },
+  { value: 98, labelKey: 'accessibility' },
   { value: 100, labelKey: 'bestPractices' },
   { value: 100, labelKey: 'seo' },
 ];
 
-// Individual circle component for animation
 function StatCircle({ value, label }: { value: number; label: string }) {
   const [count, setCount] = useState(0);
   const ref = useRef<HTMLDivElement>(null);
@@ -52,9 +52,16 @@ function StatCircle({ value, label }: { value: number; label: string }) {
   }, [value]);
 
   return (
-    <div ref={ref} className="flex flex-col items-center text-center">
+    // IMPROVED: Added role and aria-labelledby for better semantic grouping for each stat
+    <div 
+      ref={ref} 
+      className="flex flex-col items-center text-center"
+      role="group" 
+      aria-labelledby={`stat-label-${label.replace(/\s/g, '-')}`} // Create a valid ID from label
+    >
       <div className="relative w-32 h-32 md:w-40 md:h-40 flex items-center justify-center">
-        <svg className="absolute w-full h-full" viewBox="0 0 100 100">
+        {/* ADDED aria-hidden="true" to SVG as it's purely decorative, its value is in the span */}
+        <svg className="absolute w-full h-full" viewBox="0 0 100 100" aria-hidden="true">
           <circle
             className="text-gray-700"
             strokeWidth="8"
@@ -80,29 +87,47 @@ function StatCircle({ value, label }: { value: number; label: string }) {
             transform="rotate(-90 50 50)"
           />
         </svg>
-        <span className="text-3xl md:text-4xl font-bold text-white">{count}</span>
+        {/* ADDED aria-live="polite" to announce the final count */}
+        {/* Also added role="status" for the live region */}
+        <span 
+          className="text-3xl md:text-4xl font-bold text-white"
+          aria-live="polite" 
+          role="status"
+        >
+          {count}%
+        </span> {/* ADDED % sign */}
       </div>
-      <p className="mt-4 text-lg font-semibold text-gray-300">{label}</p>
+      {/* ADDED ID to the label so it can be referenced by aria-labelledby on the parent div */}
+      <p id={`stat-label-${label.replace(/\s/g, '-')}`} className="mt-4 text-lg font-semibold text-gray-300">
+        {label}
+      </p>
     </div>
   );
 }
 
-// Main section component
 export default function StatsSection() {
   const t = useTranslations('StatsSection');
 
   return (
-    <section className="py-20 bg-gray-900">
+    <section 
+      id="stats" // ADDED: ID for potential future linking
+      className="py-20 bg-gray-900"
+      aria-labelledby="stats-heading" // ADDED: Link section to its main heading
+      role="region" // ADDED: Define section as a generic landmark region
+    >
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-extrabold text-white mb-4">{t('title')}</h2>
+          <h2 id="stats-heading" className="text-3xl md:text-4xl font-extrabold text-white mb-4">{t('title')}</h2> {/* ADDED: ID */}
           <p className="text-lg text-gray-400 max-w-2xl mx-auto">{t('subtitle')}</p>
         </div>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+        {/* Using ul/li for a list of stats is more semantic */}
+        <ul className="grid grid-cols-2 md:grid-cols-4 gap-8"> {/* CHANGED to <ul> */}
           {stats.map((stat) => (
-            <StatCircle key={stat.labelKey} value={stat.value} label={t(stat.labelKey)} />
+            <li key={stat.labelKey}> {/* CHANGED to <li> */}
+              <StatCircle value={stat.value} label={t(stat.labelKey)} />
+            </li>
           ))}
-        </div>
+        </ul>
       </div>
     </section>
   );

@@ -1,213 +1,262 @@
 {
-  "AgencyHeader": {
+  "Common": {
+    "backToTop": "Retour en haut de page"
+  },
+ "AgencyNavigation": {
     "siteTitle": "Upmerce Solutions",
-    "ctaButton": "Obtenir un devis gratuit",
+    "mainNavigation": "Navigation principale",
+    "mobileNavigation": "Menu de navigation mobile",
+    "openMenu": "Ouvrir le menu principal",
+    "closeMenu": "Fermer le menu principal",
     "home": "Accueil",
-    "our-process": "Notre Processus",
-    "blog": "Blog"
-  },
+    "ourProcess": "Notre Processus",
+    "features": "Fonctionnalités",
+    "portfolio": "Portfolio",
+    "pricing": "Tarifs",
+    "faq": "FAQ",
+    "blog": "Blog",
+    "ctaButton": "Obtenir un Devis",
+    "contactUsDescription": "pour un devis de projet personnalisé",
+    "whatsappMessage": "Bonjour, j'aimerais me renseigner sur vos services pour mon entreprise.",
+    "skipToContent": "Aller au contenu principal"
+  
+},
   "AgencyHero": {
-    "title_part1": "Soyez Propriétaire de Votre Succès.",
-    "title_part2": "Arrêtez de le Louer.",
-    "subtitle": "Nous créons des sites web haute performance pour les entreprises du tourisme marocain, vous offrant une plateforme magnifique et sans commission que vous possédez réellement.",
-    "ctaButton": "Découvrir Nos Thèmes"
-  },
-  "AgencyProblemSolution": {
-    "problemTitle": "L'Ancienne Méthode ne Fonctionne Plus",
-    "problems": [
-      {
-        "title": "Le Piège des Commissions",
-        "description": "Vous êtes contraint de payer 15 à 25 % de vos revenus à des plateformes de réservation qui contrôlent vos relations clients et dictent vos tarifs."
+  "title_part1": "Maîtrisez Votre Succès.",
+  "title_part2": "Cessez de le Louer.",
+  "subtitle": "Fatigué des commissions élevées et des sites web lents ? Nous créons des plateformes de haute performance pour les hôtels et riads marocains, vous offrant une propriété totale et des réservations directes.",
+  "ctaButton": "Découvrir Nos Thèmes",
+  "heroImageAlt": "Un paysage marocain époustouflant représentant les services d'Upmerce",
+  "ctaButtonAriaLabel": "Voir nos projets de portfolio"
+},
+ "AgencyProblemSolution": {
+    "problemTitle": "Le Problème que Nous Résolvons",
+    "problems": {
+      "0": {
+        "title": "Frais de Commission Élevés",
+        "description": "Les plateformes traditionnelles grugent vos profits avec des structures de commission exorbitantes."
       },
-      {
-        "title": "Le Problème WordPress & Wix",
-        "description": "Vous obtenez un site lent et générique, vulnérable aux menaces de sécurité à cause de plugins obsolètes et invisible sur Google."
+      "1": {
+        "title": "Processus Lents et Inefficaces",
+        "description": "Les flux de travail manuels et les systèmes obsolètes étranglent la croissance de votre entreprise."
       },
-      {
-        "title": "Le Casse-tête de la Gestion",
-        "description": "Les mises à jour simples deviennent une corvée technique, vous forçant à perdre du temps sur un système complexe au lieu de vous concentrer sur vos clients."
+      "2": {
+        "title": "Le Casse-tête du Marketing Numérique",
+        "description": "Vous avez du mal à vous faire remarquer en ligne ? Nous perçons le bruit ambiant pour vous."
       }
-    ],
-    "solutionTitle": "Votre Fondation Numérique",
-    "solutionText": "Nous fournissons un actif numérique complet et performant que vous possédez entièrement. Un seul paiement, zéro frais mensuels. C'est une plateforme indépendante conçue pour augmenter vos réservations directes et garantir votre liberté financière."
+    },
+    "solutionTitle": "Notre Solution : Dynamiser Votre Parcours Numérique",
+    "solutionText": "Nous offrons une plateforme complète et tout-en-un, conçue pour rationaliser vos opérations, renforcer votre présence en ligne et maximiser vos revenus. Dites adieu aux frais cachés et bonjour à une croissance fluide."
   },
   "AgencyPortfolio": {
-    "title": "Un Design pour Chaque Activité",
-    "subtitle": "Votre marque est unique. Choisissez un thème qui correspond à votre histoire, tous construits sur une base de performance d'élite et prêts pour votre touche personnelle.",
-    "theme_default_name": "Défaut",
-    "theme_default_tags": "Tours Opérateurs • Hôtels de Charme • Professionnel",
-    "theme_adventure_name": "Aventure",
-    "theme_adventure_tags": "Trekking • Surf • Excursions • Dynamique",
-    "theme_luxury_name": "Luxe",
-    "theme_luxury_tags": "Riads • Villas Privées • Voyages sur Mesure • Élégant",
+    "title": "Notre Superbe Portfolio",
+    "subtitle": "Explorez des thèmes de sites web magnifiques, conçus pour rehausser votre présence en ligne et captiver votre audience.",
+    "themeSelectionLabel": "Choisissez un thème de site web pour voir les détails",
+    "theme_default_name": "Élégance par Défaut",
+    "theme_default_tags": "Moderne, Minimaliste, Professionnel",
+    "theme_adventure_name": "Aventurier",
+    "theme_adventure_tags": "Voyage, Plein air, Dynamique",
+    "theme_luxury_name": "Retraite de Luxe",
+    "theme_luxury_tags": "Haut de gamme, Exclusif, Sophistiqué",
+    "imageAltDesktop": "Vue bureau complète du thème de site web {themeName}",
+    "imageAltTablet": "Vue tablette du thème de site web {themeName}",
+    "imageAltMobile": "Vue mobile du thème de site web {themeName}",
     "ctaButton": "Voir la Démo en Direct"
   },
   "AgencyFeatures": {
-    "title": "Votre Boîte à Outils Complète pour la Croissance",
-    "subtitle": "Votre site web est plus qu'une simple brochure ; c'est un moteur puissant pour chaque aspect de votre entreprise.",
+    "title": "Libérez le Potentiel de Votre Entreprise",
+    "subtitle": "Découvrez comment Upmerce vous dote d'outils conçus pour la croissance, l'efficacité et des expériences client exceptionnelles.",
     "increaseBookings": {
       "title": "Augmentez Vos Réservations",
-      "subtitle": "Des outils conçus pour convertir les visiteurs en clients payants et booster vos revenus directs.",
-      "items": [
-        "Réservation Directe Sans Commission",
-        "Avis Clients Intégrés",
-        "Blog & Expériences Optimisés SEO",
-        "Optimisation Avancée des Images"
-      ]
+      "subtitle": "Attirez plus de clients et maximisez vos revenus avec nos outils puissants.",
+      "items": {
+        "0": "Modèles de Site Web à Haute Conversion",
+        "1": "Optimisation SEO et Génération de Trafic",
+        "2": "Système de Réservation Intégré",
+        "3": "Marketing sur les Réseaux Sociaux"
+      }
     },
     "effortlessManagement": {
       "title": "Gestion Sans Effort",
-      "subtitle": "Un tableau de bord simple et puissant qui vous donne le contrôle total de votre activité.",
-      "items": [
-        "Panneau d'Administration Personnalisé (CRUD)",
-        "Backend Sécurisé Google Firebase",
-        "Mises à Jour Faciles du Contenu (Markdown)",
-        "Évolutivité Automatisée"
-      ]
+      "subtitle": "Rationalisez vos opérations et gagnez du temps avec des solutions intuitives et faciles à utiliser.",
+      "items": {
+        "0": "Planification et Rappels Automatisés",
+        "1": "Gestion de la Relation Client (CRM)",
+        "2": "Paiements en Ligne Sécurisés",
+        "3": "Analyses et Rapports"
+      }
     },
     "premiumExperience": {
-      "title": "Une Expérience de Marque Premium",
-      "subtitle": "Ravissez vos invités avec une expérience utilisateur magnifique, professionnelle et accessible.",
-      "items": [
-        "Architecture Multi-Thèmes",
-        "Couleurs & Typographie Dynamiques",
-        "Support Multilingue Complet",
-        "Modes Clair & Sombre"
-      ]
+      "title": "Expérience Client Premium",
+      "subtitle": "Offrez un service inoubliable qui fidélise vos clients et génère des recommandations.",
+      "items": {
+        "0": "Portails Clients Personnalisés",
+        "1": "Outils de Communication Fluides",
+        "2": "Collecte de Retours et d'Avis",
+        "3": "Support Multilingue"
+      }
     }
   },
-  "AgencyPricing": {
-    "title": "Une Propriété Simple et Transparente",
-    "subtitle": "Un seul investissement pour un actif à vie. Pas de frais mensuels. Pas de coûts cachés. Choisissez la fondation qui vous convient.",
-    "popular": "Le plus populaire",
-    "packages": [
-      {
-        "name": "Fondation Numérique",
-        "price": "Gratuit*",
-        "description": "Le début parfait pour une présence en ligne professionnelle. Idéal pour les nouvelles entreprises et les guides locaux.",
-        "note": "*Inclut un lien 'Site web par Upmerce' dans le pied de page.",
-        "features": [
-          "Site Web Haute Performance",
-          "Panneau d'Administration Complet"
-        ],
-        "cta": "Contactez-nous",
+ "AgencyPricing": {
+    "title": "Tarifs Transparents, Résultats Puissants",
+    "subtitle": "Choisissez le forfait parfait pour les besoins de votre entreprise et commencez à bâtir votre empire en ligne dès aujourd'hui. Sans frais cachés, juste de la croissance.",
+    "popular": "Populaire",
+    "popularPlanLabel": "Voici notre forfait le plus populaire : {packageName}",
+    "featuresListLabel": "Fonctionnalités incluses dans le forfait {packageName}",
+    "choosePlanLabel": "Choisir le forfait {packageName}",
+    "packages": {
+      "0": {
+        "name": "Débutant",
+        "price": "0 Dh",
+        "description": "Idéal pour les nouvelles entreprises qui établissent leur présence en ligne.",
+        "features": {
+          "0": "Modèle de site web personnalisable",
+          "1": "Optimisation SEO de base"
+        },
+        "cta": "Choisir ce Forfait",
+        "note": "Parfait pour les solopreneurs.",
         "isPopular": false
       },
-      {
-        "name": "Croissance d'Entreprise",
-        "price": "1999 DH",
-        "description": "Pour les entreprises établies cherchant à attirer plus de clients et à construire une marque forte.",
-        "note": "Aucune mention 'Upmerce'.",
-        "isPopular": true,
-        "features": [
-          "Site Web Haute Performance",
-          "Panneau d'Administration Complet",
-          "Système de Blog & Contenu",
-          "Système d'Avis Clients"
-        ],
-        "cta": "Obtenir un devis"
+      "1": {
+        "name": "Croissance",
+        "price": "1999 Dh",
+        "description": "Étendez votre portée avec des fonctionnalités avancées et un support dédié.",
+        "features": {
+          "0": "Tout du forfait Débutant",
+          "1": "SEO avancé et Analytique",
+          "2": "CRM intégré",
+          "3": "Intégration des réseaux sociaux"
+        },
+        "cta": "Choisir ce Forfait",
+        "note": "Recommandé pour les entreprises en croissance.",
+        "isPopular": true
       },
-      {
-        "name": "Moteur de Réservation",
-        "price": "2999 DH",
-        "description": "La solution ultime pour automatiser les ventes, capturer des prospects et maximiser vos revenus directs.",
-        "features": [
-          "Site Web Haute Performance",
-          "Panneau d'Administration Complet",
-          "Système de Blog & Contenu",
-          "Système d'Avis Clients",
-          "Moteur de Réservation Directe"
-        ],
-        "cta": "Obtenir un devis",
+      "2": {
+        "name": "Entreprise",
+        "price": "Devis Personnalisé",
+        "description": "Solutions sur mesure pour les opérations à grande échelle et les exigences complexes.",
+        "features": {
+          "0": "Tout du forfait Croissance",
+          "1": "Développement de fonctionnalités personnalisées",
+          "2": "Gestionnaire de compte dédié",
+          "3": "Support prioritaire 24/7",
+          "4": "Sécurité et évolutivité avancées"
+        },
+        "cta": "Contactez-nous",
         "note": "",
         "isPopular": false
       }
-    ]
+    }
   },
-  "AgencyProcess": {
-    "metadataTitle": "Notre Processus | Upmerce Solutions",
-    "title": "Notre Partenariat Stratégique",
-    "subtitle": "Nous ne construisons pas seulement des sites web ; nous construisons des solutions commerciales. Notre processus est un parcours transparent et collaboratif conçu pour votre succès.",
-    "steps": [
-      {
-        "title": "1. Découverte & Stratégie",
-        "description": "Nous commençons par une analyse approfondie de vos objectifs commerciaux et du marché pour élaborer une stratégie gagnante."
+ "AgencyProcess": {
+    "title": "Notre Processus Optimisé",
+    "subtitle": "Découvrez comment nous transformons votre vision en une réalité numérique, étape par étape.",
+    "steps": {
+      "0": {
+        "title": "Découverte et Stratégie",
+        "description": "Nous commençons par comprendre vos objectifs, votre audience et votre marché pour élaborer une stratégie numérique sur mesure."
       },
-      {
-        "title": "2. Développement Haute Performance",
-        "description": "Nous développons votre site sur une pile technologique moderne, en vous fournissant un lien de prévisualisation privé pour suivre les progrès en direct."
+      "1": {
+        "title": "Conception et Prototypage",
+        "description": "Notre équipe crée des designs intuitifs et visuellement époustouflants, garantissant une expérience utilisateur fluide."
       },
-      {
-        "title": "3. Lancement & SEO",
-        "description": "Nous mettons en œuvre la stratégie de référencement fondamentale et déployons votre site sur un réseau de classe mondiale pour une vitesse et une fiabilité optimales."
+      "2": {
+        "title": "Développement et Tests",
+        "description": "Nous développons des solutions robustes et performantes, en les testant rigoureusement sur tous les appareils et navigateurs."
       },
-      {
-        "title": "4. Transfert & Formation",
-        "description": "Nous transférons 100% de la propriété et offrons une session de formation personnalisée sur votre nouveau panneau d'administration, vous assurant un contrôle total."
+      "3": {
+        "title": "Lancement et Optimisation",
+        "description": "Après un lancement réussi, nous continuons de surveiller, d'analyser et d'optimiser pour une performance maximale."
       }
-    ]
+    }
   },
   "AgencyContact": {
-    "title": "Prêt à Maîtriser Votre Présence en Ligne ?",
-    "subtitle": "Discutons de la manière dont un site web haute performance peut augmenter vos réservations directes et garantir votre indépendance. Contactez-moi pour une consultation gratuite.",
-    "ctaButton": "Envoyer le Message",
-    "formNameLabel": "Votre Nom",
-    "formEmailLabel": "Votre Adresse E-mail",
-    "formMessageLabel": "Parlez-moi de votre projet",
-    "loadingButton": "Envoi...",
-    "alertSuccess": "Message envoyé ! Je vous répondrai sous peu.",
-    "errorMissingFields": "Veuillez remplir tous les champs obligatoires.",
-    "errorGeneric": "Une erreur est survenue. Veuillez réessayer."
+"title": "Contactez-nous",
+"subtitle": "Vous avez un projet en tête ou souhaitez simplement discuter ? Contactez-nous !",
+"formNameLabel": "Votre Nom",
+"formEmailLabel": "Votre E-mail",
+"formMessageLabel": "Votre Message",
+"ctaButton": "Envoyer le message",
+"loadingButton": "Envoi...",
+"validationNameRequired": "Le nom est requis.",
+"validationEmailRequired": "L'e-mail est requis.",
+"validationEmailInvalid": "Veuillez entrer une adresse e-mail valide.",
+"validationMessageRequired": "Le message est requis.",
+"formHasErrors": "Veuillez corriger les erreurs dans le formulaire.",
+"unexpectedError": "Une erreur inattendue est survenue.",
+"unknownError": "Une erreur inconnue est survenue. Veuillez réessayer plus tard."
   },
+  
   "AgencyFooter": {
-    "copyright": "Upmerce Solutions. Tous Droits Réservés."
+    "copyright": "Tous droits réservés.",
+    "shortDescription": "Nous propulsons le succès numérique des entreprises avec des stratégies innovantes de développement web et de marketing.",
+    "footerNavs": {
+      "companyTitle": "Entreprise",
+      "aboutUs": "À propos de nous",
+      "services": "Services",
+      "resourcesTitle": "Ressources",
+      "support": "Support",
+      "termsOfService": "Conditions d'utilisation",
+      "privacyPolicy": "Politique de confidentialité",
+      "contactTitle": "Contactez-nous"
+    }
   },
+
   "AgencyMetadata": {
     "title": "Upmerce Solutions | Sites Web Haute Performance pour le Tourisme Marocain",
     "description": "Nous créons des sites web rapides, sécurisés et multi-thèmes pour les riads, les tours opérateurs et les guides au Maroc. Augmentez vos réservations directes et échappez aux frais de commission."
   },
-  "StatsSection": {
-    "title": "Des Résultats que Vous Pouvez Mesurer",
-    "subtitle": "Nous concevons chaque site web pour atteindre des scores Google PageSpeed d'élite. Une meilleure performance n'est pas seulement esthétique, elle se traduit par un meilleur classement dans les recherches et plus de visiteurs se convertissant en clients.",
-    "performance": "Performance",
-    "accessibility": "Accessibilité",
-    "bestPractices": "Bonnes Pratiques",
-    "seo": "SEO"
+ "StatsSection": {
+    "title": "Nos Réalisations et Normes",
+    "subtitle": "Nous nous engageons à fournir une qualité exceptionnelle et des résultats mesurables pour chaque client.",
+    "performance": "Score de Performance",
+    "accessibility": "Score d'Accessibilité",
+    "bestPractices": "Score des Meilleures Pratiques",
+    "seo": "Score SEO"
   },
   
   "AgencyTechnology": {
-    "title": "L'Avantage Technologique",
-    "subtitle": "Votre site web est un actif commercial, pas une simple brochure. Nous construisons sur une base moderne pour fournir des résultats que les anciennes plateformes ne peuvent égaler.",
+    "title": "Notre Avantage Technologique",
+    "subtitle": "Découvrez la différence frappante entre les pratiques obsolètes et l'approche de pointe d'Upmerce en matière de développement web.",
+    "oldWay": {
+      "title": "L'Ancienne Méthode",
+      "performance": "Temps de chargement lents et interfaces peu fluides.",
+      "security": "Vulnérable aux cybermenaces et aux violations de données.",
+      "cost": "Investissement initial élevé avec des frais de maintenance cachés."
+    },
+    "newWay": {
+      "title": "La Méthode Upmerce",
+      "performance": "Performances ultra-rapides et expérience utilisateur fluide.",
+      "security": "Protocoles de sécurité robustes de niveau entreprise.",
+      "cost": "Solutions rentables avec une tarification mensuelle prévisible."
+    },
     "labels": {
       "performance": "Performance :",
       "security": "Sécurité :",
       "cost": "Coût :"
-    },
-    "oldWay": {
-      "title": "L'Ancienne Méthode (WordPress)",
-      "performance": "Lent et lourd en raison d'un noyau surchargé et d'un assemblage de plugins, entraînant une mauvaise expérience utilisateur et un classement SEO inférieur.",
-      "security": "Vulnérable aux attaques via des plugins obsolètes provenant d'innombrables développeurs tiers, mettant vos données et votre réputation en danger.",
-      "cost": "Coûteux de manière trompeuse avec des frais cachés pour les plugins premium, les correctifs de sécurité et la maintenance constante par des développeurs."
-    },
-    "newWay": {
-      "title": "La Méthode Upmerce",
-      "performance": "Ultra-rapide et fluide. Nous utilisons Next.js — la même technologie moderne utilisée par les plus grandes plateformes marocaines — pour offrir une expérience professionnelle qui ravit les utilisateurs et est privilégiée par Google.",
-      "security": "Une forteresse construite sur la plateforme Firebase de Google. Un système unifié et moderne qui élimine le risque constant des plugins obsolètes et vulnérables.",
-      "cost": "Tarification transparente en un seul paiement. Pas de frais mensuels obligatoires, avec un modèle évolutif 'payez-selon-votre-croissance' pour les grandes entreprises."
     }
   },
 "AgencyOwnership": {
-  "title": "Arrêtez de Louer. Commencez à Posséder.",
-  "subtitle": "Lorsque vous travaillez avec nous, vous n'êtes pas seulement un client — vous êtes le propriétaire. Nous construisons votre actif et vous remettons ensuite toutes les clés.",
-  "item1": "Vos Configurations Firebase & Vercel",
-  "item2": "Le Code Complet sur GitHub",
-  "item3": "Accès Complet à l'Administration",
-  "item4": "Zéro Frais Mensuels ou Engagement"
-},
+    "title": "Votre Propriété, Notre Priorité",
+    "subtitle": "Chez Upmerce, nous croyons en la transparence et nous vous donnons le plein contrôle sur vos actifs numériques.",
+    "item1": "Vous possédez 100% du code et des actifs de votre site web.",
+    "item2": "Aucun frais caché ni contrat restrictif.",
+    "item3": "Accès complet à vos paramètres d'hébergement et de domaine.",
+    "item4": "Contrôle créatif et technique total."
+  },
 "FaqHub": {
-  "title": "Explorez Notre Expertise",
-  "subtitle": "Nous répondons aux questions les plus urgentes des opérateurs touristiques au Maroc.",
-  "browseAllButton": "Parcourir Tous les Articles"
-}
+    "title": "Vous avez des questions ? Nous avons les réponses.",
+    "subtitle": "Explorez notre base de connaissances où nous répondons aux questions les plus fréquentes que se posent les entreprises comme la vôtre.",
+    "browseAllButton": "Parcourir tous les articles"
+  },
+"AgencyFounder": {
+    "name": "Mustapha Ouazza",
+    "title": "Fondateur & PDG",
+    "missionStatement": "Chez Upmerce, notre mission est de donner aux entreprises les moyens de réussir avec des solutions numériques de pointe qui stimulent la croissance et favorisent des liens significatifs. Nous croyons en la construction de bien plus que de simples sites web ; nous bâtissons des partenariats pour la réussite."
+  },
+ "Loading": { 
+    "loadingMessage": "Le contenu est en cours de chargement, veuillez patienter.",
+    "loadingText": "Chargement du contenu..."
+  }
 
 }

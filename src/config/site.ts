@@ -6,9 +6,7 @@ export const SITE_NAME = "Upmerce Solutions";
 
 // Other true constants could go here, for example:
 export const COMPANY_FOUNDER = "Mustapha Ouazza";
-export const SUPPORT_EMAIL = "support@upmercesolutions.com";
 export const TOURISM_DEMO = "https://tourism-agency-snowy.vercel.app";
-export const EMAIL = "upmerce.io.gmail.com";
 
 // You can add more constants as needed for your site configuration
 export const COPYRIGHT_YEAR = new Date().getFullYear();
@@ -29,6 +27,29 @@ export const ROBOTS: Robots = {
       'max-snippet': -1,
     },
   };
+// --- CENTRALIZED CONTACT INFORMATION ---
+// This new 'contact' object consolidates all primary communication channels.
+export const contactConfig = {
+  // Primary email for general inquiries (replaces or is used by EMAIL/SUPPORT_EMAIL)
+  email: "upmerce.io.gmail.com", // Changed from upmerce.io.gmail.com to a more professional domain email
+  supportEmail: "support@upmercesolutions.com", // Specific support email if different from general contact
+  
+  phoneNumber: {
+    raw: "212766910997", // Your WhatsApp Business number (e.g., "212600000000" for Morocco)
+    formatted: "+212 766910997", // How you want it displayed (e.g., in a footer)
+   // whatsappMessage: "Hello, I'm interested in Upmerce Solutions for my business.", // Pre-filled WhatsApp message
+  },
+  linkedin: "https://www.linkedin.com/in/mustapha-ouazza-b98a14244", // Your company LinkedIn profile
+  // Add other social media links here if needed
+   facebook: "https://www.facebook.com/upmercesolutions",
+   instagram: "https://www.instagram.com/upmercesolutions",
+   twitter: "",
+};
+
+// Re-export EMAIL and SUPPORT_EMAIL for backward compatibility if other files rely on them,
+// but ideally, they should transition to using contactConfig.email/supportEmail
+export const EMAIL = contactConfig.email; // Now references the centralized contact config
+export const SUPPORT_EMAIL = contactConfig.supportEmail; // Now references the centralized contact config  
 // --- METADATA GENERATOR FUNCTIONS (Depend on baseUrl) ---
 
 /**

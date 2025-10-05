@@ -1,212 +1,264 @@
 {
-  "AgencyHeader": {
-    "siteTitle": "Upmerce Solutions",
-    "ctaButton": "Get Free Quote",
-    "home": "Home",
-    "our-process": "Our Process",
-    "blog": "Blog"
+  "Common": {
+    "backToTop": "Back to Top"
   },
+  "AgencyNavigation": {
+"siteTitle": "Upmerce Solutions", 
+"mainNavigation": "Main navigation", 
+"mobileNavigation": "Mobile navigation menu", 
+"openMenu": "Open main menu", 
+"closeMenu": "Close main menu", 
+"home": "Home",
+"ourProcess": "Our Process",
+"features": "Features",
+"portfolio": "Portfolio",
+"pricing": "Pricing",
+"faq": "FAQ",
+"blog": "Blog",
+"ctaButton": "Get a Quote",
+"contactUsDescription": "for a custom project quote" ,
+"whatsappMessage": "Hello, I would like to inquire about your services for my business." ,
+"skipToContent": "Skip to main content"
+
+},
  "AgencyHero": {
   "title_part1": "Own Your Success.",
   "title_part2": "Stop Renting It.",
-  "subtitle": "We build high-performance websites for Moroccan tourism businesses, giving you a beautiful, commission-free platform that you truly own.",
-  "ctaButton": "Explore Our Themes"
+  "subtitle": "Tired of high commissions and slow websites? We build beautiful, high-performance platforms for Moroccan hotels and riads, giving you total ownership and direct bookings.",
+  "ctaButton": "Explore Our Themes",
+  "heroImageAlt": "A stunning Moroccan landscape representing Upmerce's services",
+  "ctaButtonAriaLabel": "View our portfolio projects" 
 },
   "AgencyProblemSolution": {
-  "problemTitle": "The Old Way is Broken",
-  "problems": [
-    {
-      "title": "The Commission Trap",
-      "description": "You're stuck paying 15-25% of your revenue to booking platforms that control your customer relationships and dictate your pricing."
-    },
-    {
-      "title": "The WordPress & Wix Problem",
-      "description": "You get a slow, generic template site that's vulnerable to security threats from outdated plugins and invisible on Google."
-    },
-    {
-      "title": "The Management Headache",
-      "description": "Simple updates become a technical chore, forcing you to waste time on a clunky system instead of focusing on your guests."
-    }
-  ],
-  "solutionTitle": "Your Digital Foundation",
-  "solutionText": "We provide a complete, high-performance digital asset you truly own. One payment, zero monthly fees. It's an independent platform engineered to increase your direct bookings and secure your financial freedom."
-},
-  "AgencyPortfolio": {
-  "title": "A Design for Every Business",
-  "subtitle": "Your brand is unique. Choose a theme that matches your story, all built on a foundation of elite performance and ready for your personal touch.",
-  "theme_default_name": "Default",
-  "theme_default_tags": "Tour Operators • Boutique Hotels • Professional",
-  "theme_adventure_name": "Adventure",
-  "theme_adventure_tags": "Trekking • Surfing • Excursions • Dynamic",
-  "theme_luxury_name": "Luxury",
-  "theme_luxury_tags": "Riads • Private Villas • Bespoke Travel • Elegant",
-  "ctaButton": "View Live Demo"
-},
- "AgencyFeatures": {
-  "title": "Your Complete Toolkit for Growth",
-  "subtitle": "Your website is more than a brochure; it's a powerful engine for every part of your business.",
-  "increaseBookings": {
-    "title": "Increase Your Bookings",
-    "subtitle": "Tools designed to convert visitors into paying customers and boost your direct revenue.",
-    "items": [
-      "Commission-Free Direct Booking",
-      "Integrated Customer Reviews",
-      "SEO-Optimized Blog & Experiences",
-      "Advanced Image Optimization"
-    ]
+ "problemTitle": "The Problem We Solve", 
+"problems": {
+  "0": {
+    "title": "High Commission Fees",
+    "description": "Traditional platforms eat into your profits with exorbitant commission structures."
   },
-  "effortlessManagement": {
-    "title": "Effortless Management",
-    "subtitle": "A simple, powerful dashboard that puts you in complete control of your business.",
-    "items": [
-      "Custom Admin Panel (Full CRUD)",
-      "Secure Google Firebase Backend",
-      "Easy Content Updates (Markdown)",
-      "Automated Scalability"
-    ]
+  "1": {
+    "title": "Slow & Inefficient Processes",
+    "description": "Manual workflows and outdated systems bottleneck your business growth."
   },
-  "premiumExperience": {
-    "title": "A Premium Brand Experience",
-    "subtitle": "Delight your guests with a beautiful, professional, and accessible user experience.",
-    "items": [
-      "Multi-Theme Architecture",
-      "Dynamic Colors & Typography",
-      "Full Multilingual Support",
-      "Light & Dark Modes"
-    ]
+  "2": {
+    "title": "Digital Marketing Headache",
+    "description": "Struggling to get noticed online? We cut through the noise for you."
   }
 },
- "AgencyPricing": {
-  "title": "Simple, Transparent Ownership",
-  "subtitle": "One investment for a lifetime asset. No monthly fees. No hidden costs. Choose the foundation that's right for you.",
-  "popular": "Most Popular",
-  "packages": [
-    {
-      "name": "Digital Foundation",
-      "price": "Free*",
-      "description": "The perfect start for a professional online presence. Ideal for new businesses and local guides.",
-      "note": "*Includes a 'Website by Upmerce' link in the footer.",
-      "features": [
-        "High-Performance Website",
-        "Full Admin Panel"
-      ],
-      "cta": "Contact Us",
-      "isPopular": false
-    },
-    {
-      "name": "Business Growth",
-      "price": "1999 DH",
-      "description": "For established businesses looking to attract more customers and build a strong brand.",
-      "note": "No 'Upmerce' branding.",
-      "isPopular": true,
-      "features": [
-        "High-Performance Website",
-        "Full Admin Panel",
-        "Blog & Content System",
-        "Customer Review System"
-      ],
-      "cta": "Get a Quote"
-    },
-    {
-      "name": "Booking Engine",
-      "price": "2999 DH",
-      "description": "The ultimate solution to automate sales, capture leads, and maximize your direct revenue.",
-      "features": [
-        "High-Performance Website",
-        "Full Admin Panel",
-        "Blog & Content System",
-        "Customer Review System",
-        "Direct Booking Engine"
-      ],
-      "cta": "Get a Quote",
-      "note": "",
-      "isPopular": false
-    }
-  ]
+"solutionTitle": "Our Solution: Empowering Your Digital Journey",
+"solutionText": "We provide a comprehensive, all-in-one platform designed to streamline your operations, boost your online presence, and maximize your revenue. Say goodbye to hidden fees and hello to seamless growth."
 },
+  "AgencyPortfolio": {
+
+"title": "Our Stellar Portfolio",
+"subtitle": "Explore stunning website themes crafted to elevate your online presence and captivate your audience.",
+"themeSelectionLabel": "Choose a website theme to view details", 
+"theme_default_name": "Default Elegance",
+"theme_default_tags": "Modern, Minimal, Professional",
+"theme_adventure_name": "Adventure Seeker",
+"theme_adventure_tags": "Travel, Outdoors, Dynamic",
+"theme_luxury_name": "Luxury Retreat",
+"theme_luxury_tags": "High-End, Exclusive, Sophisticated",
+"imageAltDesktop": "Full desktop view of the {themeName} website theme",
+"imageAltTablet": "Tablet view of the {themeName} website theme",
+"imageAltMobile": "Mobile view of the {themeName} website theme",
+"ctaButton": "View Live Demo"
+},
+ "AgencyFeatures": {
+ 
+"title": "Unlock Your Business Potential",
+"subtitle": "Discover how Upmerce empowers you with tools designed for growth, efficiency, and exceptional client experiences.",
+"increaseBookings": {
+  "title": "Increase Your Bookings",
+  "subtitle": "Attract more clients and maximize your revenue with our powerful tools.",
+  "items": {
+    "0": "High-Converting Website Templates",
+    "1": "SEO Optimization & Traffic Generation",
+    "2": "Integrated Booking System",
+    "3": "Social Media Marketing"
+  }
+},
+"effortlessManagement": {
+  "title": "Effortless Management",
+  "subtitle": "Streamline operations and save time with intuitive, easy-to-use solutions.",
+  "items": {
+    "0": "Automated Scheduling & Reminders",
+    "1": "Client Relationship Management (CRM)",
+    "2": "Secure Online Payments",
+    "3": "Analytics & Reporting"
+  }
+},
+"premiumExperience": {
+  "title": "Premium Client Experience",
+  "subtitle": "Deliver unforgettable service that builds loyalty and drives referrals.",
+  "items": {
+    "0": "Personalized Client Portals",
+    "1": "Seamless Communication Tools",
+    "2": "Feedback & Review Collection",
+    "3": "Multi-language Support"
+  }
+}
+},
+ "AgencyPricing": {
+   
+"title": "Transparent Pricing, Powerful Results",
+"subtitle": "Choose the perfect plan for your business needs and start building your online empire today. No hidden fees, just growth.",
+"popular": "Popular",
+"popularPlanLabel": "This is our most popular plan: {packageName}",
+"featuresListLabel": "Features included in the {packageName} plan",
+"choosePlanLabel": "Choose the {packageName} plan",
+
+"packages": {
+  "0": {
+    "name": "Starter",
+    "price": "0 Dh",
+    "description": "Ideal for new businesses establishing their online presence.",
+    "features": {
+      "0": "Customizable Website Template",
+      "1": "Basic SEO Optimization"
+    },
+    "cta": "Choose Plan",
+    "note": "Perfect for solopreneurs.",
+    "isPopular": false 
+  },
+  "1": {
+    "name": "Growth",
+    "price": "1999 Dh",
+    "description": "Expand your reach with advanced features and dedicated support.",
+    "features": {
+      "0": "Everything in Starter",
+      "1": "Advanced SEO & Analytics",
+      "2": "Integrated CRM",
+      "3": "Social Media Integration"
+    },
+    "cta": "Choose Plan",
+    "note": "Recommended for growing businesses.",
+    "isPopular": true 
+  },
+  "2": {
+    "name": "Enterprise",
+    "price": "Custom Quote",
+    "description": "Tailored solutions for large-scale operations and complex requirements.",
+    "features": {
+      "0": "Everything in Growth",
+      "1": "Custom Feature Development",
+      "2": "Dedicated Account Manager",
+      "3": "24/7 Priority Support",
+      "4": "Advanced Security & Scalability"
+    },
+    "cta": "Contact Us",
+    "note": "",
+    "isPopular": false 
+  }
+}
+  },
   "AgencyProcess": {
-  "metadataTitle": "Our Process | Upmerce Solutions",
-  "title": "Our Strategic Partnership",
-  "subtitle": "We don't just build websites; we build business solutions. Our process is a transparent and collaborative journey designed for your success.",
-  "steps": [
-    {
-      "title": "1. Discovery & Strategy",
-      "description": "We start with a deep dive into your business goals and conduct a market analysis to build a winning strategy."
-    },
-    {
-      "title": "2. High-Performance Build",
-      "description": "We develop your website on a modern tech stack, providing you with a private preview link to watch the progress live."
-    },
-    {
-      "title": "3. Launch & SEO",
-      "description": "We implement the foundational SEO strategy and deploy your site to a world-class network for optimal speed and reliability."
-    },
-    {
-      "title": "4. Handoff & Training",
-      "description": "We transfer 100% ownership and provide a personalized training session on your new admin panel, ensuring you are fully in control."
-    }
-  ]
+
+"title": "Our Streamlined Process",
+"subtitle": "Discover how we turn your vision into a digital reality, step by step.",
+"steps": {
+  "0": {
+    "title": "Discovery & Strategy",
+    "description": "We start by understanding your goals, audience, and market to craft a tailored digital strategy."
+  },
+  "1": {
+    "title": "Design & Prototyping",
+    "description": "Our team creates intuitive and visually stunning designs, ensuring a seamless user experience."
+  },
+  "2": {
+    "title": "Development & Testing",
+    "description": "We build robust, high-performance solutions, rigorously testing them across devices and browsers."
+  },
+  "3": {
+    "title": "Launch & Optimization",
+    "description": "After a successful launch, we continue to monitor, analyze, and optimize for peak performance."
+  }
+}
 },
   "AgencyContact": {
-    "title": "Ready to Own Your Online Presence?",
-    "subtitle": "Let's discuss how a high-performance website can increase your direct bookings and secure your independence. Contact me for a free consultation.",
-    "ctaButton": "Send Message",
-    "formNameLabel": "Your Name",
-    "formEmailLabel": "Your Email Address",
-    "formMessageLabel": "Tell me about your project",
-    "loadingButton": "Sending...",
-    "alertSuccess": "Message sent! I will get back to you shortly.",
-    "errorMissingFields": "Please fill out all required fields.",
-    "errorGeneric": "An error occurred. Please try again."
+"title": "Contact Us",
+"subtitle": "Have a project in mind or just want to chat? Reach out to us!",
+"formNameLabel": "Your Name",
+"formEmailLabel": "Your Email",
+"formMessageLabel": "Your Message",
+"ctaButton": "Send Message",
+"loadingButton": "Sending...",
+"validationNameRequired": "Name is required.", 
+"validationEmailRequired": "Email is required.", 
+"validationEmailInvalid": "Please enter a valid email address.", 
+"validationMessageRequired": "Message is required.", 
+"formHasErrors": "Please correct the errors in the form.", 
+"unexpectedError": "An unexpected error occurred.", 
+"unknownError": "An unknown error occurred. Please try again later." 
   },
   "AgencyFooter": {
-    "copyright": "Upmerce Solutions. All Rights Reserved."
+    "copyright": "All rights reserved.", 
+    "shortDescription": "Driving digital success for businesses with innovative web development and marketing strategies.",
+    "footerNavs": {
+    "companyTitle": "Company",
+    "aboutUs": "About Us",
+    "services": "Services",
+    "resourcesTitle": "Resources",
+    "support": "Support",
+    "termsOfService": "Terms of Service",
+    "privacyPolicy": "Privacy Policy",
+    "contactTitle": "Contact Us"
+}
   },
   "AgencyMetadata": {
     "title": "Upmerce Solutions | High-Performance Websites for Moroccan Tourism",
     "description": "We build fast, secure, multi-theme websites for riads, tour operators, and guides in Morocco. Increase your direct bookings and escape commission fees."
   },
  "StatsSection": {
-  "title": "Results You Can Measure",
-  "subtitle": "We engineer every website to achieve elite Google PageSpeed scores. Better performance doesn't just look good—it means higher search rankings and more visitors converting into customers.",
-  "performance": "Performance",
-  "accessibility": "Accessibility",
-  "bestPractices": "Best Practices",
-  "seo": "SEO"
+ 
+"title": "Our Achievements & Standards",
+"subtitle": "We are committed to delivering exceptional quality and measurable results for every client.",
+"performance": "Performance Score",
+"accessibility": "Accessibility Score",
+"bestPractices": "Best Practices Score",
+"seo": "SEO Score"
 },
   "AgencyTechnology": {
-  "title": "The Technology Advantage",
-  "subtitle": "Your website is a business asset, not just a brochure. We build on a modern foundation to deliver results that older platforms can't match.",
-  "labels": {
-    "performance": "Performance:",
-    "security": "Security:",
-    "cost": "Cost:"
-  },
-  "oldWay": {
-    "title": "The Old Way (WordPress)",
-    "performance": "Slow and clunky due to a bloated core and a patchwork of plugins, leading to poor user experience and lower SEO rankings.",
-    "security": "Vulnerable to attacks through outdated plugins from countless third-party developers, putting your data and reputation at risk.",
-    "cost": "Deceptively expensive with hidden costs for premium plugins, security fixes, and constant developer maintenance."
-  },
-  "newWay": {
-    "title": "The Upmerce Way",
-    "performance": "Lightning-fast and smooth. We use Next.js—the same modern technology trusted by leading Moroccan platforms—to deliver a professional experience that delights users and is favored by Google.",
-    "security": "A fortress built on Google's Firebase platform. A unified, modern system that eliminates the constant risk of outdated and vulnerable plugins.",
-    "cost": "Transparent one-time pricing. No mandatory monthly fees, with a scalable pay-as-you-grow model for large-scale businesses."
-  }
+"title": "Our Technology Advantage",
+"subtitle": "Discover the stark difference between outdated practices and Upmerce's cutting-edge approach to web development.",
+"oldWay": {
+  "title": "The Old Way",
+  "performance": "Slow loading times and clunky interfaces.",
+  "security": "Vulnerable to cyber threats and data breaches.",
+  "cost": "High initial investment with hidden maintenance fees."
+},
+"newWay": {
+  "title": "The Upmerce Way",
+  "performance": "Blazing-fast performance and seamless user experience.",
+  "security": "Robust, enterprise-grade security protocols.",
+  "cost": "Cost-effective solutions with predictable monthly pricing."
+},
+"labels": {
+  "performance": "Performance:",
+  "security": "Security:",
+  "cost": "Cost:"
+}
 },
 "AgencyOwnership": {
-  "title": "Stop Renting. Start Owning.",
-  "subtitle": "When you work with us, you're not just a client—you're the owner. We build your asset and then hand you all the keys.",
-  "item1": "Your Firebase & Vercel Configs",
-  "item2": "The Complete GitHub Codebase",
-  "item3": "Full Admin Access",
-  "item4": "Zero Monthly Fees or Lock-in"
+ "title": "Your Ownership, Our Priority",
+"subtitle": "At Upmerce, we believe in transparency and empowering you with full control over your digital assets.",
+"item1": "You own 100% of your website code and assets.",
+"item2": "No hidden fees or restrictive contracts.",
+"item3": "Full access to your hosting and domain settings.",
+"item4": "Complete creative and technical control."
 },
 "FaqHub": {
-  "title": "Explore Our Expertise",
-  "subtitle": "We answer the most pressing questions for tourism operators in Morocco.",
-   "browseAllButton": "Browse All Articles"
-
-}
+ "title": "Questions on Your Mind? We Have Answers.",
+"subtitle": "Explore our knowledge hub where we tackle the most common questions businesses like yours ask.",
+"browseAllButton": "Browse All Articles"
+},
+"AgencyFounder": {
+"name": "Mustapha Ouazza",
+"title": "Founder & CEO",
+"missionStatement": "At Upmerce, our mission is to empower businesses with cutting-edge digital solutions that drive growth and foster meaningful connections. We believe in building more than just websites; we build partnerships for success."
+},
+ "Loading": { 
+    "loadingMessage": "Content is loading, please wait.",
+    "loadingText": "Loading content..."
+  }
 }
