@@ -9,4 +9,6 @@ export type PostData = {
   image: string;
   contentHtml?: string;
   tags?: string[];
+  categories?: string[]; // Added: Make it optional as not all posts might have them
+  
 };

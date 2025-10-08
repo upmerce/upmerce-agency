@@ -150,7 +150,7 @@ export const siteConfig: SiteConfig = {
 
   // Contact & Social
   contact: {
-    email: "upmerce.io@gmail.com",
+    email: "contact@upmerce.com",
     phone: "+212 766 910 997",
     address: "Agadir, 80652, Morocco",
   },

@@ -2,11 +2,16 @@
 
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
-import {getAllPostIds, getPostData } from '../../../../../lib/blog';
+import {getAllPostIds, getPostData, getSortedPostsData } from '../../../../../lib/blog';
 import mediumStyles from './MediumPost.module.css';
 import Image from 'next/image';
 import { generateCustomMetadata } from '../../../../../lib/metadata';
 import { siteConfig } from '@/app/config/site';
+import ShareButtons from '@/components/ui/ShareButtons';
+import AuthorBio from '@/components/ui/AuthorBio';
+import BlogCallToAction from '@/components/ui/BlogCallToAction';
+import RelatedPostsSection from '@/components/ui/RelatedPostsSection';
+import PostCategoriesAndTags from '@/components/ui/PostCategoriesAndTags';
 
 // The type represents the resolved object, which includes locale.
 type PostPageProps = {
@@ -79,6 +84,10 @@ export default async function PostPage({ params }: PostPageProps) {
   try {
     const { id, locale } = await params;
     const postData = await getPostData(id, locale);
+    // --- Data for new components ---
+    const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://upmerce.com';
+    const currentPostUrl = `${siteUrl}/${locale}/blog/${id}`; // Full URL for sharing
+    const allPosts = await getSortedPostsData(locale); // Fetch all posts for related section
     {/*
        const jsonLd = {
       '@context': 'https://schema.org',
@@ -112,13 +121,24 @@ export default async function PostPage({ params }: PostPageProps) {
           >
             {postData.title}
           </h1>
-          <div
-            className={`${mediumStyles["medium-post-meta"]} mb-8 flex items-center text-sm text-gray-500`}
-            style={{ gap: '0.5rem' }}
-          >
-            <span style={{ fontWeight: 500 }}>{postData.author}</span>
-            <span style={{ fontSize: '1.2em' }}>·</span>
-            <span>{postData.date}</span>
+         {/* MODIFIED: Post Meta Data Structure for better responsiveness */}
+          <div className={`${mediumStyles["medium-post-meta"]} mb-8 flex flex-col sm:flex-row sm:flex-wrap items-start sm:items-center text-sm text-gray-500`}>
+            {/* Section 1: Author and Date - Always try to keep this together */}
+            <div className="flex items-center gap-2 pr-4 mb-2 sm:mb-0 whitespace-nowrap"> {/* Added pr-4 and whitespace-nowrap */}
+              <span style={{ fontWeight: 500, color: '#b0b0b0' }}>{postData.author}</span>
+              <span style={{ fontSize: '1.2em', color: '#b0b0b0' }}>·</span>
+              <span style={{ color: '#b0b0b0' }}>{postData.date}</span>
+            </div>
+
+            {/* Section 2: Categories and Tags - Allow this to wrap naturally */}
+            {postData.categories && postData.categories.length > 0 && (
+              <PostCategoriesAndTags categories={postData.categories} tags={postData.tags || []} />
+            )}
+          </div>
+          {/* END MODIFIED Post Meta Data Structure */}
+          {/* Social Share Buttons - TOP */}
+          <div className="mb-8">
+            <ShareButtons postUrl={currentPostUrl} postTitle={postData.title} />
           </div>
           {postData.image && (
            <Image
@@ -142,6 +162,31 @@ export default async function PostPage({ params }: PostPageProps) {
             style={{ fontSize: '1.18rem', color: '#222', lineHeight: '1.8', letterSpacing: '0.01em' }}
             dangerouslySetInnerHTML={{ __html: postData.contentHtml || '' }}
           />
+          {/* Social Share Buttons - BOTTOM */}
+          <div className="mt-12 pt-6 border-t border-gray-200">
+            <ShareButtons postUrl={currentPostUrl} postTitle={postData.title} />
+          </div>
+
+          {/* Author Bio Section */}
+          <div className="mt-8">
+            <AuthorBio authorName={postData.author} locale={locale} />
+          </div>
+
+          {/* Blog Specific Call-to-Action */}
+          <div className="mt-12">
+            <BlogCallToAction locale={locale} />
+          </div>
+
+          {/* Related Posts Section */}
+          <div className="mt-12 pt-6 border-t border-gray-200">
+            <RelatedPostsSection
+              currentPostId={id}
+              currentPostCategories={postData.categories || []}
+              currentPostTags={postData.tags || []}
+              allPosts={allPosts}
+              locale={locale}
+            />
+          </div>
         </article>
       </section>
     );

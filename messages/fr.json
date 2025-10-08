@@ -257,6 +257,25 @@
  "Loading": { 
     "loadingMessage": "Le contenu est en cours de chargement, veuillez patienter.",
     "loadingText": "Chargement du contenu..."
-  }
+  },
+  "Blog" : {
+  "shareThisPost": "Partager cet article",
+  "shareOn_Facebook": "Partager sur Facebook",
+  "shareOn_TwitterX": "Partager sur Twitter/X",
+  "shareOn_LinkedIn": "Partager sur LinkedIn",
+  "shareOn_WhatsApp": "Partager sur WhatsApp",
+  "shareOn_Pinterest": "Partager sur Pinterest",
+  "shareOn_Email": "Partager par e-mail",
+  "shareOn_CopyLink": "Copier le lien",
+  "linkCopied": "Lien copié dans le presse-papiers !",
+  "relatedPostsTitle": "Vous pourriez aussi aimer",
+  "authorBioShort": "Experts en Transformation Digitale pour le Tourisme au Maroc.",
+  "readMoreAboutUs": "En savoir plus sur nous",
+  "blogCtaTitle": "Prêt à Transformer Votre Entreprise Touristique en Ligne ?",
+  "blogCtaDescription": "Laissez Upmerce Solutions construire un site web performant, axé sur la conversion et adapté au marché touristique marocain.",
+  "blogCtaButton": "Obtenez une Consultation Gratuite",
+  "viewCategory": "Voir tous les articles de la catégorie {category}",
+  "viewTag": "Voir tous les articles avec l'étiquette {tag}"
+}
 
 }

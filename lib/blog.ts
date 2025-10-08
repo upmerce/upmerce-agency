@@ -36,6 +36,8 @@ export function getSortedPostsData(locale: string): Omit<PostData, 'contentHtml'
             author?: string;
             description?: string;
             image?: string;
+            categories?: string[];
+            tags?: string[];
         };
 
         const baseUrl = process.env.NEXT_PUBLIC_API_URL || 'https://www.upmerce.com';
@@ -52,6 +54,8 @@ export function getSortedPostsData(locale: string): Omit<PostData, 'contentHtml'
             author: data.author || '',
             description: data.description || '',
             image: absoluteImageUrl,
+            categories: data.categories || [], // <-- ADDED: Provide an empty array if undefined
+            tags: data.tags || [], // <-- ADDED: Provide an empty array if undefined
         };
     });
 
@@ -100,7 +104,11 @@ export async function getPostData(id: string, locale: string): Promise<PostData>
         .process(matterResult.content);
 
     const contentHtml = processedContent.toString();
-    const restData = matterResult.data as Omit<PostData, 'id' | 'contentHtml'>;
+   // const restData = matterResult.data as Omit<PostData, 'id' | 'contentHtml'>;
+     const restData = matterResult.data as Omit<PostData, 'id' | 'contentHtml'> & {
+        categories?: string[];
+        tags?: string[];
+    };
 
     // Ensure image URL is absolute here as well for consistency
     const baseUrl = process.env.NEXT_PUBLIC_API_URL || 'https://www.upmerce.com';
@@ -114,5 +122,7 @@ export async function getPostData(id: string, locale: string): Promise<PostData>
         contentHtml,
         ...restData,
         image: absoluteImageUrl, // Override with the absolute URL
+        categories: restData.categories || [], // Ensure categories is always an array
+        tags: restData.tags || [], // Ensure tags is always an array
     };
 }

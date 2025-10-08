@@ -1,113 +1,226 @@
 /* Medium-style blog post CSS for reuse */
 
+/* Base container and background */
 .medium-post-bg {
-  background: #181a1b;
+  background: #181a1b; /* Dark background for the whole page */
+  min-height: 100vh; /* Ensure it covers full viewport height */
+  padding: 2rem 0; /* Add vertical padding */
 }
+
 .medium-post-container {
-  background: #232526;
-  color: #eaeaea;
-  padding: 2rem 1rem;
-  max-width: 700px;
+  background: #232526; /* Slightly lighter dark background for the post content area */
+  color: #eaeaea; /* Light text for readability on dark background */
+  padding: 3rem 2rem; /* Increased padding for better spacing on desktop */
+  max-width: 768px; /* Standardize max-width for better consistency */
   width: 100%;
-  margin: 0 auto;
+  margin: 0 auto; /* Center the container */
   box-sizing: border-box;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Stronger shadow for depth on dark theme */
+  border-radius: 8px; /* Keep rounded corners */
 }
+
+/* Post Title */
 .medium-post-title {
   font-family: 'Georgia', 'Times New Roman', serif;
-  color: #f5f5f5;
-  font-size: 2rem;
-  line-height: 1.2;
+  color: #fefefe; /* Very light color for prominence */
+  font-size: 2.8rem; /* Slightly larger for impact */
+  line-height: 1.25;
+  margin-bottom: 0.5em; /* Space below title */
 }
+
+/* Post Meta (Author, Date, Categories, Tags) */
 .medium-post-meta span {
-  margin-right: 0.5em;
-  color: #b0b0b0;
+  margin-right: 0.75em; /* Slightly more space */
+  color: #b0b0b0; /* Subtler text color */
 }
-.medium-post-content h2, .medium-post-content h3 {
-  margin-top: 2.2em;
+/* Ensure category/tag links within meta are styled appropriately */
+.medium-post-meta a {
+  color: #a78bfa; /* Light purple for links */
+  text-decoration: none;
+  transition: color 0.2s ease-in-out;
+}
+.medium-post-meta a:hover {
+  color: #c4b5fd; /* Lighter purple on hover */
+}
+
+/* Main Post Content */
+.medium-post-content {
+  font-size: 1.15rem; /* Slightly adjusted font size */
+  line-height: 1.8;
+  letter-spacing: 0.01em;
+  color: #d4d4d4; /* Main content text color */
+}
+
+.medium-post-content h1,
+.medium-post-content h2,
+.medium-post-content h3,
+.medium-post-content h4,
+.medium-post-content h5,
+.medium-post-content h6 {
+  margin-top: 2.5em; /* More space above headings */
   margin-bottom: 1em;
   font-weight: 700;
-  color: #fafafa;
+  color: #fefefe; /* Headings stand out */
 }
+
+.medium-post-content h1 { font-size: 2.2em; } /* Relative sizing for h1 within content */
+.medium-post-content h2 { font-size: 1.8em; }
+.medium-post-content h3 { font-size: 1.5em; }
+.medium-post-content h4 { font-size: 1.3em; }
+
 .medium-post-content p {
   margin-bottom: 1.5em;
-  color: #eaeaea;
+  color: #d4d4d4;
 }
-.medium-post-content ul, .medium-post-content ol {
+
+.medium-post-content ul,
+.medium-post-content ol {
   margin-bottom: 1.5em;
-  padding-left: 1.5em;
-  color: #eaeaea;
+  padding-left: 2em; /* Slightly more indentation for lists */
+  color: #d4d4d4;
 }
+
+.medium-post-content li {
+  margin-bottom: 0.5em;
+}
+
+.medium-post-content strong {
+  color: #fefefe; /* Bold text stands out */
+}
+
+.medium-post-content em {
+  color: #b0b0b0; /* Emphasized text slightly muted */
+}
+
+.medium-post-content a {
+  color: #a78bfa; /* Purple links */
+  text-decoration: underline;
+  transition: color 0.2s ease-in-out;
+}
+
+.medium-post-content a:hover {
+  color: #c4b5fd; /* Lighter purple on hover */
+}
+
 .medium-post-content blockquote {
-  border-left: 4px solid #444;
-  padding-left: 1em;
-  color: #b0b0b0;
+  border-left: 4px solid #8b5cf6; /* A pop of purple for blockquotes */
+  padding-left: 1.5em; /* Slightly more padding */
+  color: #c0c0c0; /* Lighter gray for quote text */
   font-style: italic;
-  margin: 2em 0;
-  background: #222;
+  margin: 2.5em 0; /* More vertical space */
+  background: #2a2c2e; /* Slightly different dark background for contrast */
+  padding-top: 0.8em;
+  padding-bottom: 0.8em;
+  border-radius: 4px;
 }
+
 .medium-post-content img {
   max-width: 100%;
+  height: auto; /* Maintain aspect ratio */
   border-radius: 6px;
-  margin: 2em 0;
-  background: #222;
+  margin: 2.5em 0;
+  display: block; /* Ensure it takes full width and centers if image is smaller */
+  background: #2e3032; /* Dark placeholder for loading images */
+  object-fit: cover; /* Ensure images fill their space nicely */
 }
-/* Add these styles for tables at the bottom of PostStyles.module.css */
 
+/* Code Blocks */
+.medium-post-content pre {
+  background-color: #1a1c1e; /* Even darker background for code blocks */
+  color: #e0e0e0;
+  padding: 1em 1.2em;
+  border-radius: 6px;
+  overflow-x: auto; /* Allow horizontal scrolling for long lines */
+  margin: 2.5em 0;
+  font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace;
+  font-size: 0.9em;
+}
+
+.medium-post-content code:not(pre code) {
+  background-color: #2a2c2e;
+  color: #a78bfa; /* Highlight inline code with purple */
+  padding: 0.2em 0.4em;
+  border-radius: 3px;
+  font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace;
+  font-size: 0.9em;
+}
+
+/* Tables */
 .medium-post-content table {
   width: 100%;
   border-collapse: collapse;
   margin: 2.5em 0;
   font-size: 0.95em;
   border-radius: 8px;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.05);
-  display: table;
-  max-width: 100%;
+  overflow: hidden; /* Ensures rounded corners on table borders */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); /* Softer shadow for tables */
 }
 
 .medium-post-content th,
 .medium-post-content td {
-  border: 1px solid #e5e5e5;
-  padding: 0.6em 0.5em;
+  border: 1px solid #3a3c3e; /* Darker border for table cells */
+  padding: 0.8em 1em; /* Increased padding */
   text-align: left;
-  color: #eaeaea;
-  font-size: 0.95em;
-@media (max-width: 600px) {
-  .medium-post-container {
-    padding: 1rem 0.2rem;
-    max-width: 100vw;
-    width: 100vw;
-    margin: 0;
-  }
-  .medium-post-title {
-    font-size: 1.3rem;
-    padding: 0.2em 0.1em;
-  }
-  .medium-post-content table {
-    font-size: 0.85em;
-    margin: 1em 0;
-    border-radius: 4px;
-    box-shadow: none;
-    max-width: 100vw;
-    width: 100vw;
-    display: table;
-  }
-  .medium-post-content th,
-  .medium-post-content td {
-    padding: 0.4em 0.2em;
-    font-size: 0.85em;
-  }
-}
+  color: #d4d4d4; /* Text color */
 }
 
 .medium-post-content th {
-  background-color: #fafafa;
+  background-color: #333638; /* Darker header background */
   font-weight: 600;
-  color: #181a1b;
+  color: #fefefe; /* Header text color */
 }
 
 .medium-post-content tr:nth-child(even) {
-  background-color: #fcfcfc;
-  color: #181a1b;
-  background-color: #232526;
-  color: #eaeaea;
+  background-color: #2e3032; /* Slightly different background for even rows */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) { /* Adjusted breakpoint slightly */
+  .medium-post-container {
+    padding: 2rem 1rem; /* Adjust padding for tablets/smaller desktops */
+  }
+  .medium-post-title {
+    font-size: 2.2rem; /* Scale down title */
+  }
+  .medium-post-content {
+    font-size: 1rem; /* Slightly smaller content font */
+  }
+  .medium-post-content h1 { font-size: 1.8em; }
+  .medium-post-content h2 { font-size: 1.5em; }
+  .medium-post-content h3 { font-size: 1.3em; }
+  .medium-post-content th,
+  .medium-post-content td {
+    padding: 0.6em 0.8em;
+  }
+}
+
+@media (max-width: 480px) { /* Mobile-specific adjustments */
+  .medium-post-container {
+    padding: 1.5rem 0.75rem; /* More compact on very small screens */
+    border-radius: 0; /* Remove border-radius on mobile for full width look */
+    max-width: 100%; /* Ensure it takes full width */
+    margin: 0; /* Remove margin */
+  }
+  .medium-post-title {
+    font-size: 1.8rem; /* Further scale down title */
+    padding: 0 0.5rem; /* Add horizontal padding to title */
+  }
+  .medium-post-meta {
+    padding: 0 0.5rem; /* Add padding to meta info */
+  }
+  .medium-post-content {
+    font-size: 0.95rem; /* Even smaller content font */
+  }
+  .medium-post-content table {
+    font-size: 0.8em;
+    margin: 1.5em 0;
+  }
+  .medium-post-content th,
+  .medium-post-content td {
+    padding: 0.4em 0.5em;
+  }
+  .medium-post-content pre {
+    padding: 0.8em;
+    font-size: 0.8em;
+  }
 }

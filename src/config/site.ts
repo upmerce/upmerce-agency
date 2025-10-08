@@ -31,8 +31,8 @@ export const ROBOTS: Robots = {
 // This new 'contact' object consolidates all primary communication channels.
 export const contactConfig = {
   // Primary email for general inquiries (replaces or is used by EMAIL/SUPPORT_EMAIL)
-  email: "upmerce.io.gmail.com", // Changed from upmerce.io.gmail.com to a more professional domain email
-  supportEmail: "support@upmercesolutions.com", // Specific support email if different from general contact
+  email: "contact@upmerce.com", // Changed from contact@upmerce.com to a more professional domain email
+  supportEmail: "contact@upmerce.com", // Specific support email if different from general contact
   
   phoneNumber: {
     raw: "212766910997", // Your WhatsApp Business number (e.g., "212600000000" for Morocco)

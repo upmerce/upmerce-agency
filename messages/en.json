@@ -260,5 +260,26 @@
  "Loading": { 
     "loadingMessage": "Content is loading, please wait.",
     "loadingText": "Loading content..."
-  }
+  },
+"Blog" : {
+
+  "shareThisPost": "Share this post",
+  "shareOn_Facebook": "Share on Facebook",
+  "shareOn_TwitterX": "Share on Twitter/X",
+  "shareOn_LinkedIn": "Share on LinkedIn",
+  "shareOn_WhatsApp": "Share on WhatsApp",
+  "shareOn_Pinterest": "Share on Pinterest",
+  "shareOn_Email": "Share via Email",
+  "shareOn_CopyLink": "Copy Link",
+  "linkCopied": "Link copied to clipboard!",
+  "relatedPostsTitle": "You might also like",
+  "authorBioShort": "Digital Transformation Experts for Tourism in Morocco.",
+  "readMoreAboutUs": "Read more about us",
+  "blogCtaTitle": "Ready to Transform Your Tourism Business Online?",
+  "blogCtaDescription": "Let Upmerce Solutions build a high-performance, conversion-driven website tailored for the Moroccan tourism market.",
+  "blogCtaButton": "Get a Free Consultation",
+  "viewCategory": "View all posts in category {category}",
+  "viewTag": "View all posts with tag {tag}"
+
+}  
 }

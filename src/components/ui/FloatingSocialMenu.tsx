@@ -27,7 +27,7 @@ export default function FloatingSocialMenu() {
   const socialLinks = [
     {
       name: 'WhatsApp',
-      iconSrc: 'icons/whatsapp.svg', // Ensure this path is correct
+      iconSrc: '/icons/whatsapp.svg', // Ensure this path is correct
       // Use the localized message in the URL
       href: `https://wa.me/${contactConfig.phoneNumber.raw}?text=${encodeURIComponent(localizedWhatsappMessage)}`,
       bgColor: 'bg-green-500',
@@ -40,7 +40,7 @@ export default function FloatingSocialMenu() {
     },
     ...(contactConfig.linkedin ? [{ // Only include if LinkedIn URL exists
       name: 'LinkedIn',
-      iconSrc: 'icons/linkedin.svg', // Ensure this path is correct
+      iconSrc: '/icons/linkedin.svg', // Ensure this path is correct
       href: contactConfig.linkedin,
       bgColor: 'bg-blue-600',
     }] : []),

@@ -254,6 +254,25 @@
  "Loading": { 
     "loadingMessage": "يتم تحميل المحتوى، يرجى الانتظار.",
     "loadingText": "جاري تحميل المحتوى..."
-  }
+  },
+"Blog" : {
+  "shareThisPost": "شارك هذا المقال",
+  "shareOn_Facebook": "شارك على فيسبوك",
+  "shareOn_TwitterX": "شارك على تويتر/إكس",
+  "shareOn_LinkedIn": "شارك على لينكدإن",
+  "shareOn_WhatsApp": "شارك عبر واتساب",
+  "shareOn_Pinterest": "شارك على بنترست",
+  "shareOn_Email": "شارك عبر البريد الإلكتروني",
+  "shareOn_CopyLink": "انسخ الرابط",
+  "linkCopied": "تم نسخ الرابط إلى الحافظة!",
+  "relatedPostsTitle": "قد يعجبك أيضاً",
+  "authorBioShort": "خبراء التحول الرقمي لقطاع السياحة في المغرب.",
+  "readMoreAboutUs": "اقرأ المزيد عنا",
+  "blogCtaTitle": "هل أنت مستعد لتحويل عملك السياحي عبر الإنترنت؟",
+  "blogCtaDescription": "دع Upmerce Solutions تبني لك موقعًا إلكترونيًا عالي الأداء وموجهًا للتحويلات ومصممًا خصيصًا لسوق السياحة المغربي.",
+  "blogCtaButton": "احصل على استشارة مجانية",
+  "viewCategory": "عرض جميع المقالات في فئة {category}",
+  "viewTag": "عرض جميع المقالات بوسم {tag}"
+}  
 
 }
