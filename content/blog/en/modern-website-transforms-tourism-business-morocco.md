@@ -81,5 +81,5 @@ Our tourism template offers you the winning trifecta for online success: uncompr
 
 **Ready to transform your online presence and unlock more direct bookings than ever before?**
 
-> * [**Explore our live demo to experience the difference for yourself.**](https://tourism-agency-snowy.vercel.app/en)
+> * [**Explore our live demo to experience the difference for yourself.**](https://upmerce-adventure-demo.vercel.app/en)
 > * [**Contact Upmerce Solutions today for a free consultation.**](https://www.upmerce.com/en#contact)

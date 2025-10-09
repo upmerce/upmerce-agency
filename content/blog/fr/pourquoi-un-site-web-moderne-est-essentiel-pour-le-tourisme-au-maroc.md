@@ -81,5 +81,5 @@ Notre template pour le tourisme vous offre le trio gagnant du succès en ligne :
 
 **Prêt à transformer votre présence en ligne et à débloquer plus de réservations directes que jamais ?**
 
-* [**Explorez notre démo en direct pour vivre l'expérience par vous-même.**](https://tourism-agency-snowy.vercel.app/fr)
+* [**Explorez notre démo en direct pour vivre l'expérience par vous-même.**](https://upmerce-adventure-demo.vercel.app/fr)
 * [**Contactez Upmerce Solutions dès aujourd'hui pour une consultation gratuite.**](https://www.upmerce.com/fr#contact)
