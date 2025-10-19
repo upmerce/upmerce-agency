@@ -27,7 +27,7 @@ const nextConfig = {
         pathname: '/images/**', // Or '/**' to allow all images from the domain
       },
     ],
-     minimumCacheTTL: 60 * 60 * 24 * 30, // Cache for 30 days
+     minimumCacheTTL: 60 * 60 * 24 * 30, // Cache for 30 days,
   },
 };
 
