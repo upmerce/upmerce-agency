@@ -281,5 +281,143 @@
   "viewCategory": "View all posts in category {category}",
   "viewTag": "View all posts with tag {tag}"
 
-}  
+},
+
+  "Onboarding": {
+    "title": "Website Project Questionnaire",
+    "introduction": "This questionnaire will help us gather all the necessary information to build a professional website that perfectly represents your business and helps you achieve your goals. Please be as detailed as possible.",
+
+    "part1Title": "Part 1: Your Business & Brand",
+    "officialNameLabel": "Official Business Name",
+    "officialNamePlaceholder": "e.g., Atlas Mountain Guides SARL",
+    "officialNameHelp": "This is for legal and copyright purposes.",
+    "websiteDisplayNameLabel": "Website Display Name",
+    "websiteDisplayNameHelp": "The name that will prominently appear on your website header and branding.",
+    "websiteDisplayNamePlaceholder": "e.g., Hassan's Atlas Treks",
+    "sloganLabel": "Your Slogan / Tagline (in one sentence)",
+    "sloganPlaceholder": "e.g., Authentic, private trekking tours in the High Atlas Mountains, led by local Berber guides.",
+    "logoLabel": "Do you have a logo?",
+    "logoHelp": "If yes, please upload it in a high-quality format (PNG, SVG).",
+    "sloganHelp": "A catchy phrase that describes your business.",
+    
+    "businessCategoryLabel": "Your Business Category",
+    "businessCategoryHelp": "What type of business are you?",
+    "businessCategoryPlaceholder": "Select category",
+    "businessCategoryOptionTouristicTransport": "Touristic Transport",
+    "businessCategoryOptionTourOperator": "Tour Operator",
+    "businessCategoryOptionHotel": "Hotel/Riad",
+    "businessCategoryOptionRestaurant": "Restaurant/Café",
+    "businessCategoryOptionECommerce": "E-commerce",
+    "businessCategoryOptionOther": "Other",
+
+    "industrySpecificsLabel": "Specifics of Your Services/Products",
+    "industrySpecificsHelp": "Briefly describe your main services or products. E.g., 'Airport transfers, day trips to Ourika Valley, Sahara tours', or 'Handmade leather goods'.",
+    "industrySpecificsPlaceholder": "e.g., Airport transfers, day trips to Ourika Valley, Sahara tours",
+
+
+    "part2Title": "Part 2: Design & Style",
+    "primaryColorLabel": "Primary Brand Color",
+    "primaryColorPlaceholder": "e.g., #D4AF37 or 'a deep blue'",
+    "primaryColorHelp": "This is the main color for buttons, links, and key elements. If you know the hex code, that's perfect. If not, just describe it.",
+    "secondaryColorLabel": "Secondary Accent Color",
+    "secondaryColorPlaceholder": "e.g., 'a warm terracotta orange'",
+    "secondaryColorHelp": "A second color to complement your primary one.",
+
+    "templateThemeLabel": "Preferred Website Design Theme",
+    "templateThemeHelp": "Choose a theme that best reflects your brand's style. This will dictate the overall look and feel.",
+    "templateThemePlaceholder": "Select a theme",
+    "templateThemeOptionDefault": "Default (Clean & Modern)",
+    "templateThemeOptionAdventure": "Adventure (Bold & Dynamic)",
+    "templateThemeOptionLuxury": "Luxury (Elegant & Refined)",
+    "templateThemeOptionCustom": "Custom (Let's discuss)",
+
+
+    "part3Title": "Part 3: Website Content & Contact",
+    "contactInfoTitle": "Contact Information",
+    "emailLabel": "Email Address",
+    "emailPlaceholder": "For customer inquiries",
+    "phoneLabel": "Phone Number",
+    "phonePlaceholder": "The main business phone number",
+    "addressLabel": "Physical Address",
+    "addressPlaceholder": "Your main office or meeting point",
+    
+    "whatsappNumberLabel": "WhatsApp Number",
+    "whatsappNumberPlaceholder": "e.g., +212 6 XX XX XX XX",
+    "whatsappNumberHelp": "If you use WhatsApp for business communication, please provide the number.",
+
+    "socialMediaTitle": "Social Media Links",
+    "facebookLabel": "Facebook (Full URL)",
+    "facebookPlaceholder": "e.g., https://www.facebook.com/yourpage",
+    "instagramLabel": "Instagram (Full URL)",
+    "instagramPlaceholder": "e.g., https://www.instagram.com/yourhandle",
+    "twitterLabel": "Twitter / X (Full URL)",
+    "twitterPlaceholder": "e.g., https://twitter.com/yourhandle",
+
+    "aboutUsContentLabel": "About Your Business",
+    "aboutUsContentPlaceholder": "Tell us your company story, mission, and values. This will be the content for your 'About Us' page.",
+    "aboutUsContentHelp": "A brief overview of your company's history, mission, and what makes you unique.",
+
+    "serviceDescriptionLabel": "Describe Your Main Services/Tours",
+    "serviceDescriptionPlaceholder": "e.g., We offer private airport transfers, guided city tours in Marrakech, and multi-day desert excursions.",
+    "serviceDescriptionHelp": "Provide a detailed description of the main services or types of tours you offer.",
+
+    "tourLocationsServedLabel": "Main Tour Locations Served",
+    "tourLocationsServedPlaceholder": "e.g., Imlil & High Atlas, Marrakech Day Trips, Agafay Desert",
+    "tourLocationsServedHelp": "List the primary cities, regions, or destinations where your tours operate, separated by commas.",
+
+    "paymentMethodsAcceptedLabel": "Accepted Payment Methods",
+    "paymentMethodsAcceptedHelp": "Which payment methods do you accept from clients?",
+    "paymentMethodsAcceptedOptionCash": "Cash on site",
+    "paymentMethodsAcceptedOptionBankTransfer": "Bank Transfer",
+    "paymentMethodsAcceptedOptionOnlinePaymentGateway": "Online Payment Gateway (e.g., Credit Card)",
+    "paymentMethodsAcceptedOptionOther": "Other (e.g., PayPal)",
+
+    "websiteLanguageOptionsLabel": "Desired Website Languages",
+    "websiteLanguageOptionsHelp": "Which languages should your website be available in?",
+    "websiteLanguageOptionAR": "Arabic",
+    "websiteLanguageOptionFR": "French",
+    "websiteLanguageOptionEN": "English",
+    "websiteLanguageOptionES": "Spanish",
+    "websiteLanguageOptionDE": "German",
+
+
+    "part4Title": "Part 4: SEO (Search Engine Optimization)",
+    "keywordsLabel": "Keywords",
+    "keywordsPlaceholder": "e.g., atlas mountains trek, morocco hiking, imlil guide (list 5-10 words/phrases customers search for)",
+    "keywordsHelp": "Please list 5-10 words or phrases that customers would typically search on Google to find your business, separated by commas.",
+    "socialShareImageLabel": "Social Media Sharing Image",
+    "socialShareImageHelp": "Provide one beautiful, high-quality photo that best represents your business. This image will appear when your website link is shared on social media.",
+
+    "part5Title": "Part 5: Features & Specific Needs",
+    "reviewsSystemLabel": "Customer Reviews Section",
+    "reviewsSystemHelp": "Allows guests to leave and display reviews directly on your site to build trust.",
+    "blogSystemLabel": "Blog & News Section",
+    "blogSystemHelp": "A blog to share stories, updates, and attract more visitors from Google.",
+    "bookingEngineLabel": "Direct Booking Engine",
+    "bookingEngineHelp": "A form or system for customers to request or make reservations with specific dates and preferences.",
+    "experiencesSectionLabel": "Dedicated 'Experiences' / 'Tours' Section",
+    "experiencesSectionHelp": "A structured section to showcase your specific tours, packages, or unique experiences.",
+    "faqSectionLabel": "FAQ (Frequently Asked Questions) Section",
+    "faqSectionHelp": "An organized section to answer common customer questions, reducing direct inquiries.",
+
+
+    "submitButton": "Submit Questionnaire",
+    "formSuccess": "Thank you! Your questionnaire has been submitted successfully. We'll be in touch shortly!",
+    "formError": "An error occurred. Please try again. If the problem persists, contact us directly.",
+    "requiredField": "This field is required",
+    "invalidUrl": "Please enter a valid URL",
+
+    "businessBrandSection": {
+      "title": "Business & Brand Identity",
+      "description": "Provide the core details of your business and brand. This information will be used across your website."
+    },
+    "emailHelp": "The primary email for customer inquiries.",
+    "phoneHelp": "The main phone number for your business.",
+    "addressHelp": "Your physical business location, if applicable.",
+    "facebookHelp": "Link to your official Facebook page.",
+    "instagramHelp": "Link to your official Instagram profile.",
+    "twitterHelp": "Link to your official Twitter/X profile."
+  }
+
+
 }

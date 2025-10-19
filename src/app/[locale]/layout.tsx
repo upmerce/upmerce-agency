@@ -77,7 +77,10 @@ export default async function RootLayout({
           It should be the very first interactive element in the body.
         */}
         <ThemeRegistry>
-          <NextIntlClientProvider locale={locale || 'en'} messages={messages}>
+          <NextIntlClientProvider 
+             locale={locale || 'en'} 
+             messages={messages}
+             >
             <div className="flex flex-col min-h-screen">
               <Header />
               {/* Accessibility: The <main> tag is correctly used as a landmark. */}
