@@ -27,6 +27,7 @@ export const BusinessBrandSection: React.FC<BusinessBrandSectionProps> = ({ cont
           helpText={t('officialNameHelp')}
           control={control}
           error={errors.officialName?.message}
+          maxLength={100} // <-- ADDED MAXLENGTH
         />
         <InputField
           name="websiteDisplayName"
@@ -35,6 +36,7 @@ export const BusinessBrandSection: React.FC<BusinessBrandSectionProps> = ({ cont
           helpText={t('websiteDisplayNameHelp')}
           control={control}
           error={errors.websiteDisplayName?.message}
+          maxLength={60} // <-- ADDED MAXLENGTH
         />
         <InputField
           name="slogan"
@@ -43,9 +45,9 @@ export const BusinessBrandSection: React.FC<BusinessBrandSectionProps> = ({ cont
           helpText={t('sloganHelp')}
           control={control}
           error={errors.slogan?.message}
+          maxLength={200} // <-- ADDED MAXLENGTH
         />
 
-        {/* --- NEW: Business Category SelectField --- */}
         <SelectField
           name="businessCategory"
           label={t('businessCategoryLabel')}
@@ -62,19 +64,17 @@ export const BusinessBrandSection: React.FC<BusinessBrandSectionProps> = ({ cont
             { value: 'other', label: t('businessCategoryOptionOther') },
           ]}
         />
-        {/* --- END NEW --- */}
 
-        {/* --- CORRECTED: Industry Specifics using TextAreaField --- */}
-        <TextareaField // <-- NOW USING TextAreaField
+        <TextareaField
           name="industrySpecifics"
           label={t('industrySpecificsLabel')}
           placeholder={t('industrySpecificsPlaceholder')}
           helpText={t('industrySpecificsHelp')}
           control={control}
           error={errors.industrySpecifics?.message}
-          rows={4} // Rows for the textarea
+          rows={4}
+          maxLength={500} // <-- ADDED MAXLENGTH
         />
-        {/* --- END CORRECTED --- */}
 
         {children}
       </div>

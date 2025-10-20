@@ -7,10 +7,11 @@ interface InputFieldProps<TFieldValues extends FieldValues> {
   control: Control<TFieldValues>;
   label: string;
   placeholder?: string;
-  type?: 'text' | 'email' | 'password' | 'number' | 'url' | 'tel'; // Added 'url' type
+  type?: 'text' | 'email' | 'password' | 'number' | 'url' | 'tel';
   error?: string;
   helpText?: string;
   disabled?: boolean;
+  maxLength?: number; // <-- ADDED THIS PROP
 }
 
 export const InputField = <TFieldValues extends FieldValues>({
@@ -22,13 +23,14 @@ export const InputField = <TFieldValues extends FieldValues>({
   error,
   helpText,
   disabled = false,
+  maxLength, // <-- DESTRUCTURED THE PROP
 }: InputFieldProps<TFieldValues>) => {
   const {
     field: { onChange, onBlur, value, name: fieldName, ref },
   } = useController({ name, control });
 
   return (
-    <div className="flex flex-col space-y-2">
+    <div className="flex flex-col">
       <label htmlFor={fieldName} className="block text-gray-200 text-sm font-medium mb-1">
         {label}
       </label>
@@ -36,12 +38,13 @@ export const InputField = <TFieldValues extends FieldValues>({
         id={fieldName}
         name={fieldName}
         type={type}
-        value={value === null || value === undefined ? '' : value as string} // Ensure controlled component
+        value={value === null || value === undefined ? '' : (value as string)}
         onChange={onChange}
         onBlur={onBlur}
         ref={ref}
         placeholder={placeholder}
         disabled={disabled}
+        maxLength={maxLength} // <-- APPLIED THE PROP HERE
         className={`
           block w-full px-4 py-2 rounded-md border
           bg-gray-700 text-gray-100

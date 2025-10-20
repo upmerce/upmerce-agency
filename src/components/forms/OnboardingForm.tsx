@@ -17,66 +17,52 @@ import { FeaturesPackagesSection } from './sections/FeaturesPackagesSection';
 
 // IMPORTANT: Import the generic FileUploadField
 import { FileUploadField } from '@/components/forms/FileUploadField';
-// IMPORTANT: Use YOUR InputField component (commented out as it's not directly used here)
-// import { InputField } from '@/components/ui/InputField'; 
 
-
-// --- Zod Schema for Validation ---
 // --- Zod Schema for Validation ---
 const schema = z.object({
-  questionnaireId: z.string().uuid('Invalid Questionnaire ID').optional(),
-  officialName: z.string().min(1, 'requiredField'),
-  websiteDisplayName: z.string().min(1, 'requiredField'),
-  slogan: z.string().optional(),
-  logoUrl: z.string().optional().or(z.literal('')),
-  
-  // --- NEW FIELDS: Business Category & Specifics ---
+  questionnaireId: z.string().uuid('Invalid Questionnaire ID').optional(),
+  
+  // Business & Brand Section
+  officialName: z.string().min(1, 'requiredField').max(100, 'maxLengthExceeded'),
+  websiteDisplayName: z.string().min(1, 'requiredField').max(60, 'maxLengthExceeded'),
+  slogan: z.string().max(200, 'maxLengthExceeded').optional(),
+  logoUrl: z.string().optional().or(z.literal('')),
   businessCategory: z.enum(['touristicTransport', 'tourOperator', 'hotel', 'restaurant', 'eCommerce', 'other'] as const, {
     error: 'requiredField',
   }),
-  industrySpecifics: z.string().min(1, 'requiredField'), // Making this required for detailed info
-  // --- END NEW FIELDS ---
-
-  primaryColor: z.string().min(1, 'requiredField'),
-  secondaryColor: z.string().optional(),
-  // --- NEW FIELD: Template Theme ---
+  industrySpecifics: z.string().min(1, 'requiredField').max(500, 'maxLengthExceeded'),
+  
+  // Design & Style Section
+  primaryColor: z.string().min(1, 'requiredField'),
+  secondaryColor: z.string().optional(),
   templateTheme: z.enum(['default', 'adventure', 'luxury', 'custom'] as const, {
     error: 'requiredField',
   }),
-  // --- END NEW FIELD ---
-
-  email: z.string().email('invalidUrl').min(1, 'requiredField'), // Using invalidUrl for email error too for consistency
-  phone: z.string().min(1, 'requiredField'),
-  address: z.string().optional(),
-  // --- NEW FIELD: WhatsApp Number ---
-  whatsappNumber: z.string().optional(),
-  // --- END NEW FIELD ---
-
-  facebook: z.string().url('invalidUrl').optional().or(z.literal('')),
-  instagram: z.string().url('invalidUrl').optional().or(z.literal('')),
-  twitter: z.string().url('invalidUrl').optional().or(z.literal('')),
-
-  // --- NEW FIELDS: About Us, Service Description, Tour Locations Served (replaces tourLocations) ---
-  aboutUsContent: z.string().min(1, 'requiredField'), // Making About Us required
-  serviceDescription: z.string().min(1, 'requiredField'), // Making Service Description required
-  tourLocationsServed: z.string().optional(), // Now specific for tour businesses
-  // --- END NEW FIELDS ---
-
-  // --- NEW FIELDS: Payment Methods & Languages ---
+  
+  // Website Content Section
+  email: z.string().email('invalidUrl').min(1, 'requiredField').max(254, 'maxLengthExceeded'),
+  phone: z.string().min(1, 'requiredField').max(25, 'maxLengthExceeded'),
+  address: z.string().max(250, 'maxLengthExceeded').optional(),
+  whatsappNumber: z.string().max(25, 'maxLengthExceeded').optional(),
+  facebook: z.string().url('invalidUrl').max(255, 'maxLengthExceeded').optional().or(z.literal('')),
+  instagram: z.string().url('invalidUrl').max(255, 'maxLengthExceeded').optional().or(z.literal('')),
+  twitter: z.string().url('invalidUrl').max(255, 'maxLengthExceeded').optional().or(z.literal('')),
+  aboutUsContent: z.string().min(1, 'requiredField').max(2500, 'maxLengthExceeded'),
+  serviceDescription: z.string().min(1, 'requiredField').max(2500, 'maxLengthExceeded'),
+  tourLocationsServed: z.string().max(500, 'maxLengthExceeded').optional(),
   paymentMethodsAccepted: z.array(z.enum(['cash', 'bankTransfer', 'onlinePaymentGateway', 'other'] as const)).optional(),
   websiteLanguageOptions: z.array(z.enum(['ar', 'fr', 'en', 'es', 'de'] as const)).optional(),
-  // --- END NEW FIELDS ---
-
-  keywords: z.string().optional(),
-  socialShareImageUrl: z.string().optional().or(z.literal('')),
-  
-  reviewsSystem: z.boolean(),
-  blogSystem: z.boolean(),
-  bookingEngine: z.boolean(),
-  // --- NEW FIELDS: Experiences & FAQ ---
+  
+  // SEO Section
+  keywords: z.string().max(500, 'maxLengthExceeded').optional(),
+  socialShareImageUrl: z.string().optional().or(z.literal('')),
+  
+  // Features & Packages Section
+  reviewsSystem: z.boolean(),
+  blogSystem: z.boolean(),
+  bookingEngine: z.boolean(),
   experiencesSection: z.boolean(),
   faqSection: z.boolean(),
-  // --- END NEW FIELDS ---
 });
 
 export type FormData = z.infer<typeof schema>;
@@ -103,6 +89,13 @@ const CustomAlert: React.FC<{
 
 const QUESTIONNAIRE_ID_STORAGE_KEY = 'user_questionnaire_id';
 
+// --- NEW: Define theme demo links ---
+const themeDemos = {
+    default: 'https://upmerce-default-demo.vercel.app/', // Replace with your actual URL
+    adventure: 'https://upmerce-adventure-demo.vercel.app/', // Replace with your actual URL
+    luxury: 'https://upmerce-luxury-demo.vercel.app/', // Replace with your actual URL
+};
+
 export default function OnboardingForm() {
   const t = useTranslations('Onboarding');
   const [loading, setLoading] = useState(false);
@@ -113,51 +106,39 @@ export default function OnboardingForm() {
   const [isFormReady, setIsFormReady] = useState(false);
 
 const methods = useForm<FormData>({
-    resolver: zodResolver(schema),
-    defaultValues: {
-      questionnaireId: undefined,
-      officialName: '',
-      websiteDisplayName: '',
-      slogan: '',
-      logoUrl: '',
-      // --- NEW DEFAULTS: Business Category & Specifics ---
-      businessCategory: undefined, // Or a default like 'other' if you prefer
+    resolver: zodResolver(schema),
+    defaultValues: {
+      questionnaireId: undefined,
+      officialName: '',
+      websiteDisplayName: '',
+      slogan: '',
+      logoUrl: '',
+      businessCategory: undefined,
       industrySpecifics: '',
-      // --- END NEW DEFAULTS ---
-      primaryColor: '',
-      secondaryColor: '',
-      // --- NEW DEFAULT: Template Theme ---
-      templateTheme: undefined, // Or a default like 'default'
-      // --- END NEW DEFAULT ---
-      email: '',
-      phone: '',
-      address: '',
-      // --- NEW DEFAULT: WhatsApp Number ---
+      primaryColor: '',
+      secondaryColor: '',
+      templateTheme: undefined,
+      email: '',
+      phone: '',
+      address: '',
       whatsappNumber: '',
-      // --- END NEW DEFAULT ---
-      facebook: '',
-      instagram: '',
-      twitter: '',
-      // --- NEW DEFAULTS: About Us, Service Description, Tour Locations Served ---
+      facebook: '',
+      instagram: '',
+      twitter: '',
       aboutUsContent: '',
       serviceDescription: '',
-      tourLocationsServed: '', // New specific field
-      // --- END NEW DEFAULTS ---
-      // --- NEW DEFAULTS: Payment Methods & Languages ---
-      paymentMethodsAccepted: [], // Initialize as empty array
-      websiteLanguageOptions: [], // Initialize as empty array
-      // --- END NEW DEFAULTS ---
-      keywords: '',
-      socialShareImageUrl: '',
-      reviewsSystem: false,
-      blogSystem: false,
-      bookingEngine: false,
-      // --- NEW DEFAULTS: Experiences & FAQ ---
+      tourLocationsServed: '',
+      paymentMethodsAccepted: [],
+      websiteLanguageOptions: [],
+      keywords: '',
+      socialShareImageUrl: '',
+      reviewsSystem: false,
+      blogSystem: false,
+      bookingEngine: false,
       experiencesSection: false,
       faqSection: false,
-      // --- END NEW DEFAULTS ---
-    },
-  });
+    },
+  });
 
   const {
     control,
@@ -172,124 +153,69 @@ const methods = useForm<FormData>({
 
     if (!storedId) {
       localStorage.setItem(QUESTIONNAIRE_ID_STORAGE_KEY, idToUse);
-      console.log('Generated and stored new questionnaireId:', idToUse);
-    } else {
-      console.log('Retrieved existing questionnaireId from localStorage:', idToUse);
-    }
-
+    } 
     setActiveQuestionnaireId(idToUse);
+   
+    const fetchAndPopulateForm = async (id: string) => {
+      try {
+        const response = await fetch('/api/start-questionnaire', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ questionnaireId: id }),
+        });
 
-    // src/components/forms/OnboardingForm.tsx - inside useEffect
+        if (!response.ok) {
+          throw new Error('Failed to fetch existing questionnaire data.');
+        }
 
-    const fetchAndPopulateForm = async (id: string) => {
-      try {
-        console.log('Calling /api/start-questionnaire to fetch data for ID:', id);
-        const response = await fetch('/api/start-questionnaire', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({ questionnaireId: id }),
-        });
-
-        if (!response.ok) {
-          throw new Error('Failed to fetch existing questionnaire data.');
-        }
-
-        const data = await response.json();
-        console.log('Backend response with formData:', data); // <--- IMPORTANT: CHECK THIS LOG IN YOUR CONSOLE
-        
-        // Construct populatedData directly from fetched data, prioritizing fetched values
-        const populatedData: FormData = {
-            questionnaireId: id, 
-
-            officialName: data.formData?.officialName ?? '',
-            websiteDisplayName: data.formData?.websiteDisplayName ?? '',
-            slogan: data.formData?.slogan ?? '',
-            logoUrl: data.formData?.logoUrl ?? '', 
-            
-            // --- NEW MAPPING: Business Category & Specifics ---
-            // Ensure these are correctly cast as Zod enum expects specific string types
-            // If data.formData?.businessCategory is null/undefined, it becomes undefined (correct for enum default)
+        const data = await response.json();
+        
+        const populatedData: FormData = {
+            questionnaireId: id, 
+            officialName: data.formData?.officialName ?? '',
+            websiteDisplayName: data.formData?.websiteDisplayName ?? '',
+            slogan: data.formData?.slogan ?? '',
+            logoUrl: data.formData?.logoUrl ?? '', 
             businessCategory: (data.formData?.businessCategory as FormData['businessCategory']) ?? undefined, 
             industrySpecifics: data.formData?.industrySpecifics ?? '',
-            // --- END NEW MAPPING ---
-
-            primaryColor: data.formData?.primaryColor ?? '',
-            secondaryColor: data.formData?.secondaryColor ?? '',
-            
-            // --- NEW MAPPING: Template Theme ---
+            primaryColor: data.formData?.primaryColor ?? '',
+            secondaryColor: data.formData?.secondaryColor ?? '',
             templateTheme: (data.formData?.templateTheme as FormData['templateTheme']) ?? undefined,
-            // --- END NEW MAPPING ---
-
-            email: data.formData?.email ?? '',
-            phone: data.formData?.phone ?? '',
-            address: data.formData?.address ?? '',
-            
-            // --- NEW MAPPING: WhatsApp Number ---
+            email: data.formData?.email ?? '',
+            phone: data.formData?.phone ?? '',
+            address: data.formData?.address ?? '',
             whatsappNumber: data.formData?.whatsappNumber ?? '',
-            // --- END NEW MAPPING ---
-
-            facebook: data.formData?.facebook ?? '',
-            instagram: data.formData?.instagram ?? '',
-            twitter: data.formData?.twitter ?? '',
-            
-            // --- NEW MAPPING: About Us, Service Description, Tour Locations Served ---
+            facebook: data.formData?.facebook ?? '',
+            instagram: data.formData?.instagram ?? '',
+            twitter: data.formData?.twitter ?? '',
             aboutUsContent: data.formData?.aboutUsContent ?? '',
             serviceDescription: data.formData?.serviceDescription ?? '',
-            tourLocationsServed: data.formData?.tourLocationsServed ?? '', // Maps new field
-            // --- END NEW MAPPING ---
-
-            // --- NEW MAPPING: Payment Methods & Languages ---
-            // Ensure these are cast to string arrays correctly or defaulted to empty array
+            tourLocationsServed: data.formData?.tourLocationsServed ?? '',
             paymentMethodsAccepted: (data.formData?.paymentMethodsAccepted as FormData['paymentMethodsAccepted']) ?? [],
             websiteLanguageOptions: (data.formData?.websiteLanguageOptions as FormData['websiteLanguageOptions']) ?? [],
-            // --- END NEW MAPPING ---
-
-            keywords: data.formData?.keywords ?? '',
-            reviewsSystem: data.formData?.reviewsSystem ?? false,
-            blogSystem: data.formData?.blogSystem ?? false,
-            bookingEngine: data.formData?.bookingEngine ?? false,
-            
-            // --- NEW MAPPING: Experiences & FAQ ---
+            keywords: data.formData?.keywords ?? '',
+            reviewsSystem: data.formData?.reviewsSystem ?? false,
+            blogSystem: data.formData?.blogSystem ?? false,
+            bookingEngine: data.formData?.bookingEngine ?? false,
             experiencesSection: data.formData?.experiencesSection ?? false,
             faqSection: data.formData?.faqSection ?? false,
-            // --- END NEW MAPPING ---
-
-            socialShareImageUrl: data.formData?.socialShareImageUrl ?? '',
-        };
-        
-        // --- CONSOLE LOGS FOR DEBUGGING ---
-        console.log('Populated data for socialShareImageUrl (after mapping):', populatedData.socialShareImageUrl);
-        console.log('Populated data for logoUrl (after mapping):', populatedData.logoUrl);
-        // ADD MORE SPECIFIC LOGS FOR NEW FIELDS
-        console.log('Populated data for businessCategory:', populatedData.businessCategory);
-        console.log('Populated data for industrySpecifics:', populatedData.industrySpecifics);
-        console.log('Populated data for templateTheme:', populatedData.templateTheme);
-        console.log('Populated data for whatsappNumber:', populatedData.whatsappNumber);
-        console.log('Populated data for aboutUsContent:', populatedData.aboutUsContent);
-        console.log('Populated data for serviceDescription:', populatedData.serviceDescription);
-        console.log('Populated data for tourLocationsServed:', populatedData.tourLocationsServed);
-        console.log('Populated data for paymentMethodsAccepted:', populatedData.paymentMethodsAccepted);
-        console.log('Populated data for websiteLanguageOptions:', populatedData.websiteLanguageOptions);
-        console.log('Populated data for experiencesSection:', populatedData.experiencesSection);
-        console.log('Populated data for faqSection:', populatedData.faqSection);
-        // --- END CONSOLE LOGS ---
-
-        reset(populatedData);
-        console.log('Form reset with data:', populatedData); // Keep this for overall check
-        setIsFormReady(true);
-
-      } catch (error) {
-        console.error('Error fetching and populating form data:', error);
-        setIsFormReady(true);
-      }
-    };
+            socialShareImageUrl: data.formData?.socialShareImageUrl ?? '',
+        };
+        
+        reset(populatedData);
+        setIsFormReady(true);
+      } catch (error) {
+        console.error('Error fetching and populating form data:', error);
+        setIsFormReady(true);
+      }
+    };
 
     if (idToUse) {
       fetchAndPopulateForm(idToUse);
     }
-  }, [reset, methods, setActiveQuestionnaireId]); // `methods` is needed if using `methods.getValues()`
+  }, [reset]);
 
   const onSubmit = async (data: FormData) => {
     setLoading(true);
@@ -306,7 +232,6 @@ const methods = useForm<FormData>({
     data.questionnaireId = activeQuestionnaireId;
 
     try {
-      console.log('Submitting form data:', data);
       const response = await fetch('/api/onboarding', {
         method: 'POST',
         headers: {
@@ -349,9 +274,7 @@ const methods = useForm<FormData>({
     );
   }
 
-  // Define commonFieldProps for individual fields (they still need 't')
   const commonFieldProps = { control, errors, t, questionnaireId: activeQuestionnaireId };
-  // Define commonSectionProps for sections (they don't need 't')
   const commonSectionProps = { control, errors, questionnaireId: activeQuestionnaireId };
 
 
@@ -367,7 +290,6 @@ const methods = useForm<FormData>({
       <div className="bg-gray-800 p-6 md:p-10 rounded-lg shadow-xl border border-gray-700">
         <form onSubmit={handleSubmit(onSubmit)} className="space-y-8">
 
-          {/* Business & Brand Section */}
           <BusinessBrandSection {...commonSectionProps}>
             <FileUploadField
                 name="logoUrl"
@@ -378,7 +300,9 @@ const methods = useForm<FormData>({
             />
           </BusinessBrandSection>
           
-          <DesignStyleSection {...commonSectionProps} />
+          {/* --- UPDATED: Pass themeDemos as a prop --- */}
+          <DesignStyleSection {...commonSectionProps} themeDemos={themeDemos} />
+          
           <WebsiteContentSection {...commonSectionProps} />
           
           <SeoSection {...commonSectionProps}>

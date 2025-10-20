@@ -4,7 +4,7 @@ import { Control, FieldErrors } from 'react-hook-form';
 import { useTranslations } from 'next-intl';
 import { FormData } from '@/components/forms/OnboardingForm';
 import { InputField } from '@/components/ui/InputField';
-import { MultiCheckboxField } from '@/components/ui/MultiCheckboxField'; // <-- NEW IMPORT
+import { MultiCheckboxField } from '@/components/ui/MultiCheckboxField';
 import { TextareaField } from '@/components/ui/TextareaField';
 
 interface WebsiteContentSectionProps {
@@ -27,6 +27,7 @@ export const WebsiteContentSection: React.FC<WebsiteContentSectionProps> = ({ co
           type="email"
           control={control}
           error={errors.email?.message}
+          maxLength={254} // <-- ADDED MAXLENGTH
         />
         <InputField
           name="phone"
@@ -36,8 +37,8 @@ export const WebsiteContentSection: React.FC<WebsiteContentSectionProps> = ({ co
           type="tel"
           control={control}
           error={errors.phone?.message}
+          maxLength={25} // <-- ADDED MAXLENGTH
         />
-        {/* --- NEW: WhatsApp Number InputField --- */}
         <InputField
           name="whatsappNumber"
           label={t('whatsappNumberLabel')}
@@ -46,8 +47,8 @@ export const WebsiteContentSection: React.FC<WebsiteContentSectionProps> = ({ co
           type="tel"
           control={control}
           error={errors.whatsappNumber?.message}
+          maxLength={25} // <-- ADDED MAXLENGTH
         />
-        {/* --- END NEW --- */}
         <InputField
           name="address"
           label={t('addressLabel')}
@@ -55,6 +56,7 @@ export const WebsiteContentSection: React.FC<WebsiteContentSectionProps> = ({ co
           helpText={t('addressHelp')}
           control={control}
           error={errors.address?.message}
+          maxLength={250} // <-- ADDED MAXLENGTH
         />
         <InputField
           name="facebook"
@@ -64,6 +66,7 @@ export const WebsiteContentSection: React.FC<WebsiteContentSectionProps> = ({ co
           type="url"
           control={control}
           error={errors.facebook?.message}
+          maxLength={255} // <-- ADDED MAXLENGTH
         />
         <InputField
           name="instagram"
@@ -73,6 +76,7 @@ export const WebsiteContentSection: React.FC<WebsiteContentSectionProps> = ({ co
           type="url"
           control={control}
           error={errors.instagram?.message}
+          maxLength={255} // <-- ADDED MAXLENGTH
         />
         <InputField
           name="twitter"
@@ -82,9 +86,8 @@ export const WebsiteContentSection: React.FC<WebsiteContentSectionProps> = ({ co
           type="url"
           control={control}
           error={errors.twitter?.message}
+          maxLength={255} // <-- ADDED MAXLENGTH
         />
-
-        {/* --- NEW: About Us Content TextAreaField --- */}
         <TextareaField
           name="aboutUsContent"
           label={t('aboutUsContentLabel')}
@@ -93,10 +96,8 @@ export const WebsiteContentSection: React.FC<WebsiteContentSectionProps> = ({ co
           control={control}
           error={errors.aboutUsContent?.message}
           rows={6}
+          maxLength={2500} // <-- ADDED MAXLENGTH
         />
-        {/* --- END NEW --- */}
-
-        {/* --- NEW: Service Description TextAreaField --- */}
         <TextareaField
           name="serviceDescription"
           label={t('serviceDescriptionLabel')}
@@ -105,21 +106,17 @@ export const WebsiteContentSection: React.FC<WebsiteContentSectionProps> = ({ co
           control={control}
           error={errors.serviceDescription?.message}
           rows={6}
+          maxLength={2500} // <-- ADDED MAXLENGTH
         />
-        {/* --- END NEW --- */}
-
-        {/* --- REPLACED: tourLocations with tourLocationsServed InputField --- */}
         <InputField
-          name="tourLocationsServed" // Changed name
-          label={t('tourLocationsServedLabel')} // Changed label
-          placeholder={t('tourLocationsServedPlaceholder')} // Changed placeholder
-          helpText={t('tourLocationsServedHelp')} // Changed help text
+          name="tourLocationsServed"
+          label={t('tourLocationsServedLabel')}
+          placeholder={t('tourLocationsServedPlaceholder')}
+          helpText={t('tourLocationsServedHelp')}
           control={control}
-          error={errors.tourLocationsServed?.message} // Changed error
+          error={errors.tourLocationsServed?.message}
+          maxLength={500} // <-- ADDED MAXLENGTH
         />
-        {/* --- END REPLACED --- */}
-
-        {/* --- NEW: Payment Methods MultiCheckboxField --- */}
         <MultiCheckboxField
           name="paymentMethodsAccepted"
           label={t('paymentMethodsAcceptedLabel')}
@@ -133,9 +130,6 @@ export const WebsiteContentSection: React.FC<WebsiteContentSectionProps> = ({ co
             { value: 'other', label: t('paymentMethodsAcceptedOptionOther') },
           ]}
         />
-        {/* --- END NEW --- */}
-
-        {/* --- NEW: Website Language Options MultiCheckboxField --- */}
         <MultiCheckboxField
           name="websiteLanguageOptions"
           label={t('websiteLanguageOptionsLabel')}
@@ -150,7 +144,6 @@ export const WebsiteContentSection: React.FC<WebsiteContentSectionProps> = ({ co
             { value: 'de', label: t('websiteLanguageOptionDE') },
           ]}
         />
-        {/* --- END NEW --- */}
       </div>
     </section>
   );
