@@ -2,327 +2,330 @@
   "Common": {
     "backToTop": "Back to Top"
   },
-  "AgencyNavigation": {
-"siteTitle": "Upmerce Solutions", 
-"mainNavigation": "Main navigation", 
-"mobileNavigation": "Mobile navigation menu", 
-"openMenu": "Open main menu", 
-"closeMenu": "Close main menu", 
-"home": "Home",
-"ourProcess": "Our Process",
-"features": "Features",
-"portfolio": "Portfolio",
-"pricing": "Pricing",
-"faq": "FAQ",
-"blog": "Blog",
-"ctaButton": "Get a Quote",
-"contactUsDescription": "for a custom project quote" ,
-"whatsappMessage": "Hello, I would like to inquire about your services for my business." ,
-"skipToContent": "Skip to main content"
-
-},
- "AgencyHero": {
-  "title_part1": "Own Your Success.",
-  "title_part2": "Stop Renting It.",
-  "subtitle": "Tired of high commissions and slow websites? We build beautiful, high-performance platforms for Moroccan hotels and riads, giving you total ownership and direct bookings.",
-  "ctaButton": "Explore Our Themes",
-  "heroImageAlt": "A stunning Moroccan landscape representing Upmerce's services",
-  "ctaButtonAriaLabel": "View our portfolio projects" 
-},
+  "AgencyMetadata": {
+    "title": "Website Creation (Hotel & Riad) in Morocco | Upmerce",
+    "description": "We create ultra-fast websites for hotels and riads, with a Dashboard. Free Lifetime Hosting. Get your professional site for 0 Dh."
+  },
+  "AgencyHero": {
+    "title_part1": "Your Professional Website",
+    "title_part2": "for Riad or Hotel. From 0 Dh.",
+    "subtitle": "Stop paying commissions AND hosting fees. Get an ultra-fast Next.js website with your own admin dashboard. Free Lifetime Hosting.",
+    "ctaButton": "See our Plans",
+    "heroImageAlt": "A modern Moroccan riad, example of a website created by Upmerce",
+    "ctaButtonAriaLabel": "See our plans and prices"
+  },
   "AgencyProblemSolution": {
- "problemTitle": "The Problem We Solve", 
-"problems": {
-  "0": {
-    "title": "High Commission Fees",
-    "description": "Traditional platforms eat into your profits with exorbitant commission structures."
+    "problemTitle": "The Old Model is Designed to Make You Pay",
+    "problems": {
+      "0": {
+        "title": "High Commissions (Booking, etc.)",
+        "description": "Every booking via an OTA reduces your margin. You're paying rent for your own customers."
+      },
+      "1": {
+        "title": "Slow & Outdated Sites (WordPress)",
+        "description": "Slow and vulnerable WordPress sites frustrate your customers and are penalized by Google."
+      },
+      "2": {
+        "title": "Hidden Fees (Annual Hosting)",
+        "description": "Agencies offer you 1 year, then charge you high hosting fees every year."
+      }
+    },
+    "solutionTitle": "Our Solution: True Ownership. Zero Fees.",
+    "solutionText": "We offer you a modern platform (Next.js) that you own 100%. You get an admin dashboard, incredible speed, and free hosting. Forever."
   },
-  "1": {
-    "title": "Slow & Inefficient Processes",
-    "description": "Manual workflows and outdated systems bottleneck your business growth."
+  "AgencyFounder": {
+    "name": "Mustapha Ouazza",
+    "title": "Founder & Lead Developer",
+    "missionStatement": "I created Upmerce to end the old model. Our mission is to free Moroccan hoteliers from commissions and hidden annual fees. We offer you full ownership of fast, secure technology and free lifetime hosting. Your success is no longer for rent."
   },
-  "2": {
-    "title": "Digital Marketing Headache",
-    "description": "Struggling to get noticed online? We cut through the noise for you."
-  }
-},
-"solutionTitle": "Our Solution: Empowering Your Digital Journey",
-"solutionText": "We provide a comprehensive, all-in-one platform designed to streamline your operations, boost your online presence, and maximize your revenue. Say goodbye to hidden fees and hello to seamless growth."
-},
+  "StatsSection": {
+    "title": "The Technical Proof (Non-WordPress)",
+    "subtitle": "Your customers won't wait for a slow site. Our Next.js sites are designed for speed. Here are our Google Lighthouse scores, guaranteeing your performance and SEO.",
+    "performance": "Performance",
+    "accessibility": "Accessibility",
+    "bestPractices": "Best Practices",
+    "seo": "SEO"
+  },
+  "AgencyFeatures": {
+    "title": "A Complete Platform, Not Just a Website",
+    "subtitle": "Discover all the included features, from your private admin panel to free lifetime hosting.",
+    "increaseBookings": {
+      "title": "The Foundation (Speed & Security)",
+      "subtitle": "A modern technical base for performance.",
+      "items": [
+        "Ultra-Fast Performance (Next.js)",
+        "Advanced Security (Google Technology)",
+        "Free Lifetime Hosting (on your account)",
+        "Total Ownership of Code & Data",
+        "Responsive Design (Mobile-First)",
+        "Light / Dark Theme Support",
+        "Domain Connection Assistance",
+        "Optimized for Social Media"
+      ]
+    },
+    "effortlessManagement": {
+      "title": "Your Private Admin Panel",
+      "subtitle": "Easily control 100% of your content.",
+      "items": [
+        "Admin Dashboard (Google Technology)",
+        "Easy Blog Management (Add/Edit/Delete)",
+        "Easy Tour & Experience Management",
+        "Easy Customer Review Management",
+        "SEO-Friendly Content (Markdown)",
+        "Multilingual Support (Ar, Fr, En, Es...)",
+        "Secure and Personal Admin Access"
+      ]
+    },
+    "premiumExperience": {
+      "title": "The Booking Engine",
+      "subtitle": "Convert visitors into direct customers.",
+      "items": [
+        "Direct Booking System (0% Comm.)",
+        "Payment Integration (Stripe)",
+        "Booking Management Dashboard",
+        "Automatic Booking Confirmations",
+        "Customer Review and Rating System",
+        "Personalized Customer Portals",
+        "WhatsApp & Email Integration"
+      ]
+    }
+  },
   "AgencyPortfolio": {
-
-"title": "Our Stellar Portfolio",
-"subtitle": "Explore stunning website themes crafted to elevate your online presence and captivate your audience.",
-"themeSelectionLabel": "Choose a website theme to view details", 
-"theme_default_name": "Default Elegance",
-"theme_default_tags": "Modern, Minimal, Professional",
-"theme_adventure_name": "Adventure Seeker",
-"theme_adventure_tags": "Travel, Outdoors, Dynamic",
-"theme_luxury_name": "Luxury Retreat",
-"theme_luxury_tags": "High-End, Exclusive, Sophisticated",
-"imageAltDesktop": "Full desktop view of the {themeName} website theme",
-"imageAltTablet": "Tablet view of the {themeName} website theme",
-"imageAltMobile": "Mobile view of the {themeName} website theme",
-"ctaButton": "View Live Demo"
-},
- "AgencyFeatures": {
- 
-"title": "Unlock Your Business Potential",
-"subtitle": "Discover how Upmerce empowers you with tools designed for growth, efficiency, and exceptional client experiences.",
-"increaseBookings": {
-  "title": "Increase Your Bookings",
-  "subtitle": "Attract more clients and maximize your revenue with our powerful tools.",
-  "items": {
-    "0": "High-Converting Website Templates",
-    "1": "SEO Optimization & Traffic Generation",
-    "2": "Integrated Booking System",
-    "3": "Social Media Marketing"
-  }
-},
-"effortlessManagement": {
-  "title": "Effortless Management",
-  "subtitle": "Streamline operations and save time with intuitive, easy-to-use solutions.",
-  "items": {
-    "0": "Automated Scheduling & Reminders",
-    "1": "Client Relationship Management (CRM)",
-    "2": "Secure Online Payments",
-    "3": "Analytics & Reporting"
-  }
-},
-"premiumExperience": {
-  "title": "Premium Client Experience",
-  "subtitle": "Deliver unforgettable service that builds loyalty and drives referrals.",
-  "items": {
-    "0": "Personalized Client Portals",
-    "1": "Seamless Communication Tools",
-    "2": "Feedback & Review Collection",
-    "3": "Multi-language Support"
-  }
-}
-},
- "AgencyPricing": {
-   
-"title": "Transparent Pricing, Powerful Results",
-"subtitle": "Choose the perfect plan for your business needs and start building your online empire today. No hidden fees, just growth.",
-"popular": "Popular",
-"popularPlanLabel": "This is our most popular plan: {packageName}",
-"featuresListLabel": "Features included in the {packageName} plan",
-"choosePlanLabel": "Choose the {packageName} plan",
-
-"packages": {
-  "0": {
-    "name": "Starter",
-    "price": "0 Dh",
-    "description": "Ideal for new businesses establishing their online presence.",
-    "features": {
-      "0": "Customizable Website Template",
-      "1": "Basic SEO Optimization"
+    "title": "Our Professional Themes",
+    "subtitle": "Choose a premium design, optimized for hotels, riads, and travel agencies. Each theme is ultra-fast and SEO-ready.",
+    "themeSelectionLabel": "Choose a website theme to preview",
+    "theme_default_name": "Modern Elegance",
+    "theme_default_tags": "Modern, Minimalist, Hotel & Riad",
+    "theme_adventure_name": "Adventure & Discovery",
+    "theme_adventure_tags": "Tours, Travel Agency, Dynamic",
+    "theme_luxury_name": "Luxury & Prestige",
+    "theme_luxury_tags": "Luxury Riad, High-End, Exclusive",
+    "imageAltDesktop": "Desktop view of the {themeName} theme",
+    "imageAltTablet": "Tablet view of the {themeName} theme",
+    "imageAltMobile": "Mobile view of the {themeName} theme",
+    "ctaButton": "See Live Demo"
+  },
+  "AgencyTechnology": {
+    "title": "Our Technology vs The Old Way",
+    "subtitle": "Why our sites are faster, more secure, and cheaper in the long run.",
+    "oldWay": {
+      "title": "The Old Way (WordPress)",
+      "performance": "Slow sites, poor Google score, frustrating mobile experience.",
+      "security": "Vulnerable to hacks, constant and mandatory plugin updates.",
+      "cost": "High annual maintenance and hosting fees. You are a tenant."
     },
-    "cta": "Choose Plan",
-    "note": "Perfect for solopreneurs.",
-    "isPopular": false 
-  },
-  "1": {
-    "name": "Growth",
-    "price": "1999 Dh",
-    "description": "Expand your reach with advanced features and dedicated support.",
-    "features": {
-      "0": "Everything in Starter",
-      "1": "Advanced SEO & Analytics",
-      "2": "Integrated CRM",
-      "3": "Social Media Integration"
+    "newWay": {
+      "title": "The Upmerce Approach (Next.js)",
+      "performance": "Blazing-fast performance. Google score 95+. Perfect mobile experience.",
+      "security": "Modern security (Google Technology). Zero plugin maintenance.",
+      "cost": "Free Lifetime Hosting. Zero maintenance fees. You are 100% owner."
     },
-    "cta": "Choose Plan",
-    "note": "Recommended for growing businesses.",
-    "isPopular": true 
+    "labels": {
+      "performance": "Performance:",
+      "security": "Security:",
+      "cost": "Cost:"
+    }
   },
-  "2": {
-    "name": "Enterprise",
-    "price": "Custom Quote",
-    "description": "Tailored solutions for large-scale operations and complex requirements.",
-    "features": {
-      "0": "Everything in Growth",
-      "1": "Custom Feature Development",
-      "2": "Dedicated Account Manager",
-      "3": "24/7 Priority Support",
-      "4": "Advanced Security & Scalability"
-    },
-    "cta": "Contact Us",
-    "note": "",
-    "isPopular": false 
-  }
-}
+  "AgencyOwnership": {
+    "title": "Your Site. Your Domain. Your Accounts.",
+    "subtitle": "Stop being a 'tenant' of an agency. Become 100% owner of your digital assets.",
+    "item1": "You own 100% of your website code.",
+    "item2": "Free Lifetime Hosting on *your own* Vercel account.",
+    "item3": "Secure database on *your own* Google account.",
+    "item4": "You control your domain name. No hidden fees, ever."
   },
-  "AgencyProcess": {
-
-"title": "Our Streamlined Process",
-"subtitle": "Discover how we turn your vision into a digital reality, step by step.",
-"steps": {
-  "0": {
-    "title": "Discovery & Strategy",
-    "description": "We start by understanding your goals, audience, and market to craft a tailored digital strategy."
+  "AgencyPricing": {
+    "title": "A Transparent Offer, Without Competition",
+    "subtitle": "Start for free and only pay when you need direct booking. Zero hidden fees.",
+    "popular": "Popular",
+    "popularPlanLabel": "This is our most popular plan: {packageName}",
+    "featuresListLabel": "Features included in the {packageName} plan",
+    "choosePlanLabel": "Choose the {packageName} plan",
+    "packages": {
+      "0": {
+        "name": "Starter",
+        "price": "0 Dh",
+        "description": "Your complete professional website to manage your content and attract customers on Google.",
+        "features": [
+          "Multi-page Next.js Website",
+          "Admin Dashboard (Google Technology)",
+          "Easy Management (Blog, Tours, Reviews)",
+          "Free Lifetime Hosting (on your account)",
+          "Domain Connection Assistance",
+          "Advanced SEO Platform",
+          "Multilingual & Dark/Light Theme",
+          "100% Code Ownership"
+        ],
+        "cta": "Start for Free",
+        "note": "No credit card required.",
+        "isPopular": false
+      },
+      "1": {
+        "name": "Growth",
+        "price": "1999 Dh",
+        "description": "Unlock direct booking and turn your site into a profit machine.",
+        "features": [
+          "Everything in Starter, plus:",
+          "Direct Booking Engine (0% Comm.)",
+          "Secure Payment Integration (Stripe)",
+          "Booking Management (via Admin)",
+          "Automatic Booking Confirmations",
+          "Personalized Customer Portals",
+          "Priority Support"
+        ],
+        "cta": "Choose This Plan",
+        "note": "One-time payment. Launch offer.",
+        "isPopular": true
+      },
+      "2": {
+        "name": "Enterprise",
+        "price": "Custom Quote",
+        "description": "A tailor-made solution for complex needs and advanced integrations.",
+        "features": [
+          "Everything in Growth, plus:",
+          "Custom Features",
+          "Advanced Integrations (e.g., Channel Manager)",
+          "Dedicated Support & Training",
+          "Advanced Performance & Security"
+        ],
+        "cta": "Contact Us",
+        "note": "",
+        "isPopular": false
+      }
+    }
   },
-  "1": {
-    "title": "Design & Prototyping",
-    "description": "Our team creates intuitive and visually stunning designs, ensuring a seamless user experience."
+  "FaqHub": {
+    "title": "Your Questions, Our Expert Answers",
+    "subtitle": "Browse our articles and find clear answers on performance, SEO, and direct bookings.",
+    "browseAllButton": "See All Articles"
   },
-  "2": {
-    "title": "Development & Testing",
-    "description": "We build robust, high-performance solutions, rigorously testing them across devices and browsers."
-  },
-  "3": {
-    "title": "Launch & Optimization",
-    "description": "After a successful launch, we continue to monitor, analyze, and optimize for peak performance."
-  }
-}
-},
   "AgencyContact": {
-"title": "Contact Us",
-"subtitle": "Have a project in mind or just want to chat? Reach out to us!",
-"formNameLabel": "Your Name",
-"formEmailLabel": "Your Email",
-"formMessageLabel": "Your Message",
-"ctaButton": "Send Message",
-"loadingButton": "Sending...",
-"validationNameRequired": "Name is required.", 
-"validationEmailRequired": "Email is required.", 
-"validationEmailInvalid": "Please enter a valid email address.", 
-"validationMessageRequired": "Message is required.", 
-"formHasErrors": "Please correct the errors in the form.", 
-"unexpectedError": "An unexpected error occurred.", 
-"unknownError": "An unknown error occurred. Please try again later." 
+    "title": "Ready to Launch Your Site?",
+    "subtitle": "Start with our 0 Dh plan or request a free quote for direct booking. Tell us about your project.",
+    "formNameLabel": "Your Name",
+    "formEmailLabel": "Your Email",
+    "formMessageLabel": "Tell us about your project (your riad, hotel, agency...)",
+    "ctaButton": "Get My Free Quote",
+    "loadingButton": "Sending...",
+    "validationNameRequired": "Your name is required.",
+    "validationEmailRequired": "Your email is required.",
+    "validationEmailInvalid": "Please enter a valid email address.",
+    "validationMessageRequired": "A message is required.",
+    "formHasErrors": "Please correct the errors in the form.",
+    "unexpectedError": "An unexpected error occurred.",
+    "unknownError": "An unknown error occurred. Please try again."
+  },
+  "AgencyNavigation": {
+    "siteTitle": "Upmerce Solutions",
+    "mainNavigation": "Main navigation",
+    "mobileNavigation": "Mobile navigation menu",
+    "openMenu": "Open main menu",
+    "closeMenu": "Close main menu",
+    "home": "Home",
+    "ourProcess": "Our Approach",
+    "features": "Features",
+    "portfolio": "Our Themes",
+    "pricing": "Pricing",
+    "faq": "FAQ",
+    "blog": "Blog",
+    "ctaButton": "Free Quote",
+    "contactUsDescription": "for a custom project quote",
+    "whatsappMessage": "Hello, I'd like to inquire about your services for my business.",
+    "skipToContent": "Skip to main content"
   },
   "AgencyFooter": {
-    "copyright": "All rights reserved.", 
-    "shortDescription": "Driving digital success for businesses with innovative web development and marketing strategies.",
+    "copyright": "All rights reserved.",
+    "shortDescription": "We create ultra-fast Next.js websites for Moroccan hotels and riads. Take back control of your direct bookings.",
     "footerNavs": {
-    "companyTitle": "Company",
-    "aboutUs": "About Us",
-    "services": "Services",
-    "resourcesTitle": "Resources",
-    "support": "Support",
-    "termsOfService": "Terms of Service",
-    "privacyPolicy": "Privacy Policy",
-    "contactTitle": "Contact Us"
-}
+      "companyTitle": "Company",
+      "aboutUs": "About Us",
+      "services": "Features",
+      "resourcesTitle": "Resources",
+      "support": "Support",
+      "termsOfService": "Terms of Service",
+      "privacyPolicy": "Privacy Policy",
+      "contactTitle": "Contact Us"
+    }
   },
-  "AgencyMetadata": {
-    "title": "Upmerce Solutions | High-Performance Websites for Moroccan Tourism",
-    "description": "We build fast, secure, multi-theme websites for riads, tour operators, and guides in Morocco. Increase your direct bookings and escape commission fees."
+  "AgencyProcess": {
+    "title": "Our Strategic Process",
+    "subtitle": "From idea to launch, here's how we build your 100% owned website.",
+    "steps": {
+      "0": {
+        "title": "Discovery & SEO Strategy",
+        "description": "We analyze your competitors, your goals, and define a keyword strategy to generate direct bookings."
+      },
+      "1": {
+        "title": "Design & User Experience (UX)",
+        "description": "Creation of a fast, modern, and conversion-optimized design that captivates customers on mobile and desktop."
+      },
+      "2": {
+        "title": "High-Performance Development (Next.js)",
+        "description": "This is where we code your site with modern technology for maximum speed and security. No WordPress."
+      },
+      "3": {
+        "title": "Launch & Ownership Transfer",
+        "description": "We deploy your site, connect your domain via your accounts, and transfer 100% ownership of the code to you. Zero monthly fees."
+      }
+    }
   },
- "StatsSection": {
- 
-"title": "Our Achievements & Standards",
-"subtitle": "We are committed to delivering exceptional quality and measurable results for every client.",
-"performance": "Performance Score",
-"accessibility": "Accessibility Score",
-"bestPractices": "Best Practices Score",
-"seo": "SEO Score"
-},
-  "AgencyTechnology": {
-"title": "Our Technology Advantage",
-"subtitle": "Discover the stark difference between outdated practices and Upmerce's cutting-edge approach to web development.",
-"oldWay": {
-  "title": "The Old Way",
-  "performance": "Slow loading times and clunky interfaces.",
-  "security": "Vulnerable to cyber threats and data breaches.",
-  "cost": "High initial investment with hidden maintenance fees."
-},
-"newWay": {
-  "title": "The Upmerce Way",
-  "performance": "Blazing-fast performance and seamless user experience.",
-  "security": "Robust, enterprise-grade security protocols.",
-  "cost": "Cost-effective solutions with predictable monthly pricing."
-},
-"labels": {
-  "performance": "Performance:",
-  "security": "Security:",
-  "cost": "Cost:"
-}
-},
-"AgencyOwnership": {
- "title": "Your Ownership, Our Priority",
-"subtitle": "At Upmerce, we believe in transparency and empowering you with full control over your digital assets.",
-"item1": "You own 100% of your website code and assets.",
-"item2": "No hidden fees or restrictive contracts.",
-"item3": "Full access to your hosting and domain settings.",
-"item4": "Complete creative and technical control."
-},
-"FaqHub": {
- "title": "Questions on Your Mind? We Have Answers.",
-"subtitle": "Explore our knowledge hub where we tackle the most common questions businesses like yours ask.",
-"browseAllButton": "Browse All Articles"
-},
-"AgencyFounder": {
-"name": "Mustapha Ouazza",
-"title": "Founder & CEO",
-"missionStatement": "At Upmerce, our mission is to empower businesses with cutting-edge digital solutions that drive growth and foster meaningful connections. We believe in building more than just websites; we build partnerships for success."
-},
- "Loading": { 
+  "Loading": {
     "loadingMessage": "Content is loading, please wait.",
     "loadingText": "Loading content..."
   },
-"Blog" : {
-
-  "shareThisPost": "Share this post",
-  "shareOn_Facebook": "Share on Facebook",
-  "shareOn_TwitterX": "Share on Twitter/X",
-  "shareOn_LinkedIn": "Share on LinkedIn",
-  "shareOn_WhatsApp": "Share on WhatsApp",
-  "shareOn_Pinterest": "Share on Pinterest",
-  "shareOn_Email": "Share via Email",
-  "shareOn_CopyLink": "Copy Link",
-  "linkCopied": "Link copied to clipboard!",
-  "relatedPostsTitle": "You might also like",
-  "authorBioShort": "Digital Transformation Experts for Tourism in Morocco.",
-  "readMoreAboutUs": "Read more about us",
-  "blogCtaTitle": "Ready to Transform Your Tourism Business Online?",
-  "blogCtaDescription": "Let Upmerce Solutions build a high-performance, conversion-driven website tailored for the Moroccan tourism market.",
-  "blogCtaButton": "Get a Free Consultation",
-  "viewCategory": "View all posts in category {category}",
-  "viewTag": "View all posts with tag {tag}"
-
-},
-
+  "Blog": {
+    "shareThisPost": "Share this post",
+    "shareOn_Facebook": "Share on Facebook",
+    "shareOn_TwitterX": "Share on Twitter/X",
+    "shareOn_LinkedIn": "Share on LinkedIn",
+    "shareOn_WhatsApp": "Share on WhatsApp",
+    "shareOn_Pinterest": "Share on Pinterest",
+    "shareOn_Email": "Share via Email",
+    "shareOn_CopyLink": "Copy link",
+    "linkCopied": "Link copied to clipboard!",
+    "relatedPostsTitle": "You might also like",
+    "authorBioShort": "Experts in Digital Transformation for Tourism in Morocco.",
+    "readMoreAboutUs": "Read more about us",
+    "blogCtaTitle": "Ready to transform your online tourism business?",
+    "blogCtaDescription": "Let Upmerce Solutions create a high-performance, conversion-focused website tailored to the Moroccan tourism market.",
+    "blogCtaButton": "Get a free consultation",
+    "viewCategory": "View all posts in category {category}",
+    "viewTag": "View all posts with tag {tag}"
+  },
   "Onboarding": {
     "title": "Website Project Questionnaire",
-    "introduction": "This questionnaire will help us gather all the necessary information to build a professional website that perfectly represents your business and helps you achieve your goals. Please be as detailed as possible.",
-
+    "introduction": "This questionnaire will help us gather all the necessary information to create a professional website that perfectly represents your business and helps you achieve your goals. Please be as detailed as possible.",
     "part1Title": "Part 1: Your Business & Brand",
-    "officialNameLabel": "Official Business Name",
-    "officialNamePlaceholder": "e.g., Atlas Mountain Guides SARL",
+    "officialNameLabel": "Official Company Name",
+    "officialNamePlaceholder": "E.g., Atlas Mountain Guides SARL",
     "officialNameHelp": "This is for legal and copyright purposes.",
     "websiteDisplayNameLabel": "Website Display Name",
-    "websiteDisplayNameHelp": "The name that will prominently appear on your website header and branding.",
-    "websiteDisplayNamePlaceholder": "e.g., Hassan's Atlas Treks",
-    "sloganLabel": "Your Slogan / Tagline (in one sentence)",
-    "sloganPlaceholder": "e.g., Authentic, private trekking tours in the High Atlas Mountains, led by local Berber guides.",
+    "websiteDisplayNameHelp": "The name that will appear prominently in your site header and branding.",
+    "websiteDisplayNamePlaceholder": "E.g., Hassan's Atlas Treks",
+    "sloganLabel": "Your Slogan / Tagline (one sentence)",
+    "sloganPlaceholder": "E.g., Authentic and private treks in the High Atlas, guided by local Berbers.",
     "logoLabel": "Do you have a logo?",
     "logoHelp": "If yes, please upload it in a high-quality format (PNG, SVG).",
-    "sloganHelp": "A catchy phrase that describes your business.",
-    
+    "sloganHelp": "A catchy phrase describing your business.",
     "businessCategoryLabel": "Your Business Category",
     "businessCategoryHelp": "What type of business are you?",
-    "businessCategoryPlaceholder": "Select category",
+    "businessCategoryPlaceholder": "Select a category",
     "businessCategoryOptionTouristicTransport": "Touristic Transport",
     "businessCategoryOptionTourOperator": "Tour Operator",
     "businessCategoryOptionHotel": "Hotel/Riad",
     "businessCategoryOptionRestaurant": "Restaurant/Café",
     "businessCategoryOptionECommerce": "E-commerce",
     "businessCategoryOptionOther": "Other",
-
-    "industrySpecificsLabel": "Specifics of Your Services/Products",
+    "industrySpecificsLabel": "Specifics of your Services/Products",
     "industrySpecificsHelp": "Briefly describe your main services or products. E.g., 'Airport transfers, day trips to Ourika Valley, Sahara tours', or 'Handmade leather goods'.",
-    "industrySpecificsPlaceholder": "e.g., Airport transfers, day trips to Ourika Valley, Sahara tours",
-
-
+    "industrySpecificsPlaceholder": "E.g., Airport transfers, day trips to Ourika Valley",
     "part2Title": "Part 2: Design & Style",
-    "primaryColorLabel": "Primary Brand Color",
-    "primaryColorPlaceholder": "e.g., #D4AF37 or 'a deep blue'",
-    "primaryColorHelp": "This is the main color for buttons, links, and key elements. If you know the hex code, that's perfect. If not, just describe it.",
+    "primaryColorLabel": "Main Brand Color",
+    "primaryColorPlaceholder": "E.g., #D4AF37 or 'a deep blue'",
+    "primaryColorHelp": "This is the primary color for buttons, links, and key elements. If you know the hex code, great. Otherwise, just describe it.",
     "secondaryColorLabel": "Secondary Accent Color",
-    "secondaryColorPlaceholder": "e.g., 'a warm terracotta orange'",
-    "secondaryColorHelp": "A second color to complement your primary one.",
-
+    "secondaryColorPlaceholder": "E.g., 'a warm terracotta orange'",
+    "secondaryColorHelp": "A second color to complement your primary color.",
     "templateThemeLabel": "Preferred Website Design Theme",
     "templateThemeHelp": "Choose a theme that best reflects your brand's style. This will dictate the overall look and feel.",
     "templateThemePlaceholder": "Select a theme",
@@ -330,9 +333,7 @@
     "templateThemeOptionAdventure": "Adventure (Bold & Dynamic)",
     "templateThemeOptionLuxury": "Luxury (Elegant & Refined)",
     "templateThemeOptionCustom": "Custom (Let's discuss)",
-
-
-    "part3Title": "Part 3: Website Content & Contact",
+    "part3Title": "Part 3: Site Content & Contact",
     "contactInfoTitle": "Contact Information",
     "emailLabel": "Email Address",
     "emailPlaceholder": "For customer inquiries",
@@ -340,38 +341,31 @@
     "phonePlaceholder": "The main business phone number",
     "addressLabel": "Physical Address",
     "addressPlaceholder": "Your main office or meeting point",
-    
     "whatsappNumberLabel": "WhatsApp Number",
-    "whatsappNumberPlaceholder": "e.g., +212 6 XX XX XX XX",
+    "whatsappNumberPlaceholder": "E.g., +212 6 XX XX XX XX",
     "whatsappNumberHelp": "If you use WhatsApp for business communication, please provide the number.",
-
     "socialMediaTitle": "Social Media Links",
     "facebookLabel": "Facebook (Full URL)",
-    "facebookPlaceholder": "e.g., https://www.facebook.com/yourpage",
+    "facebookPlaceholder": "E.g., https://www.facebook.com/yourpage",
     "instagramLabel": "Instagram (Full URL)",
-    "instagramPlaceholder": "e.g., https://www.instagram.com/yourhandle",
+    "instagramPlaceholder": "E.g., https://www.instagram.com/youraccount",
     "twitterLabel": "Twitter / X (Full URL)",
-    "twitterPlaceholder": "e.g., https://twitter.com/yourhandle",
-
+    "twitterPlaceholder": "E.g., https://twitter.com/youraccount",
     "aboutUsContentLabel": "About Your Business",
-    "aboutUsContentPlaceholder": "Tell us your company story, mission, and values. This will be the content for your 'About Us' page.",
+    "aboutUsContentPlaceholder": "Tell us your company's story, mission, and values. This will be the content for your 'About Us' page.",
     "aboutUsContentHelp": "A brief overview of your company's history, mission, and what makes you unique.",
-
-    "serviceDescriptionLabel": "Describe Your Main Services/Tours",
-    "serviceDescriptionPlaceholder": "e.g., We offer private airport transfers, guided city tours in Marrakech, and multi-day desert excursions.",
-    "serviceDescriptionHelp": "Provide a detailed description of the main services or types of tours you offer.",
-
+    "serviceDescriptionLabel": "Describe your Main Services/Tours",
+    "serviceDescriptionPlaceholder": "E.g., We offer private airport transfers, guided tours of Marrakech, and multi-day desert trips.",
+    "serviceDescriptionHelp": "Provide a detailed description of the main services or tour types you offer.",
     "tourLocationsServedLabel": "Main Tour Locations Served",
-    "tourLocationsServedPlaceholder": "e.g., Imlil & High Atlas, Marrakech Day Trips, Agafay Desert",
-    "tourLocationsServedHelp": "List the primary cities, regions, or destinations where your tours operate, separated by commas.",
-
+    "tourLocationsServedPlaceholder": "E.g., Imlil & High Atlas, Marrakech Excursions, Agafay Desert",
+    "tourLocationsServedHelp": "List the main cities, regions, or destinations where your tours operate, separated by commas.",
     "paymentMethodsAcceptedLabel": "Accepted Payment Methods",
-    "paymentMethodsAcceptedHelp": "Which payment methods do you accept from clients?",
-    "paymentMethodsAcceptedOptionCash": "Cash on site",
+    "paymentMethodsAcceptedHelp": "What payment methods do you accept from customers?",
+    "paymentMethodsAcceptedOptionCash": "Cash on arrival",
     "paymentMethodsAcceptedOptionBankTransfer": "Bank Transfer",
-    "paymentMethodsAcceptedOptionOnlinePaymentGateway": "Online Payment Gateway (e.g., Credit Card)",
-    "paymentMethodsAcceptedOptionOther": "Other (e.g., PayPal)",
-
+    "paymentMethodsAcceptedOptionOnlinePaymentGateway": "Online Payment Gateway (E.g., Credit Card)",
+    "paymentMethodsAcceptedOptionOther": "Other (E.g., PayPal)",
     "websiteLanguageOptionsLabel": "Desired Website Languages",
     "websiteLanguageOptionsHelp": "Which languages should your website be available in?",
     "websiteLanguageOptionAR": "Arabic",
@@ -379,47 +373,38 @@
     "websiteLanguageOptionEN": "English",
     "websiteLanguageOptionES": "Spanish",
     "websiteLanguageOptionDE": "German",
-
-
     "part4Title": "Part 4: SEO (Search Engine Optimization)",
     "keywordsLabel": "Keywords",
-    "keywordsPlaceholder": "e.g., atlas mountains trek, morocco hiking, imlil guide (list 5-10 words/phrases customers search for)",
-    "keywordsHelp": "Please list 5-10 words or phrases that customers would typically search on Google to find your business, separated by commas.",
-    "socialShareImageLabel": "Social Media Sharing Image",
-    "socialShareImageHelp": "Provide one beautiful, high-quality photo that best represents your business. This image will appear when your website link is shared on social media.",
-
+    "keywordsPlaceholder": "E.g., atlas mountains trek, morocco hiking, imlil guide (list 5-10 words/phrases customers search)",
+    "keywordsHelp": "Please list 5-10 words or phrases customers would typically search on Google to find your business, separated by commas.",
+    "socialShareImageLabel": "Social Media Share Image",
+    "socialShareImageHelp": "Provide a beautiful, high-quality photo that best represents your business. This image will appear when your website link is shared on social media.",
     "part5Title": "Part 5: Features & Specific Needs",
     "reviewsSystemLabel": "Customer Reviews Section",
-    "reviewsSystemHelp": "Allows guests to leave and display reviews directly on your site to build trust.",
+    "reviewsSystemHelp": "Allows customers to leave and display reviews directly on your site to build trust.",
     "blogSystemLabel": "Blog & News Section",
     "blogSystemHelp": "A blog to share stories, updates, and attract more visitors from Google.",
     "bookingEngineLabel": "Direct Booking Engine",
-    "bookingEngineHelp": "A form or system for customers to request or make reservations with specific dates and preferences.",
+    "bookingEngineHelp": "A form or system allowing customers to request or make reservations with specific dates and preferences.",
     "experiencesSectionLabel": "Dedicated 'Experiences' / 'Tours' Section",
     "experiencesSectionHelp": "A structured section to showcase your specific tours, packages, or unique experiences.",
     "faqSectionLabel": "FAQ (Frequently Asked Questions) Section",
     "faqSectionHelp": "An organized section to answer common customer questions, reducing direct inquiries.",
-
-
     "submitButton": "Submit Questionnaire",
-    "formSuccess": "Thank you! Your questionnaire has been submitted successfully. We'll be in touch shortly!",
+    "formSuccess": "Thank you! Your questionnaire has been submitted successfully. We will contact you shortly!",
     "formError": "An error occurred. Please try again. If the problem persists, contact us directly.",
     "requiredField": "This field is required",
     "invalidUrl": "Please enter a valid URL",
-
     "businessBrandSection": {
       "title": "Business & Brand Identity",
-      "description": "Provide the core details of your business and brand. This information will be used across your website."
+      "description": "Provide the essential details about your business and brand. This information will be used throughout your website."
     },
     "emailHelp": "The primary email for customer inquiries.",
     "phoneHelp": "The main phone number for your business.",
-    "addressHelp": "Your physical business location, if applicable.",
+    "addressHelp": "The physical address of your business, if applicable.",
     "facebookHelp": "Link to your official Facebook page.",
     "instagramHelp": "Link to your official Instagram profile.",
     "twitterHelp": "Link to your official Twitter/X profile.",
     "themeDemosTitle": "Theme Demos"
-   
   }
-
-
 }
