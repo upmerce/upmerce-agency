@@ -7,14 +7,13 @@ import { NextIntlClientProvider } from "next-intl";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import { getMainJsonLd, metadataStore, siteConfig } from "../config/site";
-import GoogleAnalytics from "@/components/analytics/GoogleAnalytics";
 import ThemeRegistry from "@/components/ThemeRegistry";
 import { generateCustomMetadata } from "../../../lib/metadata";
 import { AUTHORS } from "@/config/site";
-import MetaPixel from "@/components/analytics/MetaPixel";
-// ...existing code...
 import FloatingSocialMenu from "@/components/ui/FloatingSocialMenu";
 import BackToTopButton from "@/components/ui/BackToTopButton";
+import { CookieConsentProvider } from "@/components/context/CookieConsentContext";
+import AnalyticsScripts from "@/components/analytics/AnalyticsScripts";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -81,28 +80,30 @@ export default async function RootLayout({
              locale={locale || 'en'} 
              messages={messages}
              >
-            <div className="flex flex-col min-h-screen">
-              <Header />
-              {/* Accessibility: The <main> tag is correctly used as a landmark. */}
-              {/* Accessibility: It's good that children content goes here. */}
-              <main id="main-content" className="flex-grow"> {/* ADDED id="main-content" for skip link */}
-                {children}
-              </main>
-              <Footer />
-            </div>
-            {/* Accessibility: Floating elements like these need careful consideration for screen readers and touch users. */}
-            {/* Ensure they don't obscure important content or interfere with keyboard navigation. */}
-            {/* The WhatsAppButton is imported but not rendered. It might be within FloatingSocialMenu or another component. */}
+            <CookieConsentProvider>
+                <div className="flex flex-col min-h-screen">
+                <Header />
+             
+                <main id="main-content" className="flex-grow"> {/* ADDED id="main-content" for skip link */}
+                   {children}
+                </main>
+                <Footer />
+                </div>
+            
+            
+           {/*  <CookieConsent /> */}
             <FloatingSocialMenu/>
             <BackToTopButton /> 
+            <AnalyticsScripts />
+            </CookieConsentProvider>
           </NextIntlClientProvider>
         </ThemeRegistry>
-        {process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID && (
+        {/* {process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID && (
           <GoogleAnalytics measurementId={process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID} />
         )}
         {process.env.NEXT_PUBLIC_META_PIXEL_ID && (
           <MetaPixel />
-        )}
+        )} */}
       </body>
     </html>
   );

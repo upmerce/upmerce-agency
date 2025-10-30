@@ -406,5 +406,146 @@
     "instagramHelp": "Link to your official Instagram profile.",
     "twitterHelp": "Link to your official Twitter/X profile.",
     "themeDemosTitle": "Theme Demos"
+  },
+  "Terms": {
+    "title": "Terms of Service",
+    "lastUpdated": "Last Updated: October 30, 2025",
+    "projectInfo": "About this Project:",
+    "project": "Project: Upmerce.com",
+    "founder": "Founder: Mustapha Ouazza",
+    "contactLabel": "Contact:",
+    "contactEmail": "contact@upmerce.com",
+    "status": "Status: Active",
+    "sections": {
+      "acceptance": {
+        "title": "1. Acceptance of Terms",
+        "content": "<p>By accessing, browsing, or using the website Upmerce.com (the 'Site') or any services provided by Upmerce ('we', 'us', 'our'), you ('Client', 'you') acknowledge that you have read, understood, and agree to be bound by these Terms of Service ('Terms'). If you do not agree to these Terms, you must not use our services.</p>"
+      },
+      "definitions": {
+        "title": "2. Definitions",
+        "content": "<ul><li><strong>Service:</strong> Refers to the creation, development, and/or hosting of Next.js websites for tourism businesses (riads, hotels, agencies) as offered in our 'Starter' and 'Growth' plans.</li><li><strong>Client:</strong> Refers to the individual or legal entity (e.g., hotel, riad) purchasing or using our Service.</li><li><strong>Client's Customer:</strong> Refers to the end-user or tourist who accesses, browses, or makes a booking on the website we provide to our Client.</li><li><strong>Platform:</strong> Refers to the Upmerce.com website, our Next.js website templates, and the associated admin dashboards.</li><li><strong>Third-Party Services:</strong> Refers to non-Upmerce services, such as Vercel (hosting), Google (database/auth), and Stripe (payments), that are integral to the Service.</li></ul>"
+      },
+      "services": {
+        "title": "3. Description of Services",
+        "content": "<p>Upmerce provides website development and technology services. Our offerings include, but are not limited to:</p><ul><li><strong>'Starter Plan':</strong> A professional, multi-page Next.js website with an admin dashboard for content management, deployed on the Client's own Vercel account.</li><li><strong>'Growth Plan':</strong> Includes all features of the Starter Plan, plus the integration of a direct booking engine, payment processing via the Client's Stripe account, and booking management features.</li></ul><p>The specific features, scope, and fees for any Service will be detailed in a separate quote or service agreement provided to the Client.</p>"
+      },
+      "ipOwnership": {
+        "title": "4. Intellectual Property & Code Ownership",
+        "content": "<p>Our policy on intellectual property is as follows:</p><ul><li><strong>Client Content:</strong> The Client retains full ownership of all content provided to Upmerce, including text, logos, and images.</li><li><strong>Upmerce 'Starter Plan':</strong> For the 'Starter Plan', the Client receives a license to use the website. The underlying source code and platform technology remain the property of Upmerce.</li><li><strong>Upmerce 'Growth Plan':</strong> Upon full and final payment for the 'Growth Plan', Upmerce transfers 100% ownership of the website's final source code to the Client. The Client is free to modify, transfer, or host this code as they see fit.</li><li><strong>Reservation of Rights:</strong> Upmerce retains all rights to its proprietary technologies, methods, and reusable template components used in the creation of the Client's website.</li></ul>"
+      },
+      "thirdParty": {
+        "title": "5. Third-Party Services & Limitation of Liability",
+        "content": "<p>The Upmerce Service is designed to integrate with robust Third-Party Services to provide the Client with full control and zero ongoing fees.</p><ul><li><strong>Client Responsibility:</strong> The Client is required to create and maintain their own accounts with these services (e.g., Vercel, Google, Stripe). The Client is the direct customer of these providers and is bound by their respective terms of service.</li><li><strong>Hosting:</strong> 'Free Lifetime Hosting' is provided via the Client's own Vercel account. Upmerce is not a hosting provider and is not responsible for Vercel's service, uptime, or any changes to Vercel's 'Pro' or 'Hobby' plans, including the introduction of fees or the discontinuation of service.</li><li><strong>Payments:</strong> All payments made by a Client's Customer are processed directly through the Client's Stripe account. Upmerce is not a party to these transactions and does not store or have access to any credit card information.</li><li><strong>No Liability:</strong> Upmerce shall not be held liable for any failure, outage, data breach, data loss, policy change, or unexpected cost arising from any Third-Party Service. Our liability is strictly limited to the source code and services we provide directly to the Client.</li></ul>"
+      },
+      "responsibility": {
+        "title": "6. Client Responsibilities",
+        "content": "<p>The Client agrees to:</p><ul><li>Provide all necessary content (text, images, branding) in a timely manner.</li><li>Be solely responsible for the accuracy, legality, and management of all content on their website, including room rates, availability, and descriptions.</li><li>Be solely responsible for their business operations and legal/tax compliance.</li><li>Be solely responsible for managing all bookings, payments, cancellations, refunds, and disputes with their own Customers. Upmerce is a technology provider and is not a party to any transaction or dispute between the Client and the Client's Customer.</li></ul>"
+      },
+      "modifications": {
+        "title": "7. Modifications to Terms",
+        "content": "<p>We reserve the right, at our sole discretion, to modify or replace these Terms at any time. We will notify you of any material changes by posting the new Terms on this page and updating the 'Last Updated' date. Your continued use of the Service after such changes constitutes your acceptance of the new Terms.</p>"
+      },
+      "law": {
+        "title": "8. Governing Law & Jurisdiction",
+        "content": "<p>These Terms shall be governed, construed, and enforced in accordance with the laws of the Kingdom of Morocco. Any dispute, claim, or controversy arising out of or relating to these Terms or the breach, termination, or invalidity thereof, shall be submitted to the exclusive jurisdiction of the competent courts of Agadir, Morocco.</p>"
+      },
+      "contact": {
+        "title": "9. Contact Us",
+        "content": "<p>If you have any questions about these Terms, please contact us by email at <a href='mailto:contact@upmerce.com' class='text-blue-600 dark:text-blue-400 hover:underline'>contact@upmerce.com</a>.</p>"
+      }
+    }
+  },
+  "Privacy": {
+    "title": "Privacy Policy",
+    "lastUpdated": "Last Updated: October 30, 2025",
+    "projectInfo": "About this Project:",
+    "project": "Project: Upmerce.com",
+    "founder": "Founder: Mustapha Ouazza",
+    "contactLabel": "Contact:",
+    "contactEmail": "contact@upmerce.com",
+    "status": "Status: Active",
+    "sections": {
+      "intro": {
+        "title": "1. Introduction",
+        "content": "<p>Welcome to Upmerce.com. We are committed to protecting your personal data and respecting your privacy. This Privacy Policy explains how we collect, use, store, and protect your personal information. We operate in compliance with the Moroccan Law No. 09-08 regarding the protection of individuals with regard to the processing of personal data.</p><p>For any questions regarding this policy or your data, you may also consult the website of the Moroccan National Commission for the Control of Personal Data Protection (CNDP) at www.cndp.ma.</p>"
+      },
+      "dataController": {
+        "title": "2. Data Controller vs. Data Processor",
+        "content": "<p>This policy must distinguish between our two roles, as seen by our competitor Rhillane Marketing:</p><ul><li><strong>As 'Data Controller' (Responsable de Traitement):</strong> Upmerce is the Data Controller for the personal data we collect from you when you visit <strong>our</strong> website, Upmerce.com (e.g., when you fill out our 'Get My Free Quote' form).</li><li><strong>As 'Data Processor' (Sous-Traitant):</strong> For the websites we build for our Clients (hotels, riads), our <strong>Client</strong> is the 'Data Controller' for all data collected from their customers (the tourists). Upmerce acts strictly as a 'Data Processor' in this capacity. We only process this data on behalf of our Client and as per their instructions, enabling their admin dashboard and booking engine to function.</li></ul>"
+      },
+      "dataCollected": {
+        "title": "3. Data We Collect",
+        "content": "<p>We collect different types of data depending on your interaction with us:</p><p><strong>A. When you visit Upmerce.com (We are the Controller):</strong></p><ul><li><strong>Data you provide:</strong> Name, email address, phone number, and company details when you fill out our contact or quote forms.</li><li><strong>Data collected automatically:</strong> IP address, browser type, operating system, and navigation data (pages visited, time spent) via essential and analytical cookies.</li></ul><p><strong>B. When we act as a Processor for our Clients:</strong></p><ul><li>The Client's website, which we build, collects data from their Customers (tourists). This data is controlled by the Client and may include: names, email addresses, booking details, and customer reviews. This data is stored in the Client's own Google account database, and payment data is processed by the Client's own Stripe account. We do not have direct access to this data unless required for technical support.</li></ul>"
+      },
+      "usagePurpose": {
+        "title": "4. Purpose of Data Processing (Finalités)",
+        "content": "<p>We use your data for the following purposes:</p><ul><li><strong>To provide our Service:</strong> To create your website, process your payment, and manage your account.</li><li><strong>To communicate with you:</strong> To respond to your inquiries, provide customer support, and send you information about our services.</li><li><strong>To improve our Service:</strong> To analyze how our own website is used, allowing us to optimize performance and user experience.</li><li><strong>As a Processor:</strong> To enable the booking engine and admin dashboard to function for our Client, allowing them to manage their bookings and content.</li></ul>"
+      },
+      "legalBasis": {
+        "title": "5. Legal Basis for Processing",
+        "content": "<p>Our legal basis for processing your data is:</p><ul><li><strong>Contractual Necessity:</strong> To fulfill the service agreement we have with our Clients.</li><li><strong>Consent:</strong> When you provide us with your information via a contact form or by accepting our cookie policy.</li><li><strong>Legitimate Interest:</strong> To improve our services and for our own marketing, provided it does not override your rights.</li></ul>"
+      },
+      "storage": {
+        "title": "6. Data Retention (Conservation)",
+        "content": "<p>We retain your personal data only for as long as necessary to fulfill the purposes for which it was collected, or as required by Moroccan law. Data we process on behalf of our Clients is retained according to their own data retention policies.</p>"
+      },
+      "thirdParties": {
+        "title": "7. Data Sharing and Third Parties",
+        "content": "<p>We do not sell your personal data. We only share data in the following cases:</p><ul><li><strong>With our Clients' Third-Party Services:</strong> As a Data Processor, we configure the Client's website to send data to their designated accounts (Vercel, Google, Stripe).</li><li><strong>For Legal Obligations:</strong> If required to do so by law or in response to a valid request by competent Moroccan authorities.</li></ul>"
+      },
+      "security": {
+        "title": "8. Data Security",
+        "content": "<p>We implement robust technical and organizational measures to protect your data. Our platform is built on modern, secure technology (Next.js, Google Cloud, Vercel) designed to prevent unauthorized access, loss, or disclosure. However, no method of transmission over the Internet is 100% secure.</p>"
+      },
+      "cookies": {
+        "title": "9. Cookies and Trackers",
+        "content": "<p>Our website, Upmerce.com, uses essential and analytical cookies to analyze traffic and improve user experience. You will be prompted to manage your cookie preferences upon your first visit. The websites we build for our Clients will have their own cookie policies, for which the Client is responsible.</p>"
+      },
+      "userRights": {
+        "title": "10. Your Rights (According to Law 09-08)",
+        "content": "<p>In accordance with Moroccan Law 09-08, you have the following rights over your personal data that we control:</p><ul><li><strong>Right of Access:</strong> You have the right to obtain a copy of the personal data we hold about you.</li><li><strong>Right of Rectification:</strong> You have the right to request the correction of any inaccurate data.</li><li><strong>Right of Erasure ('Right to be Forgotten'):</strong> You have the right to request the deletion of your data, within the limits provided by law.</li><li><strong>Right to Object:</strong> You have the right to object, for legitimate reasons, to the processing of your data.</li></ul><p>To exercise these rights, please contact us at our contact email. If you are a Customer of one of our Clients (a tourist), you must contact the hotel or riad (the Data Controller) directly to exercise your rights.</p>"
+      },
+      "hosting": {
+        "title": "11. Data Hosting and International Transfers",
+        "content": "<p>Our services and the services we integrate with (Vercel, Google, Stripe) are global and may store data on servers located outside of Morocco. By using our service, you consent to this transfer. We rely on the robust security and data protection standards of these global providers to ensure your data is protected.</p>"
+      },
+      "links": {
+        "title": "12. Links to Other Websites",
+        "content": "<p>Our website may contain links to other websites. We are not responsible for the privacy practices of these other sites. We encourage you to be aware when you leave our site and to read the privacy statements of each website that collects personal information.</p>"
+      },
+      "updates": {
+        "title": "13. Updates to this Policy",
+        "content": "<p>We may update this Privacy Policy at any time. We will notify you of any changes by posting the new policy on this page and updating the 'Last Updated' date. We encourage you to review this policy periodically.</p>"
+      },
+      "contact": {
+        "title": "14. Contact Us",
+        "content": "<p>If you have any questions about this Privacy Policy or our data practices, please contact us at: <a href='mailto:contact@upmerce.com' class='text-blue-600 dark:text-blue-400 hover:underline'>contact@upmerce.com</a></p>"
+      }
+    }
+  },
+  "CookieConsent": {
+    "message": "We use cookies to enhance your browsing experience, analyze site traffic, and personalize content.",
+    "privacyLinkText": "Learn more in our Privacy Policy",
+    "acceptAll": "Accept All",
+    "declineAll": "Decline All",
+    "customize": "Customize",
+    "modal": {
+      "title": "Manage Your Cookie Preferences",
+      "close": "Close modal",
+      "description": "You can choose which types of cookies to allow. Your preferences will be saved for 1 year.",
+      "save": "Save Preferences",
+      "necessary": {
+        "title": "Strictly Necessary",
+        "description": "These cookies are essential for the website to function and cannot be switched off."
+      },
+      "analytics": {
+        "title": "Analytical Cookies",
+        "description": "These cookies help us understand how visitors interact with our website by collecting anonymous information."
+      },
+      "marketing": {
+        "title": "Marketing Cookies",
+        "description": "These cookies are used to track visitors across websites to display relevant ads (e.g., Facebook Pixel)."
+      }
+    }
   }
 }

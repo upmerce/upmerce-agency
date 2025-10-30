@@ -96,6 +96,67 @@ export const metadataStore: MetadataStore = {
         alt: "خطاطة كتبين المراحل الأربعة ديال العملية ديالنا: تحليل السوق، خطة المميزات، تطوير شامل، والإطلاق والنمو."
       }
     }
+  },
+  // 🆕 TERMS PAGE
+  terms: {
+    en: {
+      title: "Terms of Use | Upmerce",
+      description:
+        "Read the terms of use governing Upmerce's digital services and website. Transparency and responsibility for all our clients and users.",
+      ogImage: {
+        src: "/images/og/og-terms.webp",
+        alt: "A legal document icon symbolizing website terms and conditions."
+      }
+    },
+    fr: {
+      title: "Conditions d'utilisation | Upmerce",
+      description:
+        "Consultez les conditions d'utilisation régissant les services numériques et le site web d'Upmerce. Transparence et responsabilité envers nos utilisateurs.",
+      ogImage: {
+        src: "/images/og/og-terms.webp",
+        alt: "Icône de document légal symbolisant les conditions générales d'utilisation."
+      }
+    },
+    ar: {
+      title: "شروط الاستخدام | Upmerce",
+      description:
+        "اطّلع على شروط الاستخدام التي تحكم خدمات Upmerce الرقمية وموقعها الإلكتروني. الشفافية والمسؤولية تجاه جميع المستخدمين.",
+      ogImage: {
+        src: "/images/og/og-terms.webp",
+        alt: "رمز وثيقة قانونية تمثل شروط وأحكام الموقع."
+      }
+    }
+  },
+
+  // 🆕 PRIVACY PAGE
+  privacy: {
+    en: {
+      title: "Privacy Policy | Upmerce",
+      description:
+        "Learn how Upmerce collects, uses, and protects your personal data in compliance with Moroccan and international privacy laws.",
+      ogImage: {
+        src: "/images/og/og-privacy.webp",
+        alt: "A shield icon representing data privacy and user protection."
+      }
+    },
+    fr: {
+      title: "Politique de confidentialité | Upmerce",
+      description:
+        "Découvrez comment Upmerce collecte, utilise et protège vos données personnelles conformément à la loi marocaine sur la protection des données.",
+      ogImage: {
+        src: "/images/og/og-privacy.webp",
+        alt: "Icône de bouclier représentant la confidentialité et la protection des données."
+      }
+    },
+    ar: {
+      title: "سياسة الخصوصية | Upmerce",
+      description:
+        "تعرّف على كيفية جمع Upmerce لبياناتك الشخصية واستخدامها وحمايتها وفقًا لقوانين الخصوصية المغربية والدولية.",
+      ogImage: {
+        src: "/images/og/og-privacy.webp",
+        alt: "رمز درع يمثل الخصوصية وحماية بيانات المستخدم."
+      }
+    }
   }
 }
 
