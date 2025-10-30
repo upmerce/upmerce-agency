@@ -1,12 +1,15 @@
 // app/[locale]/privacy/page.tsx
-import { Metadata } from "next";
 import { metadataStore } from "@/app/config/site";
 import PrivacyContent from "@/components/terms/PrivacyContent";
 
-type Props = { params: { locale: string } };
+type MetadataProps = {
+  params: Promise<{ locale: string }>;
+}
 
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const { locale } = params;
+export async function generateMetadata({
+  params
+}: MetadataProps) {
+  const { locale } = await params;
   const pageMetadata = metadataStore.privacy?.[locale] || metadataStore.privacy?.en || {};
 
   return {

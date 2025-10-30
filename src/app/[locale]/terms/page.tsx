@@ -1,12 +1,13 @@
 // app/[locale]/terms/page.tsx
-import { Metadata } from "next";
 import { metadataStore } from "@/app/config/site";
 import TermsContent from "@/components/terms/TermsContent";
 
-type Props = { params: { locale: string } };
+type Props = { params: Promise<{ locale: string }> };
 
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const { locale } = params;
+export async function generateMetadata({
+  params,
+}: Props){
+  const { locale } = await params;
   const pageMetadata = metadataStore.terms?.[locale] || metadataStore.terms?.en || {};
 
   return {
