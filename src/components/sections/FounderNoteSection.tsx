@@ -21,7 +21,7 @@ export default function FounderNoteSection() {
           <div className="max-w-4xl mx-auto bg-gray-900 rounded-lg p-8 md:p-12 border border-gray-700 flex flex-col md:flex-row items-center text-center md:text-left">
             <div className="flex-shrink-0 mb-8 md:mb-0 md:mr-10">
               <Image
-                src="/images/founder-photo.jpg"
+                src="/images/founder-photo.webp"
                 alt={t('name') + ", " + t('title')} // IMPROVED: More descriptive alt text for founder photo
                 width={160}
                 height={160}

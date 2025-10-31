@@ -1,0 +1,83 @@
+🇫🇷 French Version (Professional & Direct)
+Subject: Vos avis 5 étoiles, mais votre site vous coûte 25% de commission
+
+Bonjour [Operator's Name],
+
+J'ai remarqué vos excellents avis sur TripAdvisor pour votre activité de [Tourism Category, e.g., "tours en 4x4"]. C'est impressionnant !
+
+En cliquant sur le lien de votre site web, j'ai vu qu'il était [Choose one: lent / ancien / non sécurisé / un lien Facebook].
+
+Cela signifie que la plupart de vos clients réservent via TripAdvisor ou Viator, et vous payez une commission de 20 à 25 % sur chaque réservation. Vous laissez de l'argent sur la table.
+
+Je suis un développeur local d'Agadir et je viens de créer une nouvelle plateforme (Next.js) ultra-rapide pour les opérateurs touristiques.
+
+Voici une démo en direct, conçue pour votre type d'activité : [Link to your Adventure demo]
+
+Mon système vous permet de prendre des réservations directes avec 0% de commission.
+
+Je construis ce système en ce moment même pour [Your Brother's Company Name].
+
+Seriez-vous disponible pour un appel de 10 minutes pour voir comment vous pourriez arrêter de payer des commissions ?
+
+Cordialement,
+
+Mustapha Ouazza Upmerce.com
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+My apologies! You are completely right. I switched to French for the entire explanation when you only wanted the message templates in French and Darija. My mistake.
+
+Let me provide the full answer again in English, with the templates as you requested.
+
+1. The Message Templates (French & Darija)
+Use these to contact other operators (via email, Facebook, Instagram DM, etc.).
+
+🇫🇷 French Version (Professional & Direct)
+Subject: Vos avis 5 étoiles, mais votre site vous coûte 25% de commission
+
+Bonjour [Operator's Name],
+
+J'ai remarqué vos excellents avis sur TripAdvisor pour votre activité de [Tourism Category, e.g., "tours en 4x4"]. C'est impressionnant !
+
+En cliquant sur le lien de votre site web, j'ai vu qu'il était [Choose one: lent / ancien / non sécurisé / un lien Facebook].
+
+Cela signifie que la plupart de vos clients réservent via TripAdvisor ou Viator, et vous payez une commission de 20 à 25 % sur chaque réservation. Vous laissez de l'argent sur la table.
+
+Je suis un développeur local d'Agadir et je viens de créer une nouvelle plateforme (Next.js) ultra-rapide pour les opérateurs touristiques.
+
+Voici une démo en direct, conçue pour votre type d'activité : [Link to your Adventure demo]
+
+Mon système vous permet de prendre des réservations directes avec 0% de commission.
+
+Je construis ce système en ce moment même pour [Your Brother's Company Name].
+
+Seriez-vous disponible pour un appel de 10 minutes pour voir comment vous pourriez arrêter de payer des commissions ?
+
+Cordialement,
+
+Mustapha Ouazza Upmerce.com
+
+🇲🇦 Moroccan Darija Version (Respectful & Clear)
+الموضوع: الريفيوز عندك واعرين، ولكن السيت ناقص شوية
+
+السلام عليكم [Name of Operator or Company],
+
+تبارك الله شفت الريفيوز (reviews) لي عندك في TripAdvisor... كلشي 5 نجوم على داكشي لي كدير فـ [Type of activity, e.g., "الخرجات ب 4x4"].
+
+ملي كليت على السيت ديالك، لقيتو [Choose one: تقيل بزاف / قديم / مافيهش شهادة الأمان / غير رابط فيسبوك].
+
+هادشي كيعني أن أغلب الكليان كيحجزو من TripAdvisor، و نتا كتخلص عليهم ديك 20-25% ديال الكوميسيون. بحالا كتخسر الفلوس.
+
+خويا، أنا ديفلوبر من هنا من أگادير، وصاوبت واحد المنصة (platform) جديدة بـ Next.js خفيفة بزاف و سريعة.
+
+ها واحد الديمو (demo) شوفو بعينيك، مصاوب خصيصا لـ [Type of activity]: [Link to your Adventure demo]
+
+بهاد السيستيم، الكليان كيحجز نيشان عندك، و نتا كتربح 100% من الفلوس (0% كوميسيون).
+
+أنا دابا كنصاوب واحد بحالو لـ [Your brother's company name].
+
+واش عندك شي 10 دقايق نهضرو؟ نقدر نوريك كيفاش.
+
+تحياتي،
+
+مصطفى وعزة Upmerce.com

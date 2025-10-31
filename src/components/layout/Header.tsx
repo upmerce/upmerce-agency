@@ -144,7 +144,7 @@ export default function Header() {
   };
 
   const navLinks: NavLink[] = [
-    { name: t('home'), target: 'top', type: 'scroll' },
+    { name: t('home'), target: '/', type: 'link' },
     { name: t('ourProcess'), target: '/process', type: 'link' },
     { name: t('features'), target: 'features', type: 'scroll' },
     { name: t('portfolio'), target: 'portfolio', type: 'scroll' },
