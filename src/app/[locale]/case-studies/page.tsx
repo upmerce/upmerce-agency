@@ -10,7 +10,8 @@ import CaseCTA from '@/components/case-studies/CaseCTA';
 import { getTranslations } from 'next-intl/server';
 
 // Dynamic metadata for SEO using translations
-export async function generateMetadata({ params: { locale } }: { params: { locale: string } }): Promise<Metadata> {
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'CaseStudies.meta' });
 
   return {
