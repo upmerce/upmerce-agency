@@ -8,7 +8,7 @@
   },
   "AgencyHero": {
     "title_part1": "Your Professional Website",
-    "title_part2": "for Riad or Hotel. From 0 Dh.",
+    "title_part2": "for Tourism Professionals. From 0 Dh.",
     "subtitle": "Stop paying commissions AND hosting fees. Get an ultra-fast Next.js website with your own admin dashboard. Free Lifetime Hosting.",
     "ctaButton": "See our Plans",
     "heroImageAlt": "A modern Moroccan riad, example of a website created by Upmerce",
@@ -48,11 +48,16 @@
   },
   "AgencyFeatures": {
     "title": "A Complete Platform, Not Just a Website",
-    "subtitle": "Discover all the included features, from your private admin panel to free lifetime hosting.",
+    "subtitle": "Discover all the included features, from your private admin panel to free lifetime hosting, emphasizing financial freedom, full ownership, and advanced tech.",
     "increaseBookings": {
-      "title": "The Foundation (Speed & Security)",
-      "subtitle": "A modern technical base for performance.",
+      "title": "Financial Freedom & The Foundation (Speed & Security)",
+      "subtitle": "A modern technical base for performance and zero ongoing costs.",
       "items": [
+        "One-Time Payment (Lifetime License)",
+        "0% Commission on Bookings Forever",
+        "0 DH / Year Hosting Cost (via Vercel Free Tier)",
+        "0 DH / Year Database Cost (via Firebase Free Tier)",
+        "No Monthly Subscription Fees",
         "Ultra-Fast Performance (Next.js)",
         "Advanced Security (Google Technology)",
         "Free Lifetime Hosting (on your account)",
@@ -60,12 +65,16 @@
         "Responsive Design (Mobile-First)",
         "Light / Dark Theme Support",
         "Domain Connection Assistance",
-        "Optimized for Social Media"
+        "Optimized for Social Media",
+        "Instant Speed (Global Edge Network Hosting)",
+        "Auto-SEO System (Rich Snippets: Price & Reviews on Google)",
+        "Auto-SSL Security (HTTPS Included)",
+        "Bank-Grade Security (Firebase Auth)"
       ]
     },
     "effortlessManagement": {
-      "title": "Your Private Admin Panel",
-      "subtitle": "Easily control 100% of your content.",
+      "title": "Your Private Admin Panel & Management",
+      "subtitle": "Easily control 100% of your content with no-code tools.",
       "items": [
         "Admin Dashboard (Google Technology)",
         "Easy Blog Management (Add/Edit/Delete)",
@@ -73,12 +82,17 @@
         "Easy Customer Review Management",
         "SEO-Friendly Content (Markdown)",
         "Multilingual Support (Ar, Fr, En, Es...)",
-        "Secure and Personal Admin Access"
+        "Secure and Personal Admin Access",
+        "Visual Admin Panel (Dashboard)",
+        "Smart Booking Engine (Validate/Reject Requests)",
+        "'No-Code' Experience Manager (Add Tours easily)",
+        "Integrated Blog System (SEO Optimized)",
+        "Review Management System (Moderate Guest Feedback)"
       ]
     },
     "premiumExperience": {
-      "title": "The Booking Engine",
-      "subtitle": "Convert visitors into direct customers.",
+      "title": "The Booking Engine & Ownership",
+      "subtitle": "Convert visitors into direct customers with full control.",
       "items": [
         "Direct Booking System (0% Comm.)",
         "Payment Integration (Stripe)",
@@ -86,7 +100,30 @@
         "Automatic Booking Confirmations",
         "Customer Review and Rating System",
         "Personalized Customer Portals",
-        "WhatsApp & Email Integration"
+        "WhatsApp & Email Integration",
+        "100% Code Ownership (You own the GitHub Repo)",
+        "100% Data Ownership (You own the Firebase Account)",
+        "Direct Payment Integration (PayPal, Tap, Stripe - No Middleman)",
+        "External Accounts Sync (TripAdvisor, Viator, Social Media)"
+      ]
+    },
+    "designTools": {
+      "title": "Design & Tools",
+      "subtitle": "Customizable and user-friendly design features.",
+      "items": [
+        "Multi-Language Support (EN/FR/ES/AR)",
+        "Multi-Theme Capability",
+        "Custom Design Override System (Unique Branding)",
+        "Mobile-First Design (Perfect for Phones)"
+      ]
+    },
+    "supportBonus": {
+      "title": "Support & Bonus",
+      "subtitle": "Ongoing support for independence.",
+      "items": [
+        "Free Training (How to post, manage, & book)",
+        "No Technician Required for Daily Tasks",
+        "Lifetime Tech Independence"
       ]
     }
   },
@@ -135,61 +172,66 @@
     "item4": "You control your domain name. No hidden fees, ever."
   },
   "AgencyPricing": {
-    "title": "A Transparent Offer, Without Competition",
-    "subtitle": "Start for free and only pay when you need direct booking. Zero hidden fees.",
-    "popular": "Popular",
-    "popularPlanLabel": "This is our most popular plan: {packageName}",
+    "title": "A Partnership, Not a Subscription",
+    "subtitle": "We believe in your growth. Start with a professional foundation for free, and invest in direct booking independence when you are ready.",
+    "popular": "Best Value",
+    "popularPlanLabel": "This is our recommended plan: {packageName}",
     "featuresListLabel": "Features included in the {packageName} plan",
     "choosePlanLabel": "Choose the {packageName} plan",
     "packages": {
       "0": {
-        "name": "Starter",
+        "name": "Starter Foundation",
         "price": "0 Dh",
-        "description": "Your complete professional website to manage your content and attract customers on Google.",
+        "description": "Our investment in your business. A complete, professional digital presence to establish your brand and attract customers from Google.",
         "features": [
-          "Multi-page Next.js Website",
-          "Admin Dashboard (Google Technology)",
-          "Easy Management (Blog, Tours, Reviews)",
-          "Free Lifetime Hosting (on your account)",
-          "Domain Connection Assistance",
-          "Advanced SEO Platform",
+          "Professional Next.js Website",
+          "Google-Powered Admin Dashboard",
+          "Easy Content Management (Blog, Tours)",
+          "Free Lifetime Hosting (Your Account)",
+          "Advanced SEO Architecture",
           "Multilingual & Dark/Light Theme",
-          "100% Code Ownership"
+          "Mobile-First Design",
+          "Free Training & Onboarding"
         ],
-        "cta": "Start for Free",
-        "note": "No credit card required.",
+        "cta": "Apply for Partnership",
+        "note": "Limited spots. No credit card required.",
         "isPopular": false
       },
       "1": {
-        "name": "Growth",
-        "price": "1999 Dh",
-        "description": "Unlock direct booking and turn your site into a profit machine.",
+        "name": "Growth Engine",
+       
+        "price": "999 Dh <s>1999 Dh</s>",
+       
+        "description": "The independence package. Unlock the direct booking engine that pays for itself with just 1 booking by eliminating commissions.",
         "features": [
           "Everything in Starter, plus:",
-          "Direct Booking Engine (0% Comm.)",
-          "Secure Payment Integration (Stripe)",
-          "Booking Management (via Admin)",
-          "Automatic Booking Confirmations",
+          "0% Commission Booking Engine",
+          "Secure Global Payments (Stripe)",
+          "Automated Booking Confirmations",
+          "Booking Management Dashboard",
           "Personalized Customer Portals",
-          "Priority Support"
+          "Priority WhatsApp Support",
+          "100% Code & Data Ownership Transfer"
         ],
-        "cta": "Choose This Plan",
-        "note": "One-time payment. Launch offer.",
+       
+        "cta": "Claim 50% Off Offer",
+        "note": "🔥 Launch Offer: 50% discount ends soon.",
+       
         "isPopular": true
       },
       "2": {
-        "name": "Enterprise",
+        "name": "Enterprise Custom",
         "price": "Custom Quote",
-        "description": "A tailor-made solution for complex needs and advanced integrations.",
+        "description": "For established businesses requiring bespoke features, advanced integrations (e.g., Channel Managers), and dedicated strategy.",
         "features": [
           "Everything in Growth, plus:",
-          "Custom Features",
-          "Advanced Integrations (e.g., Channel Manager)",
-          "Dedicated Support & Training",
-          "Advanced Performance & Security"
+          "Custom Feature Development",
+          "Advanced API Integrations",
+          "Dedicated Success Manager",
+          "Advanced Security & SLA"
         ],
-        "cta": "Contact Us",
-        "note": "",
+        "cta": "Contact Sales",
+        "note": "Tailored solutions for scale.",
         "isPopular": false
       }
     }
@@ -215,16 +257,16 @@
     "unexpectedError": "An unexpected error occurred.",
     "unknownError": "An unknown error occurred. Please try again."
   },
-  "AgencyNavigation": {
+ "AgencyNavigation": {
     "siteTitle": "Upmerce Solutions",
     "mainNavigation": "Main navigation",
     "mobileNavigation": "Mobile navigation menu",
     "openMenu": "Open main menu",
     "closeMenu": "Close main menu",
     "home": "Home",
-    "ourProcess": "Our Approach",
-    "features": "Features",
-    "portfolio": "Our Themes",
+    "about": "About Us",
+    "solutions": "Solutions",
+    "caseStudies": "Case Studies",
     "pricing": "Pricing",
     "faq": "FAQ",
     "blog": "Blog",
@@ -546,6 +588,327 @@
         "title": "Marketing Cookies",
         "description": "These cookies are used to track visitors across websites to display relevant ads (e.g., Facebook Pixel)."
       }
+    }
+  },
+  "Campaign": {
+    "Landing": {
+      "metaTitle": "Win a Digital Transformation for Your Tour Agency | Upmerce giveaway",
+      "metaDescription": "Moroccan Tour Operators: Enter to win a free, custom-built Next.js Direct Booking Engine. Stop paying commissions and take control.",
+      "heroTitle": "Tour Operators: Stop Paying Commissions.",
+      "heroSubtitle": "Win a complete Digital Transformation for your agency.",
+      "heroDescription": "We are giving away 3 custom-built, ultra-fast <strong>Next.js Direct Booking Engines</strong> to selected travel agencies in Morocco. Transform your business from relying on OTAs to a direct-booking powerhouse.",
+      "ctaCardTitle": "Enter to Win Now",
+      "ctaCardSubtitle": "Use your Google account for instant, 1-click entry. No forms to fill out.",
+      "googleButtonLabel": "Enter with Google in 1-Click",
+      "googleButtonLoading": "Signing in...",
+      "securityNote": "Secure entry via Google. No credit card required.",
+      "Benefits": {
+        "zeroCommissionTitle": "0% Commission Bookings",
+        "zeroCommissionDesc": "Keep 100% of your earnings with your own direct Stripe/PayPal integration.",
+        "seoTitle": "Blazing Fast Google SEO",
+        "seoDesc": "Built on Next.js technology for instant loading and top Google rankings.",
+        "mobileAdminTitle": "Mobile-First Admin Control",
+        "mobileAdminDesc": "Manage prices, availability, and bookings from your phone, anywhere."
+      }
+    },
+    "Qualify": {
+      "title": "Almost There, {name}!",
+      "subtitle": "To finalize your entry for the free booking engine, please answer 3 quick questions about your agency.",
+      "loadingAuth": "Checking credentials...",
+      "validationError": "Please fill in all fields to complete your entry.",
+      "submitError": "Failed to submit entry. Please try again.",
+      "labels": {
+        "websiteUrl": "Your Current Website or Instagram URL",
+        "websitePlaceholder": "e.g., www.myagency.com or @myagency",
+        "tourCount": "How many tours/activities do you offer?",
+        "isOwnerLegend": "Are you the business owner or main decision maker?",
+        "yes": "Yes",
+        "no": "No"
+      },
+      "submitButton": "Complete My Entry",
+      "submittingButton": "Submitting..."
+    },
+    "ThankYou": {
+      "title": "You're In!",
+      "subtitle": "Your entry for the free Booking Engine has been confirmed.",
+      "nextStepsTitle": "What happens next?",
+      "nextStepsDesc": "Our team will review all entries. Winners will be contacted via email by <strong>{date}</strong>. Good luck!",
+      "demoTitle": "While you wait, see what the prize looks like in action:",
+      "demoButton": "View Live Demo Case Study (Marrago)"
+    }
+  },
+  "About": {
+    "meta": {
+      "title": "About Upmerce | Building Independence for Moroccan Tourism",
+      "description": "Upmerce is the specialized technology partner for Riads, Hotels, and Tour Agencies in Morocco. We build direct booking engines that help you stop paying commissions."
+    },
+    "Hero": {
+      "title": "We Don't Just Build Websites.\n<colored>We Build Independence</colored> for Moroccan Tourism.",
+      "subtitle": "Upmerce is the specialized technology partner for <strong>Riads, Hotels, and Tour Agencies</strong> ready to stop renting their customers from the big platforms and start owning their growth."
+    },
+    "Story": {
+      "sectionTitle": "The Origin Story",
+      "headline": "The Gap Between Moroccan Hospitality and Digital Reality.",
+      "p1": "Morocco offers world-class hospitality, from the luxury Riad in Fes to the bespoke desert camp in Merzouga. Yet, too many brilliant local businesses are invisible online, or worse, enslaved by foreign platforms like <bold>Booking.com, Expedia, and Viator</bold> that take huge percentages of revenue just for making an introduction.",
+      "p2": "We saw 5-star establishments on the ground struggling with 2-star technology online—slow websites, broken booking forms, and endless WhatsApp chats.",
+      "p3": "Upmerce was born to close that gap. We believe the most powerful technology shouldn't just be for international giants; it should be for the local experts who actually deliver the experience."
+    },
+    "Difference": {
+      "sectionTitle": "The Upmerce Difference",
+      "headline": "Technology Built for Independence, Not Dependence.",
+      "pillars": {
+        "speed": {
+          "title": "Engineering for Speed (Google Loves Us)",
+          "description": "We don't use outdated tools like WordPress. We build on Next.js technology for instant loading times on mobile—the #1 factor for ranking high on Google today."
+        },
+        "commission": {
+          "title": "The 0% Commission Philosophy",
+          "description": "Whether you are selling room nights or day trips, your inventory is yours. Our direct booking engines link to your bank, so you keep 100% of the profit."
+        },
+        "mobile": {
+          "title": "Built for the Mobile Manager",
+          "description": "Our systems give you a \"Pocket Office\"—an admin panel designed for smartphones, allowing you to manage availability, prices, and bookings from the road or reception."
+        }
+      }
+    },
+    "Founder": {
+      "quote": "\"As a developer based in Souss-Massa, I've watched local tourism professionals—from Riad owners to excursion guides—work incredibly hard only to give away their margins to foreign tech companies. I started Upmerce with one goal: to give Moroccan hospitality technology that is actually better than the OTAs. Technology that makes them independent, profitable, and proud.\"",
+      "name": "Mustapha Ouazza",
+      "role": "Founder & Lead Strategist"
+    },
+    "Process": {
+      "sectionTitle": "Our Process",
+      "headline": "From Concept to Bookings: A Simple Path.",
+      "steps": {
+        "step1": {
+          "title": "Discovery & Strategy",
+          "description": "We analyze your current business, pain points, and goals to design a tailored blueprint for your digital growth."
+        },
+        "step2": {
+          "title": "The Engine Build",
+          "description": "We deploy your custom, high-performance Next.js platform with integrated direct booking and SEO foundations."
+        },
+        "step3": {
+          "title": "Content Integration",
+          "description": "We populate your site with your tours, rooms, photos, and brand assets, ensuring everything looks premium."
+        },
+        "step4": {
+          "title": "Launch & Handover",
+          "description": "We go live, train you on your mobile admin panel, and hand you the keys to your new revenue machine."
+        }
+      }
+    },
+    "CTA": {
+      "headline": "Ready to stop renting your digital presence and start owning it?",
+      "subtitle": "Don't just take our word for it. See the difference a real technology partner makes for a local Souss-Massa operator.",
+      "primaryButton": "Enter to Win a Free Build",
+      "secondaryButton": "See Live Demo (Marrago)"
+    }
+  },
+  "Solutions": {
+    "meta": {
+      "title": "Upmerce Solutions | The Direct Booking Engine for Morocco",
+      "description": "Discover the Upmerce Engine: A complete digital operating system offering 0% commission direct bookings, blazing fast speed, and mobile admin control for tourism professionals."
+    },
+    "Hero": {
+      "title": "The Upmerce Engine:\n Your Complete <colored>Digital Operating System.</colored>",
+      "subtitle": "Stop stitching together broken tools. Get the all-in-one platform built to <strong>liberate Moroccan tourism businesses</strong> from OTAs and manual work."
+    },
+    "Pain": {
+      "sectionTitle": "The Reality Check",
+      "headline": "Are you running your business,\n or is it running you?",
+      "painColumnTitle": "The Old Way (Chaos)",
+      "painPoints": {
+        "commission": {
+          "title": "The Commission Bleed",
+          "desc": "Losing 20-30% of your hard-earned margin to foreign OTAs on every single booking."
+        },
+        "whatsapp": {
+          "title": "The WhatsApp Trap",
+          "desc": "Hours spent manually chasing confirmations and payments instead of growing your business."
+        },
+        "invisible": {
+          "title": "Invisible Online",
+          "desc": "Slow, outdated websites that Google ignores and frustrated mobile customers abandon."
+        }
+      },
+      "solutionColumnTitle": "The Upmerce Way (Control)",
+      "solutionPoints": {
+        "profit": {
+          "title": "100% Profit Retention",
+          "desc": "Direct bookings with 0% commission. The money goes straight to your bank account."
+        },
+        "automation": {
+          "title": "24/7 Automation",
+          "desc": "Bookings are confirmed and paid automatically while you sleep or lead tours."
+        },
+        "presence": {
+          "title": "Unignorable Presence",
+          "desc": "Blazing fast, modern technology built to rank high and convert mobile visitors instantly."
+        }
+      }
+    },
+    "Finance": {
+      "pillarTitle": "Pillar 1: Financial Control",
+      "headline": "Your Inventory. Your Money.\nYour Bank Account.",
+      "body": "The Upmerce Engine includes a powerful, enterprise-grade commerce system built directly into your site. It’s not just a booking form; it’s a complete financial operating system designed to make you independent of third-party platforms.",
+      "features": {
+        "f1": {
+          "title": "0% Commission Direct Booking Engine",
+          "desc": "Stop sharing revenue. Our integrated e-commerce checkout means you keep every dirham from every booking."
+        },
+        "f2": {
+          "title": "Instant, Secure Global Payments",
+          "desc": "Accept credit cards from around the world securely via Stripe or PayPal. Money goes straight to your business bank account."
+        },
+        "f3": {
+          "title": "Smart & Dynamic Pricing Models",
+          "desc": "Easily set different prices for seasons, group sizes, or last-minute deals to maximize your margins."
+        }
+      }
+    },
+    "Mobile": {
+      "pillarTitle": "Pillar 2: The Pocket Office",
+      "headline": "Run Your Entire Business from Anywhere.",
+      "body": "You don't sit at a desk all day, so why should your business software? The Upmerce Engine includes a powerful, mobile-first admin panel designed for the reality of a tourism professional on the move.",
+      "features": {
+        "f1": {
+          "title": "Real-Time Availability Control",
+          "desc": "Instantly close dates or add extra spots from your phone the moment a booking comes in from another source."
+        },
+        "f2": {
+          "title": "Instant Product Updates",
+          "desc": "Need to change a price or update an itinerary description? Do it in seconds from the front seat of your 4x4. No developer needed."
+        },
+        "f3": {
+          "title": "Centralized Booking Hub",
+          "desc": "See every upcoming booking, client details, and payment status in one clean mobile dashboard."
+        }
+      }
+    },
+    "Growth": {
+      "pillarTitle": "Pillar 3: The Growth Engine",
+      "headline": "Unignorable Visibility.\nEngineered for Google.",
+      "body": "A pretty website is useless if nobody sees it. The Upmerce Engine isn't just designed for humans; it's engineered for search engines. We use cutting-edge technology to ensure you are visible when it matters most.",
+      "features": {
+        "f1": {
+          "title": "Blazing Fast Performance (Next.js)",
+          "desc": "Built on the same technology used by Netflix and Uber. Pages load instantly on mobile, reducing bounce rates and keeping customers engaged."
+        },
+        "f2": {
+          "title": "Google-First SEO Architecture",
+          "desc": "Clean code, perfect structure, and meta tags generated automatically. Google loves our sites, helping you rank higher organically."
+        },
+        "f3": {
+          "title": "Native Multilingual Capability",
+          "desc": "Don't just use Google Translate. Reach international markets professionally with deeply integrated support for English, French, Arabic, and more."
+        }
+      }
+    },
+    "Ecosystem": {
+      "sectionTitle": "The Complete Ecosystem",
+      "headline": "Everything Else You Need to Win.",
+      "body": "It's not just about bookings. The Upmerce Engine includes a suite of professional tools designed to handle every aspect of your digital presence.",
+      "features": {
+        "reviews": {
+          "title": "Integrated Social Proof",
+          "desc": "Collect and display verified customer reviews directly next to your 'Book Now' button to build instant trust."
+        },
+        "blog": {
+          "title": "SEO-Ready Blog Engine",
+          "desc": "Publish travel guides and articles easily to attract free, organic traffic from Google search."
+        },
+        "maps": {
+          "title": "Interactive Itinerary Maps",
+          "desc": "Give clients a clear visual understanding of tour routes and meeting points with integrated maps."
+        },
+        "crm": {
+          "title": "Built-in Client CRM",
+          "desc": "A centralized database of all your past customers, making it easy to reconnect and drive repeat bookings."
+        },
+        "notifications": {
+          "title": "Automated Notifications",
+          "desc": "Instant, branded email confirmations and reminders sent to clients (and you) automatically."
+        },
+        "images": {
+          "title": "Smart Image Optimization",
+          "desc": "Your high-quality photos are automatically compressed and resized for lightning-fast loading without losing quality."
+        }
+      }
+    },
+    "CTA": {
+      "headline": "Ready to stop renting your business and start owning it?",
+      "subtitle": "This isn't theory. This is the exact engine powering leading agencies in the highly competitive <strong>Marrakech market</strong> right now.",
+      "primaryButton": "Enter to Win Your Engine",
+      "secondaryButton": "See It Live (Marrago Demo)"
+    }
+  },
+  "CaseStudies": {
+    "meta": {
+      "title": "Marrago Case Study | Upmerce Success Stories",
+      "description": "See how Marrakech tour agency Marrago used Upmerce to achieve 0% commission bookings and complete digital automation."
+    },
+    "Hero": {
+      "eyebrow": "Client Spotlight: Marrakech",
+      "title": "Marrago: The Engine Behind Marrakech's Premier Excursion Agency.",
+      "subtitle": "How a local tour operator transformed from manual chaos to a fully automated, 0% commission digital powerhouse."
+    },
+    "Challenge": {
+      "title": "The Challenge: Scaling amidst analog chaos.",
+      "description": "Before Upmerce, Marrago was offering 5-star experiences on the ground in Marrakech but running on 2-star infrastructure behind the scenes. Despite high demand, growth was choked by manual processes and reliance on third-party platforms.",
+      "painPoints": {
+        "commission": {
+          "title": "The Commission Bleed",
+          "description": "Losing 25%+ of hard-earned margins to OTAs like Viator just to secure bookings, severely limiting profitability."
+        },
+        "chaos": {
+          "title": "Operational Overload",
+          "description": "Managing inventory via endless WhatsApp chats, phone calls, and paper diaries, leading to stress and occasional double-bookings."
+        },
+        "desk": {
+          "title": "Tethered to the Desk",
+          "description": "The founder couldn't update pricing, close availability, or manage bookings while on the road supervising tours."
+        }
+      }
+    },
+    "Solution": {
+      "title": "The Solution: A complete digital operating system.",
+      "subtitle": "Upmerce deployed a custom Next.js platform tailored for high-end Marrakech excursions, addressing both the frontend customer experience and backend operational needs.",
+      "frontend": {
+        "title": "1. The High-Converting Frontend",
+        "description": "We built a blazing-fast, mobile-first website designed to rank high on Google and convert premium tourists. The stunning visual design reflects the quality of Marrago's tours, building instant trust."
+      },
+      "backend": {
+        "title": "2. The 'Pocket Office' & Direct Booking Engine",
+        "description": "We freed the founder from the desk. The mobile-friendly admin panel allows for real-time availability management from the road, while the integrated Stripe checkout captures 0% commission bookings directly to their bank."
+      }
+    },
+    "Results": {
+      "title": "The Results: Independence & Growth.",
+      "subtitle": "Since launching on the Upmerce Engine, Marrago has transformed its business model, moving from OTA dependence to direct-booking dominance.",
+      "metrics": {
+        "commission": {
+          "value": "0%",
+          "label": "Commission Paid",
+          "description": "Every direct booking keeps 100% of the revenue in the business."
+        },
+        "time": {
+          "value": "10+",
+          "label": "Hours Saved Weekly",
+          "description": "Automated bookings and mobile management eliminated manual admin work."
+        },
+        "seo": {
+          "value": "#1",
+          "label": "Google Visibility",
+          "description": "Achieved top rankings for key Marrakech excursion keywords thanks to Next.js SEO."
+        }
+      }
+    },
+    "CTA": {
+      "title": "Ready for results like Marrago?",
+      "subtitle": "Stop renting your digital presence from OTAs. Start owning it with your own direct booking engine. Enter now for a chance to win a complete build.",
+      "primaryBtn": "Enter to Win Your Engine",
+      "secondaryBtn": "See Marrago Live Demo"
     }
   }
 }

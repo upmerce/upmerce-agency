@@ -1,7 +1,7 @@
 // /src/lib/firebase.ts
 import { initializeApp, getApps, getApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
-import { getAuth } from "firebase/auth";
+import { getAuth, GoogleAuthProvider } from "firebase/auth";
 import { getStorage } from "firebase/storage"; // <-- 1. IMPORT getStorage
 import { getAnalytics } from "firebase/analytics";
 // Your web app's Firebase configuration
@@ -20,10 +20,12 @@ const app = !getApps().length ? initializeApp(firebaseConfig) : getApp();
 const firestore = getFirestore(app);
 const auth = getAuth(app);
 const storage = getStorage(app); // <-- 2. INITIALIZE storage
-
+// ▼▼▼ 2. INITIALIZE THE GOOGLE PROVIDER ▼▼▼
+const googleProvider = new GoogleAuthProvider();
+// ▲▲▲
 let analytics;
 if (typeof window !== "undefined") {
   analytics = getAnalytics(app);
 }
 
-export { app, firestore, auth, storage, analytics }; // <-- 3. EXPORTS
+export { app, firestore, auth, storage, analytics, googleProvider }; // <-- 3. EXPORTS

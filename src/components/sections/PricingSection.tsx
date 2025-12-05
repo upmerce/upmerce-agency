@@ -52,22 +52,23 @@ const PricingCard: React.FC<PricingCardProps> = ({
         flex flex-col 
         transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-xl
         ${isPopular ? 'border-2 border-purple-500 shadow-lg relative pt-14' : ''} 
-      `} // REFINED: Increased pt slightly for more space below label
+      `}
       role="group"
       aria-labelledby={`package-name-${name.replace(/\s+/g, '-')}`}
     >
       {isPopular && (
         <span
           className="bg-purple-500 text-white text-xs font-bold px-3 py-1 rounded-full absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2" 
-          // REFINED: Adjusted vertical position slightly if needed, e.g., top-[-10px], but centering on border usually works. Let's rely on parent padding first.
           aria-label={popularLabel}
         >
-          {popularLabel.split(',')[0]} {/* Extracting just the "Popular" text */}
+          {popularLabel.split(',')[0]}
         </span>
       )}
       <h3 id={`package-name-${name.replace(/\s+/g, '-')}`} className="text-2xl font-bold text-white mb-2">{name}</h3>
-      <p className="text-4xl font-bold text-white mb-4">{price}</p>
-      {/* REFINED: Removed flex-grow to prevent pushing list down */}
+      {/* Price with Strikethrough Support */}
+      <div className="text-4xl font-bold text-white mb-4">
+        <span dangerouslySetInnerHTML={{ __html: price }} />
+      </div>
       <p className="text-gray-200 mb-6">{description}</p> 
       <ul className="text-left space-y-2 mb-8" aria-label={featuresListLabel}>
         {features.map((feature, fIndex) => (
@@ -98,7 +99,7 @@ export default function PricingSection({ id }: { id?: string }) {
     const features: string[] = t.raw(`packages.${index}.features`);
     return {
       name: t(`packages.${index}.name`),
-      price: t(`packages.${index}.price`),
+      price: t.raw(`packages.${index}.price`), // Use t.raw() to get HTML for price
       description: t(`packages.${index}.description`),
       features: features,
       cta: t(`packages.${index}.cta`),
@@ -139,4 +140,3 @@ export default function PricingSection({ id }: { id?: string }) {
     </section>
   );
 }
-

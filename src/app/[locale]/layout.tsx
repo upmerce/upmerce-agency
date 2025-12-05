@@ -14,6 +14,7 @@ import FloatingSocialMenu from "@/components/ui/FloatingSocialMenu";
 import BackToTopButton from "@/components/ui/BackToTopButton";
 import { CookieConsentProvider } from "@/components/context/CookieConsentContext";
 import AnalyticsScripts from "@/components/analytics/AnalyticsScripts";
+import { AuthProvider } from "@/context/AuthContext";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -80,7 +81,8 @@ export default async function RootLayout({
              locale={locale || 'en'} 
              messages={messages}
              >
-            <CookieConsentProvider>
+            <AuthProvider>
+               <CookieConsentProvider>
                 <div className="flex flex-col min-h-screen">
                 <Header />
              
@@ -91,11 +93,12 @@ export default async function RootLayout({
                 </div>
             
             
-           {/*  <CookieConsent /> */}
-            <FloatingSocialMenu/>
-            <BackToTopButton /> 
-            <AnalyticsScripts />
-            </CookieConsentProvider>
+              {/*  <CookieConsent /> */}
+              <FloatingSocialMenu/>
+              <BackToTopButton /> 
+              <AnalyticsScripts />
+              </CookieConsentProvider>
+            </AuthProvider>
           </NextIntlClientProvider>
         </ThemeRegistry>
         {/* {process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID && (

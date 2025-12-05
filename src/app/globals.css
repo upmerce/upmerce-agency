@@ -6,10 +6,7 @@ html {
   scroll-behavior: smooth;
 }
 
-body {
-  background-color: #ffffff;
-  color: #111827; /* Tailwind gray-900 */
-}
+
 
 /* Example for dark mode */
 @media (prefers-color-scheme: dark) {

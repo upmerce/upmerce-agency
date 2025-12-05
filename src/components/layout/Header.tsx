@@ -143,14 +143,15 @@ export default function Header() {
     type: 'scroll' | 'link';
   };
 
+  // Updated navigation links to point to the new dedicated pages
   const navLinks: NavLink[] = [
     { name: t('home'), target: '/', type: 'link' },
-    { name: t('ourProcess'), target: '/process', type: 'link' },
-    { name: t('features'), target: 'features', type: 'scroll' },
-    { name: t('portfolio'), target: 'portfolio', type: 'scroll' },
+    { name: t('about'), target: '/about', type: 'link' }, // Points to new About page
+    { name: t('solutions'), target: '/solutions', type: 'link' }, // Points to new Solutions page
+    { name: t('caseStudies'), target: '/case-studies', type: 'link' }, // Points to new Case Studies page
+    // Keep Pricing and FAQ as scroll links for now, as they are on the homepage
     { name: t('pricing'), target: 'pricing', type: 'scroll' },
     { name: t('faq'), target: 'faq', type: 'scroll' },
-    { name: t('blog'), target: '/blog', type: 'link' },
   ];
 
   const drawerVariants = {

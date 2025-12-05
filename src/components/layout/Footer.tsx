@@ -15,21 +15,28 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   // Define footer navigation categories and links
+  // UPDATED: Points to new dedicated pages for About, Solutions, and Case Studies
   const footerNavs = [
     {
       title: t('footerNavs.companyTitle'),
       links: [
+        // These point to dedicated pages
         { name: tNav('home'), href: '/', type: 'link' },
-        { name: t('footerNavs.aboutUs'), href: '/about', type: 'link' },
-        { name: t('footerNavs.services'), href: '/#features', type: 'scroll' }, // Linking to features section
-        { name: tNav('blog'), href: '/blog', type: 'link' },
+        { name: tNav('about'), href: '/about', type: 'link' },
+        { name: tNav('solutions'), href: '/solutions', type: 'link' },
+        { name: tNav('caseStudies'), href: '/case-studies', type: 'link' },
       ],
     },
     {
       title: t('footerNavs.resourcesTitle'),
       links: [
-        { name: tNav('faq'), href: '/#faq', type: 'scroll' }, // Linking to FAQ section
-        { name: t('footerNavs.support'), href: '/contact', type: 'link' },
+        // Blog is a separate page
+        { name: tNav('blog'), href: '/blog', type: 'link' },
+        // FAQ and Contact are sections on the homepage -> use scroll anchors
+        { name: tNav('faq'), href: '/#faq', type: 'scroll' },
+        // ▼▼▼ FIX: Changed from '/contact' to '/#contact' and type to 'scroll' ▼▼▼
+        { name: t('footerNavs.support'), href: '/#contact', type: 'scroll' },
+        // Legal pages are separate
         { name: t('footerNavs.termsOfService'), href: '/terms', type: 'link' },
         { name: t('footerNavs.privacyPolicy'), href: '/privacy', type: 'link' },
       ],
