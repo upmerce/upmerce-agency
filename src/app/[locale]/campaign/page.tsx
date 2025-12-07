@@ -42,10 +42,10 @@ export default function CampaignLandingPage() {
   return (
     <Box sx={{ 
       bgcolor: 'background.default', 
+      color: (theme) => theme.palette.getContrastText(theme.palette.background.default),
       minHeight: '100vh', 
       pt: { xs: 8, md: 12 }, 
-      pb: 8,
-      background: 'linear-gradient(180deg, rgba(25, 118, 210, 0.05) 0%, rgba(255,255,255,1) 100%)'
+      pb: 8
     }}>
       <Container maxWidth="lg">
         <Grid container spacing={6} alignItems="center">
@@ -66,10 +66,10 @@ export default function CampaignLandingPage() {
               >
                 {t('heroTitle')}
               </Typography>
-              <Typography variant="h4" color="text.secondary" sx={{ mb: 4, fontWeight: 500 }}>
+              <Typography variant="h4" sx={{ mb: 4, fontWeight: 500, color: (theme) => theme.palette.getContrastText(theme.palette.background.default) }}>
                 {t('heroSubtitle')}
               </Typography>
-              <Typography variant="body1" fontSize="1.2rem" color="text.secondary" sx={{ mb: 4, maxWidth: '600px' }}>
+              <Typography variant="body1" fontSize="1.2rem" sx={{ mb: 4, maxWidth: '600px', color: 'rgba(255,255,255,0.85)' }}>
                 {/* Use t.rich for content with html tags like <strong> */}
                 {t.rich('heroDescription', {
                     strong: (chunks) => <strong>{chunks}</strong>
@@ -85,7 +85,7 @@ export default function CampaignLandingPage() {
                     <Typography variant="h6" fontWeight="bold">
                       {benefit.title}
                     </Typography>
-                    <Typography variant="body2" color="text.secondary">
+                    <Typography variant="body2" sx={{ color: 'rgba(255,255,255,0.76)' }}>
                       {benefit.description}
                     </Typography>
                   </Box>
@@ -111,7 +111,7 @@ export default function CampaignLandingPage() {
               <Typography variant="h4" fontWeight="bold" gutterBottom>
                 {t('ctaCardTitle')}
               </Typography>
-              <Typography variant="body1" color="text.secondary" sx={{ mb: 4 }}>
+              <Typography variant="body1" sx={{ mb: 4, color: 'text.secondary' }}>
                 {t('ctaCardSubtitle')}
               </Typography>
 
@@ -120,7 +120,7 @@ export default function CampaignLandingPage() {
 
               <Stack direction="row" alignItems="center" justifyContent="center" spacing={1} sx={{ mt: 3 }}>
                 <CheckCircleIcon color="success" fontSize="small" />
-                <Typography variant="caption" color="text.secondary">
+                <Typography variant="caption" sx={{ color: 'text.secondary' }}>
                   {t('securityNote')}
                 </Typography>
               </Stack>
