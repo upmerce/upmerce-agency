@@ -6,28 +6,41 @@ import { Container, Paper, Typography, Box, Button, CircularProgress } from '@mu
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 import { useAuth } from '@/context/AuthContext';
 import { useRouter } from 'next/navigation';
-// ▼▼▼ 1. ADD useLocale IMPORT ▼▼▼
 import { useTranslations, useLocale } from 'next-intl';
+// ▼▼▼ 1. ADD ReactPixel IMPORT ▼▼▼
+import ReactPixel from 'react-facebook-pixel';
 // ▲▲▲
 
 export default function ThankYouPage() {
   const t = useTranslations('Campaign.ThankYou');
-  // ▼▼▼ 2. GET CURRENT LOCALE ▼▼▼
   const locale = useLocale();
-  // ▲▲▲
   const { user, loading: authLoading } = useAuth();
   const router = useRouter();
 
-  // ▼▼▼ 3. DEFINE LOCALIZED DATES ▼▼▼
-  // Define dates for all supported locales here for easy updating
   const announcementDates: Record<string, string> = {
     en: 'January 15, 2026',
     fr: '15 Janvier 2026',
     ar: '15 يناير 2026'
   };
 
-  // Select the date based on current locale, fallback to 'en' if somehow missing
   const dateString = announcementDates[locale] || announcementDates.en;
+
+  // ▼▼▼ 2. ADD PIXEL TRACKING useEffect ▼▼▼
+  useEffect(() => {
+    // Only fire if the user is authenticated and not loading
+    if (!authLoading && user) {
+      try {
+        // Track the standard 'SubmitApplication' event
+        ReactPixel.track('SubmitApplication');
+        console.log('Meta Pixel: SubmitApplication event fired successfully');
+      } catch (error) {
+        // Fail silently in production, log in development
+        if (process.env.NODE_ENV === 'development') {
+          console.error('Meta Pixel Error:', error);
+        }
+      }
+    }
+  }, [authLoading, user]); // Run this when auth state changes
   // ▲▲▲
 
   useEffect(() => {
@@ -65,14 +78,12 @@ export default function ThankYouPage() {
             <Typography variant="subtitle1" fontWeight="bold">
               {t('nextStepsTitle')}
             </Typography>
-            {/* ▼▼▼ USE RICH TEXT WITH LOCALIZED DATE ▼▼▼ */}
             <Typography variant="body2" color="text.secondary" component="div">
                {t.rich('nextStepsDesc', {
-                  date: dateString, // Use the selected localized date
-                  strong: (chunks) => <strong>{chunks}</strong>
+                 date: dateString, 
+                 strong: (chunks) => <strong>{chunks}</strong>
                })}
             </Typography>
-             {/* ▲▲▲ */}
           </Box>
 
           <Typography variant="body1" sx={{ mb: 2 }}>
