@@ -57,7 +57,7 @@ export const metadataStore: MetadataStore = {
       title: "About Upmerce | The 'Anti-Agency' Liberating Moroccan Tourism",
       description: "We are on a mission to free Moroccan hospitality from high-commission platforms and slow WordPress sites through superior technology and total ownership.",
       ogImage: {
-        src: "/images/og/og-main.webp",
+        src: "/images/og/og-campaign.webp",
         alt: "Upmerce mission statement: Liberating tourism businesses through technology."
       }
     },
@@ -65,7 +65,7 @@ export const metadataStore: MetadataStore = {
       title: "À propos d'Upmerce | L''Anti-Agence' qui Libère le Tourisme Marocain",
       description: "Notre mission : libérer l'hospitalité marocaine des plateformes à forte commission et des sites WordPress lents grâce à une technologie supérieure et une propriété totale.",
       ogImage: {
-        src: "/images/og/og-main.webp",
+        src: "/images/og/og-campaign.webp",
         alt: "Déclaration de mission Upmerce : Libérer les entreprises touristiques grâce à la technologie."
       }
     },
@@ -73,7 +73,7 @@ export const metadataStore: MetadataStore = {
       title: "عن Upmerce | 'ضد الوكالة' التي تحرر السياحة المغربية",
       description: "مهمتنا هي تحرير الضيافة المغربية من المنصات ذات العمولات العالية ومواقع ووردبريس البطيئة من خلال تكنولوجيا متفوقة وملكية كاملة.",
       ogImage: {
-        src: "/images/og/og-main.webp",
+        src: "/images/og/og-campaign.webp",
         alt: "بيان مهمة Upmerce: تحرير الشركات السياحية من خلال التكنولوجيا."
       }
     }
