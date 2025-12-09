@@ -1,24 +1,53 @@
-// app/[locale]/privacy/page.tsx
-import { metadataStore } from "@/app/config/site";
+// src/app/[locale]/privacy/page.tsx
+
+import { Metadata } from 'next';
 import PrivacyContent from "@/components/terms/PrivacyContent";
+import { metadataStore, siteConfig } from '@/app/config/site';
+import { generateCustomMetadata } from '../../../../lib/metadata';
 
-type MetadataProps = {
+// Define props type for page params
+type Props = {
   params: Promise<{ locale: string }>;
-}
+};
 
-export async function generateMetadata({
-  params
-}: MetadataProps) {
+// ▼▼▼ UPDATED METADATA FUNCTION ▼▼▼
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  // Get current locale
   const { locale } = await params;
-  const pageMetadata = metadataStore.privacy?.[locale] || metadataStore.privacy?.en || {};
+  // Get base URL
+  const siteUrl = process.env.NEXT_PUBLIC_API_URL || siteConfig.url;
 
-  return {
-    title: pageMetadata.title || "Politique de confidentialité - Upmerce",
-    description:
-      pageMetadata.description ||
-      "Découvrez comment Upmerce collecte, utilise et protège vos données conformément aux normes marocaines de confidentialité.",
-  };
+  // 1. Retrieve specific privacy page metadata based on locale
+  // Using 'privacy' key from our store, with a safe fallback
+  const pageMeta = metadataStore['privacy']?.[locale] || metadataStore['privacy']?.en;
+
+  // Safety check in case metadata is missing
+  if (!pageMeta) {
+    return {
+      title: "Privacy Policy | Upmerce",
+      description: "Learn how Upmerce collects, uses, and protects your data.",
+    };
+  }
+
+  // 2. Generate the final metadata object using utility function
+  return generateCustomMetadata({
+    title: pageMeta.title,
+    description: pageMeta.description,
+    pathname: `/${locale}/privacy`, // Specific path for this page
+    images: [
+      {
+        src: pageMeta.ogImage.src, // Will use /images/og/og-main.webp as defined in store
+        alt: pageMeta.ogImage.alt,
+        width: 1200,
+        height: 630,
+      },
+    ],
+    type: 'website',
+    locale: locale,
+    baseUrl: siteUrl
+  });
 }
+// ▲▲▲
 
 export default async function Page() {
   return (

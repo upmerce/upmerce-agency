@@ -1,22 +1,53 @@
-// app/[locale]/terms/page.tsx
-import { metadataStore } from "@/app/config/site";
+// src/app/[locale]/terms/page.tsx
+
+import { Metadata } from 'next';
 import TermsContent from "@/components/terms/TermsContent";
+import { metadataStore, siteConfig } from '@/app/config/site';
+import { generateCustomMetadata } from '../../../../lib/metadata';
 
-type Props = { params: Promise<{ locale: string }> };
+// Define props type for page params
+type Props = {
+  params: Promise<{ locale: string }>;
+};
 
-export async function generateMetadata({
-  params,
-}: Props){
+// ▼▼▼ UPDATED METADATA FUNCTION ▼▼▼
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  // Get current locale
   const { locale } = await params;
-  const pageMetadata = metadataStore.terms?.[locale] || metadataStore.terms?.en || {};
+  // Get base URL
+  const siteUrl = process.env.NEXT_PUBLIC_API_URL || siteConfig.url;
 
-  return {
-    title: pageMetadata.title || "Conditions d'utilisation - Upmerce",
-    description:
-      pageMetadata.description ||
-      "Lisez les conditions d'utilisation du projet Upmerce, plateforme indépendante développée par Mustapha Ouazza.",
-  };
+  // 1. Retrieve specific terms page metadata based on locale
+  // Using 'terms' key from our store, with a safe fallback
+  const pageMeta = metadataStore['terms']?.[locale] || metadataStore['terms']?.en;
+
+  // Safety check in case metadata is missing
+  if (!pageMeta) {
+    return {
+      title: "Terms of Use | Upmerce",
+      description: "Read the terms of use governing Upmerce's digital services.",
+    };
+  }
+
+  // 2. Generate the final metadata object using utility function
+  return generateCustomMetadata({
+    title: pageMeta.title,
+    description: pageMeta.description,
+    pathname: `/${locale}/terms`, // Specific path for this page
+    images: [
+      {
+        src: pageMeta.ogImage.src, // Will use /images/og/og-main.webp as defined in store
+        alt: pageMeta.ogImage.alt,
+        width: 1200,
+        height: 630,
+      },
+    ],
+    type: 'website',
+    locale: locale,
+    baseUrl: siteUrl
+  });
 }
+// ▲▲▲
 
 export default async function Page() {
   return (

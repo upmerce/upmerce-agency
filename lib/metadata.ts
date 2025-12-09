@@ -1,8 +1,6 @@
 // /lib/metadata.ts
 
 import { Metadata } from 'next';
-
-
 import { ARCHIVES, BOOKMARKS, CATEGORY, FORMAT_DETECTION, ICONS, ITUNES, OTHER } from "@/config";
 import { siteConfig } from '@/app/config/site';
 import { AUTHORS, getAppLinks, getVerification, ROBOTS } from '@/config/site';
@@ -59,21 +57,23 @@ export function generateCustomMetadata({
 
   // Ensure there's at least a default image if none are provided
   const seoImages = images.length > 0 ? images : [{
-    src: '/images/og-image.png', // Default Open Graph image
-    alt: 'Default banner image for the website',
+    // ▼▼▼ UPDATED DEFAULT IMAGE PATH ▼▼▼
+    src: '/images/og/og-main.webp', // Your new branded fallback image
+    alt: 'Upmerce Solutions - Digital Independence for Moroccan Tourism', // More descriptive alt text
+    // ▲▲▲
     width: 1200,
     height: 630
   }];
 
   // Construct absolute URLs for images
   const absoluteImageUrls = seoImages.map(image => ({
-    url: new URL(image.src, process.env.NEXT_PUBLIC_API_URL).toString(),
+    url: new URL(image.src, process.env.NEXT_PUBLIC_API_URL!).toString(),
     alt: image.alt,
     width: image.width || 1200,
     height: image.height || 630,
   }));
 
-  const canonicalUrl = new URL(pathname, process.env.NEXT_PUBLIC_API_URL).toString();
+  const canonicalUrl = new URL(pathname, process.env.NEXT_PUBLIC_API_URL!).toString();
 
   return {
     // --- Core Metadata ---
