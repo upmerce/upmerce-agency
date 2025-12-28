@@ -1,10 +1,15 @@
 // src/components/layout/CookieModal.tsx
-"use client";
+'use client';
 
 import { useTranslations } from "next-intl";
 import { useState, useEffect } from "react";
 import { CookieConsentState } from "../context/CookieConsentContext";
-
+import {
+  Dialog, DialogTitle, DialogContent, DialogActions,
+  Typography, Button, Switch, Box, FormControlLabel, IconButton, useTheme, Stack
+} from '@mui/material';
+import CloseIcon from '@mui/icons-material/Close';
+import SecurityIcon from '@mui/icons-material/Security';
 
 type Props = {
   currentConsent: CookieConsentState;
@@ -12,58 +17,11 @@ type Props = {
   onSave: (newState: CookieConsentState) => void;
 };
 
-// --- Simple Toggle Switch Component ---
-function ToggleSwitch({
-  label,
-  id,
-  checked,
-  onChange,
-  disabled = false,
-}: {
-  label: string;
-  id: string;
-  checked: boolean;
-  onChange: (checked: boolean) => void;
-  disabled?: boolean;
-}) {
-  return (
-    <label
-      htmlFor={id}
-      className={`flex items-center justify-between cursor-pointer ${
-        disabled ? "opacity-50 cursor-not-allowed" : ""
-      }`}
-    >
-      <span className="text-gray-700 dark:text-gray-300">{label}</span>
-      <div className="relative">
-        <input
-          id={id}
-          type="checkbox"
-          className="sr-only"
-          checked={checked}
-          onChange={(e) => !disabled && onChange(e.target.checked)}
-          disabled={disabled}
-        />
-        <div
-          className={`block w-10 h-6 rounded-full ${
-            checked ? "bg-blue-600" : "bg-gray-300 dark:bg-gray-600"
-          }`}
-        ></div>
-        <div
-          className={`dot absolute left-1 top-1 bg-white w-4 h-4 rounded-full transition-transform ${
-            checked ? "translate-x-4" : ""
-          }`}
-        ></div>
-      </div>
-    </label>
-  );
-}
-// --- End Toggle Switch Component ---
-
 export default function CookieModal({ currentConsent, onClose, onSave }: Props) {
   const t = useTranslations("CookieConsent");
+  const theme = useTheme();
   const [localConsent, setLocalConsent] = useState(currentConsent);
 
-  // Sync local state if prop changes
   useEffect(() => {
     setLocalConsent(currentConsent);
   }, [currentConsent]);
@@ -76,110 +34,113 @@ export default function CookieModal({ currentConsent, onClose, onSave }: Props) 
     onSave(localConsent);
   };
 
+  // Custom Amber Switch Style
+  const switchSx = {
+    '& .MuiSwitch-switchBase.Mui-checked': {
+      color: theme.palette.secondary.main,
+      '& + .MuiSwitch-track': {
+        backgroundColor: theme.palette.secondary.main,
+        opacity: 0.5,
+      },
+    },
+    '& .MuiSwitch-track': {
+      backgroundColor: 'rgba(255,255,255,0.3)',
+    }
+  };
+
+  const OptionRow = ({ label, desc, checked, onChange, disabled }: any) => (
+    <Box sx={{ p: 2, borderRadius: 2, bgcolor: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.05)' }}>
+      <FormControlLabel
+        control={
+          <Switch 
+            checked={checked} 
+            onChange={(e) => onChange && onChange(e.target.checked)} 
+            disabled={disabled}
+            sx={switchSx} 
+          />
+        }
+        label={<Typography fontWeight={600} sx={{ color: 'white' }}>{label}</Typography>}
+        sx={{ width: '100%', justifyContent: 'space-between', flexDirection: 'row-reverse', ml: 0, mr: 0 }}
+      />
+      <Typography variant="caption" sx={{ color: 'text.disabled', display: 'block', mt: 1, lineHeight: 1.4 }}>
+        {desc}
+      </Typography>
+    </Box>
+  );
+
   return (
-    <>
-      {/* Overlay */}
-      <div
-        className="fixed inset-0 z-50 bg-black bg-opacity-50 backdrop-blur-sm"
-        onClick={onClose}
-        aria-hidden="true"
-      ></div>
+    <Dialog
+      open={true}
+      onClose={onClose}
+      maxWidth="sm"
+      fullWidth
+      PaperProps={{
+        sx: {
+          bgcolor: '#1a1a1a', // Obsidian Card
+          border: '1px solid rgba(255,255,255,0.1)',
+          borderRadius: 3,
+          boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.8)',
+          color: 'white'
+        }
+      }}
+    >
+      <DialogTitle sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', pb: 1, borderBottom: '1px solid rgba(255,255,255,0.05)' }}>
+        <Stack direction="row" alignItems="center" spacing={1.5}>
+           <SecurityIcon sx={{ color: theme.palette.secondary.main }} />
+           <Typography variant="h6" fontWeight={700}>
+             {t('modal.title')}
+           </Typography>
+        </Stack>
+        <IconButton onClick={onClose} sx={{ color: 'text.secondary', '&:hover': { color: 'white' } }}>
+          <CloseIcon />
+        </IconButton>
+      </DialogTitle>
 
-      {/* Modal */}
-      <div
-        className="fixed z-50 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-md p-6 bg-white dark:bg-gray-800 rounded-lg shadow-2xl"
-        role="dialog"
-        aria-modal="true"
-        aria-labelledby="cookie-modal-title"
-      >
-        {/* Header */}
-        <div className="flex items-center justify-between pb-3 border-b border-gray-200 dark:border-gray-700">
-          <h2
-            id="cookie-modal-title"
-            className="text-lg font-semibold text-gray-900 dark:text-white"
-          >
-            {t("modal.title")}
-          </h2>
-          <button
-            onClick={onClose}
-            className="text-gray-400 hover:text-gray-600 dark:hover:text-gray-200"
-            aria-label={t("modal.close")}
-          >
-            {/* Close Icon (X) */}
-            <svg
-              className="w-6 h-6"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M6 18L18 6M6 6l12 12"
-              />
-            </svg>
-          </button>
-        </div>
+      <DialogContent sx={{ mt: 2 }}>
+        <Typography variant="body2" sx={{ color: 'text.secondary', mb: 3 }}>
+          {t('modal.description')}
+        </Typography>
 
-        {/* Body */}
-        <div className="py-4 space-y-4">
-          <p className="text-sm text-gray-600 dark:text-gray-400">
-            {t("modal.description")}
-          </p>
+        <Stack spacing={2}>
+          <OptionRow 
+            label={t('modal.necessary.title')} 
+            desc={t('modal.necessary.description')} 
+            checked={true} 
+            disabled 
+          />
+          <OptionRow 
+            label={t('modal.analytics.title')} 
+            desc={t('modal.analytics.description')} 
+            checked={localConsent.analytics} 
+            onChange={(v: boolean) => handleToggle("analytics", v)}
+          />
+          <OptionRow 
+            label={t('modal.marketing.title')} 
+            desc={t('modal.marketing.description')} 
+            checked={localConsent.marketing} 
+            onChange={(v: boolean) => handleToggle("marketing", v)}
+          />
+        </Stack>
+      </DialogContent>
 
-          {/* Categories */}
-          <div className="space-y-3">
-            <div className="p-3 bg-gray-50 dark:bg-gray-700 rounded-md">
-              <ToggleSwitch
-                id="necessary"
-                label={t("modal.necessary.title")}
-                checked={true}
-                onChange={() => {}}
-                disabled={true}
-              />
-              <p className="mt-1 text-xs text-gray-500 dark:text-gray-400">
-                {t("modal.necessary.description")}
-              </p>
-            </div>
-
-            <div className="p-3 bg-gray-50 dark:bg-gray-700 rounded-md">
-              <ToggleSwitch
-                id="analytics"
-                label={t("modal.analytics.title")}
-                checked={localConsent.analytics}
-                onChange={(value) => handleToggle("analytics", value)}
-              />
-              <p className="mt-1 text-xs text-gray-500 dark:text-gray-400">
-                {t("modal.analytics.description")}
-              </p>
-            </div>
-
-            <div className="p-3 bg-gray-50 dark:bg-gray-700 rounded-md">
-              <ToggleSwitch
-                id="marketing"
-                label={t("modal.marketing.title")}
-                checked={localConsent.marketing}
-                onChange={(value) => handleToggle("marketing", value)}
-              />
-              <p className="mt-1 text-xs text-gray-500 dark:text-gray-400">
-                {t("modal.marketing.description")}
-              </p>
-            </div>
-          </div>
-        </div>
-
-        {/* Footer */}
-        <div className="pt-3 border-t border-gray-200 dark:border-gray-700">
-          <button
-            onClick={handleSaveClick}
-            className="w-full px-4 py-2 font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700"
-          >
-            {t("modal.save")}
-          </button>
-        </div>
-      </div>
-    </>
+      <DialogActions sx={{ p: 3, pt: 1, borderTop: '1px solid rgba(255,255,255,0.05)' }}>
+        <Button onClick={onClose} sx={{ color: 'text.secondary', mr: 1 }}>
+          Cancel
+        </Button>
+        <Button
+          onClick={handleSaveClick}
+          variant="contained"
+          sx={{
+            bgcolor: theme.palette.secondary.main,
+            color: 'black',
+            fontWeight: 700,
+            px: 4,
+            '&:hover': { bgcolor: '#fbbf24' }
+          }}
+        >
+          {t('modal.save')}
+        </Button>
+      </DialogActions>
+    </Dialog>
   );
 }

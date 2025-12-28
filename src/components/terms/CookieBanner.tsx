@@ -1,8 +1,10 @@
 // src/components/layout/CookieBanner.tsx
-"use client";
+'use client';
 
 import { useTranslations } from "next-intl";
-import Link from "next/link";
+import { Link } from '@/i18n/navigation'; 
+import { Box, Button, Container, Paper, Typography, useTheme, Slide, Stack } from '@mui/material';
+import CookieIcon from '@mui/icons-material/Cookie';
 
 type Props = {
   onAcceptAll: () => void;
@@ -10,51 +12,91 @@ type Props = {
   onCustomize: () => void;
 };
 
-export default function CookieBanner({
-  onAcceptAll,
-  onDeclineAll,
-  onCustomize,
-}: Props) {
+export default function CookieBanner({ onAcceptAll, onDeclineAll, onCustomize }: Props) {
   const t = useTranslations("CookieConsent");
+  const theme = useTheme();
 
   return (
-    <section className="fixed bottom-0 left-0 right-0 z-50 bg-gray-100 dark:bg-gray-800 shadow-lg border-t border-gray-200 dark:border-gray-700">
-      <div className="container mx-auto px-4 py-3">
-        <div className="mb-2">
-          <p className="text-sm text-gray-700 dark:text-gray-300">
-            {t("message")}{" "}
-            <Link
-              href="/privacy"
-              className="font-medium text-blue-600 dark:text-blue-400 hover:underline"
-            >
-              {t("privacyLinkText")}
-            </Link>
-            .
-          </p>
-        </div>
-        
-        {/* Buttons */}
-        <div className="flex flex-col sm:flex-row gap-2">
-          <button
-            onClick={onAcceptAll}
-            className="px-4 py-2 text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 sm:flex-grow"
-          >
-            {t("acceptAll")}
-          </button>
-          <button
-            onClick={onDeclineAll}
-            className="px-4 py-2 text-sm font-medium rounded-md text-gray-700 dark:text-gray-200 bg-gray-200 dark:bg-gray-600 hover:bg-gray-300 dark:hover:bg-gray-500 sm:flex-grow"
-          >
-            {t("declineAll")}
-          </button>
-          <button
-            onClick={onCustomize}
-            className="px-4 py-2 text-sm font-medium rounded-md text-gray-700 dark:text-gray-200 bg-transparent hover:bg-gray-200 dark:hover:bg-gray-700 sm:flex-grow"
-          >
-            {t("customize")}
-          </button>
-        </div>
-      </div>
-    </section>
+    <Slide direction="up" in={true} mountOnEnter unmountOnExit>
+      <Paper
+        elevation={24}
+        sx={{
+          position: 'fixed',
+          bottom: 0,
+          left: 0,
+          right: 0,
+          zIndex: 1300, // Above everything
+          borderRadius: 0, 
+          borderTop: '1px solid rgba(255,255,255,0.1)',
+          // Obsidian Glass
+          backgroundColor: 'rgba(10, 10, 10, 0.95)', 
+          backdropFilter: 'blur(10px)',
+          p: 3
+        }}
+      >
+        <Container maxWidth="lg">
+          <Stack direction={{ xs: 'column', md: 'row' }} alignItems="center" spacing={3}>
+            
+            {/* Icon & Text */}
+            <Box sx={{ flex: 1, display: 'flex', gap: 2, alignItems: 'flex-start' }}>
+               <Box sx={{ 
+                 p: 1, 
+                 bgcolor: 'rgba(255,255,255,0.05)', 
+                 borderRadius: '50%', 
+                 display: {xs: 'none', sm: 'block'} 
+               }}>
+                  <CookieIcon sx={{ color: theme.palette.secondary.main }} />
+               </Box>
+               <Box>
+                  <Typography variant="subtitle2" sx={{ color: 'white', fontWeight: 700, mb: 0.5 }}>
+                    {t('message')} 
+                  </Typography>
+                  <Typography variant="body2" sx={{ color: 'text.secondary' }}>
+                    We use tracking to improve your experience. Read our{' '}
+                    <Link href="/privacy" style={{ color: theme.palette.secondary.main, textDecoration: 'none' }}>
+                      {t('privacyLinkText')}
+                    </Link>.
+                  </Typography>
+               </Box>
+            </Box>
+
+            {/* Actions */}
+            <Stack direction={{ xs: 'column', sm: 'row' }} spacing={2} sx={{ width: { xs: '100%', md: 'auto' } }}>
+               <Button
+                onClick={onAcceptAll}
+                variant="contained"
+                sx={{
+                  bgcolor: theme.palette.secondary.main,
+                  color: 'black',
+                  fontWeight: 700,
+                  px: 3,
+                  '&:hover': { bgcolor: '#fbbf24' }
+                }}
+              >
+                {t('acceptAll')}
+              </Button>
+              <Button
+                onClick={onDeclineAll}
+                variant="outlined"
+                sx={{
+                  color: 'white',
+                  borderColor: 'rgba(255,255,255,0.2)',
+                  px: 3,
+                  '&:hover': { borderColor: 'white', bgcolor: 'rgba(255,255,255,0.05)' }
+                }}
+              >
+                {t('declineAll')}
+              </Button>
+              <Button
+                onClick={onCustomize}
+                sx={{ color: 'text.secondary', '&:hover': { color: 'white' } }}
+              >
+                {t('customize')}
+              </Button>
+            </Stack>
+          </Stack>
+        </Container>
+      </Paper>
+    </Slide>
   );
 }
