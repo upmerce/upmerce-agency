@@ -11,6 +11,14 @@ import {
 import CloseIcon from '@mui/icons-material/Close';
 import SecurityIcon from '@mui/icons-material/Security';
 
+interface OptionRowProps {
+  label: string;
+  desc: string;
+  checked: boolean;
+  onChange?: (checked: boolean) => void;
+  disabled?: boolean;
+}
+
 type Props = {
   currentConsent: CookieConsentState;
   onClose: () => void;
@@ -48,7 +56,7 @@ export default function CookieModal({ currentConsent, onClose, onSave }: Props) 
     }
   };
 
-  const OptionRow = ({ label, desc, checked, onChange, disabled }: any) => (
+  const OptionRow = ({ label, desc, checked, onChange, disabled }: OptionRowProps) => (
     <Box sx={{ p: 2, borderRadius: 2, bgcolor: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.05)' }}>
       <FormControlLabel
         control={
