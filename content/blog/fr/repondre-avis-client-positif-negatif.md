@@ -4,7 +4,7 @@ description: "Les avis clients sont la monnaie d'échange de votre réputation. 
 date: "2024-05-17" # Mettez la date de publication actuelle
 author: "Upmerce Solutions"
 slug: "repondre-avis-client-positif-negatif"
-image: "/images/blog/repondre-avis-client-hotel.webp" # Créez une image pertinente (ex: mains tapant sur un clavier avec des bulles d'avis)
+image: "/images/blog/marketing-touristique-maroc.webp" # Créez une image pertinente (ex: mains tapant sur un clavier avec des bulles d'avis)
 tags: ["Réputation en Ligne", "Avis Clients", "Service Client", "Gestion de Crise", "E-réputation", "Satisfaction Client"]
 ---
 
