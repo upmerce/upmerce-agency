@@ -1,9 +1,16 @@
+// src/components/sections/FaqHubSection.tsx
 'use client';
 
+import React from 'react';
 import { useLocale, useTranslations } from 'next-intl';
 import { Link } from '@/i18n/navigation';
+import { Box, Container, Grid, Typography, useTheme, Paper, Button } from '@mui/material';
+import ArticleIcon from '@mui/icons-material/Article';
+import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
+import MenuBookIcon from '@mui/icons-material/MenuBook';
 
-const hubData = {
+// Data Configuration
+const hubData: Record<string, { question: string; slug: string }[]> = {
   en: [
     { question: "What is the best alternative to WordPress?", slug: "/blog/badil-wordpress-haloul-asriya" },
     { question: "How much does it cost to create a website in Morocco?", slug: "/blog/thaman-inshaa-mawqi-electroni-bil-maghrib-dalil" },
@@ -44,55 +51,159 @@ const hubData = {
 
 export default function FaqHubSection({ id }: { id?: string }) {
   const t = useTranslations('FaqHub');
-  const locale = useLocale() as 'en' | 'fr' | 'ar';
+  const locale = useLocale();
+  const theme = useTheme();
 
-  const questions = hubData[locale] || hubData.en;
+  // Type-safe locale access
+  const questions = hubData[locale as keyof typeof hubData] || hubData.en;
 
   return (
-    // Accessibility: Use aria-labelledby to link the section to its heading.
-    <section id={id} className="bg-gray-900 py-20" aria-labelledby="faq-hub-title">
-      <div className="container mx-auto px-6">
-        <div className="text-center mb-12">
-          {/* Accessibility: Add a unique ID to the heading so aria-labelledby can reference it. */}
-          <h2 id="faq-hub-title" className="text-3xl md:text-4xl font-bold text-white mb-4">{t('title')}</h2>
-          <p className="text-gray-400 max-w-2xl mx-auto">
+    <Box
+      id={id || "faq"}
+      component="section"
+      aria-labelledby="faq-hub-title"
+      sx={{
+        py: { xs: 8, md: 12 },
+        backgroundColor: theme.palette.background.default, // Obsidian
+        position: 'relative',
+        overflow: 'hidden',
+      }}
+    >
+      <Container maxWidth="lg">
+        {/* Header */}
+        <Box sx={{ textAlign: 'center', mb: 8 }}>
+          <Typography
+            variant="overline"
+            sx={{ 
+              color: theme.palette.primary.main, // White/Bright
+              letterSpacing: 2, 
+              fontWeight: 700,
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              gap: 1,
+              mb: 1
+            }}
+          >
+            <MenuBookIcon fontSize="small" /> KNOWLEDGE BASE
+          </Typography>
+          <Typography
+            id="faq-hub-title"
+            variant="h3"
+            sx={{
+              fontWeight: 800,
+              color: 'white',
+              mb: 2
+            }}
+          >
+            {t('title')}
+          </Typography>
+          <Typography
+            variant="h6"
+            sx={{
+              color: 'text.secondary',
+              fontWeight: 400,
+              maxWidth: '600px',
+              mx: 'auto'
+            }}
+          >
             {t('subtitle')}
-          </p>
-        </div>
-        <div className="max-w-4xl mx-auto">
-          {/* Accessibility: The <ul> and <li> elements are correctly used for a list of items. */}
-          {/* Each <li> contains a single <Link> element, which is good semantic structure. */}
-          <ul className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            {questions.map((item, index) => (
-              <li key={index}>
-                {/* Accessibility: The Link component is inherently accessible for navigation. */}
-                {/* The entire <li> is clickable via the Link, which is good. */}
-                {/* The text content within the <span> is sufficient as the accessible name for the link. */}
-                <Link
-                  href={item.slug}
-                  className="block w-full h-full text-start p-6 bg-gray-800 border border-gray-700 rounded-lg hover:bg-gray-700 hover:border-purple-500 transition-all duration-300"
-                  // Optional: Add a more descriptive aria-label if the question itself isn't fully clear
-                  // For example, if "question" was too short, you might add:
-                  // aria-label={t('readMoreAbout') + item.question} // e.g., "Read more about What is the best alternative to WordPress?"
+          </Typography>
+        </Box>
+
+        {/* The Grid */}
+        <Grid container spacing={2}>
+          {questions.map((item, index) => (
+            <Grid  key={index} size={{xs: 12, md: 6}}>
+              <Link href={item.slug} style={{ textDecoration: 'none' }}>
+                <Paper
+                  elevation={0}
+                  sx={{
+                    p: 3,
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'space-between',
+                    borderRadius: 3,
+                    // "Obsidian Glass" Style
+                    backgroundColor: 'rgba(255, 255, 255, 0.02)',
+                    border: '1px solid rgba(255, 255, 255, 0.05)',
+                    transition: 'all 0.2s ease',
+                    group: 'true',
+                    '&:hover': {
+                      backgroundColor: 'rgba(255, 255, 255, 0.04)',
+                      borderColor: theme.palette.secondary.main, // Amber Border Glow
+                      transform: 'translateX(6px)', // Slide effect
+                      '& .icon-arrow': {
+                        opacity: 1,
+                        transform: 'translateX(0)',
+                      }
+                    }
+                  }}
                 >
-                  <span className="text-lg font-semibold text-white">{item.question}</span>
-                </Link>
-              </li>
-            ))}
-          </ul>
+                  <Box sx={{ display: 'flex', alignItems: 'center', gap: 2, overflow: 'hidden' }}>
+                    <Box 
+                      sx={{ 
+                        p: 1, 
+                        borderRadius: 2, 
+                        bgcolor: 'rgba(255,255,255,0.05)', 
+                        color: 'text.secondary' 
+                      }}
+                    >
+                      <ArticleIcon fontSize="small" />
+                    </Box>
+                    <Typography 
+                      variant="subtitle1" 
+                      sx={{ 
+                        fontWeight: 600, 
+                        color: 'white',
+                        lineHeight: 1.4
+                      }}
+                    >
+                      {item.question}
+                    </Typography>
+                  </Box>
 
-          <div className="text-center mt-12">
-            {/* Accessibility: Standard Link for navigation. The text content is a good accessible name. */}
-            <Link
-              href="/blog"
-              className="inline-block bg-purple-600 text-white font-bold py-3 px-8 rounded-lg hover:bg-purple-700 transition-colors duration-300"
-            >
-              {t('browseAllButton')}
-            </Link>
-          </div>
+                  {/* Hover Arrow (Initially Hidden/Subtle) */}
+                  <ArrowForwardIcon 
+                    className="icon-arrow"
+                    sx={{ 
+                      color: theme.palette.secondary.main, 
+                      opacity: 0.5,
+                      fontSize: 20,
+                      transform: 'translateX(-4px)',
+                      transition: 'all 0.2s ease'
+                    }} 
+                  />
+                </Paper>
+              </Link>
+            </Grid>
+          ))}
+        </Grid>
 
-        </div>
-      </div>
-    </section>
+        {/* View All Button */}
+        <Box sx={{ textAlign: 'center', mt: 8 }}>
+          <Button
+            component={Link}
+            href="/blog"
+            variant="outlined"
+            size="large"
+            endIcon={<ArrowForwardIcon />}
+            sx={{
+              borderRadius: '50px',
+              px: 4,
+              py: 1.5,
+              borderColor: 'rgba(255,255,255,0.2)',
+              color: 'white',
+              '&:hover': {
+                borderColor: 'white',
+                backgroundColor: 'rgba(255,255,255,0.05)'
+              }
+            }}
+          >
+            {t('browseAllButton')}
+          </Button>
+        </Box>
+      </Container>
+    </Box>
   );
 }

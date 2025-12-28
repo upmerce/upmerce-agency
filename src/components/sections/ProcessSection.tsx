@@ -1,10 +1,14 @@
+// src/components/sections/ProcessSection.tsx
 'use client';
 
 import React from 'react';
 import { useTranslations } from 'next-intl';
+import { Box, Container, Grid, Typography, useTheme, Paper } from '@mui/material';
+import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 
 export default function ProcessSection() {
   const t = useTranslations('AgencyProcess');
+  const theme = useTheme();
 
   const processSteps = [0, 1, 2, 3].map(index => ({
     step: `0${index + 1}`,
@@ -13,41 +17,147 @@ export default function ProcessSection() {
   }));
 
   return (
-    // Accessibility: Add aria-labelledby to link the section to its heading.
-    <section id="our-process" className="py-20 bg-gray-900" aria-labelledby="process-title">
-      <div className="container mx-auto px-6">
-        <div className="text-center mb-16">
-          {/* Accessibility: Change h1 to h2 if this is not the main heading of the page. */}
-          {/* Most pages should only have one h1. This is a sub-section. */}
-          {/* Add an ID to the heading for aria-labelledby. */}
-          <h2 id="process-title" className="text-4xl md:text-5xl font-extrabold text-white mb-4">{t('title')}</h2>
-          <p className="text-lg text-gray-400 max-w-3xl mx-auto">{t('subtitle')}</p>
-        </div>
+    <Box
+      id="our-process"
+      component="section"
+      aria-labelledby="process-title"
+      sx={{
+        py: { xs: 8, md: 12 },
+        backgroundColor: theme.palette.background.default, // Obsidian
+        position: 'relative',
+        overflow: 'hidden',
+      }}
+    >
+      <Container maxWidth="lg">
+        {/* Header */}
+        <Box sx={{ textAlign: 'center', mb: 8, maxWidth: '800px', mx: 'auto' }}>
+           <Typography 
+            variant="overline" 
+            sx={{ 
+              color: theme.palette.secondary.main, 
+              letterSpacing: 3, 
+              fontWeight: 700 
+            }}
+          >
+            THE BLUEPRINT
+          </Typography>
+          <Typography
+            id="process-title"
+            variant="h3"
+            sx={{
+              fontWeight: 800,
+              color: 'white',
+              mb: 2,
+            }}
+          >
+            {t('title')}
+          </Typography>
+          <Typography variant="h6" sx={{ color: 'text.secondary', fontWeight: 400 }}>
+            {t('subtitle')}
+          </Typography>
+        </Box>
 
-        {/* Accessibility: Use an ordered list to semantically represent a sequence of steps. */}
-        {/* The current structure uses divs and styling to imply order, but an <ol> is much better for screen readers. */}
-        <ol className="relative border-l-2 border-purple-500 ml-6 md:ml-0 md:border-l-0 md:border-t-2">
+        {/* The Pipeline Grid */}
+        <Grid container spacing={4}>
           {processSteps.map((item, index) => (
-            // Each step is a list item
-            <li key={index} className="relative mb-12 md:mb-0">
-              <div className="absolute -left-7 md:left-auto md:-top-7 md:right-1/2 transform md:translate-x-1/2">
-                {/* Accessibility: The step number (01, 02, etc.) is decorative but also provides order. */}
-                {/* As it's visually present, it's fine. If it were purely decorative, aria-hidden might be considered. */}
-                {/* However, since it's an explicit step number, it's informative. */}
-                <div className="w-12 h-12 bg-purple-600 rounded-full flex items-center justify-center text-white font-bold text-xl">
-                  {item.step}
-                </div>
-              </div>
-              <div className="ml-12 md:ml-0 md:mt-12 md:text-center p-4">
-                {/* Accessibility: Use h3 for the step title, ensuring proper heading hierarchy. */}
-                <h3 className="text-xl font-bold text-white mb-2">{item.title}</h3>
-                <p className="text-gray-400">{item.description}</p>
-              </div>
-            </li>
-          ))}
-        </ol>
+            <Grid  key={index} sx={{ position: 'relative' }} size={{xs: 12, md: 3}}>
+              
+              {/* Connector Line (Desktop Only - except last item) */}
+              {index < processSteps.length - 1 && (
+                <Box
+                  sx={{
+                    display: { xs: 'none', md: 'block' },
+                    position: 'absolute',
+                    top: '50%',
+                    right: -20, // Position between cards
+                    transform: 'translateY(-50%)',
+                    zIndex: 2,
+                    color: 'rgba(255,255,255,0.1)'
+                  }}
+                >
+                  <ArrowForwardIcon />
+                </Box>
+              )}
 
-      </div>
-    </section>
+              <Paper
+                elevation={0}
+                sx={{
+                  p: 3,
+                  height: '100%',
+                  position: 'relative',
+                  overflow: 'hidden',
+                  borderRadius: 4,
+                  // "Obsidian Glass"
+                  backgroundColor: 'rgba(255, 255, 255, 0.02)',
+                  border: '1px solid rgba(255, 255, 255, 0.05)',
+                  transition: 'all 0.3s ease',
+                  '&:hover': {
+                    transform: 'translateY(-5px)',
+                    backgroundColor: 'rgba(255, 255, 255, 0.04)',
+                    borderColor: theme.palette.secondary.main, // Amber Glow
+                    '& .step-number': {
+                      color: theme.palette.secondary.main,
+                      opacity: 0.2
+                    }
+                  }
+                }}
+              >
+                {/* Background Giant Number */}
+                <Typography
+                  className="step-number"
+                  variant="h1"
+                  sx={{
+                    position: 'absolute',
+                    top: -10,
+                    right: -10,
+                    fontSize: '6rem',
+                    fontWeight: 900,
+                    color: 'white',
+                    opacity: 0.03, // Subtle watermark
+                    transition: 'all 0.3s ease',
+                    zIndex: 0,
+                    userSelect: 'none'
+                  }}
+                >
+                  {item.step}
+                </Typography>
+
+                <Box sx={{ position: 'relative', zIndex: 1 }}>
+                  {/* Step Badge */}
+                  <Box
+                    sx={{
+                      width: 40,
+                      height: 40,
+                      borderRadius: '50%',
+                      border: `1px solid ${theme.palette.secondary.main}`,
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      mb: 3,
+                      boxShadow: `0 0 15px ${theme.palette.secondary.main}20`
+                    }}
+                  >
+                    <Typography 
+                      variant="button" 
+                      sx={{ color: theme.palette.secondary.main, fontWeight: 700 }}
+                    >
+                      {index + 1}
+                    </Typography>
+                  </Box>
+
+                  <Typography variant="h6" sx={{ fontWeight: 700, color: 'white', mb: 1.5, lineHeight: 1.2 }}>
+                    {item.title}
+                  </Typography>
+                  
+                  <Typography variant="body2" sx={{ color: 'text.secondary', lineHeight: 1.6 }}>
+                    {item.description}
+                  </Typography>
+                </Box>
+              </Paper>
+            </Grid>
+          ))}
+        </Grid>
+      </Container>
+    </Box>
   );
 }

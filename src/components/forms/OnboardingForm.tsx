@@ -17,6 +17,9 @@ import { FeaturesPackagesSection } from './sections/FeaturesPackagesSection';
 
 // IMPORTANT: Import the generic FileUploadField
 import { FileUploadField } from '@/components/forms/FileUploadField';
+import { Box, Chip, Container, Typography, Paper, Stack, Button, Alert, CircularProgress } from '@mui/material';
+import AutoModeIcon from '@mui/icons-material/AutoMode';
+import RocketLaunchIcon from '@mui/icons-material/RocketLaunch';
 
 // --- Zod Schema for Validation ---
 const schema = z.object({
@@ -279,73 +282,117 @@ const methods = useForm<FormData>({
 
 
   return (
-    <div className="max-w-4xl mx-auto px-4 py-8 md:px-6 lg:px-8">
-      <h1 className="text-3xl md:text-4xl font-bold text-white text-center mb-4">
-        {t('title')}
-      </h1>
-      <p className="text-gray-300 text-center mb-8 md:mb-10 leading-relaxed">
-        {t('introduction')}
-      </p>
+    <Container maxWidth="lg" sx={{ position: 'relative', zIndex: 1 }}>
+      
+      {/* 1. Header Block */}
+      <Box sx={{ textAlign: 'center', mb: 8 }}>
+        <Chip 
+          icon={<AutoModeIcon sx={{ fontSize: '16px !important', color: 'black !important' }} />}
+          label="SYSTEM CONFIGURATION" 
+          sx={{ 
+            mb: 3, 
+            bgcolor: '#D97706', // Amber
+            color: 'black', 
+            fontWeight: 700, 
+            border: '1px solid white'
+          }} 
+        />
+        <Typography 
+          variant="h2" 
+          sx={{ 
+            fontWeight: 800, 
+            color: 'white', 
+            mb: 2,
+            letterSpacing: '-0.02em',
+            fontSize: { xs: '2rem', md: '3.5rem' }
+          }}
+        >
+          {t('title')}
+        </Typography>
+        <Typography variant="body1" sx={{ color: 'text.secondary', maxWidth: '700px', mx: 'auto' }}>
+          {t('introduction')}
+        </Typography>
+      </Box>
 
-      <div className="bg-gray-800 p-6 md:p-10 rounded-lg shadow-xl border border-gray-700">
-        <form onSubmit={handleSubmit(onSubmit)} className="space-y-8">
-
-          <BusinessBrandSection {...commonSectionProps}>
-            <FileUploadField
-                name="logoUrl"
-                label={t('logoLabel')}
-                helpText={t('logoHelp')}
-                storageSubfolder="logos"
+      {/* 2. The Glass Cockpit (Form Container) */}
+      <Paper 
+        elevation={0}
+        sx={{
+          p: { xs: 4, md: 8 },
+          borderRadius: 4,
+          // Obsidian Glass
+          backgroundColor: 'rgba(255, 255, 255, 0.02)',
+          border: '1px solid rgba(255, 255, 255, 0.05)',
+          boxShadow: '0 20px 80px -20px rgba(0,0,0,0.5)',
+        }}
+      >
+        <form onSubmit={handleSubmit(onSubmit)}>
+          <Stack spacing={8}>
+            
+            <BusinessBrandSection {...commonSectionProps}>
+              <FileUploadField
+                  name="logoUrl"
+                  label={t('logoLabel')}
+                  helpText={t('logoHelp')}
+                  storageSubfolder="logos"
+                  {...commonFieldProps}
+              />
+            </BusinessBrandSection>
+            
+            <DesignStyleSection {...commonSectionProps} themeDemos={themeDemos} />
+            <WebsiteContentSection {...commonSectionProps} />
+            
+            <SeoSection {...commonSectionProps}>
+              <FileUploadField
+                name="socialShareImageUrl"
+                label={t('socialShareImageLabel')}
+                helpText={t('socialShareImageHelp')}
+                storageSubfolder="social-images"
                 {...commonFieldProps}
-            />
-          </BusinessBrandSection>
-          
-          {/* --- UPDATED: Pass themeDemos as a prop --- */}
-          <DesignStyleSection {...commonSectionProps} themeDemos={themeDemos} />
-          
-          <WebsiteContentSection {...commonSectionProps} />
-          
-          <SeoSection {...commonSectionProps}>
-            <FileUploadField
-              name="socialShareImageUrl"
-              label={t('socialShareImageLabel')}
-              helpText={t('socialShareImageHelp')}
-              storageSubfolder="social-images"
-              {...commonFieldProps}
-            />
-          </SeoSection>
+              />
+            </SeoSection>
 
-          <FeaturesPackagesSection {...commonSectionProps} />
+            <FeaturesPackagesSection {...commonSectionProps} />
 
-          <input type="hidden" {...methods.register('questionnaireId')} />
+            <input type="hidden" {...methods.register('questionnaireId')} />
 
-          <div className="text-center mt-10">
-            <button
-              type="submit"
-              className="inline-flex items-center justify-center px-8 py-3 bg-blue-600 text-white font-semibold rounded-full hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-gray-900 transition-colors duration-200"
-              disabled={loading}
-            >
-              {loading && (
-                <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                  <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
-                  <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-                </svg>
-              )}
-              {t('submitButton')}
-            </button>
-          </div>
+            {/* 3. The Launch Button */}
+            <Box sx={{ textAlign: 'center', mt: 4 }}>
+              <Button
+                type="submit"
+                variant="contained"
+                size="large"
+                startIcon={loading ? <CircularProgress size={20} color="inherit" /> : <RocketLaunchIcon />}
+                disabled={loading}
+                sx={{
+                  py: 1.5, px: 6,
+                  fontSize: '1.1rem',
+                  fontWeight: 700,
+                  borderRadius: '50px',
+                  backgroundColor: 'white',
+                  color: 'black',
+                  boxShadow: '0 0 20px rgba(255,255,255,0.3)',
+                  '&:hover': {
+                    backgroundColor: '#f5f5f5',
+                    boxShadow: '0 0 30px rgba(255,255,255,0.5)',
+                    transform: 'translateY(-2px)'
+                  }
+                }}
+              >
+                {t('submitButton')}
+              </Button>
+            </Box>
+
+          </Stack>
         </form>
-      </div>
+      </Paper>
 
       {snackbarOpen && (
-        <div className="fixed bottom-6 left-1/2 -translate-x-1/2 z-50">
-          <CustomAlert
-            message={snackbarMessage}
-            severity={snackbarSeverity}
-            onClose={handleSnackbarClose}
-          />
-        </div>
+        <Alert severity={snackbarSeverity} onClose={() => setSnackbarOpen(false)} sx={{ position: 'fixed', bottom: 24, left: '50%', transform: 'translateX(-50%)', zIndex: 9999 }}>
+          {snackbarMessage}
+        </Alert>
       )}
-    </div>
+
+    </Container>
   );
 }

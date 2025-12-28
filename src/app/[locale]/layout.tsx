@@ -18,7 +18,6 @@ import { AuthProvider } from "@/context/AuthContext";
 
 const inter = Inter({ subsets: ["latin"] });
 
-// --- 1. Metadata function is good for SEO, indirectly helps accessibility ---
 type MetadataProps = {
   params: Promise<{ locale: string }>;
 }
@@ -63,19 +62,14 @@ export default async function RootLayout({
   const jsonLd = getMainJsonLd({ url: process.env.NEXT_PUBLIC_API_URL || 'https://upmerce.com', locale });
 
   return (
-    // Accessibility: lang and dir attributes are correctly set based on locale. Excellent!
     <html lang={locale} dir={locale === 'ar' ? 'rtl' : 'ltr'}>
       <head>
-        {/* Accessibility: Schema.org JSON-LD is great for SEO and context for search engines, indirectly beneficial */}
         <script type="application/ld+json" suppressHydrationWarning dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       </head>
-      {/* Accessibility: Font and background/text colors set here are a good start for visual accessibility */}
-      <body className={`${inter.className} bg-gray-900 text-gray-200`}>
-        {/*
-          Accessibility: Consider adding a "Skip to Content" link here.
-          This is crucial for keyboard and screen reader users to bypass repetitive navigation elements.
-          It should be the very first interactive element in the body.
-        */}
+      {/* UPDATED: Removed 'bg-gray-900 text-gray-200'. 
+        We let the ThemeRegistry -> CssBaseline handle the Obsidian background now.
+      */}
+      <body className={inter.className}>
         <ThemeRegistry>
           <NextIntlClientProvider 
              locale={locale || 'en'} 
@@ -84,16 +78,14 @@ export default async function RootLayout({
             <AuthProvider>
                <CookieConsentProvider>
                 <div className="flex flex-col min-h-screen">
-                <Header />
-             
-                <main id="main-content" className="flex-grow"> {/* ADDED id="main-content" for skip link */}
-                   {children}
-                </main>
-                <Footer />
+                  {/* Note: We will need to update Header later to match the dark theme */}
+                  <Header />
+                  <main id="main-content" className="flex-grow"> 
+                     {children}
+                  </main>
+                  <Footer />
                 </div>
             
-            
-              {/*  <CookieConsent /> */}
               <FloatingSocialMenu/>
               <BackToTopButton /> 
               <AnalyticsScripts />
@@ -101,12 +93,6 @@ export default async function RootLayout({
             </AuthProvider>
           </NextIntlClientProvider>
         </ThemeRegistry>
-        {/* {process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID && (
-          <GoogleAnalytics measurementId={process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID} />
-        )}
-        {process.env.NEXT_PUBLIC_META_PIXEL_ID && (
-          <MetaPixel />
-        )} */}
       </body>
     </html>
   );

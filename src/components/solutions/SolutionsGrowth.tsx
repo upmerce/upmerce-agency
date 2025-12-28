@@ -1,4 +1,4 @@
-// /src/components/solutions/SolutionsGrowth.tsx
+// src/components/solutions/SolutionsGrowth.tsx
 'use client';
 import React from 'react';
 import { Box, Container, Grid, Typography, List, ListItem, ListItemIcon, ListItemText, useTheme } from '@mui/material';
@@ -13,62 +13,41 @@ const SolutionsGrowth = () => {
   const theme = useTheme();
 
   const features = [
-    { 
-      icon: <RocketLaunchIcon color="primary" fontSize="large" />,
-      titleKey: "features.f1.title", descKey: "features.f1.desc"
-    },
-    { 
-      icon: <TravelExploreIcon color="success" fontSize="large" />,
-      titleKey: "features.f2.title", descKey: "features.f2.desc"
-    },
-    { 
-      icon: <LanguageIcon color="secondary" fontSize="large" />,
-      titleKey: "features.f3.title", descKey: "features.f3.desc"
-    },
+    { icon: <RocketLaunchIcon sx={{ color: '#38bdf8' }} />, titleKey: "features.f1.title", descKey: "features.f1.desc" },
+    { icon: <TravelExploreIcon sx={{ color: '#10b981' }} />, titleKey: "features.f2.title", descKey: "features.f2.desc" },
+    { icon: <LanguageIcon sx={{ color: '#f472b6' }} />, titleKey: "features.f3.title", descKey: "features.f3.desc" },
   ];
 
   return (
-    // ▼▼▼ UPDATED COLORS: Alternating dark background ▼▼▼
-    <Box component="section" sx={{ py: { xs: 8, md: 12 }, bgcolor: 'grey.800', color: 'common.white' }}>
+    <Box component="section" sx={{ py: { xs: 8, md: 15 }, bgcolor: theme.palette.background.default, borderTop: '1px solid rgba(255,255,255,0.05)' }}>
       <Container maxWidth="lg">
         <Grid container spacing={{ xs: 6, md: 8 }} alignItems="center">
           
-          {/* Left Column: Text Content */}
-          <Grid size={{ xs: 12, md: 6 }}>
-            <Typography variant="h5" color="primary" fontWeight="bold" gutterBottom sx={{ textTransform: 'uppercase', letterSpacing: 1 }}>
+          <Grid  size={{ xs: 12, md: 6 }}>
+            <Typography variant="overline" sx={{ color: '#38bdf8', fontWeight: 700, letterSpacing: 2 }}>
               {t('pillarTitle')}
             </Typography>
-            <Typography 
-                variant="h3" 
-                fontWeight={800} 
-                gutterBottom 
-                sx={{ mb: 4, whiteSpace: 'pre-wrap' }}
-            >
+            <Typography variant="h3" fontWeight={800} sx={{ color: 'white', mb: 3, mt: 1 }}>
                {t('headline')}
             </Typography>
-            {/* Lighter gray text */}
-            <Typography variant="body1" fontSize="1.1rem" color="grey.400" paragraph sx={{ mb: 4 }}>
+            <Typography variant="body1" fontSize="1.1rem" sx={{ color: 'text.secondary', mb: 4, lineHeight: 1.7 }}>
               {t('body')}
             </Typography>
 
             <List disablePadding>
               {features.map((feature, index) => (
                 <ListItem key={index} disableGutters sx={{ mb: 3, alignItems: 'flex-start' }}>
-                  <ListItemIcon sx={{ minWidth: 40, mt: 0.5 }}>
-                    {feature.icon}
-                  </ListItemIcon>
+                  <ListItemIcon sx={{ minWidth: 40, mt: 0.5 }}>{feature.icon}</ListItemIcon>
                   <ListItemText
-                    primary={<Typography variant="h6" fontWeight={700} gutterBottom>{t(feature.titleKey)}</Typography>}
-                    // Lighter gray text
-                    secondary={<Typography variant="body1" color="grey.400">{t(feature.descKey)}</Typography>}
+                    primary={<Typography variant="h6" fontWeight={700} sx={{ color: 'white' }}>{t(feature.titleKey)}</Typography>}
+                    secondary={<Typography variant="body2" sx={{ color: 'text.secondary' }}>{t(feature.descKey)}</Typography>}
                   />
                 </ListItem>
               ))}
             </List>
           </Grid>
 
-          {/* Right Column: Image Visual */}
-          <Grid size={{ xs: 12, md: 6 }}>
+          <Grid  size={{ xs: 12, md: 6 }}>
             <Box
               sx={{
                 position: 'relative',
@@ -76,17 +55,15 @@ const SolutionsGrowth = () => {
                 width: '100%',
                 borderRadius: 4,
                 overflow: 'hidden',
-                boxShadow: `0 20px 40px ${theme.palette.primary.main}30`, 
-                // Dark border
-                border: `1px solid ${theme.palette.grey[700]}`
+                border: '1px solid rgba(255,255,255,0.1)',
+                boxShadow: `0 0 50px -20px #38bdf830` // Blue Glow
               }}
             >
               <Image
                 src="/images/solutions/seo-speed.webp"
-                alt="Abstract concept illustration of website speed and SEO growth"
+                alt="SEO Speed"
                 fill
                 style={{ objectFit: 'cover' }}
-                sizes="(max-width: 768px) 100vw, 50vw"
               />
             </Box>
           </Grid>

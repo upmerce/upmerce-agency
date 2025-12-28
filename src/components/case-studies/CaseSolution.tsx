@@ -1,94 +1,106 @@
-// /src/components/case-studies/CaseSolution.tsx
+// src/components/case-studies/CaseSolution.tsx
 'use client';
 
 import React from 'react';
 import Image from 'next/image';
-// ▼▼▼ NEW IMPORT ▼▼▼
 import { useTranslations } from 'next-intl';
+import { Box, Container, Grid, Typography, useTheme, Chip } from '@mui/material';
+import CodeIcon from '@mui/icons-material/Code';
+import StorageIcon from '@mui/icons-material/Storage';
 
 const CaseSolution = () => {
-  // ▼▼▼ INITIALIZE TRANSLATIONS ▼▼▼
   const t = useTranslations('CaseStudies.Solution');
-  // ▲▲▲
+  const theme = useTheme();
 
   return (
-    <section className="py-20 bg-gray-900 overflow-hidden">
-      <div className="container mx-auto px-6">
+    <Box component="section" sx={{ py: { xs: 8, md: 15 }, bgcolor: theme.palette.background.default, overflow: 'hidden' }}>
+      <Container maxWidth="lg">
         
-        {/* Section Header */}
-        <div className="max-w-3xl mx-auto text-center mb-20">
-           {/* ▼▼▼ TRANSLATED TEXT ▼▼▼ */}
-          <h2 className="text-3xl md:text-5xl font-bold text-white mb-6 leading-tight">
+        {/* Header */}
+        <Box sx={{ textAlign: 'center', mb: 12, maxWidth: '800px', mx: 'auto' }}>
+          <Typography variant="overline" sx={{ color: theme.palette.secondary.main, fontWeight: 700, letterSpacing: 2 }}>
+            THE ARCHITECTURE
+          </Typography>
+          <Typography variant="h3" fontWeight={800} sx={{ color: 'white', mt: 1, mb: 2 }}>
             {t('title')}
-          </h2>
-          <p className="text-xl text-gray-400 leading-relaxed">
+          </Typography>
+          <Typography variant="body1" fontSize="1.2rem" sx={{ color: 'text.secondary' }}>
             {t('subtitle')}
-          </p>
-           {/* ▲▲▲ */}
-        </div>
+          </Typography>
+        </Box>
 
-        {/* Solution Part 1: Frontend */}
-        <div className="flex flex-col lg:flex-row items-center gap-12 mb-24">
-          <div className="lg:w-1/2 space-y-6">
-            <div className="inline-block p-3 bg-purple-900/30 rounded-xl border border-purple-500/30">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-8 h-8 text-purple-400"><path strokeLinecap="round" strokeLinejoin="round" d="M9 17.25v1.007a3 3 0 01-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0115 18.257V17.25m6-12V15a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 15V5.25m18 0A2.25 2.25 0 0018.75 3H5.25A2.25 2.25 0 003 5.25m18 0V12a2.25 2.25 0 01-2.25 2.25H5.25" /></svg>
-            </div>
-             {/* ▼▼▼ TRANSLATED TEXT ▼▼▼ */}
-            <h3 className="text-2xl md:text-3xl font-bold text-white">
+        {/* 1. FRONTEND (Tablet) */}
+        <Grid container spacing={8} alignItems="center" sx={{ mb: 12 }}>
+          <Grid  size={{ xs: 12, md: 6 }}>
+            <Chip icon={<CodeIcon />} label="FRONTEND v2.0" sx={{ mb: 2, bgcolor: 'rgba(255,255,255,0.1)', color: 'white' }} />
+            <Typography variant="h4" fontWeight={800} sx={{ color: 'white', mb: 2 }}>
               {t('frontend.title')}
-            </h3>
-            <p className="text-lg text-gray-400 leading-relaxed">
+            </Typography>
+            <Typography variant="body1" sx={{ color: 'text.secondary', lineHeight: 1.8, fontSize: '1.1rem' }}>
               {t('frontend.description')}
-            </p>
-             {/* ▲▲▲ */}
-          </div>
-          {/* Tablet Mockup Visual (Unchanged) */}
-          <div className="lg:w-1/2 relative h-[300px] md:h-[450px] w-full">
-            <div className="absolute -inset-4 bg-purple-600/20 blur-2xl rounded-3xl -z-10"></div>
-            <div className="relative h-full w-full rounded-2xl overflow-hidden border-4 border-gray-800 shadow-2xl">
+            </Typography>
+          </Grid>
+
+          <Grid  size={{ xs: 12, md: 6 }}>
+            <Box
+              sx={{
+                position: 'relative',
+                height: { xs: '300px', md: '450px' },
+                width: '100%',
+                borderRadius: 4,
+                overflow: 'hidden',
+                border: '1px solid rgba(255,255,255,0.1)',
+                boxShadow: `0 20px 60px -10px ${theme.palette.secondary.main}20`
+              }}
+            >
               <Image
                 src="/images/themes/adventure-tablet.webp"
-                alt="Marrago website shown on a tablet device"
+                alt="Tablet View"
                 fill
                 style={{ objectFit: 'cover', objectPosition: 'top' }}
-                className="hover:scale-105 transition-transform duration-500"
               />
-            </div>
-          </div>
-        </div>
+            </Box>
+          </Grid>
+        </Grid>
 
-        {/* Solution Part 2: Backend */}
-        <div className="flex flex-col-reverse lg:flex-row items-center gap-12">
-           {/* Mobile Mockup Visual (Unchanged) */}
-          <div className="lg:w-1/2 relative h-[400px] md:h-[550px] w-full flex justify-center lg:justify-start">
-            <div className="absolute inset-y-4 left-1/4 right-1/4 bg-blue-600/20 blur-2xl rounded-full -z-10 lg:left-0 lg:right-1/2"></div>
-            <div className="relative h-full aspect-[9/19] rounded-[2.5rem] overflow-hidden border-8 border-gray-800 shadow-2xl bg-gray-950">
-              <div className="absolute top-0 inset-x-0 h-6 bg-gray-950 z-20 rounded-b-3xl"></div>
-              <Image
-                src="/images/themes/adventure-mobile.webp"
-                alt="Upmerce mobile admin panel on a smartphone"
-                fill
-                style={{ objectFit: 'cover', objectPosition: 'top' }}
-              />
-            </div>
-          </div>
-          <div className="lg:w-1/2 space-y-6 lg:pl-12">
-            <div className="inline-block p-3 bg-blue-900/30 rounded-xl border border-blue-500/30">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-8 h-8 text-blue-400"><path strokeLinecap="round" strokeLinejoin="round" d="M10.5 1.5H8.25A2.25 2.25 0 006 3.75v16.5a2.25 2.25 0 002.25 2.25h7.5A2.25 2.25 0 0018 20.25V3.75a2.25 2.25 0 00-2.25-2.25H13.5m-3 0V3h3V1.5m-3 0h3m-3 18.75h3" /></svg>
-            </div>
-             {/* ▼▼▼ TRANSLATED TEXT ▼▼▼ */}
-            <h3 className="text-2xl md:text-3xl font-bold text-white">
+        {/* 2. BACKEND (Mobile) */}
+        <Grid container spacing={8} alignItems="center">
+          <Grid  size={{ xs: 12, md: 6 }} order={{ xs: 2, md: 1 }}>
+            <Box sx={{ display: 'flex', justifyContent: 'center' }}>
+              <Box
+                sx={{
+                  position: 'relative',
+                  width: '280px',
+                  height: '550px',
+                  borderRadius: '40px',
+                  border: '8px solid #1f1f1f',
+                  overflow: 'hidden',
+                  boxShadow: '0 50px 100px -20px rgba(0,0,0,0.8)'
+                }}
+              >
+                <Image
+                  src="/images/themes/adventure-mobile.webp"
+                  alt="Mobile Admin"
+                  fill
+                  style={{ objectFit: 'cover', objectPosition: 'top' }}
+                />
+              </Box>
+            </Box>
+          </Grid>
+
+          <Grid  size={{ xs: 12, md: 6 }} order={{ xs: 1, md: 2 }}>
+            <Chip icon={<StorageIcon />} label="BACKEND OPS" sx={{ mb: 2, bgcolor: 'rgba(255,255,255,0.1)', color: 'white' }} />
+            <Typography variant="h4" fontWeight={800} sx={{ color: 'white', mb: 2 }}>
               {t('backend.title')}
-            </h3>
-            <p className="text-lg text-gray-400 leading-relaxed">
+            </Typography>
+            <Typography variant="body1" sx={{ color: 'text.secondary', lineHeight: 1.8, fontSize: '1.1rem' }}>
               {t('backend.description')}
-            </p>
-             {/* ▲▲▲ */}
-          </div>
-        </div>
+            </Typography>
+          </Grid>
+        </Grid>
 
-      </div>
-    </section>
+      </Container>
+    </Box>
   );
 };
 

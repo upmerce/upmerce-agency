@@ -1,129 +1,173 @@
+// src/components/ui/FloatingSocialMenu.tsx
 'use client';
 
-import React, { useState, useEffect } from 'react';
-import Image from 'next/image';
+import React, { useState } from 'react';
+import { Box, Fab, Tooltip, useTheme } from '@mui/material';
 import { motion, AnimatePresence } from 'framer-motion';
-import { contactConfig } from '@/config/site'; // Import contactConfig
-import { useTranslations } from 'next-intl'; // Import useTranslations
+import ChatIcon from '@mui/icons-material/Chat';
+import CloseIcon from '@mui/icons-material/Close';
+import WhatsAppIcon from '@mui/icons-material/WhatsApp';
+import EmailIcon from '@mui/icons-material/Email';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import { contactConfig } from '@/config/site';
+import { useTranslations } from 'next-intl';
 
 export default function FloatingSocialMenu() {
-  const t = useTranslations('AgencyNavigation'); // Initialize useTranslations
+  const t = useTranslations('AgencyNavigation');
+  const theme = useTheme();
   const [isOpen, setIsOpen] = useState(false);
-  const [direction, setDirection] = useState('ltr');
 
-  useEffect(() => {
-    setDirection(document.documentElement.dir || 'ltr');
-  }, []);
-
-  const commonIconProps = {
-    width: 24,
-    height: 24,
-    className: "w-6 h-6",
-  };
-
-  // Get the localized WhatsApp message
   const localizedWhatsappMessage = t('whatsappMessage');
 
-  const socialLinks = [
+  // Define actions with MUI Icons and Brand Colors
+  const actions = [
     {
       name: 'WhatsApp',
-      iconSrc: '/icons/whatsapp.svg', // Ensure this path is correct
-      // Use the localized message in the URL
+      icon: <WhatsAppIcon />,
       href: `https://wa.me/${contactConfig.phoneNumber.raw}?text=${encodeURIComponent(localizedWhatsappMessage)}`,
-      bgColor: 'bg-green-500',
+      color: '#25D366', // WhatsApp Green
     },
     {
       name: 'Email',
-      iconSrc: '/icons/mail.svg', // Ensure this path is correct
+      icon: <EmailIcon />,
       href: `mailto:${contactConfig.email}`,
-      bgColor: 'bg-red-500', // Common for email icons
+      color: '#EA4335', // Google Red
     },
-    ...(contactConfig.linkedin ? [{ // Only include if LinkedIn URL exists
+    ...(contactConfig.linkedin ? [{
       name: 'LinkedIn',
-      iconSrc: '/icons/linkedin.svg', // Ensure this path is correct
+      icon: <LinkedInIcon />,
       href: contactConfig.linkedin,
-      bgColor: 'bg-blue-600',
+      color: '#0A66C2', // LinkedIn Blue
     }] : []),
   ];
 
-  // Variants for staggered animation
+  // Animation Variants
   const containerVariants = {
-    hidden: { opacity: 0 },
+    hidden: { opacity: 0, scale: 0.8 },
     visible: {
       opacity: 1,
-      transition: {
-        staggerChildren: 0.1, // Stagger children appearance
-      },
+      scale: 1,
+      transition: { staggerChildren: 0.1, delayChildren: 0.1 },
     },
+    exit: { 
+        opacity: 0, 
+        scale: 0.8,
+        transition: { staggerChildren: 0.05, staggerDirection: -1 } 
+    }
   };
 
   const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0 },
+    hidden: { opacity: 0, y: 20, scale: 0.5 },
+    visible: { opacity: 1, y: 0, scale: 1 },
+    exit: { opacity: 0, y: 20, scale: 0.5 }
   };
 
   return (
-    <div
-      className={`fixed z-50 bottom-4 md:bottom-6 group ${
-        direction === 'rtl' ? 'left-4 md:left-6' : 'right-4 md:right-6'
-      }`}
+    <Box
+      sx={{
+        position: 'fixed',
+        bottom: { xs: 24, md: 32 },
+        right: { xs: 24, md: 32 }, // Always bottom-right for consistency
+        zIndex: 9999,
+        display: 'flex',
+        flexDirection: 'column-reverse',
+        alignItems: 'center',
+        gap: 2
+      }}
       onMouseEnter={() => setIsOpen(true)}
       onMouseLeave={() => setIsOpen(false)}
     >
-      {/* Trigger Button */}
-      <button
-        type="button"
+      {/* 1. The Trigger Beacon */}
+      <Fab
         onClick={() => setIsOpen(!isOpen)}
-        className={`p-3 rounded-full shadow-lg transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-purple-400
-          ${isOpen ? 'bg-purple-600' : 'bg-gray-700 bg-opacity-60 hover:bg-opacity-100'}
-          ${isOpen ? 'scale-110' : 'scale-100'}`}
-        aria-label="Toggle social menu"
-        aria-expanded={isOpen}
+        aria-label="Contact"
+        sx={{
+          width: 64,
+          height: 64,
+          backgroundColor: theme.palette.secondary.main, // Amber
+          color: 'black',
+          boxShadow: `0 0 20px ${theme.palette.secondary.main}60`, // Amber Glow
+          transition: 'all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275)',
+          '&:hover': {
+            backgroundColor: '#fbbf24', // Lighter Amber
+            transform: 'scale(1.1)',
+            boxShadow: `0 0 30px ${theme.palette.secondary.main}90`,
+          }
+        }}
       >
-       <Image
-          src="/icons/chat.svg" // Main trigger icon (ensure path is correct)
-          alt="Chat"
-          width={30}
-          height={30}
-          className="w-7 h-7" // Removed `text-white` as it's not usually effective for SVGs via next/image
-          priority={true} // <<< ADD THIS PROP: The main trigger is always above the fold
-          sizes="30px" // <<< ADD THIS PROP: Fixed size for this icon
-        />
-      </button>
+        <AnimatePresence mode="wait">
+          {isOpen ? (
+            <motion.div
+              key="close"
+              initial={{ rotate: -90, opacity: 0 }}
+              animate={{ rotate: 0, opacity: 1 }}
+              exit={{ rotate: 90, opacity: 0 }}
+              transition={{ duration: 0.2 }}
+            >
+              <CloseIcon sx={{ fontSize: 32 }} />
+            </motion.div>
+          ) : (
+            <motion.div
+              key="chat"
+              initial={{ scale: 0.5, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.5, opacity: 0 }}
+              transition={{ duration: 0.2 }}
+            >
+              <ChatIcon sx={{ fontSize: 32 }} />
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </Fab>
 
-      {/* Expanded Social Links */}
+      {/* 2. The Pop-up Actions */}
       <AnimatePresence>
         {isOpen && (
-          <motion.div
+          <Box
+            component={motion.div}
             variants={containerVariants}
             initial="hidden"
             animate="visible"
-            exit="hidden"
-            className={`absolute mb-2 flex flex-col items-center space-y-3 ${
-              direction === 'rtl' ? 'left-0' : 'right-0'
-            } bottom-full`} // Position above the trigger button
+            exit="exit"
+            sx={{
+              display: 'flex',
+              flexDirection: 'column',
+              gap: 2,
+              mb: 1
+            }}
           >
-            {socialLinks.map((link) => (
-              <motion.a
-                key={link.name}
-                href={link.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                variants={itemVariants}
-                className={`p-3 rounded-full shadow-md ${link.bgColor} text-white transition-transform duration-200 hover:scale-110 active:scale-95`}
-                aria-label={`Open ${link.name}`}
-              >
-                <Image
-                  src={link.iconSrc}
-                  alt={link.name}
-                  {...commonIconProps} // Applies width, height, className, and now sizes
-                  // priority is NOT added here as these icons only appear on interaction
-                />
-              </motion.a>
+            {actions.map((action) => (
+              <motion.div key={action.name} variants={itemVariants}>
+                <Tooltip title={action.name} placement="left" arrow>
+                  <Fab
+                    component="a"
+                    href={action.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    size="medium"
+                    aria-label={action.name}
+                    sx={{
+                      backgroundColor: '#1a1a1a', // Obsidian Dark
+                      color: 'white',
+                      border: '1px solid rgba(255,255,255,0.1)',
+                      boxShadow: '0 8px 32px rgba(0,0,0,0.5)',
+                      '&:hover': {
+                        backgroundColor: action.color, // Brand Color on Hover
+                        transform: 'scale(1.1)',
+                        border: `1px solid ${action.color}`,
+                        boxShadow: `0 0 20px ${action.color}60`
+                      },
+                      transition: 'all 0.2s'
+                    }}
+                  >
+                    {action.icon}
+                  </Fab>
+                </Tooltip>
+              </motion.div>
             ))}
-          </motion.div>
+          </Box>
         )}
       </AnimatePresence>
-    </div>
+    </Box>
   );
 }

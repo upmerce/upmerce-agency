@@ -1,144 +1,148 @@
+// src/components/sections/FeaturesSection.tsx
 'use client';
 
-import React, { useEffect } from 'react';
+import React from 'react';
 import { useTranslations } from 'next-intl';
-import { motion, useAnimation } from 'framer-motion';
-import { useInView } from 'react-intersection-observer';
-
-// Icon Components (No changes)
-const IncreaseIcon = () => (
-  <svg className="w-6 h-6 text-green-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
-  </svg>
-);
-const ManageIcon = () => (
-  <svg className="w-6 h-6 text-purple-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924-1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-  </svg>
-);
-const BrandIcon = () => (
-  <svg className="w-6 h-6 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" />
-  </svg>
-);
-
-const CheckIcon = () => (
-  <svg className="w-5 h-5 text-gray-400 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
-  </svg>
-);
+import { Box, Container, Grid, Typography, useTheme, Stack, Chip } from '@mui/material';
+import BentoCard from '../ui/BentoCard'; // Ensure you created this in the previous step
+import MonetizationOnIcon from '@mui/icons-material/MonetizationOn';
+import SmartphoneIcon from '@mui/icons-material/Smartphone';
+import SecurityIcon from '@mui/icons-material/Security';
+import HandshakeIcon from '@mui/icons-material/Handshake';
+import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 
 export default function FeaturesSection({ id }: { id?: string }) {
   const t = useTranslations('AgencyFeatures');
+  const theme = useTheme();
 
-  const increaseBookingsItems: string[] = t.raw('increaseBookings.items');
-  const effortlessManagementItems: string[] = t.raw('effortlessManagement.items');
-  const premiumExperienceItems: string[] = t.raw('premiumExperience.items');
-
-  const controls = useAnimation();
-  const [ref, inView] = useInView({
-    triggerOnce: true,
-    threshold: 0.2,
-  });
-
-  useEffect(() => {
-    if (inView) {
-      controls.start('visible');
-    }
-  }, [controls, inView]);
-
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.2,
-      },
-    },
-  } as const;
-
-  const itemVariants = {
-    hidden: { y: 20, opacity: 0 },
-    visible: {
-      y: 0,
-      opacity: 1,
-      transition: { duration: 0.6, ease: 'easeOut' },
-    },
-  } as const;
+  // Helper to render a list of items with checkmarks
+  const renderList = (items: string[]) => (
+    <Stack spacing={1.5} sx={{ mt: 3 }}>
+      {items.map((item, index) => (
+        <Box key={index} sx={{ display: 'flex', alignItems: 'flex-start', gap: 1.5 }}>
+          <CheckCircleIcon 
+            sx={{ 
+              fontSize: 20, 
+              color: theme.palette.secondary.main, // Amber checkmarks
+              mt: 0.3 
+            }} 
+          />
+          <Typography variant="body2" sx={{ color: 'text.secondary' }}>
+            {item}
+          </Typography>
+        </Box>
+      ))}
+    </Stack>
+  );
 
   return (
-    <section
+    <Box
       id={id || "features"}
-      className="bg-gray-900 py-20"
-      aria-labelledby="features-heading"
-      role="region"
+      component="section"
+      sx={{
+        py: { xs: 8, md: 12 },
+        backgroundColor: theme.palette.background.default,
+        position: 'relative',
+      }}
     >
-      <div className="container mx-auto px-6 text-center">
-        <h2 id="features-heading" className="text-3xl md:text-4xl font-bold text-white mb-4">{t('title')}</h2>
-        <p className="text-gray-400 max-w-3xl mx-auto mb-16">{t('subtitle')}</p>
+      <Container maxWidth="lg">
+        {/* Section Header */}
+        <Box sx={{ textAlign: 'center', mb: 8, maxWidth: '800px', mx: 'auto' }}>
+          <Typography
+            variant="h3"
+            sx={{
+              fontWeight: 800,
+              mb: 2,
+              background: `linear-gradient(135deg, white 0%, ${theme.palette.grey[500]} 100%)`,
+              WebkitBackgroundClip: 'text',
+              WebkitTextFillColor: 'transparent',
+            }}
+          >
+            {t('title')}
+          </Typography>
+          <Typography variant="h6" sx={{ color: 'text.secondary', fontWeight: 400 }}>
+            {t('subtitle')}
+          </Typography>
+        </Box>
 
-        <motion.div
-          ref={ref}
-          variants={containerVariants}
-          initial="hidden"
-          animate={controls}
-          // --- THIS IS THE FIX ---
-          // Added 'items-start' to ensure cards align to the top of the grid row
-          className="grid md:grid-cols-1 lg:grid-cols-3 gap-8 items-start" 
-        >
-          {/* Column 1 */}
-          <motion.div variants={itemVariants} className="bg-gray-800 p-8 rounded-lg text-left border border-gray-700 h-full flex flex-col"> {/* Added h-full and flex flex-col */}
-            <div className="flex items-center mb-4">
-              <IncreaseIcon />
-              <h3 className="text-xl font-bold text-white ml-3">{t('increaseBookings.title')}</h3>
-            </div>
-            <p className="text-gray-400 mb-6">{t('increaseBookings.subtitle')}</p>
-            <ul className="space-y-3 text-gray-300 mt-auto"> {/* Added mt-auto to push list down if needed */}
-              {increaseBookingsItems.map((feature, index) => (
-                <li key={index} className="flex items-center">
-                  <CheckIcon />
-                  <span>{feature}</span>
-                </li>
-              ))}
-            </ul>
-          </motion.div>
+        {/* The Bento Grid */}
+        <Grid container spacing={4}>
+          
+          {/* 1. CONVERSION WEAPONS (Big Card) */}
+          <Grid  size={{xs: 12, md: 8}}>
+            <BentoCard 
+              title={t('increaseBookings.title')}
+              subtitle={t('increaseBookings.subtitle')}
+            >
+              <Box sx={{ display: 'flex', flexDirection: { xs: 'column', md: 'row' }, gap: 4 }}>
+                {/* Visual "Graph" Representation */}
+                <Box 
+                  sx={{ 
+                    flex: 1, 
+                    p: 3, 
+                    borderRadius: 3, 
+                    bgcolor: 'rgba(0,0,0,0.3)', 
+                    border: '1px solid rgba(255,255,255,0.05)',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    justifyContent: 'center',
+                    alignItems: 'center'
+                  }}
+                >
+                  <MonetizationOnIcon sx={{ fontSize: 48, color: '#10b981', mb: 2 }} />
+                  <Typography variant="caption" sx={{ color: 'text.secondary', mb: 1 }}>VISUAL PROOF</Typography>
+                  <Box sx={{ display: 'flex', gap: 1 }}>
+                     <Chip label="SEO #1" size="small" color="success" variant="outlined" />
+                     <Chip label="0% Fee" size="small" color="secondary" variant="outlined" />
+                  </Box>
+                </Box>
 
-          {/* Column 2 */}
-          <motion.div variants={itemVariants} className="bg-gray-800 p-8 rounded-lg text-left border border-gray-700 h-full flex flex-col"> {/* Added h-full and flex flex-col */}
-            <div className="flex items-center mb-4">
-              <ManageIcon />
-              <h3 className="text-xl font-bold text-white ml-3">{t('effortlessManagement.title')}</h3>
-            </div>
-            <p className="text-gray-400 mb-6">{t('effortlessManagement.subtitle')}</p>
-            <ul className="space-y-3 text-gray-300 mt-auto"> {/* Added mt-auto */}
-              {effortlessManagementItems.map((feature, index) => (
-                <li key={index} className="flex items-center">
-                  <CheckIcon />
-                  <span>{feature}</span>
-                </li>
-              ))}
-            </ul>
-          </motion.div>
+                {/* The List */}
+                <Box sx={{ flex: 1.5 }}>
+                   {renderList(t.raw('increaseBookings.items') as string[])}
+                </Box>
+              </Box>
+            </BentoCard>
+          </Grid>
 
-          {/* Column 3 */}
-          <motion.div variants={itemVariants} className="bg-gray-800 p-8 rounded-lg text-left border border-gray-700 h-full flex flex-col"> {/* Added h-full and flex flex-col */}
-            <div className="flex items-center mb-4">
-              <BrandIcon />
-              <h3 className="text-xl font-bold text-white ml-3">{t('premiumExperience.title')}</h3>
-            </div>
-            <p className="text-gray-400 mb-6">{t('premiumExperience.subtitle')}</p>
-            <ul className="space-y-3 text-gray-300 mt-auto"> {/* Added mt-auto */}
-              {premiumExperienceItems.map((feature, index) => (
-                <li key={index} className="flex items-center">
-                  <CheckIcon />
-                  <span>{feature}</span>
-                </li>
-              ))}
-            </ul>
-          </motion.div>
+          {/* 2. POCKET OFFICE (Tall Card) */}
+          <Grid  size={{xs: 12, md: 4}}>
+            <BentoCard 
+              title={t('effortlessManagement.title')} 
+              subtitle={t('effortlessManagement.subtitle')}
+            >
+               <Box sx={{ textAlign: 'center', my: 2 }}>
+                  <SmartphoneIcon sx={{ fontSize: 60, color: theme.palette.primary.main, opacity: 0.8 }} />
+               </Box>
+               {renderList(t.raw('effortlessManagement.items') as string[])}
+            </BentoCard>
+          </Grid>
 
-        </motion.div>
-      </div>
-    </section>
+          {/* 3. INDEPENDENCE (Standard Card) */}
+          <Grid  size={{xs: 12, md: 6}}>
+            <BentoCard 
+              title={t('premiumExperience.title')} 
+              subtitle={t('premiumExperience.subtitle')}
+            >
+               {renderList(t.raw('premiumExperience.items') as string[])}
+            </BentoCard>
+          </Grid>
+
+          {/* 4. DHAMANE / GUARANTEE (Standard Card) */}
+          <Grid  size={{xs: 12, md: 6}}>
+             <BentoCard 
+              title={t('designTools.title')} 
+              subtitle={t('designTools.subtitle')}
+            >
+              <Box sx={{ position: 'absolute', top: 20, right: 20, opacity: 0.1 }}>
+                <HandshakeIcon sx={{ fontSize: 100 }} />
+              </Box>
+              {renderList(t.raw('designTools.items') as string[])}
+            </BentoCard>
+          </Grid>
+
+        </Grid>
+      </Container>
+    </Box>
   );
 }

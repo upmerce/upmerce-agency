@@ -1,4 +1,4 @@
-// /src/components/about/AboutProcess.tsx
+// src/components/about/AboutProcess.tsx
 'use client';
 import React from 'react';
 import { Box, Container, Grid, Typography, Stack, useTheme, useMediaQuery } from '@mui/material';
@@ -19,66 +19,70 @@ const AboutProcess = () => {
   return (
     <Box 
       component="section" 
-      // ▼▼▼ UPDATED COLORS: Alternating dark background ▼▼▼
-      sx={{ py: { xs: 8, md: 12 }, bgcolor: 'grey.800', color: 'common.white' }}
+      sx={{ 
+        py: { xs: 8, md: 15 }, 
+        backgroundColor: theme.palette.background.default, 
+        position: 'relative',
+        overflow: 'hidden'
+      }}
     >
-      <Container maxWidth="lg">
-        {/* Section Heading */}
-        <Box sx={{ textAlign: 'center', mb: 8, maxWidth: '800px', mx: 'auto' }}>
-          <Typography 
-            variant="h5" 
-            color="primary" 
-            fontWeight="bold" 
-            gutterBottom
-            sx={{ textTransform: 'uppercase', letterSpacing: 1 }}
-          >
+      {/* Background Glow */}
+      <Box sx={{ 
+        position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)',
+        width: '800px', height: '400px', 
+        background: `radial-gradient(circle, ${theme.palette.secondary.main}08 0%, transparent 70%)`,
+        zIndex: 0
+      }} />
+
+      <Container maxWidth="lg" sx={{ position: 'relative', zIndex: 1 }}>
+        <Box sx={{ textAlign: 'center', mb: 12 }}>
+          <Typography variant="overline" sx={{ color: theme.palette.secondary.main, letterSpacing: 2, fontWeight: 700 }}>
             {t('sectionTitle')}
           </Typography>
-          <Typography 
-            variant="h3" 
-            sx={{ fontWeight: 800, mb: 2 }}
-          >
+          <Typography variant="h3" sx={{ fontWeight: 800, color: 'white', mt: 1 }}>
             {t('headline')}
           </Typography>
         </Box>
 
-        {/* The Process Steps Grid */}
         <Grid container spacing={4} sx={{ position: 'relative' }}>
-          
+          {/* Connector Line (Desktop) */}
           {!isMobile && (
             <Box 
               sx={{ 
-                position: 'absolute', top: '60px', left: '10%', right: '10%', height: '2px',
-                // Darker connecting line
-                bgcolor: 'grey.700', zIndex: 0
+                position: 'absolute', top: '40px', left: '12%', right: '12%', height: '1px',
+                background: `linear-gradient(90deg, transparent 0%, ${theme.palette.secondary.main} 50%, transparent 100%)`, 
+                opacity: 0.5,
+                zIndex: 0
               }} 
             />
           )}
 
           {steps.map((step) => (
             <Grid size={{ xs: 12, md: 3 }} key={step.number}>
-              <Stack spacing={3} alignItems={isMobile ? 'flex-start' : 'center'} sx={{ textAlign: isMobile ? 'left' : 'center', position: 'relative', zIndex: 1 }}>
-                {/* Number Circle */}
+              <Stack 
+                spacing={3} 
+                alignItems="center" 
+                sx={{ textAlign: 'center', position: 'relative', zIndex: 1 }}
+              >
+                {/* Number Badge */}
                 <Box 
                   sx={{ 
                     width: '80px', height: '80px', borderRadius: '50%',
-                    bgcolor: 'primary.main', color: 'common.white',
+                    backgroundColor: theme.palette.background.default, // Match bg to cut line
+                    border: `1px solid ${theme.palette.secondary.main}`,
+                    color: theme.palette.secondary.main,
                     display: 'flex', alignItems: 'center', justifyContent: 'center',
-                    boxShadow: theme.shadows[6], 
-                    // Dark border matching background to create "cutout" effect
-                    border: `4px solid ${theme.palette.grey[800]}`
+                    boxShadow: `0 0 20px ${theme.palette.secondary.main}30`
                   }}
                 >
                   <Typography variant="h4" fontWeight={800}>{step.number}</Typography>
                 </Box>
                 
-                {/* Title & Description */}
                 <Box>
-                  <Typography variant="h5" fontWeight={700} gutterBottom>
+                  <Typography variant="h6" fontWeight={700} sx={{ color: 'white', mb: 1 }}>
                     {t(step.titleKey)}
                   </Typography>
-                  {/* Lighter gray text */}
-                  <Typography variant="body1" color="grey.400" sx={{ lineHeight: 1.6 }}>
+                  <Typography variant="body2" sx={{ color: 'text.secondary', lineHeight: 1.6, maxWidth: '220px', mx: 'auto' }}>
                     {t(step.descKey)}
                   </Typography>
                 </Box>

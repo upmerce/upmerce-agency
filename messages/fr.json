@@ -3,274 +3,323 @@
     "backToTop": "Retour en haut"
   },
   "AgencyMetadata": {
-    "title": "Création de Site Web (Hôtel & Riad) au Maroc | Upmerce",
-    "description": "Nous créons des sites ultra-rapides pour hôtels et riads, avec Tableau de Bord. Hébergement Gratuit à Vie. Obtenez votre site pro pour 0 Dh."
+    "title": "Moteurs de Réservation Directe pour le Tourisme Marocain (0% Commission) | Upmerce",
+    "description": "Arrêtez de perdre 25% au profit des OTA. Nous construisons des moteurs de réservation Next.js haute performance pour Riads & Agences. 100% Propriété. 0% Commission. Demandez votre audit."
   },
   "AgencyHero": {
-    "title_part1": "Votre Site Web Professionnel",
-    "title_part2": "pour les Professionnels du Tourisme. À partir de 0 Dh.",
-    "subtitle": "Arrêtez de payer des commissions ET des frais d'hébergement. Obtenez un site Next.js ultra-rapide avec votre propre tableau de bord admin. Hébergement Gratuit à Vie.",
-    "ctaButton": "Voir nos Plans",
-    "heroImageAlt": "Un riad marocain moderne, exemple de site web créé par Upmerce",
-    "ctaButtonAriaLabel": "Voir nos plans et tarifs"
+    "title_part1": "Récupérez vos 25% de Marge.",
+    "title_part2": "Construisez un Moteur de Réservation, Pas Juste un Site Web.",
+    "subtitle": "Arrêtez d'être locataire chez Viator et GetYourGuide. Nous construisons des moteurs de réservation de classe mondiale et de haute confiance qui transforment votre expertise locale en revenus directs, sans commission. Rapide, sécurisé et 100% à vous.",
+    "ctaButton": "Arrêter de Payer des Commissions",
+    "heroImageAlt": "Un moteur de réservation à haute conversion pour un tour-opérateur marocain, conçu par Upmerce",
+    "ctaButtonAriaLabel": "Analyser nos solutions de réservation directe",
+    "trustLabel": "Approuvé par Marrago & les Meilleures Agences de Marrakech",
+    "newBadge": "Nouveau : Moteur 0% Commission"
   },
   "AgencyProblemSolution": {
-    "problemTitle": "L'Ancien Modèle est Conçu pour Vous Faire Payer",
+    "problemTitle": "Les OTA S'enrichissent Grâce à Votre Travail Acharné",
     "problems": {
       "0": {
-        "title": "Commissions Élevées (Booking, etc.)",
-        "description": "Chaque réservation via une OTA réduit votre marge. Vous payez un loyer pour vos propres clients."
+        "title": "La Fuite de 25% de Profit",
+        "description": "Chaque réservation via une OTA est un coup dur pour vos marges. Vous les payez pour qu'ils possèdent vos clients."
       },
       "1": {
-        "title": "Sites Lents & Obsolètes (WordPress)",
-        "description": "Les sites WordPress lents et vulnérables frustrent vos clients et sont pénalisés par Google."
+        "title": "La Barrière de Confiance 'Amateur'",
+        "description": "Les sites WordPress lents et obsolètes font fuir les touristes premium. S'ils ne font pas confiance à votre site, ils réservent chez votre concurrent sur Viator."
       },
       "2": {
-        "title": "Frais Cachés (Hébergement Annuel)",
-        "description": "Les agences vous offrent 1 an, puis vous facturent des frais d'hébergement élevés chaque année."
+        "title": "Le Chaos des Réservations Manuelles",
+        "description": "Courir après les paiements sur WhatsApp est un travail à temps plein. Si vous n'êtes pas réveillé pour répondre, vous ne gagnez pas d'argent."
       }
     },
-    "solutionTitle": "Notre Solution : Vraie Propriété. Zéro Frais.",
-    "solutionText": "Nous vous offrons une plateforme moderne (Next.js) que vous possédez à 100%. Vous obtenez un tableau de bord admin, une vitesse incroyable et un hébergement gratuit. Pour toujours."
+    "solutionTitle": "Le Moteur Upmerce : Technologie Mondiale, Âme Locale.",
+    "solutionText": "Nous vous donnons la même technologie utilisée par les géants. Vous obtenez une machine de réservation automatisée et ultra-rapide qui capture les paiements instantanément et bâtit la confiance nécessaire pour contourner les OTA pour toujours."
   },
   "AgencyFounder": {
     "name": "Mustapha Ouazza",
-    "title": "Fondateur & Développeur Principal",
-    "missionStatement": "J'ai créé Upmerce pour mettre fin à l'ancien modèle. Notre mission est de libérer les hôteliers marocains des commissions et des frais annuels cachés. Nous vous offrons la pleine propriété d'une technologie rapide et sécurisée, avec hébergement gratuit à vie. Votre succès n'est plus à louer."
+    "title": "Fondateur & Stratège Technologique",
+    "missionStatement": "J'ai bâti Upmerce pour briser le cycle de la 'Location Numérique'. Ma mission est simple : Donner aux opérateurs marocains les mêmes armes que les géants internationaux—Barres de Réservation Sticky, Tableaux de Bord Mobiles et Vitesse—mais garantir que vous possédez 100% de l'actif. Pas de commissions. Pas de frais cachés. Juste une pure indépendance."
   },
   "StatsSection": {
     "title": "La Preuve Technique (Non-WordPress)",
-    "subtitle": "Vos clients n'attendront pas un site lent. Nos sites Next.js sont conçus pour la vitesse. Voici nos scores Google Lighthouse, garantissant votre performance et votre SEO.",
+    "subtitle": "Vos clients n'attendront pas un site lent. Nos sites Next.js sont conçus pour la vitesse. Voici nos scores Google Lighthouse, garantissant votre performance et SEO.",
     "performance": "Performance",
     "accessibility": "Accessibilité",
-    "bestPractices": "Bonnes Pratiques",
+    "bestPractices": "Meilleures Pratiques",
     "seo": "SEO"
   },
   "AgencyFeatures": {
-    "title": "Une Plateforme Complète, Pas Juste un Site",
-    "subtitle": "Découvrez toutes les fonctionnalités incluses, de votre panneau admin privé à l'hébergement gratuit à vie, en mettant l'accent sur la liberté financière, la propriété totale et la technologie avancée.",
+    "title": "L'Arsenal 'Marrago' : Conçu pour le Revenu",
+    "subtitle": "Nous ne créons pas juste des pages. Nous construisons les déclencheurs psychologiques exacts qui transforment les visiteurs mobiles en réservations payées.",
     "increaseBookings": {
-      "title": "Liberté Financière & Fondations (Vitesse & Sécurité)",
-      "subtitle": "Une base technique moderne pour la performance et zéro coût récurrent.",
+      "title": "1. Armes de Conversion (L'Équipe de Vente)",
+      "subtitle": "Des fonctionnalités pour empêcher les clients de partir vérifier sur Viator.",
       "items": [
-        "Paiement Unique (Licence à Vie)",
-        "0% de Commission sur les Réservations à Vie",
-        "Coût d'Hébergement 0 DH / An (via Vercel Free Tier)",
-        "Coût de Base de Données 0 DH / An (via Firebase Free Tier)",
-        "Aucun Frais d'Abonnement Mensuel",
-        "Performance Ultra-Rapide (Next.js)",
-        "Sécurité Avancée (Technologie Google)",
-        "Hébergement Gratuit à Vie (sur votre compte)",
-        "Propriété Totale du Code & des Données",
-        "Design Responsif (Mobile-First)",
-        "Support Thème Clair / Sombre",
-        "Assistance Connexion Nom de Domaine",
-        "Optimisé pour les Réseaux Sociaux",
-        "Vitesse Instantanée (Hébergement Global Edge Network)",
-        "Système Auto-SEO (Rich Snippets : Prix & Avis sur Google)",
-        "Sécurité Auto-SSL (HTTPS Inclus)",
-        "Sécurité Bancaire (Firebase Auth)"
+        "Barre Sticky 'Zone du Pouce' (Bouton 'Réserver' toujours à 1 clic)",
+        "L'Assistant 'Trip Wizard' Psychologique (Pré-qualifie les leads)",
+        "Grille de Confiance Visuelle (Badges qui tuent la peur de l'arnaque)",
+        "Logique de Rareté Intelligente (Alertes 'Plus que 2 places')",
+        "Architecture Chargement Instantané (Next.js Edge Caching)",
+        "Rich Snippets (Affiche '5 Étoiles' directement sur Google)"
       ]
     },
     "effortlessManagement": {
-      "title": "Votre Panneau Admin Privé & Gestion",
-      "subtitle": "Contrôlez facilement 100% de votre contenu avec des outils no-code.",
+      "title": "2. Le 'Bureau de Poche' (Le Contrôle)",
+      "subtitle": "Gérez toute votre agence depuis le siège avant d'un 4x4.",
       "items": [
-        "Tableau de Bord Admin (Technologie Google)",
-        "Gestion Facile du Blog (Ajouter/Modifier/Supprimer)",
-        "Gestion Facile des Tours & Expériences",
-        "Gestion Facile des Avis Clients",
-        "Contenu Optimisé SEO (Markdown)",
-        "Support Multilingue (Ar, Fr, En, Es...)",
-        "Accès Admin Sécurisé et Personnel",
-        "Panneau Admin Visuel (Dashboard)",
-        "Moteur de Réservation Intelligent (Valider/Rejeter les Demandes)",
-        "Gestionnaire d'Expériences 'No-Code' (Ajout facile de tours)",
-        "Système de Blog Intégré (Optimisé SEO)",
-        "Système de Gestion des Avis (Modération des retours clients)"
+        "App Admin Mobile (Fermez dates & changez prix en quelques secondes)",
+        "Pont Concierge WhatsApp (Leads chauds -> Chat Direct)",
+        "Itinéraires PDF Automatisés (Look professionnel instantané)",
+        "Constructeur de Tours No-Code (Ajoutez des excursions sans développeur)",
+        "Tableau de Bord Temps Réel (Vue revenus & réservations instantanée)"
       ]
     },
     "premiumExperience": {
-      "title": "Le Moteur de Réservation & Propriété",
-      "subtitle": "Convertissez les visiteurs en clients directs avec un contrôle total.",
+      "title": "3. L'Indépendance (L'Actif)",
+      "subtitle": "Arrêtez de louer votre business. Commencez à le posséder.",
       "items": [
-        "Système de Réservation Directe (0% Com.)",
-        "Intégration de Paiement (Stripe)",
-        "Tableau de Bord de Gestion des Réservations",
-        "Confirmations de Réservation Automatiques",
-        "Système de Notation et Avis Clients",
-        "Portails Clients Personnalisés",
-        "Intégration WhatsApp & Email",
-        "Propriété du Code à 100% (Vous possédez le Repo GitHub)",
-        "Propriété des Données à 100% (Vous possédez le Compte Firebase)",
-        "Intégration de Paiement Direct (PayPal, Tap, Stripe - Sans Intermédiaire)",
-        "Synchro Comptes Externes (TripAdvisor, Viator, Réseaux Sociaux)"
+        "100% Propriété du Code (Nous vous transférons les 'Plans Numériques')",
+        "0% Commission à Vie (Intégration Directe Stripe/CMI)",
+        "Coût Hébergement 0 Dh (Utilise les 'Free Tiers' Entreprise valides pour <1M visites)",
+        "Sécurité Bancaire (Sécurisé par l'infrastructure Google, pas des plugins)"
       ]
     },
     "designTools": {
-      "title": "Design & Outils",
-      "subtitle": "Fonctionnalités de design personnalisables et conviviales.",
+      "title": "4. Le 'Dhamane' (La Garantie)",
+      "subtitle": "Nous ne disparaissons pas après le lancement.",
       "items": [
-        "Support Multi-Langues (EN/FR/ES/AR)",
-        "Capacité Multi-Thèmes",
-        "Système de Surcharge de Design (Branding Unique)",
-        "Design Mobile-First (Parfait pour les Téléphones)"
+        "Configuration Pont Financier (Stripe vers Banque Marocaine)",
+        "Formation VIP : 'Maîtriser votre Dashboard Mobile'",
+        "1 Mois de 'Suivi' & Correction de Bugs"
       ]
     },
     "supportBonus": {
-      "title": "Support & Bonus",
-      "subtitle": "Support continu pour l'indépendance.",
+      "title": "Bonus : La Stratégie",
+      "subtitle": "Apprenez à utiliser ces armes.",
       "items": [
-        "Formation Gratuite (Comment publier, gérer & réserver)",
-        "Aucun Technicien Requis pour les Tâches Quotidiennes",
+        "Guide : 'Comment utiliser le Trip Wizard pour conclure des ventes'",
+        "Stratégie : 'Fixer vos prix pour le direct vs OTA'",
         "Indépendance Technique à Vie"
       ]
     }
   },
   "AgencyPortfolio": {
-    "title": "Nos Thèmes Professionnels",
-    "subtitle": "Choisissez un design premium, optimisé pour les hôtels, riads et agences de voyage. Chaque thème est ultra-rapide et prêt pour le SEO.",
-    "themeSelectionLabel": "Choisissez un thème de site web à prévisualiser",
-    "theme_default_name": "Élégance Moderne",
-    "theme_default_tags": "Moderne, Minimaliste, Hôtel & Riad",
-    "theme_adventure_name": "Aventure & Découverte",
-    "theme_adventure_tags": "Tours, Agence de Voyage, Dynamique",
-    "theme_luxury_name": "Luxe & Prestige",
-    "theme_luxury_tags": "Riad de Luxe, Haut de Gamme, Exclusif",
-    "imageAltDesktop": "Vue bureau du thème {themeName}",
-    "imageAltTablet": "Vue tablette du thème {themeName}",
-    "imageAltMobile": "Vue mobile du thème {themeName}",
-    "ctaButton": "Voir la Démo Live"
-  },
-  "AgencyTechnology": {
-    "title": "Notre Technologie vs L'Ancienne Méthode",
-    "subtitle": "Pourquoi nos sites sont plus rapides, plus sécurisés et moins chers à long terme.",
-    "oldWay": {
-      "title": "L'Ancienne Méthode (WordPress)",
-      "performance": "Sites lents, mauvais score Google, expérience mobile frustrante.",
-      "security": "Vulnérable aux piratages, mises à jour de plugins constantes et obligatoires.",
-      "cost": "Frais de maintenance et d'hébergement annuels élevés. Vous êtes locataire."
+  "title": "Résultats Prouvés : L'Étude de Cas Marrago",
+  "subtitle": "Découvrez la technologie réelle que nous utilisons pour aider les agences locales à battre les géants. Ce n'est pas un modèle standard ; c'est un système de réservation conçu sur mesure.",
+  "themeSelectionLabel": "Voir les Succès",
+  "theme_default_name": "Marrago Travel (En Ligne)",
+  "theme_default_tags": "Moteur de Réservation Directe, 0% Commission",
+  "theme_adventure_name": "Atlas Treks (Concept)",
+  "theme_adventure_tags": "Aventure, Mobile Ultra-Rapide",
+  "theme_luxury_name": "Royal Riad (Concept)",
+  "theme_luxury_tags": "Hôtel de Luxe, Réservation Instantanée",
+  "imageAltDesktop": "Vue ordinateur de la plateforme {themeName}",
+  "imageAltTablet": "Vue tablette de la plateforme {themeName}",
+  "imageAltMobile": "Vue mobile de la plateforme {themeName}",
+  "ctaButton": "Voir la Démo Live (Marrago.com)",
+  "overline": "RÉSULTATS PROUVÉS",
+  "visitButton": "Visiter le Site",
+  "comingSoon": "Bientôt Disponible",
+  "themes": {
+    "marrago": {
+      "name": "Marrago Travel",
+      "category": "Agence d'Excursions",
+      "description": "Un moteur de réservation à haute conversion pour les excursions à Marrakech. Intègre la réservation sticky 'Zone du Pouce' et un paiement à 0% de commission."
     },
-    "newWay": {
-      "title": "L'Approche Upmerce (Next.js)",
-      "performance": "Performance ultra-rapide. Score Google 95+. Expérience mobile parfaite.",
-      "security": "Sécurité moderne (Technologie Google). Zéro maintenance de plugin.",
-      "cost": "Hébergement Gratuit à Vie. Zéro frais de maintenance. Vous êtes propriétaire à 100%."
+    "luxury": {
+      "name": "Royal Riad",
+      "category": "Hôtel de Luxe",
+      "description": "Un système de réservation élégant pour hôtels de charme. Axé sur les réservations de nuitées à haute valeur et les ventes additionnelles (upsells) de conciergerie."
     },
-    "labels": {
-      "performance": "Performance :",
-      "security": "Sécurité :",
-      "cost": "Coût :"
-    }
-  },
-  "AgencyOwnership": {
-    "title": "Votre Site. Votre Domaine. Vos Comptes.",
-    "subtitle": "Arrêtez d'être 'locataire' d'une agence. Devenez propriétaire à 100% de vos actifs numériques.",
-    "item1": "Vous possédez 100% du code de votre site web.",
-    "item2": "Hébergement Gratuit à Vie sur *votre propre* compte Vercel.",
-    "item3": "Base de données sécurisée sur *votre propre* compte Google.",
-    "item4": "Vous contrôlez votre nom de domaine. Pas de frais cachés, jamais."
-  },
-  "AgencyPricing": {
-  "title": "Une Partenariat, Pas un Abonnement",
-  "subtitle": "Nous croyons en votre croissance. Commencez avec une base professionnelle gratuitement, et investissez dans l'indépendance du direct booking quand vous êtes prêt.",
-  "popular": "Meilleure Valeur",
-  "popularPlanLabel": "Ceci est notre plan recommandé : {packageName}",
-  "featuresListLabel": "Fonctionnalités incluses dans le plan {packageName}",
-  "choosePlanLabel": "Choisir le plan {packageName}",
-  "packages": {
-    "0": {
-      "name": "Fondation Starter",
-      "price": "0 Dh",
-      "description": "Notre investissement dans votre business. Une présence numérique complète et professionnelle pour établir votre marque et attirer des clients depuis Google.",
-      "features": [
-        "Site Web Next.js Professionnel",
-        "Tableau de Bord Admin (Tech Google)",
-        "Gestion de Contenu Facile (Blog, Tours)",
-        "Hébergement à Vie Gratuit (Votre Compte)",
-        "Architecture SEO Avancée",
-        "Multilingue & Mode Sombre/Clair",
-        "Design Mobile-First",
-        "Formation & Onboarding Gratuits"
-      ],
-      "cta": "Postuler pour le Partenariat",
-      "note": "Places limitées. Pas de carte bancaire requise.",
-      "isPopular": false
-    },
-    "1": {
-  "name": "Moteur de Croissance",
-  "price": "999 Dh <s>1999 Dh</s>",
-  "description": "Le pack indépendance. Débloquez le moteur de réservation directe qui se rentabilise en une seule réservation en éliminant les commissions.",
-  "features": [
-    "Tout ce qu'il y a dans Starter, plus :",
-    "Moteur de Réservation 0% Commission",
-    "Paiements Mondiaux Sécurisés (Stripe)",
-    "Confirmations de Réservation Automatisées",
-    "Tableau de Gestion des Réservations",
-    "Portails Clients Personnalisés",
-    "Support Prioritaire WhatsApp",
-    "Transfert 100% Propriété Code & Données"
-  ],
-  "cta": "Réclamer l'Offre -50%",
-  "note": "🔥 Offre de Lancement : -50% se termine bientôt.",
-  "isPopular": true
-  },
-    "2": {
-      "name": "Entreprise Sur Mesure",
-      "price": "Devis Personnalisé",
-      "description": "Pour les entreprises établies nécessitant des fonctionnalités sur mesure, des intégrations avancées (ex: Channel Managers) et une stratégie dédiée.",
-      "features": [
-        "Tout ce qu'il y a dans Croissance, plus :",
-        "Développement de Fonctionnalités Sur Mesure",
-        "Intégrations API Avancées",
-        "Manager de Succès Dédié",
-        "Sécurité Avancée & SLA"
-      ],
-      "cta": "Contacter les Ventes",
-      "note": "Solutions adaptées pour grande échelle.",
-      "isPopular": false
+    "adventure": {
+      "name": "Atlas Treks",
+      "category": "Tours d'Aventure",
+      "description": "Une plateforme robuste et ultra-rapide pour les guides de montagne. Optimisée pour une performance 'offline-first' dans les zones reculées."
     }
   }
 },
+  "AgencyTechnology": {
+    "title": "L'Avantage 'Next.js' vs. L'Ancienne Méthode",
+    "subtitle": "Pourquoi les meilleures agences marocaines passent de WordPress à Upmerce.",
+    "oldWay": {
+      "title": "L'Ancienne Méthode (WordPress)",
+      "performance": "Lent (5-8 sec). Perd les clients mobiles.",
+      "security": "Vulnérable aux piratages de plugins et malwares.",
+      "cost": "Frais de maintenance élevés. Vous êtes un 'Locataire'."
+    },
+    "newWay": {
+      "title": "Le Moteur Upmerce (Next.js)",
+      "performance": "Instantané (<1 sec). Google vous classe N°1.",
+      "security": "Sécurité Bancaire (Tech Google). Zéro piratage.",
+      "cost": "0 Dh Maintenance. Vous êtes Propriétaire à 100%."
+    },
+    "labels": {
+      "performance": "Vitesse & SEO :",
+      "security": "Sécurité :",
+      "cost": "Propriété :"
+    }
+  },
+  "AgencyOwnership": {
+    "title": "Vous Possédez Tout.",
+    "subtitle": "Arrêtez de payer un loyer mensuel pour votre propre business numérique. Nous construisons des actifs, pas des passifs.",
+    "overline": "SOUVERAINETÉ DE L'ACTIF",
+    "comparison": {
+      "othersTitle": "LES AUTRES (WIX/SHOPIFY)",
+      "othersPoint1": "❌ Vous louez le pixel.",
+      "othersPoint2": "❌ Frais mensuels pour toujours.",
+      "othersPoint3": "❌ Ils possèdent vos données.",
+      "upmerceTitle": "UPMERCE (LE \"MULK\")",
+      "upmercePoint1": "✅ Vous possédez le code.",
+      "upmercePoint2": "✅ Paiement unique.",
+      "upmercePoint3": "✅ Vous gardez la base de données."
+    },
+    "card": {
+      "transferTitle": "Transfert de Propriété",
+      "verifiedBadge": "VÉRIFIÉ",
+      "licenseId": "ID LICENCE : UPM-2024-ACCÈS-À-VIE"
+    },
+    "item1": "Droits de Propriété Intellectuelle",
+    "item2": "Accès Admin Complet",
+    "item3": "Propriété de la Base de Données",
+    "item4": "Pas de Frais Mensuels"
+  },
+  "AgencyPricing": {
+    "title": "Investissez Une Fois. Profitez Pour Toujours.",
+    "subtitle": "Arrêtez de louer votre technologie. Un seul paiement, 0% de commission, et vous possédez le moteur à vie. Une seule réservation directe couvre vos frais d'hébergement.",
+    "popular": "Meilleur ROI",
+    "popularPlanLabel": "Recommandé : {packageName}",
+    "featuresListLabel": "Fonctionnalités dans {packageName}",
+    "choosePlanLabel": "Choisir {packageName}",
+    "packages": {
+      "0": {
+        "name": "Présence Digitale",
+        "price": "1 990 Dh",
+        "description": "Pour les nouvelles agences qui ont juste besoin d'exister sur Google. Un site vitrine professionnel pour bâtir la crédibilité.",
+        "features": [
+          "Site Web Next.js Professionnel (5 Pages)",
+          "Bouton de Redirection WhatsApp",
+          "Tableau de Bord Admin (Tech Google)",
+          "Hébergement Gratuit à Vie (Votre Compte)",
+          "Configuration SEO de Base",
+          "Design Mobile-First"
+        ],
+        "cta": "Lancer Votre Présence",
+        "note": "Paiement unique. Aucun frais caché.",
+        "isPopular": false
+      },
+      "1": {
+        "name": "Le Moteur de Croissance",
+        "price": "4 990 Dh",
+        "description": "Le Tueur d'OTA. Le système exact utilisé par Marrago pour battre Viator et GetYourGuide.",
+        "features": [
+          "Tout ce qu'il y a dans Présence, plus :",
+          "Moteur de Réservation 0% Commission (Stripe/CMI)",
+          "Technologie de Réservation Mobile Sticky",
+          "L'Assistant Psychologique 'Trip Wizard'",
+          "App Admin Mobile (Gérez depuis le téléphone)",
+          "Factures PDF & Emails Automatisés",
+          "Onboarding Financier (Configuration Stripe)",
+          "1 Mois de Support VIP Inclus"
+        ],
+        "cta": "Obtenir Le Moteur",
+        "note": "Rentabilisé en seulement ~10 réservations.",
+        "isPopular": true
+      },
+      "2": {
+        "name": "Leader du Marché",
+        "price": "12 990 Dh",
+        "description": "Pour les groupes hôteliers établis ou grandes flottes nécessitant des intégrations avancées et une stratégie sur mesure.",
+        "features": [
+          "Tout ce qu'il y a dans Croissance, plus :",
+          "Intégration Channel Manager",
+          "Multi-Langue (AR/FR/EN/ES/DE)",
+          "Développement de Fonctionnalités Sur Mesure",
+          "Hotline WhatsApp Prioritaire 24/7",
+          "Manager de Succès Dédié",
+          "Stratégie SEO & Contenu Avancée"
+        ],
+        "cta": "Contacter pour Stratégie",
+        "note": "Transformation digitale complète.",
+        "isPopular": false
+      }
+    }
+  },
+  "AgencyObjections": {
+    "title": "Vos Craintes, Nos Réponses (Dhamane)",
+    "subtitle": "Nous savons que vous avez déjà été échaudé par des freelances. Voici notre promesse d'indépendance.",
+    "items": [
+      {
+        "question": "Serai-je un 'Prisonnier' du développeur ?",
+        "answer": "Non. Nous vous donnons l'Autonomie (Indépendance). Vous obtenez un Tableau de Bord Mobile pour changer prix, photos et tours vous-même en 30 secondes. Vous possédez le code."
+      },
+      {
+        "question": "Comment récupérer mon argent sur ma banque marocaine ?",
+        "answer": "Nous configurons le pont 'Stripe-vers-Maroc' pour vous. Les fonds vont du client -> Stripe -> Votre compte CIH/Attijari légalement et en toute sécurité."
+      },
+      {
+        "question": "Et si le site plante quand vous partez ?",
+        "answer": "Notre 'Dhamane' (Garantie) inclut une période de 'Suivi'. Nous corrigeons les bugs. De plus, le site est hébergé sur une technologie serverless (Vercel) qui ne 'plante' pas comme les vieux serveurs."
+      },
+      {
+        "question": "Est-ce juste un modèle (template) ?",
+        "answer": "Non. C'est un Moteur de Réservation conçu sur mesure. C'est votre propriété numérique ('Mulk') qui crée de la valeur pour votre actif commercial."
+      }
+    ]
+  },
   "FaqHub": {
     "title": "Vos Questions, Nos Réponses d'Experts",
     "subtitle": "Parcourez nos articles et trouvez des réponses claires sur la performance, le SEO et les réservations directes.",
     "browseAllButton": "Voir Tous les Articles"
   },
   "AgencyContact": {
-    "title": "Prêt à Lancer Votre Site ?",
-    "subtitle": "Commencez avec notre plan à 0 Dh ou demandez un devis gratuit pour la réservation directe. Parlez-nous de votre projet.",
-    "formNameLabel": "Votre Nom",
-    "formEmailLabel": "Votre Email",
-    "formMessageLabel": "Parlez-nous de votre projet (votre riad, hôtel, agence...)",
-    "ctaButton": "Obtenir Mon Devis Gratuit",
-    "loadingButton": "Envoi en cours...",
-    "validationNameRequired": "Votre nom est requis.",
-    "validationEmailRequired": "Votre email est requis.",
-    "validationEmailInvalid": "Veuillez entrer une adresse email valide.",
-    "validationMessageRequired": "Un message est requis.",
-    "formHasErrors": "Veuillez corriger les erreurs dans le formulaire.",
-    "unexpectedError": "Une erreur inattendue est survenue.",
-    "unknownError": "Une erreur inconnue est survenue. Veuillez réessayer."
+  "title": "Prêt à Arrêter de Payer des Commissions ?",
+  "subtitle": "Chaque jour d'attente est un autre 25% perdu au profit de Viator. Demandez votre Devis Gratuit ou Audit aujourd'hui.",
+  "formNameLabel": "Votre Nom",
+  "formEmailLabel": "Votre Email",
+  "formMessageLabel": "Parlez-nous de vos objectifs (ex: 'Je veux réduire les frais OTA')...",
+  "ctaButton": "Obtenir Ma Stratégie de Profit",
+  "loadingButton": "Analyse en cours...",
+  "validationNameRequired": "Votre nom est requis.",
+  "validationEmailRequired": "Votre email est requis.",
+  "validationEmailInvalid": "Veuillez entrer une adresse email valide.",
+  "validationMessageRequired": "Un message est requis.",
+  "formHasErrors": "Veuillez corriger les erreurs dans le formulaire.",
+  "unexpectedError": "Une erreur inattendue s'est produite.",
+  "unknownError": "Une erreur inconnue s'est produite. Veuillez réessayer.",
+  "overline": "L'ÉTAPE FINALE",
+  "audit": {
+    "title": "Audit de Profit Gratuit",
+    "description": "Nous analysons votre site actuel et vous montrons exactement où vous perdez des réservations."
   },
+  "form": {
+    "title": "Obtenez Votre Stratégie",
+    "nameLabel": "Votre Nom",
+    "emailLabel": "Email Professionnel",
+    "messageLabel": "Parlez-nous de vos points de friction actuels...",
+    "submitButton": "Demander l'Accès",
+    "loadingButton": "Transmission...",
+    "successButton": "Demande Envoyée !"
+  }
+ },
   "AgencyNavigation": {
-  "siteTitle": "Upmerce Solutions",
-  "mainNavigation": "Navigation principale",
-  "mobileNavigation": "Menu de navigation mobile",
-  "openMenu": "Ouvrir le menu",
-  "closeMenu": "Fermer le menu",
-  "home": "Accueil",
-  "about": "À Propos",
-  "solutions": "Solutions",
-  "caseStudies": "Études de Cas",
-  "pricing": "Tarifs",
-  "faq": "FAQ",
-  "blog": "Blog",
-  "ctaButton": "Devis Gratuit",
-  "contactUsDescription": "pour un devis sur mesure",
-  "whatsappMessage": "Bonjour, je souhaite me renseigner sur vos services pour mon entreprise.",
-  "skipToContent": "Aller au contenu principal"
-},
+    "menu": "Menu",
+    "siteTitle": "Upmerce Solutions",
+    "mainNavigation": "Navigation principale",
+    "mobileNavigation": "Menu de navigation mobile",
+    "openMenu": "Ouvrir le menu",
+    "closeMenu": "Fermer le menu",
+    "home": "Accueil",
+    "about": "À Propos",
+    "solutions": "Solutions",
+    "caseStudies": "Études de Cas",
+    "pricing": "Tarifs",
+    "faq": "FAQ",
+    "blog": "Blog",
+    "ctaButton": "Devis Gratuit",
+    "contactUsDescription": "pour un devis sur mesure",
+    "whatsappMessage": "Bonjour, je souhaite me renseigner sur vos services pour mon entreprise.",
+    "skipToContent": "Aller au contenu principal"
+  },
   "AgencyFooter": {
     "copyright": "Tous droits réservés.",
     "shortDescription": "Nous créons des sites web Next.js ultra-rapides pour les hôtels et riads marocains. Reprenez le contrôle de vos réservations directes.",
@@ -286,29 +335,29 @@
     }
   },
   "AgencyProcess": {
-    "title": "Notre Processus Stratégique",
-    "subtitle": "De l'idée au lancement, voici comment nous construisons votre site web détenu à 100%.",
+    "title": "De 'Locataire' à 'Propriétaire' en 4 Étapes",
+    "subtitle": "Nous ne vous envoyons pas juste un fichier zip. Nous construisons le moteur, l'installons et vous apprenons à le conduire.",
     "steps": {
       "0": {
-        "title": "Découverte & Stratégie SEO",
-        "description": "Nous analysons vos concurrents, vos objectifs et définissons une stratégie de mots-clés pour générer des réservations directes."
+        "title": "1. L'Audit de Profit",
+        "description": "Nous analysons votre 'Hémorragie de Commissions' actuelle. Nous regardons où vous perdez de l'argent au profit des OTA et définissons la stratégie pour capturer ces réservations directes."
       },
       "1": {
-        "title": "Design & Expérience Utilisateur (UX)",
-        "description": "Création d'un design rapide, moderne et optimisé pour la conversion qui captive les clients sur mobile et bureau."
+        "title": "2. L'Architecture de Confiance",
+        "description": "Nous concevons la 'Grille de Confiance' et le 'Tunnel Mobile'. Ce n'est pas qu'une question de couleurs ; il s'agit de placer le bouton 'Réserver' dans la 'Zone du Pouce' pour une conversion maximale."
       },
       "2": {
-        "title": "Développement Haute Performance (Next.js)",
-        "description": "C'est ici que nous codons votre site avec une technologie moderne pour une vitesse et une sécurité maximales. Pas de WordPress."
+        "title": "3. La Construction du Moteur",
+        "description": "Nous codons votre plateforme avec Next.js (pas de WordPress). Nous intégrons la 'Barre Sticky', le 'Trip Wizard' et le pont de paiement Stripe/CMI."
       },
       "3": {
-        "title": "Lancement & Transfert de Propriété",
-        "description": "Nous déployons votre site, connectons votre domaine via vos comptes et vous transférons 100% de la propriété du code. Zéro frais mensuels."
+        "title": "4. Formation & Passation ('Mulk')",
+        "description": "Nous ne vous laissons pas deviner. Nous vous formons à l'utilisation de votre App Admin Mobile, vous transférons le code GitHub et vous remettons les clés. Vous possédez tout."
       }
     }
   },
   "Loading": {
-    "loadingMessage": "Le contenu est en cours de chargement, veuillez patienter.",
+    "loadingMessage": "Le contenu charge, veuillez patienter.",
     "loadingText": "Chargement du contenu..."
   },
   "Blog": {
@@ -320,51 +369,51 @@
     "shareOn_Pinterest": "Partager sur Pinterest",
     "shareOn_Email": "Partager par Email",
     "shareOn_CopyLink": "Copier le lien",
-    "linkCopied": "Lien copié dans le presse-papier !",
-    "relatedPostsTitle": "Vous aimerez peut-être aussi",
+    "linkCopied": "Lien copié dans le presse-papiers !",
+    "relatedPostsTitle": "Vous aimerez aussi",
     "authorBioShort": "Experts en Transformation Digitale pour le Tourisme au Maroc.",
     "readMoreAboutUs": "En savoir plus sur nous",
     "blogCtaTitle": "Prêt à transformer votre activité touristique en ligne ?",
-    "blogCtaDescription": "Laissez Upmerce Solutions créer un site web haute performance, axé sur la conversion et adapté au marché touristique marocain.",
+    "blogCtaDescription": "Laissez Upmerce Solutions créer un site web haute performance, axé sur la conversion, et adapté au marché touristique marocain.",
     "blogCtaButton": "Obtenir une consultation gratuite",
-    "viewCategory": "Voir tous les articles de la catégorie {category}",
+    "viewCategory": "Voir tous les articles dans la catégorie {category}",
     "viewTag": "Voir tous les articles avec le tag {tag}"
   },
   "Onboarding": {
-    "title": "Questionnaire de Projet Web",
-    "introduction": "Ce questionnaire nous aidera à rassembler toutes les informations nécessaires pour créer un site web professionnel qui représente parfaitement votre entreprise et vous aide à atteindre vos objectifs. Veuillez être aussi détaillé que possible.",
+    "title": "Questionnaire Projet Site Web",
+    "introduction": "Ce questionnaire nous aidera à rassembler toutes les informations nécessaires pour créer un site web professionnel qui représente parfaitement votre entreprise et vous aide à atteindre vos objectifs. Soyez aussi détaillé que possible.",
     "part1Title": "Partie 1 : Votre Entreprise & Marque",
     "officialNameLabel": "Nom Officiel de l'Entreprise",
-    "officialNamePlaceholder": "Ex: Atlas Mountain Guides SARL",
+    "officialNamePlaceholder": "Ex : Atlas Mountain Guides SARL",
     "officialNameHelp": "Ceci est pour des raisons légales et de droits d'auteur.",
     "websiteDisplayNameLabel": "Nom d'Affichage du Site Web",
-    "websiteDisplayNameHelp": "Le nom qui apparaîtra bien en vue dans l'en-tête de votre site et votre image de marque.",
-    "websiteDisplayNamePlaceholder": "Ex: Hassan's Atlas Treks",
-    "sloganLabel": "Votre Slogan / Accroche (une phrase)",
-    "sloganPlaceholder": "Ex: Treks authentiques et privés dans le Haut Atlas, guidés par des locaux.",
+    "websiteDisplayNameHelp": "Le nom qui apparaîtra en évidence dans l'en-tête de votre site et votre branding.",
+    "websiteDisplayNamePlaceholder": "Ex : Les Treks Atlas de Hassan",
+    "sloganLabel": "Votre Slogan / Tagline (une phrase)",
+    "sloganPlaceholder": "Ex : Treks authentiques et privés dans le Haut Atlas, guidés par des Berbères locaux.",
     "logoLabel": "Avez-vous un logo ?",
-    "logoHelp": "Si oui, veuillez le télécharger en haute qualité (PNG, SVG).",
+    "logoHelp": "Si oui, veuillez le télécharger dans un format haute qualité (PNG, SVG).",
     "sloganHelp": "Une phrase accrocheuse décrivant votre entreprise.",
     "businessCategoryLabel": "Catégorie de Votre Entreprise",
     "businessCategoryHelp": "Quel type d'entreprise êtes-vous ?",
     "businessCategoryPlaceholder": "Sélectionnez une catégorie",
     "businessCategoryOptionTouristicTransport": "Transport Touristique",
-    "businessCategoryOptionTourOperator": "Tour-opérateur / Agence de Voyage",
+    "businessCategoryOptionTourOperator": "Tour Opérateur",
     "businessCategoryOptionHotel": "Hôtel/Riad",
     "businessCategoryOptionRestaurant": "Restaurant/Café",
     "businessCategoryOptionECommerce": "E-commerce",
     "businessCategoryOptionOther": "Autre",
     "industrySpecificsLabel": "Spécificités de vos Services/Produits",
-    "industrySpecificsHelp": "Décrivez brièvement vos principaux services ou produits. Ex : 'Transferts aéroport, excursions vallée de l'Ourika, circuits Sahara', ou 'Articles en cuir faits main'.",
-    "industrySpecificsPlaceholder": "Ex: Transferts aéroport, excursions d'une journée vallée de l'Ourika",
+    "industrySpecificsHelp": "Décrivez brièvement vos principaux services ou produits. Ex : 'Transferts aéroport, excursions d'une journée Vallée de l'Ourika, tours Sahara', ou 'Maroquinerie artisanale'.",
+    "industrySpecificsPlaceholder": "Ex : Transferts aéroport, excursions d'une journée Vallée de l'Ourika",
     "part2Title": "Partie 2 : Design & Style",
     "primaryColorLabel": "Couleur Principale de la Marque",
-    "primaryColorPlaceholder": "Ex: #D4AF37 ou 'un bleu profond'",
-    "primaryColorHelp": "C'est la couleur principale pour les boutons, liens et éléments clés. Si vous connaissez le code hexadécimal, tant mieux. Sinon, décrivez-la simplement.",
-    "secondaryColorLabel": "Couleur Secondaire d'Accent",
-    "secondaryColorPlaceholder": "Ex: 'un orange terre cuite chaud'",
-    "secondaryColorHelp": "Une deuxième couleur pour compléter votre couleur principale.",
-    "templateThemeLabel": "Thème de Design Préféré",
+    "primaryColorPlaceholder": "Ex : #D4AF37 ou 'un bleu profond'",
+    "primaryColorHelp": "C'est la couleur principale pour les boutons, liens et éléments clés. Si vous connaissez le code hexadécimal, super. Sinon, décrivez-la simplement.",
+    "secondaryColorLabel": "Couleur d'Accent Secondaire",
+    "secondaryColorPlaceholder": "Ex : 'un orange terre cuite chaud'",
+    "secondaryColorHelp": "Une seconde couleur pour compléter votre couleur principale.",
+    "templateThemeLabel": "Thème de Design de Site Web Préféré",
     "templateThemeHelp": "Choisissez un thème qui reflète le mieux le style de votre marque. Cela dictera l'apparence générale.",
     "templateThemePlaceholder": "Sélectionnez un thème",
     "templateThemeOptionDefault": "Défaut (Propre & Moderne)",
@@ -376,65 +425,65 @@
     "emailLabel": "Adresse Email",
     "emailPlaceholder": "Pour les demandes clients",
     "phoneLabel": "Numéro de Téléphone",
-    "phonePlaceholder": "Le numéro principal de l'entreprise",
+    "phonePlaceholder": "Le numéro de téléphone principal de l'entreprise",
     "addressLabel": "Adresse Physique",
     "addressPlaceholder": "Votre bureau principal ou point de rencontre",
     "whatsappNumberLabel": "Numéro WhatsApp",
-    "whatsappNumberPlaceholder": "Ex: +212 6 XX XX XX XX",
+    "whatsappNumberPlaceholder": "Ex : +212 6 XX XX XX XX",
     "whatsappNumberHelp": "Si vous utilisez WhatsApp pour la communication professionnelle, veuillez fournir le numéro.",
     "socialMediaTitle": "Liens Réseaux Sociaux",
     "facebookLabel": "Facebook (URL Complète)",
-    "facebookPlaceholder": "Ex: https://www.facebook.com/votrepage",
+    "facebookPlaceholder": "Ex : https://www.facebook.com/votrepage",
     "instagramLabel": "Instagram (URL Complète)",
-    "instagramPlaceholder": "Ex: https://www.instagram.com/votrecompte",
+    "instagramPlaceholder": "Ex : https://www.instagram.com/votrecompte",
     "twitterLabel": "Twitter / X (URL Complète)",
-    "twitterPlaceholder": "Ex: https://twitter.com/votrecompte",
+    "twitterPlaceholder": "Ex : https://twitter.com/votrecompte",
     "aboutUsContentLabel": "À Propos de Votre Entreprise",
-    "aboutUsContentPlaceholder": "Racontez-nous l'histoire de votre entreprise, sa mission et ses valeurs. Ce sera le contenu de votre page 'À Propos'.",
+    "aboutUsContentPlaceholder": "Racontez-nous l'histoire, la mission et les valeurs de votre entreprise. Ce sera le contenu de votre page 'À Propos'.",
     "aboutUsContentHelp": "Un bref aperçu de l'histoire de votre entreprise, sa mission et ce qui vous rend unique.",
     "serviceDescriptionLabel": "Décrivez vos Principaux Services/Tours",
-    "serviceDescriptionPlaceholder": "Ex: Nous proposons des transferts privés aéroport, des visites guidées de Marrakech et des voyages de plusieurs jours dans le désert.",
+    "serviceDescriptionPlaceholder": "Ex : Nous offrons des transferts aéroport privés, des visites guidées de Marrakech et des voyages désert de plusieurs jours.",
     "serviceDescriptionHelp": "Fournissez une description détaillée des principaux services ou types de tours que vous proposez.",
-    "tourLocationsServedLabel": "Principales Destinations Desservies",
-    "tourLocationsServedPlaceholder": "Ex: Imlil & Haut Atlas, Excursions Marrakech, Désert d'Agafay",
+    "tourLocationsServedLabel": "Principaux Lieux de Tours Desservis",
+    "tourLocationsServedPlaceholder": "Ex : Imlil & Haut Atlas, Excursions Marrakech, Désert Agafay",
     "tourLocationsServedHelp": "Listez les principales villes, régions ou destinations où vos tours opèrent, séparées par des virgules.",
     "paymentMethodsAcceptedLabel": "Méthodes de Paiement Acceptées",
     "paymentMethodsAcceptedHelp": "Quelles méthodes de paiement acceptez-vous des clients ?",
     "paymentMethodsAcceptedOptionCash": "Espèces à l'arrivée",
     "paymentMethodsAcceptedOptionBankTransfer": "Virement Bancaire",
-    "paymentMethodsAcceptedOptionOnlinePaymentGateway": "Paiement en Ligne (Ex: Carte Bancaire)",
-    "paymentMethodsAcceptedOptionOther": "Autre (Ex: PayPal)",
-    "websiteLanguageOptionsLabel": "Langues Souhaitées pour le Site",
+    "paymentMethodsAcceptedOptionOnlinePaymentGateway": "Passerelle de Paiement en Ligne (Ex : Carte Bancaire)",
+    "paymentMethodsAcceptedOptionOther": "Autre (Ex : PayPal)",
+    "websiteLanguageOptionsLabel": "Langues Désirées du Site Web",
     "websiteLanguageOptionsHelp": "Dans quelles langues votre site web doit-il être disponible ?",
     "websiteLanguageOptionAR": "Arabe",
     "websiteLanguageOptionFR": "Français",
     "websiteLanguageOptionEN": "Anglais",
     "websiteLanguageOptionES": "Espagnol",
     "websiteLanguageOptionDE": "Allemand",
-    "part4Title": "Partie 4 : SEO (Référencement Naturel)",
+    "part4Title": "Partie 4 : SEO (Optimisation pour les Moteurs de Recherche)",
     "keywordsLabel": "Mots-clés",
-    "keywordsPlaceholder": "Ex: trek montagnes atlas, randonnée maroc, guide imlil (listez 5-10 mots/phrases que les clients cherchent)",
-    "keywordsHelp": "Veuillez lister 5 à 10 mots ou phrases que les clients chercheraient typiquement sur Google pour trouver votre entreprise, séparés par des virgules.",
+    "keywordsPlaceholder": "Ex : trek montagnes atlas, randonnée maroc, guide imlil (listez 5-10 mots/phrases que les clients recherchent)",
+    "keywordsHelp": "Veuillez lister 5-10 mots ou phrases que les clients rechercheraient typiquement sur Google pour trouver votre entreprise, séparés par des virgules.",
     "socialShareImageLabel": "Image de Partage Réseaux Sociaux",
     "socialShareImageHelp": "Fournissez une belle photo de haute qualité qui représente le mieux votre entreprise. Cette image apparaîtra lorsque le lien de votre site web sera partagé sur les réseaux sociaux.",
     "part5Title": "Partie 5 : Fonctionnalités & Besoins Spécifiques",
     "reviewsSystemLabel": "Section Avis Clients",
     "reviewsSystemHelp": "Permet aux clients de laisser et d'afficher des avis directement sur votre site pour instaurer la confiance.",
     "blogSystemLabel": "Section Blog & Actualités",
-    "blogSystemHelp": "Un blog pour partager des histoires, des mises à jour et attirer plus de visiteurs via Google.",
+    "blogSystemHelp": "Un blog pour partager des histoires, des mises à jour et attirer plus de visiteurs depuis Google.",
     "bookingEngineLabel": "Moteur de Réservation Directe",
-    "bookingEngineHelp": "Un formulaire ou système permettant aux clients de demander ou d'effectuer des réservations avec des dates et préférences spécifiques.",
+    "bookingEngineHelp": "Un formulaire ou système permettant aux clients de demander ou de faire des réservations avec des dates et préférences spécifiques.",
     "experiencesSectionLabel": "Section Dédiée 'Expériences' / 'Tours'",
     "experiencesSectionHelp": "Une section structurée pour présenter vos tours spécifiques, forfaits ou expériences uniques.",
     "faqSectionLabel": "Section FAQ (Foire Aux Questions)",
     "faqSectionHelp": "Une section organisée pour répondre aux questions courantes des clients, réduisant les demandes directes.",
-    "submitButton": "Envoyer le Questionnaire",
+    "submitButton": "Soumettre le Questionnaire",
     "formSuccess": "Merci ! Votre questionnaire a été soumis avec succès. Nous vous contacterons sous peu !",
-    "formError": "Une erreur est survenue. Veuillez réessayer. Si le problème persiste, contactez-nous directement.",
-    "requiredField": "Ce champ est obligatoire",
+    "formError": "Une erreur s'est produite. Veuillez réessayer. Si le problème persiste, contactez-nous directement.",
+    "requiredField": "Ce champ est requis",
     "invalidUrl": "Veuillez entrer une URL valide",
     "businessBrandSection": {
-      "title": "Identité de l'Entreprise & Marque",
+      "title": "Identité de l'Entreprise & de la Marque",
       "description": "Fournissez les détails essentiels sur votre entreprise et votre marque. Ces informations seront utilisées sur tout votre site web."
     },
     "emailHelp": "L'email principal pour les demandes clients.",
@@ -443,12 +492,13 @@
     "facebookHelp": "Lien vers votre page Facebook officielle.",
     "instagramHelp": "Lien vers votre profil Instagram officiel.",
     "twitterHelp": "Lien vers votre profil Twitter/X officiel.",
-    "themeDemosTitle": "Démos des Thèmes"
+    "themeDemosTitle": "Démos de Thèmes"
   },
+  
   "Terms": {
     "title": "Conditions Générales d'Utilisation",
     "lastUpdated": "Dernière mise à jour : 30 Octobre 2025",
-    "projectInfo": "À propos de ce Projet :",
+    "projectInfo": "À propos de ce projet :",
     "project": "Projet : Upmerce.com",
     "founder": "Fondateur : Mustapha Ouazza",
     "contactLabel": "Contact :",
@@ -457,34 +507,34 @@
     "sections": {
       "acceptance": {
         "title": "1. Acceptation des Conditions",
-        "content": "<p>En accédant, naviguant ou utilisant le site web Upmerce.com (le 'Site') ou tout service fourni par Upmerce ('nous', 'notre', 'nos'), vous ('Client', 'vous') reconnaissez avoir lu, compris et accepté d'être lié par ces Conditions d'Utilisation ('Conditions'). Si vous n'acceptez pas ces Conditions, vous ne devez pas utiliser nos services.</p>"
+        "content": "<p>En accédant, naviguant ou utilisant le site web Upmerce.com (le 'Site') ou tout service fourni par Upmerce ('nous', 'notre', 'nos'), vous ('Client', 'vous') reconnaissez avoir lu, compris et accepté d'être lié par ces Conditions Générales ('Conditions'). Si vous n'acceptez pas ces Conditions, vous ne devez pas utiliser nos services.</p>"
       },
       "definitions": {
         "title": "2. Définitions",
-        "content": "<ul><li><strong>Service :</strong> Fait référence à la création, au développement et/ou à l'hébergement de sites web Next.js pour les entreprises touristiques (riads, hôtels, agences) tels qu'offerts dans nos plans 'Starter' et 'Croissance'.</li><li><strong>Client :</strong> Fait référence à la personne physique ou morale (ex: hôtel, riad) achetant ou utilisant notre Service.</li><li><strong>Client du Client :</strong> Fait référence à l'utilisateur final ou au touriste qui accède, navigue ou effectue une réservation sur le site web que nous fournissons à notre Client.</li><li><strong>Plateforme :</strong> Fait référence au site Upmerce.com, à nos modèles de sites Next.js et aux tableaux de bord admin associés.</li><li><strong>Services Tiers :</strong> Fait référence aux services non-Upmerce, tels que Vercel (hébergement), Google (base de données/auth) et Stripe (paiements), qui font partie intégrante du Service.</li></ul>"
+        "content": "<ul><li><strong>Service :</strong> Désigne la création, le développement et/ou l'hébergement de sites web Next.js pour les entreprises touristiques (riads, hôtels, agences) tels que proposés dans nos plans 'Starter' et 'Growth'.</li><li><strong>Client :</strong> Désigne la personne physique ou morale (ex : hôtel, riad) achetant ou utilisant notre Service.</li><li><strong>Client du Client :</strong> Désigne l'utilisateur final ou touriste qui accède, navigue ou effectue une réservation sur le site web que nous fournissons à notre Client.</li><li><strong>Plateforme :</strong> Désigne le site web Upmerce.com, nos modèles de sites web Next.js et les tableaux de bord d'administration associés.</li><li><strong>Services Tiers :</strong> Désigne les services non-Upmerce, tels que Vercel (hébergement), Google (base de données/auth) et Stripe (paiements), qui font partie intégrante du Service.</li></ul>"
       },
       "services": {
         "title": "3. Description des Services",
-        "content": "<p>Upmerce fournit des services de développement de sites web et de technologie. Nos offres incluent, mais ne sont pas limitées à :</p><ul><li><strong>'Plan Starter' :</strong> Un site web Next.js professionnel multi-pages avec un tableau de bord admin pour la gestion de contenu, déployé sur le propre compte Vercel du Client.</li><li><strong>'Plan Croissance' :</strong> Inclut toutes les fonctionnalités du Plan Starter, plus l'intégration d'un moteur de réservation directe, le traitement des paiements via le compte Stripe du Client, et des fonctionnalités de gestion des réservations.</li></ul><p>Les fonctionnalités spécifiques, l'étendue et les frais pour tout Service seront détaillés dans un devis séparé ou un contrat de service fourni au Client.</p>"
+        "content": "<p>Upmerce fournit des services de développement de sites web et de technologie. Nos offres incluent, mais ne sont pas limitées à :</p><ul><li><strong>'Plan Starter' :</strong> Un site web Next.js professionnel multi-pages avec un tableau de bord d'administration pour la gestion de contenu, déployé sur le propre compte Vercel du Client.</li><li><strong>'Plan Growth' :</strong> Inclut toutes les fonctionnalités du Plan Starter, plus l'intégration d'un moteur de réservation directe, le traitement des paiements via le compte Stripe du Client, et des fonctionnalités de gestion des réservations.</li></ul><p>Les fonctionnalités spécifiques, la portée et les frais de tout Service seront détaillés dans un devis ou un contrat de service séparé fourni au Client.</p>"
       },
       "ipOwnership": {
         "title": "4. Propriété Intellectuelle & Propriété du Code",
-        "content": "<p>Notre politique en matière de propriété intellectuelle est la suivante :</p><ul><li><strong>Contenu du Client :</strong> Le Client conserve la pleine propriété de tout le contenu fourni à Upmerce, y compris les textes, logos et images.</li><li><strong>Upmerce 'Plan Starter' :</strong> Pour le 'Plan Starter', le Client reçoit une licence d'utilisation du site web. Le code source sous-jacent et la technologie de la plateforme restent la propriété d'Upmerce.</li><li><strong>Upmerce 'Plan Croissance' :</strong> Lors du paiement complet et final du 'Plan Croissance', Upmerce transfère 100% de la propriété du code source final du site web au Client. Le Client est libre de modifier, transférer ou héberger ce code comme bon lui semble.</li><li><strong>Réserve de Droits :</strong> Upmerce conserve tous les droits sur ses technologies propriétaires, méthodes et composants de modèles réutilisables utilisés dans la création du site web du Client.</li></ul>"
+        "content": "<p>Notre politique sur la propriété intellectuelle est la suivante :</p><ul><li><strong>Contenu Client :</strong> Le Client conserve la pleine propriété de tout contenu fourni à Upmerce, y compris les textes, logos et images.</li><li><strong>Upmerce 'Plan Starter' :</strong> Pour le 'Plan Starter', le Client reçoit une licence d'utilisation du site web. Le code source sous-jacent et la technologie de la plateforme restent la propriété d'Upmerce.</li><li><strong>Upmerce 'Plan Growth' :</strong> Lors du paiement complet et final du 'Plan Growth', Upmerce transfère 100% de la propriété du code source final du site web au Client. Le Client est libre de modifier, transférer ou héberger ce code comme bon lui semble.</li><li><strong>Réserve de Droits :</strong> Upmerce conserve tous les droits sur ses technologies propriétaires, méthodes et composants de modèles réutilisables utilisés dans la création du site web du Client.</li></ul>"
       },
       "thirdParty": {
         "title": "5. Services Tiers & Limitation de Responsabilité",
-        "content": "<p>Le Service Upmerce est conçu pour s'intégrer à des Services Tiers robustes afin de fournir au Client un contrôle total et zéro frais récurrents.</p><ul><li><strong>Responsabilité du Client :</strong> Le Client est tenu de créer et de maintenir ses propres comptes auprès de ces services (ex: Vercel, Google, Stripe). Le Client est le client direct de ces fournisseurs et est lié par leurs conditions d'utilisation respectives.</li><li><strong>Hébergement :</strong> L'Hébergement Gratuit à Vie est fourni via le propre compte Vercel du Client. Upmerce n'est pas un hébergeur et n'est pas responsable du service de Vercel, de sa disponibilité ou de tout changement apporté aux plans 'Pro' ou 'Hobby' de Vercel, y compris l'introduction de frais ou l'arrêt du service.</li><li><strong>Paiements :</strong> Tous les paiements effectués par le Client du Client sont traités directement via le compte Stripe du Client. Upmerce n'est pas partie à ces transactions et ne stocke ni n'a accès à aucune information de carte de crédit.</li><li><strong>Aucune Responsabilité :</strong> Upmerce ne pourra être tenu responsable de toute panne, interruption, violation de données, perte de données, changement de politique ou coût inattendu découlant de tout Service Tiers. Notre responsabilité est strictement limitée au code source et aux services que nous fournissons directement au Client.</li></ul>"
+        "content": "<p>Le Service Upmerce est conçu pour s'intégrer à des Services Tiers robustes pour offrir au Client un contrôle total et zéro frais récurrents.</p><ul><li><strong>Responsabilité du Client :</strong> Le Client est tenu de créer et de maintenir ses propres comptes auprès de ces services (ex : Vercel, Google, Stripe). Le Client est le client direct de ces fournisseurs et est lié par leurs conditions de service respectives.</li><li><strong>Hébergement :</strong> 'L'Hébergement Gratuit à Vie' est fourni via le propre compte Vercel du Client. Upmerce n'est pas un hébergeur et n'est pas responsable du service de Vercel, de sa disponibilité, ou de tout changement aux plans 'Pro' ou 'Hobby' de Vercel, y compris l'introduction de frais ou l'arrêt du service.</li><li><strong>Paiements :</strong> Tous les paiements effectués par un Client du Client sont traités directement via le compte Stripe du Client. Upmerce n'est pas partie à ces transactions et ne stocke ni n'a accès à aucune information de carte de crédit.</li><li><strong>Aucune Responsabilité :</strong> Upmerce ne pourra être tenu responsable de toute défaillance, panne, violation de données, perte de données, changement de politique ou coût inattendu découlant de tout Service Tiers. Notre responsabilité est strictement limitée au code source et aux services que nous fournissons directement au Client.</li></ul>"
       },
       "responsibility": {
         "title": "6. Responsabilités du Client",
-        "content": "<p>Le Client s'engage à :</p><ul><li>Fournir tout le contenu nécessaire (textes, images, branding) dans les délais impartis.</li><li>Être seul responsable de l'exactitude, de la légalité et de la gestion de tout le contenu de son site web, y compris les tarifs des chambres, la disponibilité et les descriptions.</li><li>Être seul responsable de ses opérations commerciales et de sa conformité légale/fiscale.</li><li>Être seul responsable de la gestion de toutes les réservations, paiements, annulations, remboursements et litiges avec ses propres Clients. Upmerce est un fournisseur de technologie et n'est partie à aucune transaction ou litige entre le Client et le Client du Client.</li></ul>"
+        "content": "<p>Le Client s'engage à :</p><ul><li>Fournir tout le contenu nécessaire (textes, images, branding) en temps opportun.</li><li>Être seul responsable de l'exactitude, de la légalité et de la gestion de tout contenu sur son site web, y compris les tarifs des chambres, la disponibilité et les descriptions.</li><li>Être seul responsable de ses opérations commerciales et de sa conformité légale/fiscale.</li><li>Être seul responsable de la gestion de toutes les réservations, paiements, annulations, remboursements et litiges avec ses propres Clients. Upmerce est un fournisseur de technologie et n'est pas partie à une transaction ou un litige entre le Client et le Client du Client.</li></ul>"
       },
       "modifications": {
         "title": "7. Modifications des Conditions",
         "content": "<p>Nous nous réservons le droit, à notre seule discrétion, de modifier ou de remplacer ces Conditions à tout moment. Nous vous informerons de tout changement important en publiant les nouvelles Conditions sur cette page et en mettant à jour la date de 'Dernière mise à jour'. Votre utilisation continue du Service après de tels changements constitue votre acceptation des nouvelles Conditions.</p>"
       },
       "law": {
-        "title": "8. Droit Applicable & Juridiction",
+        "title": "8. Loi Applicable & Juridiction",
         "content": "<p>Ces Conditions seront régies, interprétées et appliquées conformément aux lois du Royaume du Maroc. Tout litige, réclamation ou controverse découlant de ou lié à ces Conditions ou à leur violation, résiliation ou invalidité, sera soumis à la juridiction exclusive des tribunaux compétents d'Agadir, Maroc.</p>"
       },
       "contact": {
@@ -496,7 +546,7 @@
   "Privacy": {
     "title": "Politique de Confidentialité",
     "lastUpdated": "Dernière mise à jour : 30 Octobre 2025",
-    "projectInfo": "À propos de ce Projet :",
+    "projectInfo": "À propos de ce projet :",
     "project": "Projet : Upmerce.com",
     "founder": "Fondateur : Mustapha Ouazza",
     "contactLabel": "Contact :",
@@ -505,31 +555,31 @@
     "sections": {
       "intro": {
         "title": "1. Introduction",
-        "content": "<p>Bienvenue sur Upmerce.com. Nous nous engageons à protéger vos données personnelles et à respecter votre vie privée. Cette Politique de Confidentialité explique comment nous collectons, utilisons, stockons et protégeons vos informations personnelles. Nous opérons en conformité avec la loi marocaine n° 09-08 relative à la protection des personnes physiques à l'égard du traitement des données à caractère personnel.</p><p>Pour toute question concernant cette politique ou vos données, vous pouvez également consulter le site web de la Commission Nationale de contrôle de la protection des Données à caractère Personnel (CNDP) sur www.cndp.ma.</p>"
+        "content": "<p>Bienvenue sur Upmerce.com. Nous nous engageons à protéger vos données personnelles et à respecter votre vie privée. Cette Politique de Confidentialité explique comment nous collectons, utilisons, stockons et protégeons vos informations personnelles. Nous opérons en conformité avec la Loi Marocaine n° 09-08 relative à la protection des personnes physiques à l'égard du traitement des données à caractère personnel.</p><p>Pour toute question concernant cette politique ou vos données, vous pouvez également consulter le site web de la Commission Nationale de contrôle de la protection des Données à caractère Personnel (CNDP) à www.cndp.ma.</p>"
       },
       "dataController": {
         "title": "2. Responsable de Traitement vs. Sous-Traitant",
-        "content": "<p>Cette politique doit distinguer nos deux rôles :</p><ul><li><strong>En tant que 'Responsable de Traitement' :</strong> Upmerce est le Responsable de Traitement pour les données personnelles que nous collectons auprès de vous lorsque vous visitez <strong>notre</strong> site web, Upmerce.com (ex: lorsque vous remplissez notre formulaire 'Obtenir Mon Devis Gratuit').</li><li><strong>En tant que 'Sous-Traitant' :</strong> Pour les sites web que nous créons pour nos Clients (hôtels, riads), notre <strong>Client</strong> est le 'Responsable de Traitement' pour toutes les données collectées auprès de leurs clients (les touristes). Upmerce agit strictement en tant que 'Sous-Traitant' à ce titre. Nous ne traitons ces données que pour le compte de notre Client et selon ses instructions, permettant à son tableau de bord admin et à son moteur de réservation de fonctionner.</li></ul>"
+        "content": "<p>Cette politique doit distinguer nos deux rôles :</p><ul><li><strong>En tant que 'Responsable de Traitement' :</strong> Upmerce est le Responsable de Traitement pour les données personnelles que nous collectons auprès de vous lorsque vous visitez <strong>notre</strong> site web, Upmerce.com (ex : lorsque vous remplissez notre formulaire 'Obtenir mon Devis Gratuit').</li><li><strong>En tant que 'Sous-Traitant' :</strong> Pour les sites web que nous construisons pour nos Clients (hôtels, riads), notre <strong>Client</strong> est le 'Responsable de Traitement' pour toutes les données collectées auprès de leurs clients (les touristes). Upmerce agit strictement en tant que 'Sous-Traitant' dans cette capacité. Nous traitons ces données uniquement au nom de notre Client et selon ses instructions, permettant à son tableau de bord et moteur de réservation de fonctionner.</li></ul>"
       },
       "dataCollected": {
         "title": "3. Données que Nous Collectons",
-        "content": "<p>Nous collectons différents types de données selon votre interaction avec nous :</p><p><strong>A. Lorsque vous visitez Upmerce.com (Nous sommes le Responsable) :</strong></p><ul><li><strong>Données que vous fournissez :</strong> Nom, adresse email, numéro de téléphone et détails de l'entreprise lorsque vous remplissez nos formulaires de contact ou de devis.</li><li><strong>Données collectées automatiquement :</strong> Adresse IP, type de navigateur, système d'exploitation et données de navigation (pages visitées, temps passé) via des cookies essentiels et analytiques.</li></ul><p><strong>B. Lorsque nous agissons en tant que Sous-Traitant pour nos Clients :</strong></p><ul><li>Le site web du Client, que nous construisons, collecte des données auprès de ses Clients (touristes). Ces données sont contrôlées par le Client et peuvent inclure : noms, adresses email, détails de réservation et avis clients. Ces données sont stockées dans la propre base de données du compte Google du Client, et les données de paiement sont traitées par le propre compte Stripe du Client. Nous n'avons pas d'accès direct à ces données sauf si cela est requis pour le support technique.</li></ul>"
+        "content": "<p>Nous collectons différents types de données selon votre interaction avec nous :</p><p><strong>A. Lorsque vous visitez Upmerce.com (Nous sommes le Responsable) :</strong></p><ul><li><strong>Données que vous fournissez :</strong> Nom, adresse email, numéro de téléphone et détails de l'entreprise lorsque vous remplissez nos formulaires de contact ou de devis.</li><li><strong>Données collectées automatiquement :</strong> Adresse IP, type de navigateur, système d'exploitation et données de navigation (pages visitées, temps passé) via des cookies essentiels et analytiques.</li></ul><p><strong>B. Lorsque nous agissons en tant que Sous-Traitant pour nos Clients :</strong></p><ul><li>Le site web du Client, que nous construisons, collecte des données auprès de ses Clients (touristes). Ces données sont contrôlées par le Client et peuvent inclure : noms, adresses email, détails de réservation et avis clients. Ces données sont stockées dans la propre base de données du compte Google du Client, et les données de paiement sont traitées par le propre compte Stripe du Client. Nous n'avons pas d'accès direct à ces données sauf si nécessaire pour le support technique.</li></ul>"
       },
       "usagePurpose": {
         "title": "4. Finalités du Traitement",
-        "content": "<p>Nous utilisons vos données pour les finalités suivantes :</p><ul><li><strong>Pour fournir notre Service :</strong> Pour créer votre site web, traiter votre paiement et gérer votre compte.</li><li><strong>Pour communiquer avec vous :</strong> Pour répondre à vos demandes, fournir un support client et vous envoyer des informations sur nos services.</li><li><strong>Pour améliorer notre Service :</strong> Pour analyser comment notre propre site web est utilisé, nous permettant d'optimiser la performance et l'expérience utilisateur.</li><li><strong>En tant que Sous-Traitant :</strong> Pour permettre au moteur de réservation et au tableau de bord admin de fonctionner pour notre Client, lui permettant de gérer ses réservations et son contenu.</li></ul>"
+        "content": "<p>Nous utilisons vos données pour les finalités suivantes :</p><ul><li><strong>Pour fournir notre Service :</strong> Pour créer votre site web, traiter votre paiement et gérer votre compte.</li><li><strong>Pour communiquer avec vous :</strong> Pour répondre à vos demandes, fournir un support client et vous envoyer des informations sur nos services.</li><li><strong>Pour améliorer notre Service :</strong> Pour analyser comment notre propre site web est utilisé, nous permettant d'optimiser la performance et l'expérience utilisateur.</li><li><strong>En tant que Sous-Traitant :</strong> Pour permettre au moteur de réservation et au tableau de bord de fonctionner pour notre Client, lui permettant de gérer ses réservations et son contenu.</li></ul>"
       },
       "legalBasis": {
         "title": "5. Base Légale du Traitement",
-        "content": "<p>Notre base légale pour le traitement de vos données est :</p><ul><li><strong>Nécessité Contractuelle :</strong> Pour exécuter le contrat de service que nous avons avec nos Clients.</li><li><strong>Consentement :</strong> Lorsque vous nous fournissez vos informations via un formulaire de contact ou en acceptant notre politique de cookies.</li><li><strong>Intérêt Légitime :</strong> Pour améliorer nos services et pour notre propre marketing, à condition que cela ne prévale pas sur vos droits.</li></ul>"
+        "content": "<p>Notre base légale pour traiter vos données est :</p><ul><li><strong>Nécessité Contractuelle :</strong> Pour exécuter le contrat de service que nous avons avec nos Clients.</li><li><strong>Consentement :</strong> Lorsque vous nous fournissez vos informations via un formulaire de contact ou en acceptant notre politique de cookies.</li><li><strong>Intérêt Légitime :</strong> Pour améliorer nos services et pour notre propre marketing, à condition que cela ne prévale pas sur vos droits.</li></ul>"
       },
       "storage": {
         "title": "6. Conservation des Données",
-        "content": "<p>Nous ne conservons vos données personnelles que le temps nécessaire pour atteindre les finalités pour lesquelles elles ont été collectées, ou tel que requis par la loi marocaine. Les données que nous traitons pour le compte de nos Clients sont conservées conformément à leurs propres politiques de conservation des données.</p>"
+        "content": "<p>Nous ne conservons vos données personnelles que le temps nécessaire pour remplir les finalités pour lesquelles elles ont été collectées, ou tel que requis par la loi marocaine. Les données que nous traitons au nom de nos Clients sont conservées selon leurs propres politiques de conservation des données.</p>"
       },
       "thirdParties": {
         "title": "7. Partage de Données et Tiers",
-        "content": "<p>Nous ne vendons pas vos données personnelles. Nous ne partageons les données que dans les cas suivants :</p><ul><li><strong>Avec les Services Tiers de nos Clients :</strong> En tant que Sous-Traitant, nous configurons le site web du Client pour envoyer des données à ses comptes désignés (Vercel, Google, Stripe).</li><li><strong>Pour Obligations Légales :</strong> Si la loi l'exige ou en réponse à une demande valide des autorités marocaines compétentes.</li></ul>"
+        "content": "<p>Nous ne vendons pas vos données personnelles. Nous ne partageons les données que dans les cas suivants :</p><ul><li><strong>Avec les Services Tiers de nos Clients :</strong> En tant que Sous-Traitant, nous configurons le site du Client pour envoyer des données à ses comptes désignés (Vercel, Google, Stripe).</li><li><strong>Pour Obligations Légales :</strong> Si requis par la loi ou en réponse à une demande valide des autorités marocaines compétentes.</li></ul>"
       },
       "security": {
         "title": "8. Sécurité des Données",
@@ -537,15 +587,15 @@
       },
       "cookies": {
         "title": "9. Cookies et Traceurs",
-        "content": "<p>Notre site web, Upmerce.com, utilise des cookies essentiels et analytiques pour analyser le trafic et améliorer l'expérience utilisateur. Vous serez invité à gérer vos préférences en matière de cookies lors de votre première visite. Les sites web que nous construisons pour nos Clients auront leurs propres politiques de cookies, dont le Client est responsable.</p>"
+        "content": "<p>Notre site web, Upmerce.com, utilise des cookies essentiels et analytiques pour analyser le trafic et améliorer l'expérience utilisateur. Vous serez invité à gérer vos préférences de cookies lors de votre première visite. Les sites web que nous construisons pour nos Clients auront leurs propres politiques de cookies, dont le Client est responsable.</p>"
       },
       "userRights": {
         "title": "10. Vos Droits (Selon la Loi 09-08)",
-        "content": "<p>Conformément à la loi marocaine 09-08, vous disposez des droits suivants sur vos données personnelles que nous contrôlons :</p><ul><li><strong>Droit d'Accès :</strong> Vous avez le droit d'obtenir une copie des données personnelles que nous détenons à votre sujet.</li><li><strong>Droit de Rectification :</strong> Vous avez le droit de demander la correction de toute donnée inexacte.</li><li><strong>Droit d'Effacement ('Droit à l'Oubli') :</strong> Vous avez le droit de demander la suppression de vos données, dans les limites prévues par la loi.</li><li><strong>Droit d'Opposition :</strong> Vous avez le droit de vous opposer, pour des motifs légitimes, au traitement de vos données.</li></ul><p>Pour exercer ces droits, veuillez nous contacter à notre email de contact. Si vous êtes Client d'un de nos Clients (un touriste), vous devez contacter l'hôtel ou le riad (le Responsable de Traitement) directement pour exercer vos droits.</p>"
+        "content": "<p>Conformément à la Loi Marocaine 09-08, vous disposez des droits suivants sur vos données personnelles que nous contrôlons :</p><ul><li><strong>Droit d'Accès :</strong> Vous avez le droit d'obtenir une copie des données personnelles que nous détenons à votre sujet.</li><li><strong>Droit de Rectification :</strong> Vous avez le droit de demander la correction de toute donnée inexacte.</li><li><strong>Droit d'Effacement ('Droit à l'Oubli') :</strong> Vous avez le droit de demander la suppression de vos données, dans les limites prévues par la loi.</li><li><strong>Droit d'Opposition :</strong> Vous avez le droit de vous opposer, pour des motifs légitimes, au traitement de vos données.</li></ul><p>Pour exercer ces droits, veuillez nous contacter à notre email de contact. Si vous êtes un Client de l'un de nos Clients (un touriste), vous devez contacter l'hôtel ou le riad (le Responsable de Traitement) directement pour exercer vos droits.</p>"
       },
       "hosting": {
         "title": "11. Hébergement des Données et Transferts Internationaux",
-        "content": "<p>Nos services et les services avec lesquels nous nous intégrons (Vercel, Google, Stripe) sont mondiaux et peuvent stocker des données sur des serveurs situés en dehors du Maroc. En utilisant notre service, vous consentez à ce transfert. Nous comptons sur les normes de sécurité et de protection des données robustes de ces fournisseurs mondiaux pour assurer la protection de vos données.</p>"
+        "content": "<p>Nos services et les services avec lesquels nous nous intégrons (Vercel, Google, Stripe) sont mondiaux et peuvent stocker des données sur des serveurs situés en dehors du Maroc. En utilisant notre service, vous consentez à ce transfert. Nous nous appuyons sur les normes de sécurité et de protection des données robustes de ces fournisseurs mondiaux pour assurer la protection de vos données.</p>"
       },
       "links": {
         "title": "12. Liens vers d'Autres Sites Web",
@@ -553,7 +603,7 @@
       },
       "updates": {
         "title": "13. Mises à Jour de cette Politique",
-        "content": "<p>Nous pouvons mettre à jour cette Politique de Confidentialité à tout moment. Nous vous informerons de tout changement en publiant la nouvelle politique sur cette page et en mettant à jour la date de 'Dernière mise à jour'. Nous vous encourageons à consulter cette politique périodiquement.</p>"
+        "content": "<p>Nous pouvons mettre à jour cette Politique de Confidentialité à tout moment. Nous vous informerons de tout changement en publiant la nouvelle politique sur cette page et en mettant à jour la date de 'Dernière mise à jour'. Nous vous encourageons à revoir cette politique périodiquement.</p>"
       },
       "contact": {
         "title": "14. Contactez-nous",
@@ -568,9 +618,9 @@
     "declineAll": "Tout Refuser",
     "customize": "Personnaliser",
     "modal": {
-      "title": "Gérer Vos Préférences de Cookies",
+      "title": "Gérer vos Préférences de Cookies",
       "close": "Fermer la modale",
-      "description": "Vous pouvez choisir les types de cookies à autoriser. Vos préférences seront enregistrées pendant 1 an.",
+      "description": "Vous pouvez choisir quels types de cookies autoriser. Vos préférences seront enregistrées pendant 1 an.",
       "save": "Enregistrer les Préférences",
       "necessary": {
         "title": "Strictement Nécessaires",
@@ -582,329 +632,332 @@
       },
       "marketing": {
         "title": "Cookies Marketing",
-        "description": "Ces cookies sont utilisés pour suivre les visiteurs sur les sites web afin d'afficher des publicités pertinentes (ex: Pixel Facebook)."
+        "description": "Ces cookies sont utilisés pour suivre les visiteurs sur les sites web afin d'afficher des publicités pertinentes (ex : Pixel Facebook)."
       }
     }
   },
   "Campaign": {
-  "Landing": {
-    "metaTitle": "Gagnez une Transformation Numérique pour votre Agence | Concours Upmerce",
-    "metaDescription": "Opérateurs Touristiques Marocains : Participez pour gagner un Moteur de Réservation Directe Next.js sur mesure. Arrêtez de payer des commissions et prenez le contrôle.",
-    "heroTitle": "Opérateurs Touristiques : Arrêtez de Payer des Commissions.",
-    "heroSubtitle": "Gagnez une transformation numérique complète pour votre agence.",
-    "heroDescription": "Nous offrons 3 <strong>Moteurs de Réservation Directe Next.js</strong> sur mesure, ultra-rapides, à des agences de voyage sélectionnées au Maroc. Passez de la dépendance aux OTA à une puissance de réservation directe.",
-    "ctaCardTitle": "Participer Maintenant",
-    "ctaCardSubtitle": "Utilisez votre compte Google pour une inscription instantanée en 1 clic. Aucun formulaire à remplir.",
-    "googleButtonLabel": "Participer avec Google en 1 Clic",
-    "googleButtonLoading": "Connexion en cours...",
-    "securityNote": "Inscription sécurisée via Google. Aucune carte bancaire requise.",
-    "Benefits": {
-      "zeroCommissionTitle": "0% de Commission sur les Réservations",
-      "zeroCommissionDesc": "Gardez 100% de vos gains grâce à votre propre intégration Stripe/PayPal directe.",
-      "seoTitle": "Référencement Google Ultra-Rapide",
-      "seoDesc": "Construit sur la technologie Next.js pour un chargement instantané et un meilleur classement Google.",
-      "mobileAdminTitle": "Contrôle Admin Mobile-First",
-      "mobileAdminDesc": "Gérez vos prix, disponibilités et réservations depuis votre téléphone, n'importe où."
-    }
-  },
-  "Qualify": {
-    "title": "Presque fini, {name} !",
-    "subtitle": "Pour valider votre participation pour le moteur de réservation gratuit, merci de répondre à 3 questions rapides sur votre agence.",
-    "loadingAuth": "Vérification des identifiants...",
-    "validationError": "Veuillez remplir tous les champs pour terminer votre inscription.",
-    "submitError": "Échec de l'envoi. Veuillez réessayer.",
-    "labels": {
-      "websiteUrl": "Votre site web actuel ou lien Instagram",
-      "websitePlaceholder": "ex: www.monagence.com ou @monagence",
-      "tourCount": "Combien de tours/activités proposez-vous ?",
-      "isOwnerLegend": "Êtes-vous le propriétaire ou le décideur principal ?",
-      "yes": "Oui",
-      "no": "Non"
-    },
-    "submitButton": "Finaliser ma Participation",
-    "submittingButton": "Envoi en cours..."
-  },
-  "ThankYou": {
-    "title": "C'est validé !",
-    "subtitle": "Votre participation pour gagner le Moteur de Réservation gratuit a été confirmée.",
-    "nextStepsTitle": "Et ensuite ?",
-    "nextStepsDesc": "Notre équipe va examiner toutes les candidatures. Les gagnants seront contactés par email d'ici le <strong>{date}</strong>. Bonne chance !",
-    "demoTitle": "En attendant, voyez à quoi ressemble le prix en action :",
-    "demoButton": "Voir la Démo Live (Étude de Cas Marrago)"
-  }
-},
-"About": {
-  "meta": {
-    "title": "À Propos d'Upmerce | L'Indépendance du Tourisme Marocain",
-    "description": "Upmerce est le partenaire technologique spécialisé pour les Riads, Hôtels et Agences de Voyage au Maroc. Nous créons des moteurs de réservation directe pour vous libérer des commissions."
-  },
-  "Hero": {
-  "title": "Nous ne créons pas juste des sites web.\n<colored>Nous bâtissons l'indépendance</colored> du Tourisme Marocain.",
-  "subtitle": "Upmerce est le partenaire technologique des <strong>Riads, Hôtels et Agences</strong> prêts à arrêter de louer leurs clients aux grandes plateformes et à reprendre le contrôle de leur croissance."
-},
-  "Story": {
-    "sectionTitle": "Notre Histoire",
-    "headline": "Le fossé entre l'hospitalité marocaine et la réalité numérique.",
-    "p1": "Le Maroc offre une hospitalité de classe mondiale, du Riad de luxe à Fès au bivouac sur mesure à Merzouga. Pourtant, trop d'excellentes entreprises locales sont invisibles en ligne, ou pire, prises en otage par des plateformes étrangères comme <bold>Booking.com, Expedia et Viator</bold> qui prélèvent d'énormes pourcentages juste pour faire l'intermédiaire.",
-    "p2": "Nous avons vu des établissements 5 étoiles sur le terrain se débattre avec une technologie 2 étoiles en ligne : sites lents, formulaires cassés et discussions WhatsApp interminables.",
-    "p3": "Upmerce est né pour combler ce fossé. Nous croyons que la technologie la plus puissante ne devrait pas être réservée aux géants internationaux, mais aux experts locaux qui délivrent réellement l'expérience."
-  },
-  "Difference": {
-    "sectionTitle": "La Différence Upmerce",
-    "headline": "Une technologie pour l'Indépendance, pas la Dépendance.",
-    "pillars": {
-      "speed": {
-        "title": "Ingénierie de Vitesse (Google nous adore)",
-        "description": "Nous n'utilisons pas d'outils obsolètes comme WordPress. Nous bâtissons sur la technologie Next.js pour un chargement instantané sur mobile — le facteur n°1 pour être bien classé sur Google aujourd'hui."
-      },
-      "commission": {
-        "title": "La Philosophie 0% Commission",
-        "description": "Que vous vendiez des nuitées ou des excursions, votre inventaire vous appartient. Nos moteurs de réservation directe sont liés à votre banque, vous gardez donc 100% des profits."
-      },
-      "mobile": {
-        "title": "Conçu pour le Manager Mobile",
-        "description": "Nos systèmes vous offrent un \"Bureau de Poche\" : un panneau d'administration conçu pour smartphones, vous permettant de gérer disponibilités, prix et réservations depuis la route ou la réception."
-      }
-    }
-  },
-  "Founder": {
-    "quote": "\"En tant que développeur basé à Souss-Massa, j'ai vu les professionnels du tourisme local — des propriétaires de Riads aux guides d'excursions — travailler incroyablement dur pour finalement céder leurs marges à des boîtes technologiques étrangères. J'ai lancé Upmerce avec un seul but : donner à l'hospitalité marocaine une technologie réellement supérieure aux OTA. Une technologie qui les rend indépendants, rentables et fiers.\"",
-    "name": "Mustapha Ouazza",
-    "role": "Fondateur & Stratège Principal"
-  },
-  "Process": {
-    "sectionTitle": "Notre Processus",
-    "headline": "Du concept aux réservations : Un chemin simple.",
-    "steps": {
-      "step1": {
-        "title": "Découverte & Stratégie",
-        "description": "Nous analysons votre activité actuelle, vos problèmes et vos objectifs pour concevoir un plan sur mesure pour votre croissance numérique."
-      },
-      "step2": {
-        "title": "Construction du Moteur",
-        "description": "Nous déployons votre plateforme Next.js personnalisée haute performance, avec les fondations de réservation directe et de SEO intégrées."
-      },
-      "step3": {
-        "title": "Intégration du Contenu",
-        "description": "Nous intégrons vos tours, chambres, photos et image de marque, en veillant à ce que tout soit d'une qualité premium."
-      },
-      "step4": {
-        "title": "Lancement & Remise des Clés",
-        "description": "Nous mettons en ligne, nous vous formons sur votre admin mobile, et nous vous remettons les clés de votre nouvelle machine à revenus."
-      }
-    }
-  },
-  "CTA": {
-    "headline": "Prêt à arrêter de louer votre présence numérique et à commencer à la posséder ?",
-    "subtitle": "Ne nous croyez pas sur parole. Voyez la différence qu'un vrai partenaire technologique fait pour un opérateur local de Souss-Massa.",
-    "primaryButton": "Participer pour Gagner un Site Gratuit",
-    "secondaryButton": "Voir la Démo Live (Marrago)"
-  }
-},
-"Solutions": {
-  "meta": {
-    "title": "Solutions Upmerce | Le Moteur de Réservation Directe pour le Maroc",
-    "description": "Découvrez le Moteur Upmerce : Un système d'exploitation numérique complet offrant 0% de commission, une vitesse fulgurante et un contrôle admin mobile pour les pros du tourisme."
-  },
-  "Hero": {
-    "title": "Le Moteur Upmerce :\n Votre <colored>Système d'Exploitation Numérique.</colored>",
-    "subtitle": "Arrêtez de bricoler avec des outils cassés. Obtenez la plateforme tout-en-un conçue pour <strong>libérer les entreprises touristiques marocaines</strong> des OTA et du travail manuel."
-  },
-  "Pain": {
-    "sectionTitle": "La Réalité",
-    "headline": "Est-ce vous qui gérez votre business,\n ou est-ce lui qui vous gère ?",
-    "painColumnTitle": "L'Ancienne Méthode (Le Chaos)",
-    "painPoints": {
-      "commission": {
-        "title": "L'Hémorragie des Commissions",
-        "desc": "Perdre 20 à 30% de votre marge durement gagnée au profit d'OTA étrangères sur chaque réservation."
-      },
-      "whatsapp": {
-        "title": "Le Piège WhatsApp",
-        "desc": "Des heures passées à courir après les confirmations et les paiements manuellement au lieu de développer votre activité."
-      },
-      "invisible": {
-        "title": "Invisible en Ligne",
-        "desc": "Des sites web lents et obsolètes que Google ignore et que les clients mobiles frustrés abandonnent."
+    "Landing": {
+      "metaTitle": "Gagnez une Transformation Digitale pour Votre Agence de Voyages | Concours Upmerce",
+      "metaDescription": "Tour Opérateurs Marocains : Participez pour gagner un Moteur de Réservation Directe Next.js sur mesure. Arrêtez de payer des commissions et prenez le contrôle.",
+      "heroTitle": "Tour Opérateurs : Arrêtez de Payer des Commissions.",
+      "heroSubtitle": "Gagnez une Transformation Numérique complète pour votre agence.",
+      "heroDescription": "Nous offrons 3 <strong>Moteurs de Réservation Directe Next.js</strong> sur mesure et ultra-rapides à des agences de voyages sélectionnées au Maroc. Transformez votre entreprise de la dépendance aux OTA en une puissance de réservation directe.",
+      "ctaCardTitle": "Participez pour Gagner Maintenant",
+      "ctaCardSubtitle": "Utilisez votre compte Google pour une participation instantanée en 1 clic. Aucun formulaire à remplir.",
+      "googleButtonLabel": "Participer avec Google en 1 Clic",
+      "googleButtonLoading": "Connexion en cours...",
+      "securityNote": "Participation sécurisée via Google. Aucune carte de crédit requise.",
+      "Benefits": {
+        "zeroCommissionTitle": "Réservations 0% Commission",
+        "zeroCommissionDesc": "Gardez 100% de vos gains avec votre propre intégration directe Stripe/PayPal.",
+        "seoTitle": "SEO Google Ultra-Rapide",
+        "seoDesc": "Construit sur la technologie Next.js pour un chargement instantané et les meilleurs classements Google.",
+        "mobileAdminTitle": "Contrôle Admin Mobile-First",
+        "mobileAdminDesc": "Gérez prix, disponibilités et réservations depuis votre téléphone, n'importe où."
       }
     },
-    "solutionColumnTitle": "La Méthode Upmerce (Le Contrôle)",
-    "solutionPoints": {
-      "profit": {
-        "title": "100% de Rétention des Profits",
-        "desc": "Réservations directes avec 0% de commission. L'argent va directement sur votre compte bancaire."
+    "Qualify": {
+      "title": "Presque fini, {name} !",
+      "subtitle": "Pour finaliser votre participation pour le moteur de réservation gratuit, veuillez répondre à 3 questions rapides sur votre agence.",
+      "loadingAuth": "Vérification des identifiants...",
+      "validationError": "Veuillez remplir tous les champs pour compléter votre participation.",
+      "submitError": "Échec de l'envoi de la participation. Veuillez réessayer.",
+      "labels": {
+        "websiteUrl": "Votre URL de Site Web Actuel ou Instagram",
+        "websitePlaceholder": "ex : www.monagence.com ou @monagence",
+        "tourCount": "Combien de tours/activités proposez-vous ?",
+        "isOwnerLegend": "Êtes-vous le propriétaire de l'entreprise ou le décideur principal ?",
+        "yes": "Oui",
+        "no": "Non"
       },
-      "automation": {
-        "title": "Automatisation 24/7",
-        "desc": "Les réservations sont confirmées et payées automatiquement pendant que vous dormez ou guidez des tours."
-      },
-      "presence": {
-        "title": "Présence Incontournable",
-        "desc": "Technologie moderne et ultra-rapide conçue pour se classer haut et convertir les visiteurs mobiles instantanément."
-      }
-    }
-  },
-  "Finance": {
-    "pillarTitle": "Pilier 1 : Contrôle Financier",
-    "headline": "Votre Inventaire. Votre Argent.\nVotre Compte Bancaire.",
-    "body": "Le Moteur Upmerce inclut un puissant système de commerce intégré directement à votre site. Ce n'est pas juste un formulaire ; c'est un système financier complet conçu pour vous rendre indépendant des plateformes tierces.",
-    "features": {
-      "f1": {
-        "title": "Moteur de Réservation à 0% de Commission",
-        "desc": "Arrêtez de partager vos revenus. Notre checkout e-commerce intégré signifie que vous gardez chaque dirham de chaque réservation."
-      },
-      "f2": {
-        "title": "Paiements Mondiaux Instantanés & Sécurisés",
-        "desc": "Acceptez les cartes bancaires du monde entier via Stripe ou PayPal. L'argent va directement sur votre compte bancaire professionnel."
-      },
-      "f3": {
-        "title": "Modèles de Prix Intelligents & Dynamiques",
-        "desc": "Définissez facilement des prix différents pour les saisons, les tailles de groupe ou les offres de dernière minute pour maximiser vos marges."
-      }
-    }
-  },
-  "Mobile": {
-    "pillarTitle": "Pilier 2 : Le Bureau de Poche",
-    "headline": "Gérez Tout Votre Business de N'importe Où.",
-    "body": "Vous ne restez pas assis à un bureau toute la journée, alors pourquoi votre logiciel le devrait-il ? Le Moteur Upmerce inclut un panneau admin mobile-first puissant, conçu pour la réalité d'un professionnel du tourisme en mouvement.",
-    "features": {
-      "f1": {
-        "title": "Contrôle des Disponibilités en Temps Réel",
-        "desc": "Fermez instantanément des dates ou ajoutez des places depuis votre téléphone dès qu'une réservation arrive d'une autre source."
-      },
-      "f2": {
-        "title": "Mises à Jour Produit Instantanées",
-        "desc": "Besoin de changer un prix ou une description d'itinéraire ? Faites-le en quelques secondes depuis le siège avant de votre 4x4. Pas besoin de développeur."
-      },
-      "f3": {
-        "title": "Hub Centralisé des Réservations",
-        "desc": "Voyez chaque réservation à venir, les détails du client et le statut du paiement dans un tableau de bord mobile clair."
-      }
-    }
-  },
-  "Growth": {
-    "pillarTitle": "Pilier 3 : Le Moteur de Croissance",
-    "headline": "Visibilité Incontournable.\nIngénierie pour Google.",
-    "body": "Un joli site web est inutile si personne ne le voit. Le Moteur Upmerce n'est pas seulement conçu pour les humains ; il est conçu pour les moteurs de recherche. Nous utilisons une technologie de pointe pour assurer votre visibilité quand ça compte le plus.",
-    "features": {
-      "f1": {
-        "title": "Performance Fulgurante (Next.js)",
-        "desc": "Construit sur la même technologie utilisée par Netflix et Uber. Les pages chargent instantanément sur mobile, réduisant le taux de rebond."
-      },
-      "f2": {
-        "title": "Architecture SEO Google-First",
-        "desc": "Code propre, structure parfaite et balises méta générées automatiquement. Google adore nos sites, vous aidant à vous classer plus haut organiquement."
-      },
-      "f3": {
-        "title": "Capacité Multilingue Native",
-        "desc": "Ne vous contentez pas de Google Translate. Atteignez les marchés internationaux professionnellement avec un support intégré pour l'Anglais, le Français, l'Arabe, et plus."
-      }
-    }
-  },
-  "Ecosystem": {
-    "sectionTitle": "L'Écosystème Complet",
-    "headline": "Tout Ce Dont Vous Avez Besoin pour Gagner.",
-    "body": "Ce n'est pas qu'une question de réservations. Le Moteur Upmerce inclut une suite d'outils professionnels conçus pour gérer chaque aspect de votre présence numérique.",
-    "features": {
-      "reviews": {
-        "title": "Preuve Sociale Intégrée",
-        "desc": "Collectez et affichez des avis clients vérifiés directement à côté de votre bouton 'Réserver' pour créer une confiance immédiate."
-      },
-      "blog": {
-        "title": "Moteur de Blog Prêt pour le SEO",
-        "desc": "Publiez des guides de voyage et des articles facilement pour attirer du trafic gratuit et organique depuis les recherches Google."
-      },
-      "maps": {
-        "title": "Cartes d'Itinéraires Interactives",
-        "desc": "Donnez aux clients une compréhension visuelle claire des routes et points de rendez-vous avec des cartes intégrées."
-      },
-      "crm": {
-        "title": "CRM Client Intégré",
-        "desc": "Une base de données centralisée de tous vos anciens clients, facilitant la reconnexion et les nouvelles réservations."
-      },
-      "notifications": {
-        "title": "Notifications Automatisées",
-        "desc": "Confirmations et rappels par email instantanés et à votre image, envoyés aux clients (et à vous) automatiquement."
-      },
-      "images": {
-        "title": "Optimisation Intelligente des Images",
-        "desc": "Vos photos haute qualité sont automatiquement compressées et redimensionnées pour un chargement ultra-rapide sans perte de qualité."
-      }
-    }
-  },
-  "CTA": {
-    "headline": "Prêt à arrêter de louer votre business et à commencer à le posséder ?",
-    "subtitle": "Ce n'est pas de la théorie. C'est le moteur exact qui propulse les agences leaders sur le marché très compétitif de <strong>Marrakech</strong> en ce moment.",
-    "primaryButton": "Participer pour Gagner votre Moteur",
-    "secondaryButton": "Voir en Live (Démo Marrago)"
-  }
-},
-"CaseStudies": {
-  "meta": {
-    "title": "Étude de Cas Marrago | Les Succès Upmerce",
-    "description": "Découvrez comment l'agence Marrago à Marrakech a utilisé Upmerce pour atteindre 0% de commission et une automatisation numérique complète."
-  },
-  "Hero": {
-    "eyebrow": "Projecteur Client : Marrakech",
-    "title": "Marrago : Le Moteur Derrière la Première Agence d'Excursions de Marrakech.",
-    "subtitle": "Comment un opérateur local est passé du chaos manuel à une puissance numérique entièrement automatisée, avec 0% de commission."
-  },
-  "Challenge": {
-    "title": "Le Défi : Grandir au milieu du chaos analogique.",
-    "description": "Avant Upmerce, Marrago offrait des expériences 5 étoiles sur le terrain à Marrakech, mais tournait avec une infrastructure 2 étoiles en coulisses. Malgré une forte demande, la croissance était étouffée par les processus manuels et la dépendance aux plateformes tierces.",
-    "painPoints": {
-      "commission": {
-        "title": "L'Hémorragie des Commissions",
-        "description": "Perdre plus de 25% de marges durement gagnées au profit d'OTA comme Viator juste pour obtenir des réservations, limitant sévèrement la rentabilité."
-      },
-      "chaos": {
-        "title": "Surcharge Opérationnelle",
-        "description": "Gérer l'inventaire via des discussions WhatsApp interminables, des appels téléphoniques et des agendas papier, menant au stress et à des doubles réservations occasionnelles."
-      },
-      "desk": {
-        "title": "Enchaîné au Bureau",
-        "description": "Le fondateur ne pouvait pas mettre à jour les prix, fermer les disponibilités ou gérer les réservations tout en étant sur la route pour superviser les tours."
-      }
-    }
-  },
-  "Solution": {
-    "title": "La Solution : Un système d'exploitation numérique complet.",
-    "subtitle": "Upmerce a déployé une plateforme Next.js sur mesure adaptée aux excursions haut de gamme de Marrakech, traitant à la fois l'expérience client (frontend) et les besoins opérationnels (backend).",
-    "frontend": {
-      "title": "1. Le Site Haute Conversion",
-      "description": "Nous avons construit un site web ultra-rapide et mobile-first, conçu pour se classer haut sur Google et convertir les touristes premium. Le design visuel époustouflant reflète la qualité des tours de Marrago, créant une confiance immédiate."
+      "submitButton": "Compléter Ma Participation",
+      "submittingButton": "Envoi en cours..."
     },
-    "backend": {
-      "title": "2. Le 'Bureau de Poche' & Moteur de Réservation",
-      "description": "Nous avons libéré le fondateur de son bureau. Le panneau d'administration mobile permet une gestion des disponibilités en temps réel depuis la route, tandis que le checkout Stripe intégré capture des réservations à 0% de commission directement vers leur banque."
+    "ThankYou": {
+      "title": "Vous êtes Inscrit !",
+      "subtitle": "Votre participation pour le Moteur de Réservation gratuit a été confirmée.",
+      "nextStepsTitle": "Que se passe-t-il ensuite ?",
+      "nextStepsDesc": "Notre équipe examinera toutes les participations. Les gagnants seront contactés par email d'ici le <strong>{date}</strong>. Bonne chance !",
+      "demoTitle": "En attendant, voyez à quoi ressemble le prix en action :",
+      "demoButton": "Voir l'Étude de Cas Démo (Marrago)"
     }
   },
-  "Results": {
-    "title": "Les Résultats : Indépendance & Croissance.",
-    "subtitle": "Depuis le lancement sur le Moteur Upmerce, Marrago a transformé son modèle économique, passant de la dépendance aux OTA à la domination de la réservation directe.",
-    "metrics": {
-      "commission": {
-        "value": "0%",
-        "label": "Commission Payée",
-        "description": "Chaque réservation directe garde 100% des revenus dans l'entreprise."
-      },
-      "time": {
-        "value": "10+",
-        "label": "Heures Économisées / Semaine",
-        "description": "L'automatisation des réservations et la gestion mobile ont éliminé le travail administratif manuel."
-      },
-      "seo": {
-        "value": "#1",
-        "label": "Visibilité Google",
-        "description": "Atteinte des premières positions pour les mots-clés clés d'excursions à Marrakech grâce au SEO Next.js."
+  "About": {
+    "meta": {
+      "title": "À Propos d'Upmerce | Construire l'Indépendance du Tourisme Marocain",
+      "description": "Upmerce est le partenaire technologique spécialisé pour les Riads, Hôtels et Agences de Voyages au Maroc. Nous construisons des moteurs de réservation directe qui vous aident à arrêter de payer des commissions."
+    },
+    "Hero": {
+      "title": "Nous ne Construisons Pas Juste des Sites Web.\n<colored>Nous Construisons l'Indépendance</colored> pour le Tourisme Marocain.",
+      "subtitle": "Upmerce est le partenaire technologique spécialisé pour les <strong>Riads, Hôtels et Agences de Voyages</strong> prêts à arrêter de louer leurs clients aux grandes plateformes et à commencer à posséder leur croissance."
+    },
+    "Story": {
+      "sectionTitle": "L'Histoire d'Origine",
+      "headline": "Le Fossé Entre l'Hospitalité Marocaine et la Réalité Numérique.",
+      "p1": "Le Maroc offre une hospitalité de classe mondiale, du Riad de luxe à Fès au camp de désert sur mesure à Merzouga. Pourtant, trop de brillantes entreprises locales sont invisibles en ligne, ou pire, asservies par des plateformes étrangères comme <bold>Booking.com, Expedia et Viator</bold> qui prennent d'énormes pourcentages de revenus juste pour faire une introduction.",
+      "p2": "Nous avons vu des établissements 5 étoiles sur le terrain lutter avec une technologie 2 étoiles en ligne—sites lents, formulaires de réservation cassés, et discussions WhatsApp sans fin.",
+      "p3": "Upmerce est né pour combler ce fossé. Nous croyons que la technologie la plus puissante ne devrait pas être réservée aux géants internationaux ; elle devrait être pour les experts locaux qui délivrent réellement l'expérience."
+    },
+    "Difference": {
+      "sectionTitle": "La Différence Upmerce",
+      "headline": "Une Technologie Conçue pour l'Indépendance, Pas la Dépendance.",
+      "pillars": {
+        "speed": {
+          "title": "Ingénierie pour la Vitesse (Google Nous Aime)",
+          "description": "Nous n'utilisons pas d'outils obsolètes comme WordPress. Nous construisons sur la technologie Next.js pour des temps de chargement instantanés sur mobile—le facteur N°1 pour être bien classé sur Google aujourd'hui."
+        },
+        "commission": {
+          "title": "La Philosophie 0% Commission",
+          "description": "Que vous vendiez des nuitées ou des excursions d'une journée, votre inventaire est à vous. Nos moteurs de réservation directe se lient à votre banque, donc vous gardez 100% du profit."
+        },
+        "mobile": {
+          "title": "Conçu pour le Gestionnaire Mobile",
+          "description": "Nos systèmes vous donnent un \"Bureau de Poche\"—un panneau d'administration conçu pour les smartphones, vous permettant de gérer la disponibilité, les prix et les réservations depuis la route ou la réception."
+        }
       }
+    },
+    "Founder": {
+      "quote": "\"En tant que développeur basé dans le Souss-Massa, j'ai vu des professionnels du tourisme local—des propriétaires de Riad aux guides d'excursions—travailler incroyablement dur pour donner leurs marges à des entreprises technologiques étrangères. J'ai lancé Upmerce avec un seul but : donner à l'hospitalité marocaine une technologie qui est réellement meilleure que les OTA. Une technologie qui les rend indépendants, rentables et fiers.\"",
+      "name": "Mustapha Ouazza",
+      "role": "Fondateur & Stratège Principal"
+    },
+    "Process": {
+      "sectionTitle": "Notre Processus",
+      "headline": "Du Concept aux Réservations : Un Chemin Simple.",
+      "steps": {
+        "step1": {
+          "title": "Découverte & Stratégie",
+          "description": "Nous analysons votre activité actuelle, vos points faibles et vos objectifs pour concevoir un plan sur mesure pour votre croissance numérique."
+        },
+        "step2": {
+          "title": "La Construction du Moteur",
+          "description": "Nous déployons votre plateforme Next.js personnalisée et haute performance avec réservation directe intégrée et fondations SEO."
+        },
+        "step3": {
+          "title": "Intégration de Contenu",
+          "description": "Nous peuplons votre site avec vos tours, chambres, photos et actifs de marque, assurant que tout paraisse premium."
+        },
+        "step4": {
+          "title": "Lancement & Passation",
+          "description": "Nous mettons en ligne, vous formons sur votre panneau d'admin mobile, et vous remettons les clés de votre nouvelle machine à revenus."
+        }
+      }
+    },
+    "CTA": {
+      "headline": "Prêt à arrêter de louer votre présence numérique et à commencer à la posséder ?",
+      "subtitle": "Ne nous croyez pas sur parole. Voyez la différence qu'un vrai partenaire technologique fait pour un opérateur local du Souss-Massa.",
+      "primaryButton": "Participer pour Gagner un Site",
+      "secondaryButton": "Voir Démo Live (Marrago)"
     }
   },
-  "CTA": {
-    "title": "Prêt pour des résultats comme Marrago ?",
-    "subtitle": "Arrêtez de louer votre présence numérique aux OTA. Commencez à la posséder avec votre propre moteur de réservation directe. Participez maintenant pour tenter de gagner votre site complet.",
-    "primaryBtn": "Participer pour Gagner Votre Moteur",
-    "secondaryBtn": "Voir la Démo Live Marrago"
-  }
+  "Solutions": {
+    "meta": {
+      "title": "Solutions Upmerce | Le Moteur de Réservation Directe pour le Maroc",
+      "description": "Découvrez le Moteur Upmerce : Un système d'exploitation numérique complet offrant des réservations directes à 0% de commission, une vitesse fulgurante et un contrôle admin mobile pour les professionnels du tourisme."
+    },
+    "Hero": {
+      "title": "Le Moteur Upmerce :\n Votre <colored>Système d'Exploitation Numérique</colored> Complet.",
+      "subtitle": "Arrêtez de bricoler avec des outils cassés. Obtenez la plateforme tout-en-un construite pour <strong>libérer les entreprises touristiques marocaines</strong> des OTA et du travail manuel."
+    },
+    "Pain": {
+      "sectionTitle": "Le Constat",
+      "headline": "Gérez-vous votre entreprise,\n ou est-ce elle qui vous gère ?",
+      "painColumnTitle": "L'Ancienne Méthode (Chaos)",
+      "painPoints": {
+        "commission": {
+          "title": "L'Hémorragie de Commissions",
+          "desc": "Perdre 20-30% de votre marge durement gagnée au profit des OTA étrangères sur chaque réservation."
+        },
+        "whatsapp": {
+          "title": "Le Piège WhatsApp",
+          "desc": "Des heures passées à courir manuellement après les confirmations et les paiements au lieu de développer votre entreprise."
+        },
+        "invisible": {
+          "title": "Invisible En Ligne",
+          "desc": "Des sites lents et obsolètes que Google ignore et que les clients mobiles frustrés abandonnent."
+        }
+      },
+      "solutionColumnTitle": "La Méthode Upmerce (Contrôle)",
+      "solutionPoints": {
+        "profit": {
+          "title": "Rétention de 100% du Profit",
+          "desc": "Réservations directes avec 0% de commission. L'argent va directement sur votre compte bancaire."
+        },
+        "automation": {
+          "title": "Automatisation 24/7",
+          "desc": "Les réservations sont confirmées et payées automatiquement pendant que vous dormez ou guidez des tours."
+        },
+        "presence": {
+          "title": "Présence Incontournable",
+          "desc": "Une technologie moderne et ultra-rapide conçue pour se classer haut et convertir les visiteurs mobiles instantanément."
+        }
+      }
+    },
+    "Finance": {
+      "pillarTitle": "Pilier 1 : Contrôle Financier",
+      "headline": "Votre Inventaire. Votre Argent.\nVotre Compte Bancaire.",
+      "body": "Le Moteur Upmerce inclut un système de commerce puissant de niveau entreprise intégré directement dans votre site. Ce n'est pas juste un formulaire de réservation ; c'est un système d'exploitation financier complet conçu pour vous rendre indépendant des plateformes tierces.",
+      "features": {
+        "f1": {
+          "title": "Moteur de Réservation Directe 0% Commission",
+          "desc": "Arrêtez de partager les revenus. Notre checkout e-commerce intégré signifie que vous gardez chaque dirham de chaque réservation."
+        },
+        "f2": {
+          "title": "Paiements Mondiaux Instantanés & Sécurisés",
+          "desc": "Acceptez les cartes de crédit du monde entier en toute sécurité via Stripe ou PayPal. L'argent va directement sur votre compte bancaire professionnel."
+        },
+        "f3": {
+          "title": "Modèles de Prix Intelligents & Dynamiques",
+          "desc": "Fixez facilement des prix différents pour les saisons, les tailles de groupe ou les offres de dernière minute pour maximiser vos marges."
+        }
+      }
+    },
+    "Mobile": {
+      "pillarTitle": "Pilier 2 : Le Bureau de Poche",
+      "headline": "Gérez Toute Votre Entreprise de N'importe Où.",
+      "body": "Vous ne restez pas assis à un bureau toute la journée, alors pourquoi votre logiciel d'entreprise le devrait-il ? Le Moteur Upmerce inclut un panneau d'admin puissant et mobile-first conçu pour la réalité d'un professionnel du tourisme en mouvement.",
+      "features": {
+        "f1": {
+          "title": "Contrôle de Disponibilité Temps Réel",
+          "desc": "Fermez instantanément des dates ou ajoutez des places supplémentaires depuis votre téléphone au moment où une réservation arrive d'une autre source."
+        },
+        "f2": {
+          "title": "Mises à Jour Produit Instantanées",
+          "desc": "Besoin de changer un prix ou de mettre à jour une description d'itinéraire ? Faites-le en quelques secondes depuis le siège avant de votre 4x4. Pas besoin de développeur."
+        },
+        "f3": {
+          "title": "Hub de Réservation Centralisé",
+          "desc": "Voyez chaque réservation à venir, les détails du client et le statut de paiement dans un tableau de bord mobile propre."
+        }
+      }
+    },
+    "Growth": {
+      "pillarTitle": "Pilier 3 : Le Moteur de Croissance",
+      "headline": "Visibilité Incontournable.\nIngénierie pour Google.",
+      "body": "Un joli site web est inutile si personne ne le voit. Le Moteur Upmerce n'est pas seulement conçu pour les humains ; il est conçu pour les moteurs de recherche. Nous utilisons une technologie de pointe pour vous assurer d'être visible quand ça compte le plus.",
+      "features": {
+        "f1": {
+          "title": "Performance Ultra-Rapide (Next.js)",
+          "desc": "Construit sur la même technologie utilisée par Netflix et Uber. Les pages chargent instantanément sur mobile, réduisant les taux de rebond et gardant les clients engagés."
+        },
+        "f2": {
+          "title": "Architecture SEO Google-First",
+          "desc": "Code propre, structure parfaite et balises méta générées automatiquement. Google aime nos sites, vous aidant à vous classer plus haut organiquement."
+        },
+        "f3": {
+          "title": "Capacité Multilingue Native",
+          "desc": "N'utilisez pas juste Google Translate. Touchez les marchés internationaux professionnellement avec un support profondément intégré pour l'Anglais, le Français, l'Arabe, et plus."
+        }
+      }
+    },
+    "Ecosystem": {
+      "sectionTitle": "L'Écosystème Complet",
+      "headline": "Tout le Reste Dont Vous Avez Besoin pour Gagner.",
+      "body": "Ce n'est pas seulement une question de réservations. Le Moteur Upmerce inclut une suite d'outils professionnels conçus pour gérer chaque aspect de votre présence numérique.",
+      "features": {
+        "reviews": {
+          "title": "Preuve Sociale Intégrée",
+          "desc": "Collectez et affichez des avis clients vérifiés directement à côté de votre bouton 'Réserver' pour bâtir une confiance immédiate."
+        },
+        "blog": {
+          "title": "Moteur de Blog Prêt pour le SEO",
+          "desc": "Publiez des guides de voyage et des articles facilement pour attirer du trafic organique gratuit depuis la recherche Google."
+        },
+        "maps": {
+          "title": "Cartes d'Itinéraire Interactives",
+          "desc": "Donnez aux clients une compréhension visuelle claire des itinéraires de tour et des points de rencontre avec des cartes intégrées."
+        },
+        "crm": {
+          "title": "CRM Client Intégré",
+          "desc": "Une base de données centralisée de tous vos anciens clients, facilitant la reconnexion et les réservations répétées."
+        },
+        "notifications": {
+          "title": "Notifications Automatisées",
+          "desc": "Confirmations par email et rappels instantanés et à votre image envoyés aux clients (et à vous) automatiquement."
+        },
+        "images": {
+          "title": "Optimisation d'Image Intelligente",
+          "desc": "Vos photos de haute qualité sont automatiquement compressées et redimensionnées pour un chargement ultra-rapide sans perte de qualité."
+        }
+      }
+    },
+    "CTA": {
+      "headline": "Prêt à arrêter de louer votre entreprise et à commencer à la posséder ?",
+      "subtitle": "Ce n'est pas de la théorie. C'est le moteur exact qui propulse les agences leaders sur le marché hautement compétitif de <strong>Marrakech</strong> en ce moment.",
+      "primaryButton": "Participer pour Gagner Votre Moteur",
+      "secondaryButton": "Voir en Live (Démo Marrago)"
+    }
+  },
+  "CaseStudies": {
+    "meta": {
+      "title": "Étude de Cas Marrago | Histoires de Succès Upmerce",
+      "description": "Voyez comment l'agence de voyages Marrago à Marrakech a utilisé Upmerce pour atteindre des réservations à 0% de commission et une automatisation numérique complète."
+    },
+    "Hero": {
+      "eyebrow": "Projecteur Client : Marrakech",
+      "title": "Marrago : Le Moteur Derrière l'Agence d'Excursions Première de Marrakech.",
+      "subtitle": "Comment un tour-opérateur local est passé du chaos manuel à une puissance numérique entièrement automatisée et sans commission."
+    },
+    "Challenge": {
+      "title": "Le Défi : Grandir au milieu du chaos analogique.",
+      "description": "Avant Upmerce, Marrago offrait des expériences 5 étoiles sur le terrain à Marrakech mais fonctionnait sur une infrastructure 2 étoiles en coulisses. Malgré une forte demande, la croissance était étouffée par les processus manuels et la dépendance aux plateformes tierces.",
+      "painPoints": {
+        "commission": {
+          "title": "L'Hémorragie de Commissions",
+          "description": "Perdre 25%+ de marges durement gagnées au profit d'OTA comme Viator juste pour sécuriser des réservations, limitant sévèrement la rentabilité."
+        },
+        "chaos": {
+          "title": "Surcharge Opérationnelle",
+          "description": "Gérer l'inventaire via des discussions WhatsApp sans fin, des appels téléphoniques et des agendas papier, menant au stress et à des surréservations occasionnelles."
+        },
+        "desk": {
+          "title": "Attaché au Bureau",
+          "description": "Le fondateur ne pouvait pas mettre à jour les prix, fermer la disponibilité ou gérer les réservations tout en étant sur la route pour superviser les tours."
+        }
+      }
+    },
+    "Solution": {
+      "title": "La Solution : Un Système d'Exploitation 'Axé Conversion'.",
+      "subtitle": "Nous n'avons pas juste construit un site web ; nous avons construit une machine à revenus utilisant l'Arsenal 'Marrago'.",
+      "frontend": {
+        "title": "1. L'Interface de 'Confiance'",
+        "description": "Nous avons implémenté la Barre de Réservation Sticky 'Zone du Pouce' et le Trip Wizard 'Psychologique'. Ces outils ont empêché les utilisateurs mobiles de partir et ont augmenté la qualité des leads immédiatement."
+      },
+      "backend": {
+        "title": "2. L'Admin 'Bureau de Poche'",
+        "description": "Nous avons construit un Tableau de Bord Mobile sur mesure. Maintenant, le fondateur ferme des dates, met à jour les prix et voit les notifications 'Nouvelle Réservation' instantanément tout en guidant des tours dans le désert."
+      }
+    },
+    "Results": {
+      "title": "Les Résultats : Indépendance & Croissance.",
+      "subtitle": "Depuis le lancement sur le Moteur Upmerce, Marrago a transformé son modèle économique, passant de la dépendance aux OTA à la domination de la réservation directe.",
+      "metrics": {
+        "commission": {
+          "value": "0%",
+          "label": "Commission Payée",
+          "description": "Chaque réservation directe garde 100% des revenus dans l'entreprise."
+        },
+        "time": {
+          "value": "10+",
+          "label": "Heures Économisées/Semaine",
+          "description": "Les réservations automatisées et la gestion mobile ont éliminé le travail administratif manuel."
+        },
+        "seo": {
+          "value": "#1",
+          "label": "Visibilité Google",
+          "description": "Atteinte des meilleurs classements pour les mots-clés clés d'excursion à Marrakech grâce au SEO Next.js."
+        }
+      }
+    },
+    "CTA": {
+      "title": "Prêt pour des résultats comme Marrago ?",
+      "subtitle": "Arrêtez de louer votre présence numérique aux OTA. Commencez à la posséder avec votre propre moteur de réservation directe. Participez maintenant pour une chance de gagner une construction complète.",
+      "primaryBtn": "Participer pour Gagner Votre Moteur",
+      "secondaryBtn": "Voir Démo Live Marrago"
+    }
+  
 }
+
+  
 }

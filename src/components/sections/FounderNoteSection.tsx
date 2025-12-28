@@ -1,46 +1,154 @@
 // src/components/sections/FounderNoteSection.tsx
-
 'use client';
 
+import React from 'react';
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
+import { Box, Container, Typography, Paper, useTheme, Avatar } from '@mui/material';
+import FormatQuoteIcon from '@mui/icons-material/FormatQuote';
 import AnimatedSection from '../ui/AnimatedSection';
 
 export default function FounderNoteSection() {
   const t = useTranslations('AgencyFounder');
+  const theme = useTheme();
 
   return (
-    <section 
-      id="founder-note" // ADDED: ID for potential future direct linking (e.g., from a "About Us" page)
-      className="bg-gray-800 py-20"
-      aria-labelledby="founder-note-heading" // ADDED: Link section to its main heading (or implicitly, the founder's name)
-      role="region" // ADDED: Define section as a generic landmark region
+    <Box
+      id="founder-note"
+      component="section"
+      aria-labelledby="founder-note-heading"
+      sx={{
+        py: { xs: 8, md: 12 },
+        backgroundColor: theme.palette.background.default, // Obsidian
+        position: 'relative',
+        overflow: 'hidden',
+      }}
     >
       <AnimatedSection>
-        <div className="container mx-auto px-6">
-          <div className="max-w-4xl mx-auto bg-gray-900 rounded-lg p-8 md:p-12 border border-gray-700 flex flex-col md:flex-row items-center text-center md:text-left">
-            <div className="flex-shrink-0 mb-8 md:mb-0 md:mr-10">
-              <Image
-                src="/images/founder-photo.webp"
-                alt={t('name') + ", " + t('title')} // IMPROVED: More descriptive alt text for founder photo
-                width={160}
-                height={160}
-                className="rounded-full object-cover w-40 h-40 ring-4 ring-purple-500/50"
-                sizes="(max-width: 768px) 160px, 160px" 
-                loading="lazy" // Added explicit lazy loading for clarity
-              />
-            </div>
-            <div>
-              {/* CHANGED to <blockquote> for semantic markup of a quote */}
-              <blockquote className="text-xl lg:text-2xl text-gray-300 mb-4 font-light italic" cite="#"> {/* ADDED cite attribute (placeholder) */}
-                <p>&quot;{t('missionStatement')}&quot;</p>
-              </blockquote>
-              <p id="founder-note-heading" className="text-lg font-bold text-white mt-6">{t('name')}</p> {/* ADDED ID: This serves as the heading for the section */}
-              <p className="text-purple-400">{t('title')}</p>
-            </div>
-          </div>
-        </div>
+        <Container maxWidth="md">
+          <Paper
+            elevation={0}
+            sx={{
+              position: 'relative',
+              p: { xs: 4, md: 8 },
+              borderRadius: 4,
+              overflow: 'hidden',
+              // "Obsidian Glass" Look
+              backgroundColor: 'rgba(255, 255, 255, 0.02)',
+              border: '1px solid rgba(255, 255, 255, 0.05)',
+              display: 'flex',
+              flexDirection: { xs: 'column', md: 'row' },
+              alignItems: 'center',
+              gap: 6,
+              transition: 'all 0.3s ease',
+              '&:hover': {
+                backgroundColor: 'rgba(255, 255, 255, 0.03)',
+                borderColor: 'rgba(255, 255, 255, 0.1)',
+                boxShadow: '0 20px 40px -20px rgba(0,0,0,0.5)',
+              }
+            }}
+          >
+            {/* Decorative Big Quote Icon (Background) */}
+            <FormatQuoteIcon 
+              sx={{
+                position: 'absolute',
+                top: 20,
+                left: 20,
+                fontSize: 120,
+                color: 'white',
+                opacity: 0.03,
+                transform: 'rotate(180deg)',
+                zIndex: 0,
+              }}
+            />
+
+            {/* LEFT: The Founder's Portrait */}
+            <Box 
+              sx={{ 
+                flexShrink: 0, 
+                position: 'relative', 
+                zIndex: 1 
+              }}
+            >
+              <Box
+                sx={{
+                  position: 'relative',
+                  width: 160,
+                  height: 160,
+                  borderRadius: '50%',
+                  p: 0.5, // Spacing for border
+                  // The "Amber Halo"
+                  border: `1px solid ${theme.palette.secondary.main}`,
+                  boxShadow: `0 0 30px -5px ${theme.palette.secondary.main}40`, // Amber Glow
+                }}
+              >
+                <Avatar
+                  sx={{
+                    width: '100%',
+                    height: '100%',
+                    bgcolor: 'grey.900',
+                  }}
+                >
+                  <Image
+                    src="/images/founder-photo.webp"
+                    alt={t('name') + ", " + t('title')}
+                    fill
+                    sizes="160px"
+                    style={{ objectFit: 'cover' }}
+                    loading="lazy"
+                  />
+                </Avatar>
+              </Box>
+            </Box>
+
+            {/* RIGHT: The Manifesto */}
+            <Box sx={{ position: 'relative', zIndex: 1, textAlign: { xs: 'center', md: 'left' } }}>
+              <Typography
+                component="blockquote"
+                variant="h5"
+                sx={{
+                  color: 'white',
+                  fontStyle: 'italic',
+                  fontWeight: 300,
+                  lineHeight: 1.6,
+                  mb: 4,
+                  opacity: 0.9,
+                  fontFamily: 'serif', // Use serif for that "Editorial" feel
+                }}
+              >
+                &ldquo;{t('missionStatement')}&rdquo;
+              </Typography>
+              
+              <Box>
+                <Typography 
+                  id="founder-note-heading" 
+                  variant="h6" 
+                  sx={{ 
+                    fontWeight: 800, 
+                    color: 'white',
+                    letterSpacing: 0.5 
+                  }}
+                >
+                  {t('name')}
+                </Typography>
+                <Typography 
+                  variant="subtitle2" 
+                  sx={{ 
+                    color: theme.palette.secondary.main, // Amber text
+                    fontWeight: 600,
+                    textTransform: 'uppercase',
+                    letterSpacing: 2,
+                    mt: 0.5
+                  }}
+                >
+                  {t('title')}
+                </Typography>
+              </Box>
+            </Box>
+
+          </Paper>
+        </Container>
       </AnimatedSection>
-    </section>
+    </Box>
   );
 }

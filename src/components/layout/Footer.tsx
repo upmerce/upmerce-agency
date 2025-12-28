@@ -1,26 +1,34 @@
 // src/components/layout/Footer.tsx
-
 'use client';
 
 import React from 'react';
 import { useTranslations } from 'next-intl';
-import Image from 'next/image'; // Assuming we'll use images for social icons
-import { Link } from '@/i18n/navigation'; // For internal navigation links
-import { contactConfig } from '@/config/site'; // For contact details and social links
+import Image from 'next/image';
+import { Link } from '@/i18n/navigation';
+import { contactConfig } from '@/config/site';
+import { Box, Container, Grid, Typography, Stack, IconButton, useTheme, Divider } from '@mui/material';
+
+type SocialLink = {
+  name: string;
+  href: string;
+  iconSrc: string;
+};
+
+// Import Icons (MUI Icons are safer for theming than SVGs if possible, but we stick to images for social)
+import PhoneIcon from '@mui/icons-material/Phone';
+import EmailIcon from '@mui/icons-material/Email';
 
 export default function Footer() {
   const t = useTranslations('AgencyFooter');
-  const tNav = useTranslations('AgencyNavigation'); // For common navigation links
+  const tNav = useTranslations('AgencyNavigation');
+  const theme = useTheme();
 
   const currentYear = new Date().getFullYear();
 
-  // Define footer navigation categories and links
-  // UPDATED: Points to new dedicated pages for About, Solutions, and Case Studies
   const footerNavs = [
     {
       title: t('footerNavs.companyTitle'),
       links: [
-        // These point to dedicated pages
         { name: tNav('home'), href: '/', type: 'link' },
         { name: tNav('about'), href: '/about', type: 'link' },
         { name: tNav('solutions'), href: '/solutions', type: 'link' },
@@ -30,155 +38,199 @@ export default function Footer() {
     {
       title: t('footerNavs.resourcesTitle'),
       links: [
-        // Blog is a separate page
         { name: tNav('blog'), href: '/blog', type: 'link' },
-        // FAQ and Contact are sections on the homepage -> use scroll anchors
         { name: tNav('faq'), href: '/#faq', type: 'scroll' },
-        // ▼▼▼ FIX: Changed from '/contact' to '/#contact' and type to 'scroll' ▼▼▼
         { name: t('footerNavs.support'), href: '/#contact', type: 'scroll' },
-        // Legal pages are separate
         { name: t('footerNavs.termsOfService'), href: '/terms', type: 'link' },
         { name: t('footerNavs.privacyPolicy'), href: '/privacy', type: 'link' },
       ],
     },
   ];
 
-  // Map social links from contactConfig
-  const socialLinks: { name: string; href: string; iconSrc: string }[] = [
-    contactConfig.linkedin
-      ? {
-          name: 'LinkedIn',
-          href: contactConfig.linkedin,
-          iconSrc: '/icons/linkedin.svg',
-        }
-      : null,
-    contactConfig.facebook
-      ? {
-          name: 'Facebook',
-          href: contactConfig.facebook,
-          iconSrc: '/icons/facebook.svg',
-        }
-      : null,
-    contactConfig.twitter
-      ? {
-          name: 'X', // Previously Twitter
-          href: contactConfig.twitter,
-          iconSrc: '/icons/x-logo.svg', // Assuming you have an X logo
-        }
-      : null,
-    contactConfig.instagram
-      ? {
-          name: 'Instagram',
-          href: contactConfig.instagram,
-          iconSrc: '/icons/instagram.svg',
-        }
-      : null,
-    // Add more social media as needed from contactConfig
-  ].filter((link): link is { name: string; href: string; iconSrc: string } => Boolean(link)); // Filter out any null links if config properties are missing
+  const socialLinks: SocialLink[] = [
+    contactConfig.linkedin ? { name: 'LinkedIn', href: contactConfig.linkedin, iconSrc: '/icons/linkedin.svg' } : null,
+    contactConfig.facebook ? { name: 'Facebook', href: contactConfig.facebook, iconSrc: '/icons/facebook.svg' } : null,
+    contactConfig.twitter ? { name: 'X', href: contactConfig.twitter, iconSrc: '/icons/x-logo.svg' } : null,
+    contactConfig.instagram ? { name: 'Instagram', href: contactConfig.instagram, iconSrc: '/icons/instagram.svg' } : null,
+  ].filter(Boolean) as SocialLink[];
 
   return (
-    <footer className="bg-gray-800 border-t border-gray-700 pt-12 pb-6" role="contentinfo"> {/* ADDED role="contentinfo" */}
-      <div className="container mx-auto px-6">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 pb-8 border-b border-gray-700">
-          {/* Logo and About/Description */}
-          <div className="md:col-span-2 text-center md:text-left">
-            <Link href="/" className="flex items-center justify-center md:justify-start space-x-2 text-white hover:text-purple-400 transition-colors duration-300 mb-4" aria-label={tNav('siteTitle') + " home"}>
-              <Image
-                src="/icons/logo.webp"
-                alt={tNav('siteTitle')}
-                width={32}
-                height={32}
-                priority={false} // Not critical for LCP, will be lazy-loaded
-                sizes="32px"
-              />
-              <span className="text-2xl font-bold">{tNav('siteTitle')}</span>
-            </Link>
-            <p className="text-gray-400 max-w-sm mx-auto md:mx-0 leading-relaxed mb-4">
-              {t('shortDescription')}
-            </p>
-            {/* Social Media Links */}
-            <div className="flex justify-center md:justify-start space-x-4 mt-6">
-              {socialLinks.map((link) => (
-                <a
-                  key={link.name}
-                  href={link.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-gray-400 hover:text-purple-400 transition-colors duration-300"
-                  aria-label={`${link.name} (opens in new tab)`} 
-                >
-                  <Image
-                    src={link.iconSrc}
-                    alt={`${link.name} icon`}
-                    width={24}
-                    height={24}
-                    priority={false} // Not critical for LCP
-                    sizes="24px"
-                    className="w-6 h-6"
-                  />
-                </a>
-              ))}
-            </div>
-          </div>
+    <Box
+      component="footer"
+      sx={{
+        backgroundColor: theme.palette.background.default, // Obsidian
+        borderTop: '1px solid rgba(255,255,255,0.05)',
+        pt: 10,
+        pb: 4,
+        position: 'relative',
+        overflow: 'hidden'
+      }}
+    >
+      {/* Background Glow */}
+      <Box sx={{ 
+        position: 'absolute', bottom: -100, left: '50%', transform: 'translateX(-50%)',
+        width: '600px', height: '300px', 
+        background: `radial-gradient(circle, ${theme.palette.secondary.main}08 0%, transparent 70%)`,
+        zIndex: 0
+      }} />
 
-          {/* Navigation Links */}
+      <Container maxWidth="lg" sx={{ position: 'relative', zIndex: 1 }}>
+        <Grid container spacing={8}>
+          
+          {/* Column 1: Brand */}
+          <Grid size={{ xs: 12, md: 4 }}>
+            <Link href="/" aria-label={tNav('siteTitle')}>
+              <Box sx={{ display: 'flex', alignItems: 'center', gap: 1.5, mb: 3 }}>
+                <Image
+                  src="/icons/logo.webp"
+                  alt={tNav('siteTitle')}
+                  width={32}
+                  height={32}
+                />
+                <Typography variant="h5" sx={{ fontWeight: 800, color: 'white', letterSpacing: '-0.02em' }}>
+                  {tNav('siteTitle')}
+                </Typography>
+              </Box>
+            </Link>
+            <Typography variant="body2" sx={{ color: 'text.secondary', lineHeight: 1.8, mb: 4, maxWidth: '300px' }}>
+              {t('shortDescription')}
+            </Typography>
+
+            {/* Social Icons */}
+            <Stack direction="row" spacing={2}>
+              {socialLinks.map((link: SocialLink) => (
+                <IconButton 
+                  key={link.name} 
+                  component="a" 
+                  href={link.href} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  aria-label={link.name}
+                  sx={{ 
+                    bgcolor: 'rgba(255,255,255,0.05)',
+                    border: '1px solid rgba(255,255,255,0.05)',
+                    '&:hover': { bgcolor: 'white', '& img': { filter: 'invert(1)' } }
+                  }}
+                >
+                  <Image src={link.iconSrc} alt={link.name} width={20} height={20} />
+                </IconButton>
+              ))}
+            </Stack>
+          </Grid>
+
+          {/* Column 2 & 3: Links */}
           {footerNavs.map((nav, index) => (
-            <nav key={index} className="text-center md:text-left" aria-labelledby={`footer-nav-title-${index}`}> {/* ADDED aria-labelledby */}
-              <h3 id={`footer-nav-title-${index}`} className="text-xl font-semibold text-white mb-4">{nav.title}</h3> {/* ADDED id */}
-              <ul className="space-y-2">
+            <Grid size={{ xs: 6, md: 2 }} key={index}>
+              <Typography 
+                variant="subtitle2" 
+                sx={{ 
+                  color: 'white', 
+                  fontWeight: 700, 
+                  letterSpacing: 1.5, 
+                  textTransform: 'uppercase', 
+                  mb: 3 
+                }}
+              >
+                {nav.title}
+              </Typography>
+              <Stack spacing={1.5}>
                 {nav.links.map((link) => (
-                  <li key={link.name}>
+                  <Box key={link.name}>
                     {link.type === 'scroll' ? (
-                      <a
+                      <Typography 
+                        component="a" 
                         href={link.href}
-                        className="text-gray-400 hover:text-purple-400 transition-colors duration-300"
+                        variant="body2" 
+                        sx={{ 
+                          color: 'text.secondary', 
+                          textDecoration: 'none',
+                          transition: 'color 0.2s',
+                          '&:hover': { color: theme.palette.secondary.main }
+                        }}
                       >
                         {link.name}
-                      </a>
+                      </Typography>
                     ) : (
-                      <Link
-                        href={link.href}
-                        className="text-gray-400 hover:text-purple-400 transition-colors duration-300"
+                      <Link 
+                        href={link.href} 
+                        style={{ textDecoration: 'none' }}
                       >
-                        {link.name}
+                         <Typography 
+                          variant="body2" 
+                          sx={{ 
+                            color: 'text.secondary', 
+                            transition: 'color 0.2s',
+                            '&:hover': { color: theme.palette.secondary.main }
+                          }}
+                        >
+                          {link.name}
+                        </Typography>
                       </Link>
                     )}
-                  </li>
+                  </Box>
                 ))}
-              </ul>
-            </nav>
+              </Stack>
+            </Grid>
           ))}
 
-          {/* Contact Information */}
-          <div className="text-center md:text-left">
-            <h3 className="text-xl font-semibold text-white mb-4">{t('footerNavs.contactTitle')}</h3>
-            <ul className="space-y-2 text-gray-400">
-              {/* Address removed because contactConfig.address does not exist */}
+          {/* Column 4: Contact */}
+          <Grid size={{ xs: 12, md: 4 }}>
+            <Typography 
+              variant="subtitle2" 
+              sx={{ 
+                color: 'white', 
+                fontWeight: 700, 
+                letterSpacing: 1.5, 
+                textTransform: 'uppercase', 
+                mb: 3 
+              }}
+            >
+              {t('footerNavs.contactTitle')}
+            </Typography>
+            <Stack spacing={2}>
               {contactConfig.phoneNumber.formatted && (
-                <li>
-                  <a href={`tel:${contactConfig.phoneNumber.raw}`} className="hover:text-purple-400 flex items-center justify-center md:justify-start">
-                    <Image src="/icons/phone.svg" alt="Phone icon" width={20} height={20} className="w-5 h-5 mr-2" priority={false} sizes="20px" />
+                <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
+                  <Box sx={{ p: 1, borderRadius: 1, bgcolor: 'rgba(255,255,255,0.05)', color: theme.palette.secondary.main }}>
+                    <PhoneIcon fontSize="small" />
+                  </Box>
+                  <Typography 
+                    component="a" 
+                    href={`tel:${contactConfig.phoneNumber.raw}`} 
+                    variant="body2" 
+                    sx={{ color: 'text.secondary', textDecoration: 'none', '&:hover': { color: 'white' } }}
+                  >
                     {contactConfig.phoneNumber.formatted}
-                  </a>
-                </li>
+                  </Typography>
+                </Box>
               )}
+              
               {contactConfig.email && (
-                <li>
-                  <a href={`mailto:${contactConfig.email}`} className="hover:text-purple-400 flex items-center justify-center md:justify-start">
-                    <Image src="/icons/mail.svg" alt="Email icon" width={20} height={20} className="w-5 h-5 mr-2" priority={false} sizes="20px" />
+                <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
+                  <Box sx={{ p: 1, borderRadius: 1, bgcolor: 'rgba(255,255,255,0.05)', color: theme.palette.secondary.main }}>
+                    <EmailIcon fontSize="small" />
+                  </Box>
+                  <Typography 
+                    component="a" 
+                    href={`mailto:${contactConfig.email}`} 
+                    variant="body2" 
+                    sx={{ color: 'text.secondary', textDecoration: 'none', '&:hover': { color: 'white' } }}
+                  >
                     {contactConfig.email}
-                  </a>
-                </li>
+                  </Typography>
+                </Box>
               )}
-            </ul>
-          </div>
-        </div>
+            </Stack>
+          </Grid>
+
+        </Grid>
+
+        <Divider sx={{ my: 6, borderColor: 'rgba(255,255,255,0.05)' }} />
 
         {/* Copyright */}
-        <div className="py-6 text-center text-gray-500 text-sm">
-          <p>&copy; {currentYear} {t('copyright')}</p>
-        </div>
-      </div>
-    </footer>
+        <Typography variant="body2" align="center" sx={{ color: 'text.disabled' }}>
+          &copy; {currentYear} {t('copyright')}
+        </Typography>
+      </Container>
+    </Box>
   );
 }

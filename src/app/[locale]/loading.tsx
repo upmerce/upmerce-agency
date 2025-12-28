@@ -1,28 +1,81 @@
 // src/app/[locale]/loading.tsx
+'use client';
+
 import React from 'react';
-import Image from 'next/image'; // Import Image component
+import { Box, CircularProgress, Typography } from '@mui/material';
 import { useTranslations } from 'next-intl';
 
 export default function Loading() {
-  const t = useTranslations('Loading'); 
+  const t = useTranslations('Loading');
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-900 text-gray-200">
-      {/* Animated Logo Icon */}
-      <div 
-        className="animate-pulse" // Simple pulse animation
-        role="status" // For accessibility
-        aria-label={t('loadingMessage')} // For accessibility
-      >
-        <Image
-          src="/icons/logo.webp" // Your logo icon path
-          alt={t('loadingMessage')} // Alt text for accessibility
-          width={80} // Adjust size as needed
-          height={80} // Adjust size as needed
-          className="w-20 h-20 text-purple-500" // Tailwind classes for sizing and color if it's an SVG
+    <Box 
+      sx={{ 
+        height: '100vh',
+        width: '100vw',
+        backgroundColor: '#030303', // Obsidian: Matches your site perfectly
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        justifyContent: 'center',
+        position: 'fixed',
+        top: 0,
+        left: 0,
+        zIndex: 9999
+      }}
+    >
+      <Box sx={{ position: 'relative', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+        {/* 1. Outer "Chassis" Ring (Subtle) */}
+        <CircularProgress 
+          size={80}
+          thickness={1}
+          sx={{ 
+            color: 'rgba(255,255,255,0.1)',
+            position: 'absolute'
+          }} 
         />
-      </div>
-      <p className="mt-4 text-xl font-semibold text-purple-300">{t('loadingText')}</p>
-    </div>
+        
+        {/* 2. Inner "Energy" Ring (Amber Glow) */}
+        <CircularProgress 
+          size={80}
+          thickness={2}
+          sx={{ 
+            color: '#D97706', // Brand Amber
+            animationDuration: '1s',
+            position: 'absolute',
+            left: 0,
+            filter: 'drop-shadow(0 0 10px rgba(217, 119, 6, 0.5))', // The Glow
+            [`& .MuiCircularProgress-circle`]: {
+              strokeLinecap: 'round',
+            },
+          }} 
+        />
+      </Box>
+
+      {/* 3. The Status Text */}
+      <Typography 
+        variant="overline" 
+        sx={{ 
+          mt: 4, 
+          color: 'rgba(255,255,255,0.5)', 
+          letterSpacing: 4, 
+          fontWeight: 600,
+          fontSize: '0.75rem',
+          animation: 'pulse 1.5s infinite ease-in-out'
+        }}
+      >
+        {/* Fallback text if translation isn't ready yet */}
+        INITIALIZING SYSTEM...
+      </Typography>
+
+      {/* CSS Animation for Pulse */}
+      <style jsx global>{`
+        @keyframes pulse {
+          0% { opacity: 0.3; }
+          50% { opacity: 1; }
+          100% { opacity: 0.3; }
+        }
+      `}</style>
+    </Box>
   );
 }

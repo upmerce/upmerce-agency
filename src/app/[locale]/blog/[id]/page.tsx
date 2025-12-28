@@ -2,7 +2,7 @@
 
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
-import {getAllPostIds, getPostData, getSortedPostsData } from '../../../../../lib/blog';
+import { getAllPostIds, getPostData, getSortedPostsData } from '../../../../../lib/blog';
 import mediumStyles from './MediumPost.module.css';
 import Image from 'next/image';
 import { generateCustomMetadata } from '../../../../../lib/metadata';
@@ -12,15 +12,15 @@ import AuthorBio from '@/components/ui/AuthorBio';
 import BlogCallToAction from '@/components/ui/BlogCallToAction';
 import RelatedPostsSection from '@/components/ui/RelatedPostsSection';
 import PostCategoriesAndTags from '@/components/ui/PostCategoriesAndTags';
+import { Box, Chip, Divider, Avatar, Stack, Typography } from '@mui/material';
+import AccessTimeIcon from '@mui/icons-material/AccessTime';
 
-// The type represents the resolved object, which includes locale.
 type PostPageProps = {
   params: Promise<{ id: string; locale: string }>;
 };
 
 export async function generateStaticParams() {
   const paths = getAllPostIds(['en', 'fr', 'ar']);
-  // This now correctly returns all combinations of id and locale.
   return paths.map(path => path.params);
 }
 
@@ -29,33 +29,23 @@ export async function generateMetadata({ params }: PostPageProps): Promise<Metad
     const { id, locale } = await params;
     const postData = await getPostData(id, locale);
     const siteUrl = process.env.NEXT_PUBLIC_API_URL || 'https://upmerce.com';
-    // jsonLd can be added here if needed for metadata
-     // 2. Create the complete JSON-LD object here
+    
     const jsonLd = {
       '@context': 'https://schema.org',
       '@type': 'Article',
-      'mainEntityOfPage': {
-        '@type': 'WebPage',
-        '@id': `${siteUrl}/blog/${id}`, // The canonical URL of the page
-      },
+      'mainEntityOfPage': { '@type': 'WebPage', '@id': `${siteUrl}/blog/${id}` },
       'headline': postData.title,
       'description': postData.description,
-      'image': `${siteUrl}${postData.image}`, // Use the absolute URL for the image
-      'author': {
-        '@type': 'Organization', // Use 'Organization' for your business
-        'name': postData.author,
-      },
-      'publisher': { // Add publisher info to build authority
+      'image': `${siteUrl}${postData.image}`,
+      'author': { '@type': 'Organization', 'name': postData.author },
+      'publisher': {
         '@type': 'Organization',
         'name': siteConfig.brandName,
-        'logo': {
-          '@type': 'ImageObject',
-          'url': `${siteUrl}${siteConfig.logo}`, // Use the logo from your site config
-        }
+        'logo': { '@type': 'ImageObject', 'url': `${siteUrl}${siteConfig.logo}` }
       },
       'datePublished': postData.date,
     };
-    // 3. Generate your base metadata using your existing helper
+
     const baseMetadata = generateCustomMetadata({
       title: postData.title,
       description: postData.description,
@@ -66,17 +56,13 @@ export async function generateMetadata({ params }: PostPageProps): Promise<Metad
       author: { name: postData.author },
       keywords: postData.tags || [],
     });
-   // 4. Merge the JSON-LD script into the final metadata object
+
     return {
       ...baseMetadata,
-      other: {
-        'script[type="application/ld+json"]': JSON.stringify(jsonLd),
-      },
+      other: { 'script[type="application/ld+json"]': JSON.stringify(jsonLd) },
     };
   } catch {
-    return {
-      title: 'Post not found',
-    };
+    return { title: 'Post not found' };
   }
 }
 
@@ -84,101 +70,124 @@ export default async function PostPage({ params }: PostPageProps) {
   try {
     const { id, locale } = await params;
     const postData = await getPostData(id, locale);
-    // --- Data for new components ---
     const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://upmerce.com';
-    const currentPostUrl = `${siteUrl}/${locale}/blog/${id}`; // Full URL for sharing
-    const allPosts = await getSortedPostsData(locale); // Fetch all posts for related section
-    {/*
-       const jsonLd = {
-      '@context': 'https://schema.org',
-      '@type': 'Article',
-      headline: postData.title,
-      description: postData.description,
-      image: postData.image,
-      author: {
-        '@type': 'Person',
-        name: postData.author,
-      },
-      datePublished: postData.date,
-    }; 
-       */}
-   
+    const currentPostUrl = `${siteUrl}/${locale}/blog/${id}`;
+    const allPosts = await getSortedPostsData(locale);
 
     return (
-      <section className={`${mediumStyles["medium-post-bg"]} min-h-screen flex justify-center items-start py-12 px-4`}>
-        {/* <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-        /> */}
+      <main className={mediumStyles["medium-post-bg"]}>
+        {/* Progress Bar could be added here later */}
         
-        <article
-          className={`${mediumStyles["medium-post-container"]} bg-white shadow-md rounded-lg max-w-2xl w-full mx-auto px-8 py-10`}
-          style={{ fontFamily: 'Georgia, Times, serif', boxShadow: '0 2px 32px rgba(0,0,0,0.08)', borderRadius: '8px' }}
-        >
-          <h1
-            className={`${mediumStyles["medium-post-title"]} mb-4`}
-            style={{ fontSize: '2.8rem', fontWeight: 700, lineHeight: '1.2', letterSpacing: '-0.02em', color: '#f7f4f4ff' }}
-          >
-            {postData.title}
-          </h1>
-         {/* MODIFIED: Post Meta Data Structure for better responsiveness */}
-          <div className={`${mediumStyles["medium-post-meta"]} mb-8 flex flex-col sm:flex-row sm:flex-wrap items-start sm:items-center text-sm text-gray-500`}>
-            {/* Section 1: Author and Date - Always try to keep this together */}
-            <div className="flex items-center gap-2 pr-4 mb-2 sm:mb-0 whitespace-nowrap"> {/* Added pr-4 and whitespace-nowrap */}
-              <span style={{ fontWeight: 500, color: '#b0b0b0' }}>{postData.author}</span>
-              <span style={{ fontSize: '1.2em', color: '#b0b0b0' }}>·</span>
-              <span style={{ color: '#b0b0b0' }}>{postData.date}</span>
-            </div>
-
-            {/* Section 2: Categories and Tags - Allow this to wrap naturally */}
-            {postData.categories && postData.categories.length > 0 && (
-              <PostCategoriesAndTags categories={postData.categories} tags={postData.tags || []} />
+        <article className={mediumStyles["medium-post-container"]}>
+          
+          {/* 1. HEADER SECTION (Pt: Top padding) */}
+          <Box sx={{ pt: { xs: 12, md: 16 }, pb: 6, textAlign: 'center' }}>
+            
+            {/* Category Pill */}
+            {postData.categories && postData.categories[0] && (
+               <Chip 
+                label={postData.categories[0]} 
+                sx={{ 
+                  mb: 4, 
+                  bgcolor: 'rgba(217, 119, 6, 0.1)', // Amber tint
+                  color: '#fbbf24', // Amber text
+                  fontWeight: 700, 
+                  letterSpacing: 1,
+                  border: '1px solid rgba(217, 119, 6, 0.2)',
+                  textTransform: 'uppercase'
+                }} 
+              />
             )}
-          </div>
-          {/* END MODIFIED Post Meta Data Structure */}
-          {/* Social Share Buttons - TOP */}
-          <div className="mb-8">
-            <ShareButtons postUrl={currentPostUrl} postTitle={postData.title} />
-          </div>
+
+            {/* The Title */}
+            <h1 className={mediumStyles["medium-post-title"]} style={{ fontSize: 'clamp(2.5rem, 5vw, 4rem)', fontWeight: 800, marginBottom: '2rem' }}>
+              {postData.title}
+            </h1>
+
+            {/* Author & Meta */}
+            <Stack 
+              direction={{ xs: 'column', sm: 'row' }} 
+              spacing={3} 
+              justifyContent="center" 
+              alignItems="center"
+              sx={{ color: 'text.secondary' }}
+            >
+              <Stack direction="row" spacing={1.5} alignItems="center">
+                <Avatar sx={{ width: 32, height: 32, bgcolor: '#D97706', fontSize: '0.875rem' }}>
+                  {postData.author?.charAt(0) || 'U'}
+                </Avatar>
+                <Typography variant="subtitle2" sx={{ color: 'white', fontWeight: 600 }}>
+                  {postData.author}
+                </Typography>
+              </Stack>
+              
+              <Box sx={{ display: { xs: 'none', sm: 'block' }, width: 4, height: 4, borderRadius: '50%', bgcolor: 'rgba(255,255,255,0.3)' }} />
+
+              <Stack direction="row" spacing={1} alignItems="center">
+                <AccessTimeIcon sx={{ fontSize: 18, color: 'rgba(255,255,255,0.5)' }} />
+                <Typography variant="body2" sx={{ color: 'rgba(255,255,255,0.7)' }}>
+                  {postData.date}
+                </Typography>
+              </Stack>
+            </Stack>
+          </Box>
+
+          {/* 2. MAIN IMAGE (Cinematic) */}
           {postData.image && (
-           <Image
-              src={postData.image}
-              alt={postData.title}
-              className={`${mediumStyles["medium-post-image"]} mb-8 rounded-md w-full object-cover`}
-              style={{ maxHeight: '340px', background: '#f6f6f6' }}
-              width={800} // Keep specified width
-              height={340} // Keep specified height
-              priority // This is good, as it's the main image above the fold
-              // ADDED/MODIFIED: The 'sizes' prop is crucial here
-              sizes="(max-width: 768px) 100vw, 800px" 
-              // Explanation for sizes:
-              // (max-width: 768px) 100vw: On screens up to 768px wide (typical mobile/small tablet), 
-              //                            the image takes up 100% of the viewport width.
-              // 800px: On larger screens, it will be 800px wide (or up to its container max-width, which is 800px here).
-            />
+            <Box sx={{ position: 'relative', mb: 8 }}>
+               <Image
+                src={postData.image}
+                alt={postData.title}
+                className={mediumStyles["medium-post-image"]}
+                width={1200}
+                height={630}
+                priority
+                sizes="(max-width: 768px) 100vw, 800px"
+                style={{ width: '100%', height: 'auto', objectFit: 'cover' }}
+              />
+            </Box>
           )}
+
+          {/* 3. THE CONTENT */}
           <div
             className={mediumStyles["medium-post-content"]}
-            style={{ fontSize: '1.18rem', color: '#222', lineHeight: '1.8', letterSpacing: '0.01em' }}
             dangerouslySetInnerHTML={{ __html: postData.contentHtml || '' }}
           />
-          {/* Social Share Buttons - BOTTOM */}
-          <div className="mt-12 pt-6 border-t border-gray-200">
-            <ShareButtons postUrl={currentPostUrl} postTitle={postData.title} />
-          </div>
 
-          {/* Author Bio Section */}
-          <div className="mt-8">
+          {/* 4. FOOTER ACTIONS */}
+          <Box sx={{ mt: 10, pt: 4, borderTop: '1px solid rgba(255,255,255,0.1)' }}>
+             <Stack direction="row" justifyContent="space-between" alignItems="center" flexWrap="wrap" gap={2}>
+                <Box>
+                   <Typography variant="subtitle2" sx={{ color: 'rgba(255,255,255,0.5)', mb: 1 }}>
+                      Share this insight
+                   </Typography>
+                   <ShareButtons postUrl={currentPostUrl} postTitle={postData.title} />
+                </Box>
+                {/* Tags */}
+                {postData.tags && (
+                   <Stack direction="row" spacing={1}>
+                      {postData.tags.map(tag => (
+                         <Chip key={tag} label={`#${tag}`} size="small" sx={{ color: 'rgba(255,255,255,0.6)', bgcolor: 'rgba(255,255,255,0.05)' }} />
+                      ))}
+                   </Stack>
+                )}
+             </Stack>
+          </Box>
+
+          {/* 5. AUTHOR & CTA */}
+          <Box sx={{ mt: 8 }}>
             <AuthorBio authorName={postData.author} locale={locale} />
-          </div>
+          </Box>
 
-          {/* Blog Specific Call-to-Action */}
-          <div className="mt-12">
+          <Box sx={{ mt: 8 }}>
             <BlogCallToAction locale={locale} />
-          </div>
+          </Box>
 
-          {/* Related Posts Section */}
-          <div className="mt-12 pt-6 border-t border-gray-200">
+          {/* 6. RELATED POSTS */}
+          <Box sx={{ mt: 12, pt: 8, borderTop: '1px solid rgba(255,255,255,0.1)' }}>
+            <Typography variant="h4" sx={{ color: 'white', fontWeight: 800, mb: 6, textAlign: 'center' }}>
+               Further Intelligence
+            </Typography>
             <RelatedPostsSection
               currentPostId={id}
               currentPostCategories={postData.categories || []}
@@ -186,9 +195,10 @@ export default async function PostPage({ params }: PostPageProps) {
               allPosts={allPosts}
               locale={locale}
             />
-          </div>
+          </Box>
+
         </article>
-      </section>
+      </main>
     );
   } catch {
     notFound();

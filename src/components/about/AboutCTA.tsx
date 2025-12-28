@@ -1,17 +1,14 @@
-// /src/components/about/AboutCTA.tsx
+// src/components/about/AboutCTA.tsx
 'use client';
 import React from 'react';
 import { Box, Container, Typography, Button, Stack, useTheme } from '@mui/material';
 import RocketLaunchIcon from '@mui/icons-material/RocketLaunch';
 import OpenInNewIcon from '@mui/icons-material/OpenInNew';
 import Link from 'next/link';
-// ▼▼▼ NEW IMPORT ▼▼▼
 import { useTranslations } from 'next-intl';
 
 const AboutCTA = () => {
-  // ▼▼▼ INITIALIZE TRANSLATIONS ▼▼▼
   const t = useTranslations('About.CTA');
-  // ▲▲▲
   const theme = useTheme();
 
   return (
@@ -19,19 +16,24 @@ const AboutCTA = () => {
       component="section" 
       sx={{ 
         py: { xs: 8, md: 12 },
-        background: `linear-gradient(135deg, ${theme.palette.primary.dark} 0%, ${theme.palette.primary.main} 100%)`,
-        color: 'common.white',
-        textAlign: 'center'
+        // The "Obsidian" Background with Amber Center Glow
+        backgroundColor: theme.palette.background.default,
+        backgroundImage: `radial-gradient(circle at 50% 50%, ${theme.palette.secondary.main}15 0%, transparent 60%)`,
+        borderTop: '1px solid rgba(255,255,255,0.05)',
+        textAlign: 'center',
+        position: 'relative',
+        overflow: 'hidden'
       }}
     >
-      <Container maxWidth="md">
-         {/* ▼▼▼ TRANSLATED TEXT ▼▼▼ */}
+      <Container maxWidth="md" sx={{ position: 'relative', zIndex: 1 }}>
         <Typography 
           variant="h2" 
           sx={{ 
             fontWeight: 800, 
             mb: 3,
-            fontSize: { xs: '2rem', md: '3rem' }
+            fontSize: { xs: '2rem', md: '3.5rem' },
+            color: 'white',
+            letterSpacing: '-0.02em'
           }}
         >
           {t('headline')}
@@ -41,10 +43,11 @@ const AboutCTA = () => {
           variant="h5" 
           sx={{ 
             mb: 6, 
-            opacity: 0.9,
+            color: 'text.secondary',
             fontWeight: 400,
             maxWidth: '700px',
-            mx: 'auto'
+            mx: 'auto',
+            lineHeight: 1.6
           }}
         >
           {t('subtitle')}
@@ -56,39 +59,52 @@ const AboutCTA = () => {
           justifyContent="center"
           alignItems="center"
         >
-          {/* Primary Action */}
+          {/* Primary Action - "Millionaire" Style (White Pill) */}
           <Button
             component={Link}
             href="/campaign"
             variant="contained"
-            color="secondary"
             size="large"
             startIcon={<RocketLaunchIcon />}
             sx={{ 
-              py: 1.5, px: 4, fontSize: '1.1rem', fontWeight: 700,
-              borderRadius: 2, boxShadow: theme.shadows[10]
+              py: 1.5, px: 5, 
+              fontSize: '1.1rem', 
+              fontWeight: 700,
+              borderRadius: '50px', // Pill shape
+              backgroundColor: 'white',
+              color: 'black',
+              boxShadow: `0 0 20px ${theme.palette.secondary.main}40`, // Amber Glow
+              '&:hover': {
+                backgroundColor: '#f5f5f5',
+                transform: 'translateY(-2px)',
+                boxShadow: `0 0 30px ${theme.palette.secondary.main}60`,
+              }
             }}
           >
-             {/* ▼▼▼ TRANSLATED TEXT ▼▼▼ */}
             {t('primaryButton')}
           </Button>
 
-          {/* Secondary Action */}
+          {/* Secondary Action - Glass Outline */}
           <Button
             href="https://www.marrago.com"
             target="_blank"
             rel="noopener noreferrer"
             variant="outlined"
-            color="inherit"
             size="large"
             endIcon={<OpenInNewIcon />}
             sx={{ 
-              py: 1.5, px: 4, fontSize: '1.1rem', fontWeight: 600,
-              borderRadius: 2, borderColor: 'rgba(255,255,255,0.5)',
-              '&:hover': { borderColor: 'common.white', bgcolor: 'rgba(255,255,255,0.1)' }
+              py: 1.5, px: 5, 
+              fontSize: '1.1rem', 
+              fontWeight: 600,
+              borderRadius: '50px',
+              borderColor: 'rgba(255,255,255,0.2)',
+              color: 'white',
+              '&:hover': { 
+                borderColor: 'white', 
+                backgroundColor: 'rgba(255,255,255,0.05)' 
+              }
             }}
           >
-             {/* ▼▼▼ TRANSLATED TEXT ▼▼▼ */}
             {t('secondaryButton')}
           </Button>
         </Stack>

@@ -1,191 +1,246 @@
-// -------------------------------------------------------------------------
-// 1. UPDATED FILE: /src/components/sections/ContactSection.tsx
-// This form now sends the current locale to the API.
-// -------------------------------------------------------------------------
+// src/components/sections/ContactSection.tsx
 'use client';
 
-import React, { useState, useRef } from 'react'; // ADDED: useRef
-import { useTranslations, useLocale } from 'next-intl';
+import React, { useState } from 'react';
+import { useTranslations, useLocale } from 'next-intl'; // Import useLocale
+import { Box, Container, Grid, Typography, TextField, Button, useTheme, Paper } from '@mui/material';
+import SendIcon from '@mui/icons-material/Send';
+import AutoGraphIcon from '@mui/icons-material/AutoGraph';
 
 export default function ContactSection({ id }: { id?: string }) {
   const t = useTranslations('AgencyContact');
-  const locale = useLocale();
+  const locale = useLocale(); // Get current language
+  const theme = useTheme();
+  
+  const isRtl = locale === 'ar'; // Check for Arabic
+  const direction = isRtl ? 'rtl' : 'ltr';
 
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [message, setMessage] = useState('');
-  const [status, setStatus] = useState<{ type: 'success' | 'error'; message: string } | null>(null);
-  const [loading, setLoading] = useState(false);
-  // ADDED: State for validation errors per field
-  const [errors, setErrors] = useState<{ name?: string; email?: string; message?: string }>({});
+  const [status, setStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
 
-  // ADDED: Ref to explicitly focus the first error field
-  const firstErrorFieldRef = useRef<HTMLInputElement | HTMLTextAreaElement | null>(null);
-  // ADDED: Ref for the status message div to make it an ARIA live region
-  const statusMessageRef = useRef<HTMLDivElement>(null);
-
-  // ADDED: Client-side validation function
-  const validateForm = () => {
-    const newErrors: { name?: string; email?: string; message?: string } = {};
-    if (!name.trim()) newErrors.name = t('validationNameRequired');
-    if (!email.trim()) newErrors.email = t('validationEmailRequired');
-    else if (!/\S+@\S+\.\S+/.test(email)) newErrors.email = t('validationEmailInvalid');
-    if (!message.trim()) newErrors.message = t('validationMessageRequired');
-    setErrors(newErrors);
-    return Object.keys(newErrors).length === 0;
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    setStatus('submitting');
+    setTimeout(() => setStatus('success'), 1500);
   };
 
-  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
-    setErrors({}); // Clear previous errors
-    setStatus(null); // Clear previous status
-
-    if (!validateForm()) {
-      // If validation fails, focus the first invalid field
-      const firstErrorField = document.querySelector(
-        `[aria-invalid="true"]`
-      ) as HTMLInputElement | HTMLTextAreaElement;
-      if (firstErrorField) {
-        firstErrorField.focus();
-        // Set a status message for screen readers about form errors
-        setStatus({ type: 'error', message: t('formHasErrors') });
+  // Custom Input Style ("Stripe/Linear" + RTL Gap Fix)
+  const inputStyle = {
+    '& .MuiOutlinedInput-root': {
+      backgroundColor: 'rgba(255, 255, 255, 0.03)',
+      color: 'white',
+      borderRadius: 2,
+      textAlign: isRtl ? 'right' : 'left', 
+      
+      // ▼▼▼ FIX 1: THE BORDER COLORS ▼▼▼
+      '& fieldset': { borderColor: 'rgba(255, 255, 255, 0.1)' },
+      '&:hover fieldset': { borderColor: 'rgba(255, 255, 255, 0.3)' },
+      '&.Mui-focused fieldset': { borderColor: theme.palette.secondary.main },
+      
+      // ▼▼▼ FIX 2: THE GAP (LEGEND) ALIGNMENT ▼▼▼
+      '& .MuiOutlinedInput-notchedOutline': {
+        textAlign: isRtl ? 'right' : 'left', // Moves the "cut" to the correct side
+      },
+      
+      // ▼▼▼ FIX 3: INPUT TEXT ALIGNMENT ▼▼▼
+      '& input': {
+        textAlign: isRtl ? 'right' : 'left',
+        ...(isRtl && { paddingRight: '14px' }), // Ensure padding matches
       }
-      return;
-    }
+    },
 
-    setLoading(true);
-
-    try {
-      const response = await fetch('/api/agency-contact', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ name, email, message, locale }),
-      });
-
-      const result = await response.json();
-
-      if (!response.ok) {
-        throw new Error(result.error || t('unexpectedError'));
+    // ▼▼▼ FIX 4: THE FLOATING LABEL POSITION ▼▼▼
+    '& .MuiInputLabel-root': { 
+      color: 'rgba(255, 255, 255, 0.5)',
+      // Reset default positioning
+      left: isRtl ? 'auto' : 'inherit',
+      right: isRtl ? '28px' : 'inherit', // Position it correctly on the right
+      transformOrigin: isRtl ? 'top right' : 'top left',
+      
+      '&.Mui-focused': { color: theme.palette.secondary.main },
+      
+      // Fix the "Shrink" animation position
+      '&.MuiInputLabel-shrink': {
+        transform: isRtl 
+          ? 'translate(0, -9px) scale(0.75)' // RTL: Just move up
+          : 'translate(14px, -9px) scale(0.75)' // LTR: Move up and right
       }
-
-      setStatus({ type: 'success', message: result.message });
-      setName('');
-      setEmail('');
-      setMessage('');
-
-    } catch (err: unknown) {
-      if(err instanceof Error) {
-        setStatus({ type: 'error', message: err.message });
-      } else {
-        setStatus({ type: 'error', message: t('unknownError') });
-      }
-    } finally {
-      setLoading(false);
-    }
+    },
   };
 
   return (
-    <section id={id} className="py-20 bg-gray-800" aria-labelledby="contact-title"> {/* ADDED aria-labelledby */}
-      <div className="container mx-auto px-6 text-center">
-        <h2 id="contact-title" className="text-3xl md:text-4xl font-bold text-white mb-4"> {/* ADDED id="contact-title" */}
-          {t('title')}
-        </h2>
-        <p className="text-gray-400 max-w-2xl mx-auto mb-12">
-          {t('subtitle')}
-        </p>
+    <Box
+      id={id || "contact"}
+      component="section"
+      dir={direction} // Set section direction
+      sx={{
+        py: { xs: 8, md: 15 },
+        backgroundColor: theme.palette.background.default,
+        position: 'relative',
+        borderTop: '1px solid rgba(255,255,255,0.05)',
+      }}
+    >
+      <Container maxWidth="lg">
+        <Grid container spacing={8} alignItems="center">
+          
+          {/* LEFT: The Final Pitch */}
+          <Grid size={{ xs: 12, md: 6 }}>
+            <Box sx={{ mb: 6, textAlign: isRtl ? 'right' : 'left' }}>
+              <Typography 
+                variant="overline" 
+                sx={{ color: theme.palette.secondary.main, fontWeight: 700, letterSpacing: 2 }}
+              >
+                {t('overline')}
+              </Typography>
+              <Typography
+                variant="h2"
+                sx={{
+                  mt: 1,
+                  mb: 3,
+                  fontWeight: 800,
+                  fontSize: { xs: '2.5rem', md: '3.5rem' },
+                  lineHeight: 1.1,
+                  color: 'white'
+                }}
+              >
+                {t('title')}
+              </Typography>
+              <Typography variant="h6" sx={{ color: 'text.secondary', fontWeight: 400, mb: 4, maxWidth: '90%' }}>
+                {t('subtitle')}
+              </Typography>
+            </Box>
 
-        <form onSubmit={handleSubmit} className="max-w-xl mx-auto text-start space-y-4" noValidate> {/* ADDED noValidate for client-side control */}
-          <div>
-            <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-1">
-              {t('formNameLabel')}
-              <span className="text-red-500 ml-1" aria-hidden="true">*</span> {/* Visual indicator for required */}
-            </label>
-            <input
-              type="text"
-              id="name"
-              value={name}
-              onChange={(e) => { setName(e.target.value); setErrors((prev) => ({ ...prev, name: undefined })); }} // Clear error on change
-              required
-              className={`w-full bg-gray-700 text-white rounded-md border-gray-600 focus:ring-purple-500 focus:border-purple-500 p-3 ${errors.name ? 'border-red-500' : ''}`}
-              aria-invalid={!!errors.name} // ADDED: Indicate invalid state
-              aria-describedby={errors.name ? 'name-error' : undefined} // ADDED: Link to error message
-              ref={(el) => { if (errors.name && !firstErrorFieldRef.current) firstErrorFieldRef.current = el; }} // Focus helper
-            />
-            {errors.name && (
-              <p id="name-error" className="text-red-400 text-sm mt-1" role="alert"> {/* ADDED role="alert" */}
-                {errors.name}
-              </p>
-            )}
-          </div>
+            {/* Value Props Recap */}
+            <Box sx={{ display: 'flex', flexDirection: 'column', gap: 3 }}>
+              <Box sx={{ display: 'flex', gap: 2, flexDirection: isRtl ? 'row-reverse' : 'row', textAlign: isRtl ? 'right' : 'left' }}>
+                <Box sx={{ 
+                  p: 1.5, borderRadius: '50%', 
+                  bgcolor: 'rgba(255,255,255,0.05)', 
+                  color: theme.palette.secondary.main,
+                  height: 'fit-content'
+                }}>
+                  <AutoGraphIcon />
+                </Box>
+                <Box>
+                  <Typography variant="subtitle1" sx={{ color: 'white', fontWeight: 700, mb: 0.5 }}>
+                    {t('audit.title')}
+                  </Typography>
+                  <Typography variant="body2" sx={{ color: 'text.secondary', lineHeight: 1.6 }}>
+                    {t('audit.description')}
+                  </Typography>
+                </Box>
+              </Box>
+            </Box>
+          </Grid>
 
-          <div>
-            <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-1">
-              {t('formEmailLabel')}
-              <span className="text-red-500 ml-1" aria-hidden="true">*</span>
-            </label>
-            <input
-              type="email"
-              id="email"
-              value={email}
-              onChange={(e) => { setEmail(e.target.value); setErrors((prev) => ({ ...prev, email: undefined })); }}
-              required
-              className={`w-full bg-gray-700 text-white rounded-md border-gray-600 focus:ring-purple-500 focus:border-purple-500 p-3 ${errors.email ? 'border-red-500' : ''}`}
-              aria-invalid={!!errors.email}
-              aria-describedby={errors.email ? 'email-error' : undefined}
-              ref={(el) => { if (errors.email && !firstErrorFieldRef.current) firstErrorFieldRef.current = el; }}
-            />
-            {errors.email && (
-              <p id="email-error" className="text-red-400 text-sm mt-1" role="alert">
-                {errors.email}
-              </p>
-            )}
-          </div>
-
-          <div>
-            <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-1">
-              {t('formMessageLabel')}
-              <span className="text-red-500 ml-1" aria-hidden="true">*</span>
-            </label>
-            <textarea
-              id="message"
-              rows={5}
-              value={message}
-              onChange={(e) => { setMessage(e.target.value); setErrors((prev) => ({ ...prev, message: undefined })); }}
-              required
-              className={`w-full bg-gray-700 text-white rounded-md border-gray-600 focus:ring-purple-500 focus:border-purple-500 p-3 ${errors.message ? 'border-red-500' : ''}`}
-              aria-invalid={!!errors.message}
-              aria-describedby={errors.message ? 'message-error' : undefined}
-              ref={(el) => { if (errors.message && !firstErrorFieldRef.current) firstErrorFieldRef.current = el; }}
-            ></textarea>
-            {errors.message && (
-              <p id="message-error" className="text-red-400 text-sm mt-1" role="alert">
-                {errors.message}
-              </p>
-            )}
-          </div>
-
-          <div className="text-right">
-            <button
-              type="submit"
-              disabled={loading}
-              className="bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-8 rounded-lg transition duration-300 disabled:bg-gray-500"
+          {/* RIGHT: The Glass Form */}
+          <Grid size={{ xs: 12, md: 6 }}>
+            <Paper
+              elevation={0}
+              component="form"
+              onSubmit={handleSubmit}
+              sx={{
+                p: { xs: 4, md: 6 },
+                borderRadius: 4,
+                backgroundColor: 'rgba(255, 255, 255, 0.02)',
+                border: '1px solid rgba(255, 255, 255, 0.05)',
+                boxShadow: '0 20px 80px -20px rgba(0,0,0,0.5)',
+              }}
             >
-              {loading ? t('loadingButton') : t('ctaButton')}
-            </button>
-          </div>
-        </form>
+              <Typography variant="h5" sx={{ color: 'white', fontWeight: 700, mb: 4, textAlign: isRtl ? 'right' : 'left' }}>
+                {t('form.title')}
+              </Typography>
 
-        {status && (
-          <div
-            ref={statusMessageRef} // ADDED: Ref to the status div
-            className={`mt-6 p-4 rounded-md ${status.type === 'success' ? 'bg-green-900/50 text-green-300 border border-green-700' : 'bg-red-900/50 text-red-300 border border-red-700'}`}
-            role={status.type === 'error' ? 'alert' : 'status'} // ADDED: ARIA live region role
-            aria-live="polite" // ADDED: Politeness setting
-          >
-            {status.message}
-          </div>
-        )}
-      </div>
-    </section>
+              <Grid container spacing={3}>
+                <Grid size={{ xs: 12 }}>
+                  <TextField
+                    fullWidth
+                    dir={direction} // Explicit direction for input
+                    label={t('form.nameLabel')}
+                    variant="outlined"
+                    required
+                    sx={inputStyle}
+                    // Force the label to align correctly if MUI theme context is missing
+                    InputLabelProps={{ 
+                      sx: { 
+                        transformOrigin: isRtl ? 'top right' : 'top left',
+                        left: isRtl ? 'auto' : 14,
+                        right: isRtl ? 14 : 'auto'
+                      } 
+                    }}
+                  />
+                </Grid>
+                <Grid size={{ xs: 12 }}>
+                  <TextField
+                    fullWidth
+                    dir={direction}
+                    label={t('form.emailLabel')}
+                    type="email"
+                    variant="outlined"
+                    required
+                    sx={inputStyle}
+                    InputLabelProps={{ 
+                      sx: { 
+                        transformOrigin: isRtl ? 'top right' : 'top left',
+                        left: isRtl ? 'auto' : 14,
+                        right: isRtl ? 14 : 'auto'
+                      } 
+                    }}
+                  />
+                </Grid>
+                <Grid size={{ xs: 12 }}>
+                  <TextField
+                    fullWidth
+                    dir={direction}
+                    label={t('form.messageLabel')}
+                    multiline
+                    rows={4}
+                    variant="outlined"
+                    required
+                    sx={inputStyle}
+                    InputLabelProps={{ 
+                      sx: { 
+                        transformOrigin: isRtl ? 'top right' : 'top left',
+                        left: isRtl ? 'auto' : 14,
+                        right: isRtl ? 14 : 'auto'
+                      } 
+                    }}
+                  />
+                </Grid>
+
+                <Grid size={{ xs: 12 }}>
+                  <Button
+                    type="submit"
+                    fullWidth
+                    variant="contained"
+                    size="large"
+                    disabled={status === 'submitting' || status === 'success'}
+                    // Flip icon position for RTL
+                    startIcon={isRtl && status !== 'success' ? <SendIcon sx={{ transform: 'scaleX(-1)' }} /> : null}
+                    endIcon={!isRtl && status !== 'success' ? <SendIcon /> : null}
+                    sx={{
+                      py: 2,
+                      fontSize: '1.1rem',
+                      fontWeight: 700,
+                      borderRadius: 2,
+                      backgroundColor: status === 'success' ? '#10b981' : 'white',
+                      color: status === 'success' ? 'white' : 'black',
+                      boxShadow: status === 'success' ? '0 0 20px #10b981' : 'none',
+                      '&:hover': {
+                          backgroundColor: status === 'success' ? '#10b981' : '#f0f0f0',
+                      }
+                    }}
+                  >
+                     {status === 'submitting' ? t('form.loadingButton') : 
+                      status === 'success' ? t('form.successButton') : 
+                      t('form.submitButton')}
+                  </Button>
+                </Grid>
+              </Grid>
+
+            </Paper>
+          </Grid>
+        </Grid>
+      </Container>
+    </Box>
   );
 }

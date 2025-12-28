@@ -1,74 +1,170 @@
 // src/components/sections/ProblemSolutionSection.tsx
-
 'use client';
 
 import React from 'react';
 import { useTranslations } from 'next-intl';
+import { Box, Container, Grid, Typography, Paper, useTheme, Stack } from '@mui/material';
+import MoneyOffIcon from '@mui/icons-material/MoneyOff';
+import SpeedIcon from '@mui/icons-material/Speed';
+import WhatsAppIcon from '@mui/icons-material/WhatsApp';
+import AutoAwesomeIcon from '@mui/icons-material/AutoAwesome';
 
-// IMPORTANT: ADD `aria-hidden="true"` to these decorative SVG icons
-// This tells screen readers to ignore them, as their meaning is conveyed by the surrounding text.
-const CommissionIcon = () => (
-  <svg className="w-8 h-8 text-purple-400" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" aria-hidden="true">
-    <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 15.75l-2.489-2.489m0 0a3.375 3.375 0 10-4.773-4.773 3.375 3.375 0 004.774 4.774zM21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-  </svg>
-);
-const SlowIcon = () => (
-  <svg className="w-8 h-8 text-purple-400" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" aria-hidden="true">
-    <path strokeLinecap="round" strokeLinejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
-  </svg>
-);
-const HeadacheIcon = () => (
-  <svg className="w-8 h-8 text-purple-400" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" aria-hidden="true">
-    <path strokeLinecap="round" strokeLinejoin="round" d="M16.5 8.25V6a2.25 2.25 0 0 0-2.25-2.25H6A2.25 2.25 0 0 0 3.75 6v8.25A2.25 2.25 0 0 0 6 16.5h2.25m8.25-8.25H18a2.25 2.25 0 0 1 2.25 2.25V18A2.25 2.25 0 0 1 18 20.25h-7.5A2.25 2.25 0 0 1 8.25 18v-1.5m8.25-8.25h-6a2.25 2.25 0 0 0-2.25 2.25v6" />
-  </svg>
-);
-
-const icons = [CommissionIcon, SlowIcon, HeadacheIcon];
+// Map icons to the problems
+const problemIcons = [MoneyOffIcon, SpeedIcon, WhatsAppIcon];
 
 export default function ProblemSolutionSection({ id }: { id?: string }) {
   const t = useTranslations('AgencyProblemSolution');
-  
+  const theme = useTheme();
+
   const problems = [0, 1, 2].map(index => ({
     title: t(`problems.${index}.title`),
     description: t(`problems.${index}.description`),
-    icon: icons[index],
+    Icon: problemIcons[index],
   }));
 
   return (
-    <section 
-      id={id || "problem-solution"} // ENSURED ID, provided default
-      className="bg-gray-900 py-20"
-      aria-labelledby="problem-solution-heading" // ADDED: Link section to its main heading
-      role="region" // ADDED: Define section as a generic landmark region
+    <Box
+      id={id || "problem-solution"}
+      component="section"
+      aria-labelledby="problem-solution-heading"
+      sx={{
+        py: { xs: 8, md: 12 },
+        backgroundColor: theme.palette.background.default, // Obsidian
+        position: 'relative',
+        overflow: 'hidden',
+      }}
     >
-      <div className="container mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
-        <div>
-          <h2 id="problem-solution-heading" className="text-3xl lg:text-4xl font-bold text-white mb-6">{t('problemTitle')}</h2> {/* ADDED: ID */}
-          <ul className="space-y-6"> {/* Good use of unordered list */}
-            {problems.map((problem, index) => {
-              const IconComponent = problem.icon;
-              return (
-                <li key={index} className="flex items-start">
-                  <div className="flex-shrink-0 bg-gray-800 p-3 rounded-full mr-4" aria-hidden="true"> {/* ADDED aria-hidden="true" to decorative div */}
-                    <IconComponent />
-                  </div>
-                  <div>
-                    <h4 className="font-bold text-lg text-white">{problem.title}</h4> {/* Good use of h4, nested correctly under h2 */}
-                    <p className="text-gray-400">{problem.description}</p>
-                  </div>
-                </li>
-              );
-            })}
-          </ul>
-        </div>
-        
-        <div className="bg-gray-800 border border-gray-700 p-8 rounded-lg shadow-lg">
-          <h3 className="text-2xl font-bold text-white mb-3">{t('solutionTitle')}</h3> {/* Good use of h3 */}
-          <p className="text-gray-300">
-            {t('solutionText')}
-          </p>
-        </div>
-      </div>
-    </section>
+      {/* Background Decor: Subtle Red Glow behind the "Pain" area */}
+      <Box
+        sx={{
+          position: 'absolute',
+          top: '20%',
+          left: '-10%',
+          width: '500px',
+          height: '500px',
+          background: 'radial-gradient(circle, rgba(220, 38, 38, 0.08) 0%, transparent 70%)',
+          filter: 'blur(60px)',
+          zIndex: 0,
+        }}
+      />
+
+      <Container maxWidth="lg" sx={{ position: 'relative', zIndex: 1 }}>
+        <Grid container spacing={6} alignItems="center">
+          
+          {/* LEFT: THE PAIN (Warning Cards) */}
+          <Grid  size={{xs: 12, md: 6}}>
+            <Typography
+              variant="h3"
+              id="problem-solution-heading"
+              sx={{
+                mb: 4,
+                fontWeight: 800,
+                // Gradient Text for "The OTAs Are Getting Rich"
+                background: 'linear-gradient(90deg, #fff 0%, #999 100%)',
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
+              }}
+            >
+              {t('problemTitle')}
+            </Typography>
+
+            <Stack spacing={3}>
+              {problems.map((problem, index) => (
+                <Paper
+                  key={index}
+                  elevation={0}
+                  sx={{
+                    p: 3,
+                    display: 'flex',
+                    alignItems: 'flex-start',
+                    gap: 2,
+                    backgroundColor: 'rgba(255, 255, 255, 0.03)', // Very subtle glass
+                    border: '1px solid rgba(255, 255, 255, 0.05)',
+                    borderRadius: 3,
+                    transition: 'all 0.3s ease',
+                    '&:hover': {
+                      borderColor: 'rgba(239, 68, 68, 0.3)', // Red border on hover (Warning)
+                      backgroundColor: 'rgba(239, 68, 68, 0.05)',
+                      transform: 'translateX(8px)',
+                    },
+                  }}
+                >
+                  <Box
+                    sx={{
+                      p: 1.5,
+                      borderRadius: 2,
+                      backgroundColor: 'rgba(255,255,255,0.05)',
+                      color: index === 0 ? '#ef4444' : '#fff', // First icon Red (Money Loss)
+                    }}
+                  >
+                    <problem.Icon fontSize="medium" />
+                  </Box>
+                  <Box>
+                    <Typography variant="h6" sx={{ fontWeight: 700, mb: 0.5, color: '#fff' }}>
+                      {problem.title}
+                    </Typography>
+                    <Typography variant="body2" sx={{ color: 'text.secondary', lineHeight: 1.6 }}>
+                      {problem.description}
+                    </Typography>
+                  </Box>
+                </Paper>
+              ))}
+            </Stack>
+          </Grid>
+
+          {/* RIGHT: THE SOLUTION (The Glowing Amber Card) */}
+          <Grid  size={{xs: 12, md: 6}}>
+            <Paper
+              elevation={0}
+              sx={{
+                p: { xs: 4, md: 6 },
+                height: '100%',
+                borderRadius: 5,
+                position: 'relative',
+                overflow: 'hidden',
+                // The "Golden Ticket" Look
+                background: `linear-gradient(135deg, ${theme.palette.secondary.main}15 0%, rgba(0,0,0,0) 100%)`,
+                border: `1px solid ${theme.palette.secondary.main}30`,
+                boxShadow: `0 20px 80px -20px ${theme.palette.secondary.main}20`, // Amber Glow
+              }}
+            >
+              {/* Decorative "Circuit" lines */}
+              <Box sx={{ position: 'absolute', top: 0, right: 0, p: 3, opacity: 0.2 }}>
+                <AutoAwesomeIcon sx={{ fontSize: 60, color: theme.palette.secondary.main }} />
+              </Box>
+
+              <Typography
+                variant="h4"
+                component="h3"
+                sx={{
+                  fontWeight: 800,
+                  color: theme.palette.secondary.main, // Amber Text
+                  mb: 3,
+                  letterSpacing: '-0.02em',
+                }}
+              >
+                {t('solutionTitle')}
+              </Typography>
+
+              <Typography
+                variant="body1"
+                sx={{
+                  color: 'text.primary',
+                  fontSize: '1.1rem',
+                  lineHeight: 1.8,
+                  opacity: 0.9,
+                }}
+              >
+                {t('solutionText')}
+              </Typography>
+              
+              {/* Visual Divider */}
+              <Box sx={{ width: '40px', height: '4px', bgcolor: theme.palette.secondary.main, mt: 4, borderRadius: 2 }} />
+            </Paper>
+          </Grid>
+
+        </Grid>
+      </Container>
+    </Box>
   );
 }

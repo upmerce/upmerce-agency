@@ -1,4 +1,4 @@
-// /src/components/solutions/SolutionsPain.tsx
+// src/components/solutions/SolutionsPain.tsx
 'use client';
 import React from 'react';
 import { Box, Container, Grid, Typography, Paper, Stack, useTheme } from '@mui/material';
@@ -15,56 +15,50 @@ const SolutionsPain = () => {
   const theme = useTheme();
 
   const painPoints = [
-    { icon: <MoneyOffIcon color="error" />, titleKey: "painPoints.commission.title", descKey: "painPoints.commission.desc" },
-    { icon: <WhatsAppIcon color="warning" />, titleKey: "painPoints.whatsapp.title", descKey: "painPoints.whatsapp.desc" },
-    { icon: <BrokenImage color="error" />, titleKey: "painPoints.invisible.title", descKey: "painPoints.invisible.desc" },
+    { icon: <MoneyOffIcon sx={{ color: '#ef4444' }} />, titleKey: "painPoints.commission.title", descKey: "painPoints.commission.desc" },
+    { icon: <WhatsAppIcon sx={{ color: '#f59e0b' }} />, titleKey: "painPoints.whatsapp.title", descKey: "painPoints.whatsapp.desc" },
+    { icon: <BrokenImage sx={{ color: '#ef4444' }} />, titleKey: "painPoints.invisible.title", descKey: "painPoints.invisible.desc" },
   ];
 
   const solutionPoints = [
-    { icon: <AttachMoneyIcon color="success" />, titleKey: "solutionPoints.profit.title", descKey: "solutionPoints.profit.desc" },
-    { icon: <AutoModeIcon color="primary" />, titleKey: "solutionPoints.automation.title", descKey: "solutionPoints.automation.desc" },
-    { icon: <LinkIcon color="primary" />, titleKey: "solutionPoints.presence.title", descKey: "solutionPoints.presence.desc" },
+    { icon: <AttachMoneyIcon sx={{ color: '#10b981' }} />, titleKey: "solutionPoints.profit.title", descKey: "solutionPoints.profit.desc" },
+    { icon: <AutoModeIcon sx={{ color: '#38bdf8' }} />, titleKey: "solutionPoints.automation.title", descKey: "solutionPoints.automation.desc" },
+    { icon: <LinkIcon sx={{ color: theme.palette.secondary.main }} />, titleKey: "solutionPoints.presence.title", descKey: "solutionPoints.presence.desc" },
   ];
 
   return (
-    // ▼▼▼ UPDATED Main Background to dark gray ▼▼▼
-    <Box component="section" sx={{ py: { xs: 8, md: 12 }, bgcolor: 'grey.900', color: 'common.white' }}>
+    <Box component="section" sx={{ py: { xs: 8, md: 12 }, bgcolor: theme.palette.background.default, position: 'relative' }}>
       <Container maxWidth="lg">
-        <Box sx={{ textAlign: 'center', mb: 8 }}>
-           <Typography variant="h5" color="primary" fontWeight="bold" gutterBottom sx={{ textTransform: 'uppercase', letterSpacing: 1 }}>
+        <Box sx={{ textAlign: 'center', mb: 10 }}>
+           <Typography variant="overline" sx={{ color: 'text.secondary', letterSpacing: 2, fontWeight: 700 }}>
             {t('sectionTitle')}
           </Typography>
-          <Typography 
-            variant="h3" 
-            fontWeight={800}
-            sx={{ whiteSpace: 'pre-wrap' }}
-          >
+          <Typography variant="h3" fontWeight={800} sx={{ color: 'white', mt: 1 }}>
             {t('headline')}
           </Typography>
         </Box>
 
         <Grid container spacing={4}>
-          {/* The Old Way (Pain) - Dark Red Theme */}
-          <Grid size={{ xs: 12, md: 6 }}>
-            <Paper elevation={4} sx={{ 
-              p: 4, height: '100%', borderRadius: 4, 
-              // ▼▼▼ UPDATED CARD COLORS ▼▼▼
-              bgcolor: 'rgba(211, 47, 47, 0.1)', // Dark red tint
-              border: `1px solid ${theme.palette.error.dark}`,
-              color: 'common.white'
+          
+          {/* THE OLD WAY (Critical Error) */}
+          <Grid  size={{ xs: 12, md: 6 }}>
+            <Paper elevation={0} sx={{ 
+              p: 5, height: '100%', borderRadius: 4, 
+              bgcolor: 'rgba(239, 68, 68, 0.05)', 
+              border: '1px solid rgba(239, 68, 68, 0.2)',
+              transition: 'all 0.3s',
+              '&:hover': { bgcolor: 'rgba(239, 68, 68, 0.08)' }
             }}>
-              <Typography variant="h4" fontWeight={800} gutterBottom sx={{ color: theme.palette.error.main, mb: 4 }}>
+              <Typography variant="h4" fontWeight={800} sx={{ color: '#ef4444', mb: 4, letterSpacing: '-0.02em' }}>
                 {t('painColumnTitle')}
               </Typography>
               <Stack spacing={4}>
                 {painPoints.map((item, index) => (
                   <Stack key={index} direction="row" spacing={3} alignItems="flex-start">
-                    {/* Darker icon background */}
-                    <Box sx={{ p: 1.5, borderRadius: '50%', bgcolor: 'grey.800', boxShadow: 2 }}>{item.icon}</Box>
+                    <Box sx={{ p: 1.5, borderRadius: 2, bgcolor: 'rgba(239, 68, 68, 0.1)' }}>{item.icon}</Box>
                     <Box>
-                      <Typography variant="h6" fontWeight={700} gutterBottom>{t(item.titleKey)}</Typography>
-                      {/* Lighter gray text */}
-                      <Typography variant="body1" color="grey.300">{t(item.descKey)}</Typography>
+                      <Typography variant="h6" fontWeight={700} sx={{ color: 'white' }}>{t(item.titleKey)}</Typography>
+                      <Typography variant="body2" sx={{ color: 'text.secondary', mt: 0.5 }}>{t(item.descKey)}</Typography>
                     </Box>
                   </Stack>
                 ))}
@@ -72,30 +66,28 @@ const SolutionsPain = () => {
             </Paper>
           </Grid>
 
-          {/* The New Way (Solution) - Dark Blue Theme */}
+          {/* THE NEW WAY (System Optimized) */}
           <Grid size={{ xs: 12, md: 6 }}>
-            <Paper elevation={10} sx={{ 
-              p: 4, height: '100%', borderRadius: 4, 
-              // ▼▼▼ UPDATED CARD COLORS ▼▼▼
-              bgcolor: 'rgba(25, 118, 210, 0.1)', // Dark blue tint
-              border: `1px solid ${theme.palette.primary.dark}`, 
-              position: 'relative', overflow: 'hidden',
-              color: 'common.white'
+            <Paper elevation={0} sx={{ 
+              p: 5, height: '100%', borderRadius: 4, 
+              bgcolor: 'rgba(255, 255, 255, 0.03)', 
+              border: `1px solid ${theme.palette.secondary.main}50`, 
+              boxShadow: `0 0 40px -10px ${theme.palette.secondary.main}20`,
+              position: 'relative', overflow: 'hidden'
             }}>
-               <Box sx={{ position: 'absolute', top: -50, right: -50, width: 200, height: 200, bgcolor: theme.palette.primary.main, opacity: 0.1, borderRadius: '50%' }} />
+              {/* Glow Effect */}
+              <Box sx={{ position: 'absolute', top: -100, right: -100, width: 300, height: 300, background: `radial-gradient(circle, ${theme.palette.secondary.main}20 0%, transparent 70%)` }} />
                
-              <Typography variant="h4" fontWeight={800} gutterBottom sx={{ color: theme.palette.primary.main, mb: 4 }}>
+              <Typography variant="h4" fontWeight={800} sx={{ color: 'white', mb: 4, letterSpacing: '-0.02em' }}>
                 {t('solutionColumnTitle')}
               </Typography>
               <Stack spacing={4}>
                 {solutionPoints.map((item, index) => (
                   <Stack key={index} direction="row" spacing={3} alignItems="flex-start">
-                     {/* Darker icon background */}
-                    <Box sx={{ p: 1.5, borderRadius: '50%', bgcolor: 'grey.800', boxShadow: 2 }}>{item.icon}</Box>
+                    <Box sx={{ p: 1.5, borderRadius: 2, bgcolor: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.1)' }}>{item.icon}</Box>
                     <Box>
-                      <Typography variant="h6" fontWeight={700} gutterBottom>{t(item.titleKey)}</Typography>
-                      {/* Lighter gray text */}
-                      <Typography variant="body1" color="grey.300">{t(item.descKey)}</Typography>
+                      <Typography variant="h6" fontWeight={700} sx={{ color: 'white' }}>{t(item.titleKey)}</Typography>
+                      <Typography variant="body2" sx={{ color: 'text.secondary', mt: 0.5 }}>{t(item.descKey)}</Typography>
                     </Box>
                   </Stack>
                 ))}

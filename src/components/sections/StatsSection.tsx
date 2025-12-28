@@ -1,13 +1,13 @@
 // src/components/sections/StatsSection.tsx
-
 'use client';
 
 import React, { useEffect, useRef, useState } from 'react';
 import { useTranslations } from 'next-intl';
+import { Box, Container, Grid, Typography, useTheme, Paper } from '@mui/material';
 
 const stats = [
-  { value: 95, labelKey: 'performance' },
-  { value: 98, labelKey: 'accessibility' },
+  { value: 98, labelKey: 'performance' },
+  { value: 99, labelKey: 'accessibility' },
   { value: 100, labelKey: 'bestPractices' },
   { value: 100, labelKey: 'seo' },
 ];
@@ -16,6 +16,7 @@ function StatCircle({ value, label }: { value: number; label: string }) {
   const [count, setCount] = useState(0);
   const ref = useRef<HTMLDivElement>(null);
   const hasAnimated = useRef(false);
+  const theme = useTheme();
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -51,84 +52,165 @@ function StatCircle({ value, label }: { value: number; label: string }) {
     };
   }, [value]);
 
+  // Determine color based on score (Like Google Lighthouse)
+  // 90+ is Green (Success), 50-89 is Orange, <50 is Red
+  const strokeColor = value >= 90 ? '#10B981' : theme.palette.secondary.main;
+
   return (
-    // IMPROVED: Added role and aria-labelledby for better semantic grouping for each stat
-    <div 
-      ref={ref} 
-      className="flex flex-col items-center text-center"
-      role="group" 
-      aria-labelledby={`stat-label-${label.replace(/\s/g, '-')}`} // Create a valid ID from label
+    <Paper
+      ref={ref}
+      elevation={0}
+      role="group"
+      aria-labelledby={`stat-label-${label.replace(/\s/g, '-')}`}
+      sx={{
+        p: 4,
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        justifyContent: 'center',
+        // "Obsidian Glass" Tile Style
+        backgroundColor: 'rgba(255, 255, 255, 0.02)',
+        border: '1px solid rgba(255, 255, 255, 0.05)',
+        borderRadius: 4,
+        transition: 'transform 0.3s ease',
+        '&:hover': {
+          transform: 'translateY(-5px)',
+          borderColor: 'rgba(255, 255, 255, 0.1)',
+          backgroundColor: 'rgba(255, 255, 255, 0.03)',
+        }
+      }}
     >
-      <div className="relative w-32 h-32 md:w-40 md:h-40 flex items-center justify-center">
-        {/* ADDED aria-hidden="true" to SVG as it's purely decorative, its value is in the span */}
-        <svg className="absolute w-full h-full" viewBox="0 0 100 100" aria-hidden="true">
+      <Box sx={{ position: 'relative', width: 120, height: 120, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+        <svg
+          width="120"
+          height="120"
+          viewBox="0 0 100 100"
+          aria-hidden="true"
+          style={{ transform: 'rotate(-90deg)' }} // Start from top
+        >
+          {/* Background Circle */}
           <circle
-            className="text-gray-700"
-            strokeWidth="8"
-            stroke="currentColor"
-            fill="transparent"
-            r="45"
             cx="50"
             cy="50"
+            r="45"
+            fill="transparent"
+            stroke="rgba(255,255,255,0.1)"
+            strokeWidth="6"
           />
+          {/* Progress Circle */}
           <circle
-            className="text-indigo-400"
-            strokeWidth="8"
-            stroke="currentColor"
-            fill="transparent"
-            r="45"
             cx="50"
             cy="50"
+            r="45"
+            fill="transparent"
+            stroke={strokeColor}
+            strokeWidth="6"
+            strokeLinecap="round"
             style={{
               strokeDasharray: 283,
               strokeDashoffset: 283 - (283 * count) / 100,
-              transition: 'stroke-dashoffset 0.5s ease-in-out',
+              transition: 'stroke-dashoffset 0.5s ease-out',
+              filter: `drop-shadow(0 0 4px ${strokeColor}60)` // Neon Glow
             }}
-            transform="rotate(-90 50 50)"
           />
         </svg>
-        {/* ADDED aria-live="polite" to announce the final count */}
-        {/* Also added role="status" for the live region */}
-        <span 
-          className="text-3xl md:text-4xl font-bold text-white"
-          aria-live="polite" 
+
+        {/* The Number */}
+        <Typography
+          variant="h4"
+          aria-live="polite"
           role="status"
+          sx={{
+            position: 'absolute',
+            fontWeight: 800,
+            color: 'white',
+            fontSize: '1.8rem',
+          }}
         >
-          {count}%
-        </span> {/* ADDED % sign */}
-      </div>
-      {/* ADDED ID to the label so it can be referenced by aria-labelledby on the parent div */}
-      <p id={`stat-label-${label.replace(/\s/g, '-')}`} className="mt-4 text-lg font-semibold text-gray-300">
+          {count}
+        </Typography>
+      </Box>
+
+      {/* The Label */}
+      <Typography
+        id={`stat-label-${label.replace(/\s/g, '-')}`}
+        variant="subtitle1"
+        sx={{
+          mt: 3,
+          fontWeight: 600,
+          color: 'text.secondary',
+          letterSpacing: 1,
+          textTransform: 'uppercase',
+          fontSize: '0.75rem'
+        }}
+      >
         {label}
-      </p>
-    </div>
+      </Typography>
+    </Paper>
   );
 }
 
 export default function StatsSection() {
   const t = useTranslations('StatsSection');
+  const theme = useTheme();
 
   return (
-    <section 
-      id="stats" // ADDED: ID for potential future linking
-      className="py-20 bg-gray-900"
-      aria-labelledby="stats-heading" // ADDED: Link section to its main heading
-      role="region" // ADDED: Define section as a generic landmark region
+    <Box
+      id="stats"
+      component="section"
+      aria-labelledby="stats-heading"
+      sx={{
+        py: { xs: 8, md: 12 },
+        backgroundColor: theme.palette.background.default, // Obsidian
+        borderBottom: '1px solid rgba(255,255,255,0.05)', // Subtle separator
+      }}
     >
-      <div className="container mx-auto px-6">
-        <div className="text-center mb-16">
-          <h2 id="stats-heading" className="text-3xl md:text-4xl font-extrabold text-white mb-4">{t('title')}</h2> {/* ADDED: ID */}
-          <p className="text-lg text-gray-400 max-w-2xl mx-auto">{t('subtitle')}</p>
-        </div>
-        {/* Using ul/li for a list of stats is more semantic */}
-        <ul className="grid grid-cols-2 md:grid-cols-4 gap-8"> {/* CHANGED to <ul> */}
+      <Container maxWidth="lg">
+        <Box sx={{ textAlign: 'center', mb: 8 }}>
+          <Typography
+            variant="overline"
+            sx={{
+              color: theme.palette.success.main, // Teal text
+              fontWeight: 700,
+              letterSpacing: 2,
+              mb: 1,
+              display: 'block'
+            }}
+          >
+            GOOGLE LIGHTHOUSE AUDIT
+          </Typography>
+          <Typography
+            id="stats-heading"
+            variant="h3"
+            sx={{
+              fontWeight: 800,
+              color: 'white',
+              mb: 2
+            }}
+          >
+            {t('title')}
+          </Typography>
+          <Typography
+            variant="h6"
+            sx={{
+              color: 'text.secondary',
+              fontWeight: 400,
+              maxWidth: '600px',
+              mx: 'auto'
+            }}
+          >
+            {t('subtitle')}
+          </Typography>
+        </Box>
+
+        <Grid container spacing={4}>
           {stats.map((stat) => (
-            <li key={stat.labelKey}> {/* CHANGED to <li> */}
+            <Grid  key={stat.labelKey} size={{xs: 6, md: 3}}>
               <StatCircle value={stat.value} label={t(stat.labelKey)} />
-            </li>
+            </Grid>
           ))}
-        </ul>
-      </div>
-    </section>
+        </Grid>
+      </Container>
+    </Box>
   );
 }

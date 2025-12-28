@@ -1,61 +1,95 @@
-// /src/components/case-studies/CaseCTA.tsx
+// src/components/case-studies/CaseCTA.tsx
 'use client';
 
 import React from 'react';
 import Link from 'next/link';
+import { useTranslations } from 'next-intl';
+import { Box, Container, Typography, Button, Stack, useTheme } from '@mui/material';
 import RocketLaunchIcon from '@mui/icons-material/RocketLaunch';
 import OpenInNewIcon from '@mui/icons-material/OpenInNew';
-// ▼▼▼ NEW IMPORT ▼▼▼
-import { useTranslations } from 'next-intl';
 
 const CaseCTA = () => {
-  // ▼▼▼ INITIALIZE TRANSLATIONS ▼▼▼
   const t = useTranslations('CaseStudies.CTA');
-  // ▲▲▲
+  const theme = useTheme();
 
   return (
-    <section className="py-20 relative overflow-hidden">
-      {/* Background elements unchanged... */}
-      <div className="absolute inset-0 bg-gradient-to-br from-purple-600 to-blue-600 z-0"></div>
-      <div className="absolute inset-0 opacity-10 z-0" style={{ backgroundImage: 'radial-gradient(circle at 2px 2px, white 1px, transparent 0)', backgroundSize: '32px 32px' }}></div>
-
-      <div className="container mx-auto px-6 relative z-10 text-center">
-        
-         {/* ▼▼▼ TRANSLATED TEXT ▼▼▼ */}
-        <h2 className="text-3xl md:text-5xl font-extrabold text-white mb-6 leading-tight max-w-4xl mx-auto">
+    <Box 
+      component="section" 
+      sx={{ 
+        py: { xs: 8, md: 15 },
+        backgroundColor: theme.palette.background.default,
+        backgroundImage: `radial-gradient(circle at 50% 50%, ${theme.palette.secondary.main}15 0%, transparent 60%)`,
+        borderTop: '1px solid rgba(255,255,255,0.05)',
+        textAlign: 'center',
+        position: 'relative',
+        overflow: 'hidden'
+      }}
+    >
+      <Container maxWidth="md" sx={{ position: 'relative', zIndex: 1 }}>
+        <Typography 
+          variant="h2" 
+          sx={{ 
+            fontWeight: 800, mb: 3, fontSize: { xs: '2rem', md: '3.5rem' }, 
+            lineHeight: 1.2, color: 'white' 
+          }}
+        >
           {t('title')}
-        </h2>
-        <p className="text-xl text-purple-100 leading-relaxed max-w-2xl mx-auto mb-12">
+        </Typography>
+        
+        <Typography 
+          variant="h5" 
+          sx={{ 
+            mb: 6, color: 'text.secondary', fontWeight: 400, maxWidth: '800px', mx: 'auto', lineHeight: 1.6 
+          }}
+        >
           {t('subtitle')}
-        </p>
-         {/* ▲▲▲ */}
+        </Typography>
 
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
-          {/* Primary Action */}
-          <Link 
-            href="/campaign" 
-            className="group relative inline-flex items-center justify-center px-8 py-4 text-lg font-bold text-purple-900 bg-white rounded-xl overflow-hidden transition-all duration-300 hover:bg-purple-50 hover:scale-105 hover:shadow-2xl shadow-purple-900/30"
+        <Stack 
+          direction={{ xs: 'column', sm: 'row' }} 
+          spacing={3} 
+          justifyContent="center"
+          alignItems="center"
+        >
+          <Button
+            component={Link}
+            href="/campaign"
+            variant="contained"
+            size="large"
+            startIcon={<RocketLaunchIcon />}
+            sx={{ 
+              py: 1.5, px: 5, fontSize: '1.1rem', fontWeight: 700,
+              borderRadius: '50px', backgroundColor: 'white', color: 'black',
+              boxShadow: `0 0 20px ${theme.palette.secondary.main}40`,
+              minWidth: '200px',
+              '&:hover': {
+                 backgroundColor: '#f5f5f5',
+                 boxShadow: `0 0 30px ${theme.palette.secondary.main}60`,
+              }
+            }}
           >
-            <span className="mr-3"><RocketLaunchIcon /></span>
-             {/* ▼▼▼ TRANSLATED BUTTON ▼▼▼ */}
             {t('primaryBtn')}
-          </Link>
+          </Button>
 
-          {/* Secondary Action */}
-          <a 
-            href="https://www.marrago.com" 
-            target="_blank" 
+          <Button
+            href="https://www.marrago.com"
+            target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-white border-2 border-white/30 rounded-xl transition-all duration-300 hover:bg-white/10 hover:border-white"
+            variant="outlined"
+            size="large"
+            endIcon={<OpenInNewIcon />}
+            sx={{ 
+              py: 1.5, px: 5, fontSize: '1.1rem', fontWeight: 600,
+              borderRadius: '50px', borderColor: 'rgba(255,255,255,0.2)', color: 'white',
+              minWidth: '200px',
+              '&:hover': { borderColor: 'white', bgcolor: 'rgba(255,255,255,0.05)' }
+            }}
           >
-            <span className="mr-3"><OpenInNewIcon /></span>
-             {/* ▼▼▼ TRANSLATED BUTTON ▼▼▼ */}
             {t('secondaryBtn')}
-          </a>
-        </div>
-
-      </div>
-    </section>
+          </Button>
+        </Stack>
+      </Container>
+    </Box>
   );
 };
 

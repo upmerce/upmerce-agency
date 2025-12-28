@@ -1,85 +1,93 @@
-// /src/components/case-studies/CaseResults.tsx
+// src/components/case-studies/CaseResults.tsx
 'use client';
 
 import React from 'react';
-// ▼▼▼ NEW IMPORT ▼▼▼
 import { useTranslations } from 'next-intl';
-
-// Icons remain the same...
-const MoneyIcon = () => (
-  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-10 h-10 text-green-400"><path strokeLinecap="round" strokeLinejoin="round" d="M12 6v12m-3-2.818l.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.051-.659-1.172-.879-1.172-2.303 0-3.182 1.172-.879 3.07-.879 4.242 0L15 8.818m-9 3a3 3 0 006 0v3a3 3 0 00-6 0v-3zm0 0h6m-6 0a3 3 0 01-3-3V9a3 3 0 013-3h6a3 3 0 013 3v3a3 3 0 01-3 3m-6 0a3 3 0 00-6 0v3a3 3 0 006 0v-3zm0 0h6" /></svg>
-);
-const TimeIcon = () => (
-  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-10 h-10 text-blue-400"><path strokeLinecap="round" strokeLinejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-);
-const SearchIcon = () => (
-  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-10 h-10 text-purple-400"><path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" /></svg>
-);
+import { Box, Container, Grid, Typography, Paper, useTheme } from '@mui/material';
+import TrendingUpIcon from '@mui/icons-material/TrendingUp';
+import SpeedIcon from '@mui/icons-material/Speed';
+import SearchIcon from '@mui/icons-material/Search';
 
 const CaseResults = () => {
-  // ▼▼▼ INITIALIZE TRANSLATIONS ▼▼▼
   const t = useTranslations('CaseStudies.Results');
-  // ▲▲▲
+  const theme = useTheme();
 
-  // Data updated to use translation keys
   const metrics = [
-    { icon: <MoneyIcon />, valueKey: "metrics.commission.value", labelKey: "metrics.commission.label", descKey: "metrics.commission.description" },
-    { icon: <TimeIcon />, valueKey: "metrics.time.value", labelKey: "metrics.time.label", descKey: "metrics.time.description" },
-    { icon: <SearchIcon />, valueKey: "metrics.seo.value", labelKey: "metrics.seo.label", descKey: "metrics.seo.description" }
+    { icon: <TrendingUpIcon sx={{ fontSize: 40, color: '#10b981' }} />, valueKey: "metrics.commission.value", labelKey: "metrics.commission.label", descKey: "metrics.commission.description" },
+    { icon: <SpeedIcon sx={{ fontSize: 40, color: '#38bdf8' }} />, valueKey: "metrics.time.value", labelKey: "metrics.time.label", descKey: "metrics.time.description" },
+    { icon: <SearchIcon sx={{ fontSize: 40, color: '#f472b6' }} />, valueKey: "metrics.seo.value", labelKey: "metrics.seo.label", descKey: "metrics.seo.description" }
   ];
 
   return (
-    <section className="py-20 relative overflow-hidden">
-      {/* Background elements unchanged... */}
-      <div className="absolute inset-0 bg-gradient-to-br from-blue-950 via-purple-950 to-gray-900 -z-10"></div>
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-purple-600/10 blur-[120px] rounded-full -z-10"></div>
-
-      <div className="container mx-auto px-6 relative z-10">
+    <Box component="section" sx={{ py: { xs: 8, md: 15 }, bgcolor: theme.palette.background.default, borderTop: '1px solid rgba(255,255,255,0.05)' }}>
+      <Container maxWidth="lg">
         
-        {/* Section Header */}
-        <div className="max-w-3xl mx-auto text-center mb-16">
-           {/* ▼▼▼ TRANSLATED TEXT ▼▼▼ */}
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+        <Box sx={{ textAlign: 'center', mb: 12, maxWidth: '800px', mx: 'auto' }}>
+           <Typography variant="overline" sx={{ color: '#10b981', fontWeight: 700, letterSpacing: 2 }}>
+            ROI VERIFIED
+          </Typography>
+          <Typography variant="h3" fontWeight={800} sx={{ color: 'white', mt: 1, mb: 2 }}>
             {t('title')}
-          </h2>
-          <p className="text-xl text-gray-300 leading-relaxed">
+          </Typography>
+          <Typography variant="body1" fontSize="1.2rem" sx={{ color: 'text.secondary' }}>
             {t('subtitle')}
-          </p>
-           {/* ▲▲▲ */}
-        </div>
+          </Typography>
+        </Box>
 
-        {/* Metrics Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
+        <Grid container spacing={4}>
           {metrics.map((metric, index) => (
-            <div 
-              key={index}
-              className="bg-white/5 border border-white/10 rounded-2xl p-8 text-center backdrop-blur-sm hover:bg-white/10 transition-all duration-300 group"
-            >
-              <div className="mb-6 inline-flex p-4 bg-gray-900/50 rounded-xl group-hover:scale-110 transition-transform">
-                {metric.icon}
-              </div>
-              {/* Big Number with Glow */}
-              <div className="relative mb-2">
-                <div className="absolute inset-0 bg-purple-500/20 blur-xl rounded-full -z-10"></div>
-                <span className="text-5xl md:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-white to-purple-200">
-                   {/* ▼▼▼ TRANSLATED VALUE ▼▼▼ */}
+            <Grid size={{ xs: 12, sm: 6, md: 4 }} key={index}>
+              <Paper
+                elevation={0}
+                sx={{
+                  p: 5,
+                  height: '100%',
+                  borderRadius: 4,
+                  textAlign: 'center',
+                  bgcolor: 'rgba(255, 255, 255, 0.02)', 
+                  border: '1px solid rgba(255, 255, 255, 0.05)',
+                  transition: 'all 0.3s ease',
+                  '&:hover': {
+                    transform: 'translateY(-5px)',
+                    bgcolor: 'rgba(255, 255, 255, 0.04)',
+                    borderColor: 'rgba(255, 255, 255, 0.1)'
+                  }
+                }}
+              >
+                <Box sx={{ mb: 3, display: 'inline-flex', p: 2, borderRadius: '50%', bgcolor: 'rgba(255,255,255,0.05)' }}>
+                  {metric.icon}
+                </Box>
+                
+                {/* The "Neon" Number */}
+                <Typography 
+                  variant="h2" 
+                  fontWeight={800} 
+                  sx={{ 
+                    mb: 1,
+                    background: index === 0 
+                      ? 'linear-gradient(135deg, #10b981 0%, #34d399 100%)' 
+                      : 'linear-gradient(135deg, white 0%, #94a3b8 100%)',
+                    WebkitBackgroundClip: 'text',
+                    WebkitTextFillColor: 'transparent',
+                    letterSpacing: '-0.02em'
+                  }}
+                >
                   {t(metric.valueKey)}
-                </span>
-              </div>
-               {/* ▼▼▼ TRANSLATED LABEL & DESC ▼▼▼ */}
-              <h3 className="text-xl font-bold text-white mb-4">
-                {t(metric.labelKey)}
-              </h3>
-              <p className="text-gray-400 leading-relaxed">
-                {t(metric.descKey)}
-              </p>
-               {/* ▲▲▲ */}
-            </div>
-          ))}
-        </div>
+                </Typography>
 
-      </div>
-    </section>
+                <Typography variant="h6" fontWeight={700} sx={{ color: 'white', mb: 2 }}>
+                  {t(metric.labelKey)}
+                </Typography>
+                <Typography variant="body2" sx={{ color: 'text.secondary', lineHeight: 1.6 }}>
+                  {t(metric.descKey)}
+                </Typography>
+              </Paper>
+            </Grid>
+          ))}
+        </Grid>
+
+      </Container>
+    </Box>
   );
 };
 

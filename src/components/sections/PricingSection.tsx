@@ -1,142 +1,187 @@
+// src/components/sections/PricingSection.tsx
 'use client';
 
 import React from 'react';
-import { Link } from '@/i18n/navigation';
 import { useTranslations } from 'next-intl';
+import { Box, Container, Grid, Typography, Button, useTheme, Chip, Stack, Paper } from '@mui/material';
+import CheckCircleIcon from '@mui/icons-material/CheckCircle';
+import AutoAwesomeIcon from '@mui/icons-material/AutoAwesome';
+import { Link } from '@/i18n/navigation';
 
-// --- Reusable Check Icon Component ---
-const CheckIcon = () => (
-  <svg 
-    className="w-5 h-5 text-green-400 mr-2 flex-shrink-0" 
-    fill="none" 
-    stroke="currentColor" 
-    viewBox="0 0 24 24" 
-    xmlns="http://www.w3.org/2000/svg" 
-    aria-hidden="true"
-  >
-    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
-  </svg>
-);
-
-// --- Interface for Pricing Card Props ---
-interface PricingCardProps {
-  name: string;
-  price: string;
-  description: string;
-  features: string[];
-  cta: string;
-  isPopular: boolean;
-  specialNote?: string;
-  popularLabel: string;
-  featuresListLabel: string;
-  choosePlanLabel: string;
-}
-
-// --- Pricing Card Sub-component ---
-const PricingCard: React.FC<PricingCardProps> = ({
-  name,
-  price,
-  description,
-  features,
-  cta,
-  isPopular,
-  specialNote,
-  popularLabel,
-  featuresListLabel,
-  choosePlanLabel
-}) => {
-  return (
-    <div
-      className={`
-        bg-gray-800 p-8 rounded-lg border border-gray-700 
-        flex flex-col 
-        transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-xl
-        ${isPopular ? 'border-2 border-purple-500 shadow-lg relative pt-14' : ''} 
-      `}
-      role="group"
-      aria-labelledby={`package-name-${name.replace(/\s+/g, '-')}`}
-    >
-      {isPopular && (
-        <span
-          className="bg-purple-500 text-white text-xs font-bold px-3 py-1 rounded-full absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2" 
-          aria-label={popularLabel}
-        >
-          {popularLabel.split(',')[0]}
-        </span>
-      )}
-      <h3 id={`package-name-${name.replace(/\s+/g, '-')}`} className="text-2xl font-bold text-white mb-2">{name}</h3>
-      {/* Price with Strikethrough Support */}
-      <div className="text-4xl font-bold text-white mb-4">
-        <span dangerouslySetInnerHTML={{ __html: price }} />
-      </div>
-      <p className="text-gray-200 mb-6">{description}</p> 
-      <ul className="text-left space-y-2 mb-8" aria-label={featuresListLabel}>
-        {features.map((feature, fIndex) => (
-          <li key={fIndex} className="flex items-center text-gray-200">
-            <CheckIcon />
-            <span>{feature}</span>
-          </li>
-        ))}
-      </ul>
-      <Link
-        href="#contact" 
-        className="mt-auto bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300 text-center"
-        aria-label={choosePlanLabel}
-      >
-        {cta}
-      </Link>
-      {specialNote && <p className="text-sm text-gray-500 mt-4">{specialNote}</p>}
-    </div>
-  );
-};
-
-// --- Main Pricing Section Component ---
 export default function PricingSection({ id }: { id?: string }) {
   const t = useTranslations('AgencyPricing');
+  const theme = useTheme();
 
-  // --- Data Generation ---
-  const packages = [0, 1, 2].map(index => {
-    const features: string[] = t.raw(`packages.${index}.features`);
-    return {
-      name: t(`packages.${index}.name`),
-      price: t.raw(`packages.${index}.price`), // Use t.raw() to get HTML for price
-      description: t(`packages.${index}.description`),
-      features: features,
-      cta: t(`packages.${index}.cta`),
-      specialNote: index === 2 ? undefined : t(`packages.${index}.note`),
-      isPopular: t.raw(`packages.${index}.isPopular`) as boolean,
-    };
-  });
+  const packages = [0, 1, 2]; // Indices for your 3 plans
 
   return (
-    <section
+    <Box
       id={id || "pricing"}
-      className="py-20 bg-gray-900 dark:bg-gray-900"
-      aria-labelledby="pricing-heading"
-      role="region"
+      component="section"
+      sx={{
+        py: { xs: 8, md: 12 },
+        backgroundColor: theme.palette.background.default,
+        position: 'relative',
+        overflow: 'hidden',
+      }}
     >
-      <div className="container mx-auto px-6 text-center">
-        <h2 id="pricing-heading" className="text-3xl md:text-4xl font-bold text-white mb-4">{t('title')}</h2>
-        <p className="text-gray-400 max-w-2xl mx-auto mb-12">{t('subtitle')}</p>
-        
-        <div className="grid md:grid-cols-3 gap-8">
-          {packages.map((pkg, index) => (
-            <PricingCard
-              key={index}
-              name={pkg.name}
-              price={pkg.price}
-              description={pkg.description}
-              features={pkg.features}
-              cta={pkg.cta}
-              isPopular={pkg.isPopular}
-              specialNote={pkg.specialNote}
-              popularLabel={t('popularPlanLabel', { packageName: pkg.name })}
-              featuresListLabel={t('featuresListLabel', { packageName: pkg.name })}
-              choosePlanLabel={t('choosePlanLabel', { packageName: pkg.name })}
-            />
-          ))}
-        </div>
-      </div>
-    </section>
+      {/* Background Decor: Amber Glow behind the Pricing Area */}
+      <Box
+        sx={{
+          position: 'absolute',
+          top: '50%',
+          left: '50%',
+          transform: 'translate(-50%, -50%)',
+          width: '80%',
+          height: '600px',
+          background: `radial-gradient(circle, ${theme.palette.secondary.main}08 0%, transparent 70%)`,
+          zIndex: 0,
+        }}
+      />
+
+      <Container maxWidth="lg" sx={{ position: 'relative', zIndex: 1 }}>
+        {/* Header */}
+        <Box sx={{ textAlign: 'center', mb: 8, maxWidth: '700px', mx: 'auto' }}>
+          <Typography
+            variant="h3"
+            sx={{
+              fontWeight: 800,
+              mb: 2,
+              color: 'white',
+            }}
+          >
+            {t('title')}
+          </Typography>
+          <Typography variant="h6" sx={{ color: 'text.secondary', fontWeight: 400 }}>
+            {t('subtitle')}
+          </Typography>
+        </Box>
+
+        {/* Pricing Cards */}
+        <Grid container spacing={4} alignItems="center">
+          {packages.map((index) => {
+            // Retrieve data
+            const name = t(`packages.${index}.name`);
+            const price = t(`packages.${index}.price`);
+            const description = t(`packages.${index}.description`);
+            const features = t.raw(`packages.${index}.features`) as string[];
+            const isPopular = index === 1; // Middle plan is the "Hero"
+
+            return (
+              <Grid  key={index} size={{xs: 12, md: 4}}>
+                <Paper
+                  elevation={0}
+                  sx={{
+                    p: 4,
+                    height: '100%',
+                    position: 'relative',
+                    // Logic for the "Popular" Card vs others
+                    transform: isPopular ? { md: 'scale(1.05)' } : 'none',
+                    zIndex: isPopular ? 2 : 1,
+                    backgroundColor: isPopular ? '#121212' : 'rgba(255,255,255,0.02)',
+                    border: isPopular 
+                      ? `1px solid ${theme.palette.secondary.main}` 
+                      : '1px solid rgba(255,255,255,0.08)',
+                    borderRadius: 4,
+                    boxShadow: isPopular 
+                      ? `0 0 40px -10px ${theme.palette.secondary.main}30` // Amber Glow
+                      : 'none',
+                    transition: 'transform 0.3s ease',
+                  }}
+                >
+                  {/* "Best ROI" Badge for Popular Plan */}
+                  {isPopular && (
+                    <Chip
+                      icon={<AutoAwesomeIcon sx={{ fontSize: '16px !important', color: 'black !important' }} />}
+                      label={t('popular')}
+                      sx={{
+                        position: 'absolute',
+                        top: -16,
+                        left: '50%',
+                        transform: 'translateX(-50%)',
+                        backgroundColor: theme.palette.secondary.main,
+                        color: 'black',
+                        fontWeight: 700,
+                        border: '1px solid white',
+                      }}
+                    />
+                  )}
+
+                  {/* Plan Name & Price */}
+                  <Typography variant="overline" sx={{ color: isPopular ? theme.palette.secondary.main : 'text.secondary', fontWeight: 700, letterSpacing: 1 }}>
+                    {name}
+                  </Typography>
+                  <Typography variant="h3" sx={{ fontWeight: 800, color: 'white', mt: 1, mb: 2 }}>
+                    {price}
+                  </Typography>
+                  <Typography variant="body2" sx={{ color: 'text.secondary', mb: 4, minHeight: '60px' }}>
+                    {description}
+                  </Typography>
+
+                  {/* CTA Button */}
+                  <Button
+                    fullWidth
+                    component={Link}
+                    href="#contact"
+                    variant={isPopular ? 'contained' : 'outlined'}
+                    color={isPopular ? 'secondary' : 'primary'}
+                    size="large"
+                    sx={{
+                      mb: 4,
+                      py: 1.5,
+                      fontWeight: 700,
+                      borderRadius: 3,
+                      // Specific styling for the popular button to make it pop
+                      ...(isPopular && {
+                        backgroundColor: 'white',
+                        color: 'black',
+                        '&:hover': {
+                          backgroundColor: '#f0f0f0',
+                        }
+                      })
+                    }}
+                  >
+                    {t(`packages.${index}.cta`)}
+                  </Button>
+
+                  {/* Features List */}
+                  <Stack spacing={2}>
+                    {features.map((feature, i) => (
+                      <Box key={i} sx={{ display: 'flex', alignItems: 'flex-start', gap: 1.5 }}>
+                        <CheckCircleIcon 
+                          sx={{ 
+                            fontSize: 20, 
+                            color: isPopular ? theme.palette.secondary.main : 'rgba(255,255,255,0.3)',
+                            mt: 0.3 
+                          }} 
+                        />
+                        <Typography variant="body2" sx={{ color: 'text.secondary' }}>
+                          {feature}
+                        </Typography>
+                      </Box>
+                    ))}
+                  </Stack>
+
+                  {/* ROI Note */}
+                  <Typography 
+                    variant="caption" 
+                    sx={{ 
+                      display: 'block', 
+                      mt: 4, 
+                      textAlign: 'center', 
+                      color: 'text.disabled',
+                      fontStyle: 'italic' 
+                    }}
+                  >
+                    {t(`packages.${index}.note`)}
+                  </Typography>
+
+                </Paper>
+              </Grid>
+            );
+          })}
+        </Grid>
+      </Container>
+    </Box>
   );
 }

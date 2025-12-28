@@ -1,70 +1,64 @@
-// /src/components/about/AboutFounder.tsx
+// src/components/about/AboutFounder.tsx
 'use client';
 import React from 'react';
-import { Box, Container, Grid, Typography, Stack, useTheme } from '@mui/material';
+import { Box, Container, Grid, Typography, Stack, useTheme, Avatar } from '@mui/material';
 import FormatQuoteIcon from '@mui/icons-material/FormatQuote';
 import Image from 'next/image';
-// ▼▼▼ NEW IMPORT ▼▼▼
 import { useTranslations } from 'next-intl';
 
 const AboutFounder = () => {
-  // ▼▼▼ INITIALIZE TRANSLATIONS ▼▼▼
   const t = useTranslations('About.Founder');
-  // ▲▲▲
   const theme = useTheme();
 
   return (
     <Box 
       component="section" 
       sx={{ 
-        py: { xs: 8, md: 12 },
-        bgcolor: 'grey.900',
-        color: 'common.white',
+        py: { xs: 8, md: 15 },
+        backgroundColor: theme.palette.background.default,
         position: 'relative',
         overflow: 'hidden'
       }}
     >
-      
       <Container maxWidth="lg">
-        <Grid container spacing={{ xs: 6, md: 8 }} alignItems="center">
-          {/* Left Column: The Quote */}
+        <Grid container spacing={{ xs: 8, md: 8 }} alignItems="center">
+          
+          {/* Left Column: The Manifesto */}
           <Grid size={{ xs: 12, md: 7 }} order={{ xs: 2, md: 1 }}>
-            <Box sx={{ position: 'relative', zIndex: 2 }}>
-              {/* Giant Quote Icon */}
+            <Box sx={{ position: 'relative', zIndex: 2, pl: { md: 4 } }}>
+              {/* Giant Background Icon */}
               <FormatQuoteIcon 
                 sx={{ 
-                  fontSize: { xs: 80, md: 120 }, 
-                  color: 'primary.main',
-                  opacity: 0.3,
+                  fontSize: { xs: 80, md: 160 }, 
+                  color: 'white',
+                  opacity: 0.03,
                   position: 'absolute',
-                  top: -40, left: -20, zIndex: -1
+                  top: -60, left: -40, zIndex: -1,
+                  transform: 'rotate(180deg)'
                 }} 
               />
               
-              {/* The Manifesto Quote */}
               <Typography 
-                variant="h4" 
                 component="blockquote"
                 sx={{ 
+                  fontFamily: 'serif',
                   fontStyle: 'italic', 
-                  fontWeight: 500,
+                  fontSize: { xs: '1.5rem', md: '2.2rem' },
                   lineHeight: 1.4,
-                  mb: 4,
-                  fontSize: { xs: '1.5rem', md: '2rem' }
+                  mb: 5,
+                  color: 'white',
                 }}
               >
-                 {/* ▼▼▼ TRANSLATED TEXT ▼▼▼ */}
-                {t('quote')}
+                &ldquo;{t('quote')}&rdquo;
               </Typography>
 
-              {/* Signature Block */}
               <Stack direction="row" spacing={2} alignItems="center">
+                <Box sx={{ width: 3, height: 40, bgcolor: theme.palette.secondary.main }} />
                 <Box>
-                   {/* ▼▼▼ TRANSLATED TEXT ▼▼▼ */}
-                  <Typography variant="h6" fontWeight={700} sx={{ color: 'primary.light' }}>
+                  <Typography variant="h6" fontWeight={700} sx={{ color: 'white' }}>
                     {t('name')}
                   </Typography>
-                  <Typography variant="subtitle2" sx={{ opacity: 0.8, letterSpacing: 1, textTransform: 'uppercase' }}>
+                  <Typography variant="subtitle2" sx={{ color: theme.palette.secondary.main, letterSpacing: 1, textTransform: 'uppercase' }}>
                     {t('role')}
                   </Typography>
                 </Box>
@@ -72,31 +66,41 @@ const AboutFounder = () => {
             </Box>
           </Grid>
 
-          {/* Right Column: The Photo */}
+          {/* Right Column: The Portrait */}
           <Grid size={{ xs: 12, md: 5 }} order={{ xs: 1, md: 2 }}>
             <Box
               sx={{
                 position: 'relative',
                 aspectRatio: '1 / 1', 
                 width: '100%',
-                maxWidth: '500px',
+                maxWidth: '450px',
                 mx: 'auto',
-                borderRadius: 4,
-                border: `4px solid ${theme.palette.primary.main}`,
+                borderRadius: '50%', // Circle crop for elegance
+                border: `1px solid rgba(255,255,255,0.1)`,
                 overflow: 'hidden',
-                boxShadow: theme.shadows[20]
+                boxShadow: `0 20px 60px -20px rgba(0,0,0,0.8)`
               }}
             >
-              {/* Make sure this image exists! */}
               <Image
                 src="/images/founder-photo.webp"
-                alt="Mustapha Ouazza, Founder of Upmerce"
+                alt="Mustapha Ouazza"
                 fill
                 style={{ objectFit: 'cover' }}
                 sizes="(max-width: 768px) 100vw, 50vw"
               />
+              
+              {/* Inner Glow Border */}
+              <Box 
+                sx={{ 
+                  position: 'absolute', inset: 0, 
+                  borderRadius: '50%', 
+                  border: `1px solid ${theme.palette.secondary.main}`, 
+                  opacity: 0.5 
+                }} 
+              />
             </Box>
           </Grid>
+
         </Grid>
       </Container>
     </Box>

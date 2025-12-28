@@ -1,4 +1,4 @@
-// /src/components/about/AboutDifference.tsx
+// src/components/about/AboutDifference.tsx
 'use client';
 import React from 'react';
 import { Box, Container, Grid, Typography, Paper, Stack, useTheme } from '@mui/material';
@@ -14,19 +14,19 @@ const AboutDifference = () => {
   const pillars = [
     {
       id: 1,
-      icon: <SpeedIcon sx={{ fontSize: 60 }} color="primary" />,
+      icon: <SpeedIcon sx={{ fontSize: 40, color: '#38bdf8' }} />, // Cyan for Speed
       titleKey: "pillars.speed.title",
       descKey: "pillars.speed.description"
     },
     {
       id: 2,
-      icon: <MonetizationOnIcon sx={{ fontSize: 60 }} color="success" />,
+      icon: <MonetizationOnIcon sx={{ fontSize: 40, color: '#10b981' }} />, // Emerald for Money
       titleKey: "pillars.commission.title",
       descKey: "pillars.commission.description"
     },
     {
       id: 3,
-      icon: <PhoneIphoneIcon sx={{ fontSize: 60 }} color="secondary" />,
+      icon: <PhoneIphoneIcon sx={{ fontSize: 40, color: theme.palette.secondary.main }} />, // Amber for Mobile
       titleKey: "pillars.mobile.title",
       descKey: "pillars.mobile.description"
     }
@@ -35,52 +35,47 @@ const AboutDifference = () => {
   return (
     <Box 
       component="section" 
-      // ▼▼▼ UPDATED COLORS: Alternating dark background ▼▼▼
       sx={{ 
         py: { xs: 8, md: 12 },
-        bgcolor: 'grey.800',
-        color: 'common.white'
+        backgroundColor: theme.palette.background.default,
+        borderTop: '1px solid rgba(255,255,255,0.05)',
+        borderBottom: '1px solid rgba(255,255,255,0.05)',
       }}
     >
       <Container maxWidth="lg">
-        {/* Section Heading */}
-        <Box sx={{ textAlign: 'center', mb: 8, maxWidth: '800px', mx: 'auto' }}>
+        <Box sx={{ textAlign: 'center', mb: 10 }}>
           <Typography 
-            variant="h5" 
-            color="primary" 
-            fontWeight="bold" 
-            gutterBottom
-            sx={{ textTransform: 'uppercase', letterSpacing: 1 }}
+            variant="overline" 
+            sx={{ color: 'text.secondary', letterSpacing: 2, fontWeight: 700 }}
           >
             {t('sectionTitle')}
           </Typography>
           <Typography 
             variant="h3" 
-            sx={{ fontWeight: 800, mb: 2 }}
+            sx={{ fontWeight: 800, color: 'white', mt: 1 }}
           >
             {t('headline')}
           </Typography>
         </Box>
 
-        {/* The 3-Column Grid of Pillars */}
         <Grid container spacing={4}>
           {pillars.map((pillar) => (
             <Grid size={{ xs: 12, md: 4 }} key={pillar.id}>
               <Paper
-                elevation={2}
-                // ▼▼▼ UPDATED CARDS: Dark background, light border ▼▼▼
+                elevation={0}
                 sx={{
                   p: 4,
                   height: '100%',
                   borderRadius: 4,
-                  bgcolor: 'grey.900', // Dark card background
-                  color: 'common.white', // White text
-                  border: `1px solid ${theme.palette.grey[800]}`, // Subtle border
-                  transition: 'transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, border-color 0.3s',
+                  // Glassmorphism Card
+                  backgroundColor: 'rgba(255,255,255,0.02)', 
+                  border: '1px solid rgba(255,255,255,0.05)',
+                  transition: 'all 0.3s ease',
                   '&:hover': {
-                    transform: 'translateY(-8px)',
-                    boxShadow: theme.shadows[10],
-                    borderColor: 'primary.main' // Highlight border on hover
+                    transform: 'translateY(-5px)',
+                    backgroundColor: 'rgba(255,255,255,0.04)',
+                    borderColor: 'rgba(255,255,255,0.1)',
+                    boxShadow: `0 10px 40px -10px rgba(0,0,0,0.5)`
                   }
                 }}
               >
@@ -88,21 +83,23 @@ const AboutDifference = () => {
                   <Box 
                     sx={{ 
                       p: 2, 
-                      borderRadius: '50%', 
-                      // Darker background for icon circle
-                      bgcolor: 'grey.800',
+                      borderRadius: 3, 
+                      bgcolor: 'rgba(255,255,255,0.05)',
                       display: 'inline-flex',
+                      border: '1px solid rgba(255,255,255,0.05)'
                     }}
                   >
                     {pillar.icon}
                   </Box>
-                  <Typography variant="h5" fontWeight={700} gutterBottom>
-                    {t(pillar.titleKey)}
-                  </Typography>
-                  {/* Lighter gray text for description */}
-                  <Typography variant="body1" color="grey.400" sx={{ lineHeight: 1.7 }}>
-                    {t(pillar.descKey)}
-                  </Typography>
+                  
+                  <Box>
+                    <Typography variant="h5" fontWeight={700} sx={{ color: 'white', mb: 1 }}>
+                      {t(pillar.titleKey)}
+                    </Typography>
+                    <Typography variant="body1" sx={{ color: 'text.secondary', lineHeight: 1.6 }}>
+                      {t(pillar.descKey)}
+                    </Typography>
+                  </Box>
                 </Stack>
               </Paper>
             </Grid>

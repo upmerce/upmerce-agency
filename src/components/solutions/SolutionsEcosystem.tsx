@@ -1,4 +1,4 @@
-// /src/components/solutions/SolutionsEcosystem.tsx
+// src/components/solutions/SolutionsEcosystem.tsx
 'use client';
 import React from 'react';
 import { Box, Container, Grid, Typography, Paper, Stack, useTheme } from '@mui/material';
@@ -15,68 +15,62 @@ const SolutionsEcosystem = () => {
   const theme = useTheme();
 
   const features = [
-    { icon: <ReviewsIcon color="warning" />, titleKey: "features.reviews.title", descKey: "features.reviews.desc" },
-    { icon: <BookIcon color="primary" />, titleKey: "features.blog.title", descKey: "features.blog.desc" },
-    { icon: <MapIcon color="success" />, titleKey: "features.maps.title", descKey: "features.maps.desc" },
-    { icon: <PeopleAltIcon color="secondary" />, titleKey: "features.crm.title", descKey: "features.crm.desc" },
-    { icon: <MarkEmailReadIcon color="info" />, titleKey: "features.notifications.title", descKey: "features.notifications.desc" },
-    { icon: <PhotoFilterIcon color="error" />, titleKey: "features.images.title", descKey: "features.images.desc" },
+    { icon: <ReviewsIcon sx={{ color: '#f59e0b' }} />, titleKey: "features.reviews.title", descKey: "features.reviews.desc" },
+    { icon: <BookIcon sx={{ color: '#3b82f6' }} />, titleKey: "features.blog.title", descKey: "features.blog.desc" },
+    { icon: <MapIcon sx={{ color: '#10b981' }} />, titleKey: "features.maps.title", descKey: "features.maps.desc" },
+    { icon: <PeopleAltIcon sx={{ color: '#8b5cf6' }} />, titleKey: "features.crm.title", descKey: "features.crm.desc" },
+    { icon: <MarkEmailReadIcon sx={{ color: '#ec4899' }} />, titleKey: "features.notifications.title", descKey: "features.notifications.desc" },
+    { icon: <PhotoFilterIcon sx={{ color: '#ef4444' }} />, titleKey: "features.images.title", descKey: "features.images.desc" },
   ];
 
   return (
-    // ▼▼▼ UPDATED COLORS: Main dark background ▼▼▼
-    <Box component="section" sx={{ py: { xs: 8, md: 12 }, bgcolor: 'grey.900', color: 'common.white' }}>
+    <Box component="section" sx={{ py: { xs: 8, md: 15 }, bgcolor: theme.palette.background.default }}>
       <Container maxWidth="lg">
-        {/* Section Heading */}
-        <Box sx={{ textAlign: 'center', mb: 8, maxWidth: '800px', mx: 'auto' }}>
-          <Typography variant="h5" color="primary" fontWeight="bold" gutterBottom sx={{ textTransform: 'uppercase', letterSpacing: 1 }}>
+        <Box sx={{ textAlign: 'center', mb: 10, maxWidth: '800px', mx: 'auto' }}>
+          <Typography variant="overline" sx={{ color: 'text.secondary', fontWeight: 700, letterSpacing: 2 }}>
             {t('sectionTitle')}
           </Typography>
-          <Typography variant="h3" fontWeight={800} sx={{ mb: 3 }}>
+          <Typography variant="h3" fontWeight={800} sx={{ color: 'white', mt: 1, mb: 2 }}>
             {t('headline')}
           </Typography>
-          {/* Lighter gray text */}
-          <Typography variant="body1" fontSize="1.2rem" color="grey.400">
+          <Typography variant="body1" fontSize="1.2rem" sx={{ color: 'text.secondary' }}>
             {t('body')}
           </Typography>
         </Box>
 
-        {/* The Feature Grid */}
-        <Grid container spacing={4}>
+        <Grid container spacing={3}>
           {features.map((feature, index) => (
             <Grid size={{ xs: 12, sm: 6, md: 4 }} key={index}>
               <Paper
-                elevation={2}
-                // ▼▼▼ UPDATED CARDS: Dark background, light border ▼▼▼
+                elevation={0}
                 sx={{
                   p: 4,
                   height: '100%',
-                  borderRadius: 4,
-                  bgcolor: 'grey.900', // Dark card bg
-                  color: 'common.white',
-                  border: `1px solid ${theme.palette.grey[800]}`, // Light border
-                  transition: 'transform 0.3s, box-shadow 0.3s, border-color 0.3s',
+                  borderRadius: 3,
+                  bgcolor: 'rgba(255,255,255,0.02)', // Glass
+                  border: '1px solid rgba(255,255,255,0.05)',
+                  transition: 'all 0.3s ease',
                   '&:hover': {
                     transform: 'translateY(-5px)',
-                    boxShadow: theme.shadows[8],
-                    borderColor: theme.palette.primary.main
+                    bgcolor: 'rgba(255,255,255,0.04)',
+                    borderColor: 'rgba(255,255,255,0.1)',
+                    boxShadow: '0 10px 30px -10px rgba(0,0,0,0.5)'
                   }
                 }}
               >
                 <Stack spacing={2}>
                   <Box sx={{ 
-                    p: 1.5, borderRadius: '50%', 
-                    // Darker icon background
-                    bgcolor: 'grey.800',
-                    display: 'inline-flex', alignSelf: 'flex-start', boxShadow: 1
+                    p: 1.5, borderRadius: 2, 
+                    bgcolor: 'rgba(255,255,255,0.05)', 
+                    display: 'inline-flex', alignSelf: 'flex-start',
+                    border: '1px solid rgba(255,255,255,0.05)'
                   }}>
                     {feature.icon}
                   </Box>
-                  <Typography variant="h6" fontWeight={700}>
+                  <Typography variant="h6" fontWeight={700} sx={{ color: 'white' }}>
                     {t(feature.titleKey)}
                   </Typography>
-                  {/* Lighter gray text */}
-                  <Typography variant="body2" color="grey.400" sx={{ lineHeight: 1.6 }}>
+                  <Typography variant="body2" sx={{ color: 'text.secondary', lineHeight: 1.6 }}>
                     {t(feature.descKey)}
                   </Typography>
                 </Stack>
