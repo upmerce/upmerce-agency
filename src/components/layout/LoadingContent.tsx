@@ -1,19 +1,19 @@
-// src/app/[locale]/loading.tsx
+// src/components/layout/LoadingContent.tsx
 'use client';
 
 import React from 'react';
 import { Box, CircularProgress, Typography } from '@mui/material';
-import { useTranslations } from 'next-intl';
+//import { useTranslations } from 'next-intl';
 
-export default function Loading() {
-  const t = useTranslations('Loading');
+export default function LoadingContent() {
+ // const t = useTranslations('Loading');
 
   return (
     <Box 
       sx={{ 
         height: '100vh',
         width: '100vw',
-        backgroundColor: '#030303', // Obsidian: Matches your site perfectly
+        backgroundColor: '#030303', // Obsidian
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
@@ -64,7 +64,6 @@ export default function Loading() {
           animation: 'pulse 1.5s infinite ease-in-out'
         }}
       >
-        {/* Fallback text if translation isn't ready yet */}
         INITIALIZING SYSTEM...
       </Typography>
 

@@ -1,21 +1,17 @@
-// src/app/[locale]/not-found.tsx
+// src/components/layout/NotFoundContent.tsx
 'use client';
 
 import React from 'react';
 import Link from 'next/link';
 import { Box, Container, Typography, Button, Stack, Chip } from '@mui/material';
-import RadarIcon from '@mui/icons-material/Radar'; // "Scanning" feel
+import RadarIcon from '@mui/icons-material/Radar';
 import HomeIcon from '@mui/icons-material/Home';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 
-// Note: not-found.tsx in app router is a Server Component by default, 
-// but we use 'use client' for the router/navigation features if needed 
-// or for MUI interactivity. Here it's static enough, but 'use client' is safe.
-
-export default function NotFound() {
+export default function NotFoundContent() {
   return (
     <Box 
-      component="main"
+      component="div"
       sx={{ 
         minHeight: '100vh',
         backgroundColor: '#030303', // Obsidian
@@ -26,7 +22,7 @@ export default function NotFound() {
         overflow: 'hidden'
       }}
     >
-      {/* 1. Background Visuals (The "Void") */}
+      {/* 1. Background Visuals */}
       <Box sx={{ 
         position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)',
         width: '600px', height: '600px', 
@@ -34,7 +30,7 @@ export default function NotFound() {
         filter: 'blur(100px)', zIndex: 0 
       }} />
 
-      {/* Grid Pattern Overlay */}
+      {/* Grid Pattern */}
       <Box sx={{
         position: 'absolute', inset: 0, opacity: 0.1, zIndex: 0,
         backgroundImage: 'linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px)',
@@ -45,7 +41,7 @@ export default function NotFound() {
         
         {/* 2. The Status Chip */}
         <Chip 
-          icon={<RadarIcon sx={{ fontSize: '16px !important', color: '#ef4444 !important' }} />} // Red scanning icon
+          icon={<RadarIcon sx={{ fontSize: '16px !important', color: '#ef4444 !important' }} />}
           label="SIGNAL LOST" 
           sx={{ 
             mb: 4, 

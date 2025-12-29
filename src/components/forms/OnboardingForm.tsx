@@ -17,7 +17,7 @@ import { FeaturesPackagesSection } from './sections/FeaturesPackagesSection';
 
 // IMPORTANT: Import the generic FileUploadField
 import { FileUploadField } from '@/components/forms/FileUploadField';
-import { Box, Chip, Container, Typography, Paper, Stack, Button, Alert, CircularProgress } from '@mui/material';
+import { Box, Chip, Container, Paper, Stack, Button, Typography, CircularProgress, Alert } from '@mui/material';
 import AutoModeIcon from '@mui/icons-material/AutoMode';
 import RocketLaunchIcon from '@mui/icons-material/RocketLaunch';
 
