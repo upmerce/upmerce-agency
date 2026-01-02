@@ -3,42 +3,40 @@
     "backToTop": "Back to Top"
   },
  "AgencyMetadata": {
-    "title": "Direct Booking Engines for Moroccan Tourism (0% Commission) | Upmerce",
-    "description": "Stop losing 25% to OTAs. We build high-performance Next.js booking engines for Riads & Tour Agencies. 100% Ownership. 0% Commission. Get your audit."
+    "title": "Upmerce | Direct Booking Engines & Digital Sovereignty (0% Commission)",
+    "description": "Don't leave 25% of your hard work to foreign platforms anymore. High-performance Next.js solutions for Riads & Agencies. Total Ownership (Mulk). Law 80-14 Compliant. 0% Commission."
   },
- "AgencyHero": {
-    "title_part1": "Reclaim Your 25% Margin.",
-    "title_part2": "Build a Booking Engine, Not Just a Website.",
-    "subtitle": "Stop being a tenant on Viator and GetYourGuide. We build world-class, high-trust booking engines that turn your local expertise into direct, commission-free revenue. Fast, secure, and 100% owned by you.",
-    "ctaButton": "Stop Paying Commissions",
-    "heroImageAlt": "A high-converting booking engine for a Moroccan tour operator, engineered by Upmerce",
-    "ctaButtonAriaLabel": "Analyze our direct booking solutions",
-    "trustLabel": "Trusted by Marrago & Top Marrakech Agencies", 
-    "newBadge": "New: 0% Commission Engine"
+  "AgencyHero": {
+    "title_part1": "Stop being a tenant of your own business.",
+    "title_part2": "Demand your Digital 'Mulk' with 0% Commission.",
+    "subtitle": "In 2026, depending on foreign platforms is a strategic risk. Upmerce equips Riads and Transport Agencies with sovereign Next.js infrastructure: ultra-fast, protected against phishing, and compliant with Law 80-14. Reclaim your 25% margin today.",
+    "ctaButton": "Reclaim My Independence",
+    "trustLabel": "The infrastructure of choice for certified operators in Marrakech, Agadir, and Tangier.",
+    "newBadge": "2026 Sovereign Standard"
   },
   "AgencyProblemSolution": {
-    "problemTitle": "The OTAs Are Getting Rich Off Your Hard Work",
+    "problemTitle": "The Trap of Platforms and Digital DIY",
     "problems": {
       "0": {
-        "title": "The 25% Profit Drain",
-        "description": "Every booking through an OTA is a massive hit to your margins. You are paying them to own your customers."
+        "title": "The Commission Ransom",
+        "description": "You are paying to acquire your own customers. Every OTA booking is a 25% tax that brakes your local investment."
       },
       "1": {
-        "title": "The 'Amateur' Trust Barrier",
-        "description": "Slow, outdated WordPress sites scare away premium tourists. If they don't trust your site, they book your competitor on Viator."
+        "title": "WordPress Weakness & Scams",
+        "description": "'Cobbled-together' sites are data sieves. In 2026, a slow or hacked site destroys your reputation in a second with premium clients."
       },
       "2": {
-        "title": "Manual Booking Chaos",
-        "description": "Chasing payments on WhatsApp is a full-time job. If you aren't awake to answer, you aren't making money."
+        "title": "The Danger of the Informal",
+        "description": "Working without an ICE contract or with code you don't own makes you vulnerable. If your developer disappears, your business stops."
       }
     },
-    "solutionTitle": "The Upmerce Engine: Global Tech, Local Soul.",
-    "solutionText": "We give you the same technology used by the giants. You get an automated, ultra-fast booking machine that captures payments instantly and builds the trust needed to bypass the OTAs forever."
+    "solutionTitle": "Upmerce: The Shield and Engine of your Growth.",
+    "solutionText": "We don't sell websites; we install assets. Impenetrable Next.js technology, a sales funnel that converts faster than Viator, and a legal guarantee of total ownership."
   },
   "AgencyFounder": {
     "name": "Mustapha Ouazza",
-    "title": "Founder & Technology Strategist",
-    "missionStatement": "I built Upmerce to break the cycle of 'Digital Renting.' My mission is simple: Give Moroccan operators the same weapons as the international giants—Sticky Booking Bars, Mobile Dashboards, and Speed—but ensure you own 100% of the asset. No commissions. No hidden fees. Just pure independence."
+    "title": "Digital Sovereignty Strategist",
+    "missionStatement": "I created Upmerce to offer Moroccan operators what I call 'Digital Mulk' (Ownership). My mission is to transform Riads and Agencies from 'tenants' of web giants into owners of their own technology. With my ICE and local commitment, I guarantee total transparency: no hidden fees, no 'ghosting', just raw performance."
   },
   "StatsSection": {
     "title": "The Technical Proof (Non-WordPress)",
@@ -49,60 +47,50 @@
     "seo": "SEO"
   },
  "AgencyFeatures": {
-    "title": "The 'Marrago' Arsenal: Built for Revenue",
-    "subtitle": "We don't just build pages. We build the exact psychological triggers that turn mobile visitors into paid bookings.",
-    "increaseBookings": {
-      "title": "1. Conversion Weapons (The Sales Team)",
-      "subtitle": "Features that stop clients from leaving to check Viator.",
-      "items": [
-        "Thumb-Zone Sticky Bar (Keeps 'Book Now' 1-tap away)",
-        "The 'Psychological' Trip Wizard (Pre-qualifies leads)",
-        "Visual Trust Grid (Badges that kill 'Scam Fear' instantly)",
-        "Smart Scarcity Logic ('Only 2 spots left' alerts)",
-        "Instant-Load Architecture (Next.js Edge Caching)",
-        "Rich Snippets (Show '5 Stars' directly in Google Search)"
-      ]
-    },
-    "effortlessManagement": {
-      "title": "2. The 'Pocket Office' (The Control)",
-      "subtitle": "Manage your entire agency from the front seat of a 4x4.",
-      "items": [
-        "Mobile Admin App (Close dates & change prices in seconds)",
-        "WhatsApp Concierge Bridge (Warm leads -> Direct Chat)",
-        "Automated PDF Itineraries (Instant professional look)",
-        "No-Code Tour Builder (Add excursions without a developer)",
-        "Real-Time Dashboard (View revenue & bookings instantly)"
-      ]
-    },
-    "premiumExperience": {
-      "title": "3. The Independence (The Asset)",
-      "subtitle": "Stop renting your business. Start owning it.",
-      "items": [
-        "100% Code Ownership (We transfer the 'Digital Blueprints' to you)",
-        "0% Commission Forever (Direct Stripe/CMI Integration)",
-        "0 Dh Hosting Cost (Uses Enterprise 'Free Tiers' valid for <1M visits)",
-        "Bank-Grade Security (Secured by Google's infrastructure, not plugins)"
-      ]
-    },
-    "designTools": {
-      "title": "4. The 'Dhamane' (The Guarantee)",
-      "subtitle": "We don't disappear after launch.",
-      "items": [
-        "Financial Bridge Setup (Stripe to Moroccan Bank)",
-        "VIP Training: 'Mastering Your Mobile Dashboard'",
-        "1-Month 'Suivi' (Follow-up) & Bug Fixing"
-      ]
-    },
-    "supportBonus": {
-      "title": "Bonus: The Strategy",
-      "subtitle": "Learn how to use these weapons.",
-      "items": [
-        "Guide: 'How to use the Trip Wizard to close deals'",
-        "Strategy: 'Pricing your tours for direct vs. OTA'",
-        "Lifetime Tech Independence"
-      ]
-    }
+  "title": "The Upmerce Sales Arsenal",
+  "subtitle": "Every feature is designed with a single mission: to transform a simple mobile visit into a paid booking, commission-free.",
+  "increaseBookings": {
+    "title": "1. Conversion & Psychology",
+    "subtitle": "Eliminate international tourist hesitation with world-class trust tools.",
+    "items": [
+      "Thumb-Zone Sticky Bar (Book in one motion)",
+      "The 'Trip Wizard' Assistant (Pre-qualifies your leads 24/7)",
+      "Trust Grid (Law 80-14 certification badges & Reviews)",
+      "Next.js Edge Architecture (Instant load, even on 4G)",
+      "Rich Snippets (Show your '5 Stars' directly in Google)"
+    ]
   },
+  "effortlessManagement": {
+    "title": "2. The 'Pocket Office' (Control)",
+    "subtitle": "Manage your entire agency from the front seat of your 4x4 or your Riad's reception.",
+    "items": [
+      "Mobile Admin App (Close dates & change prices in 3 seconds)",
+      "WhatsApp Concierge Bridge (Warm leads to Direct Chat)",
+      "Automated PDF Itineraries (Instant professional look)",
+      "Smart Inventory Management (Add tours without a developer)",
+      "Real-Time Dashboard (Instant view of your recovered margins)"
+    ]
+  },
+  "premiumExperience": {
+    "title": "3. Sovereignty & Independence",
+    "subtitle": "Stop renting your business. Start actually owning it.",
+    "items": [
+      "100% Code Ownership (Legal transfer of the asset)",
+      "0% Lifetime Commission (Money goes from card to bank account)",
+      "0 Dh Sovereign Hosting (Secure Enterprise Standard)",
+      "Anti-Phishing Security (Protection against extranet scams)"
+    ]
+  },
+  "designTools": {
+    "title": "4. The 'Dhamane' (Guarantee)",
+    "subtitle": "Local support for total peace of mind.",
+    "items": [
+      "Financial Bridge Setup (Stripe to Moroccan Bank)",
+      "VIP Training: 'Mastering Your Mobile Dashboard'",
+      "Post-Launch Support & Bug Fixing"
+    ]
+  }
+},
   "AgencyPortfolio": {
     "title": "Proven Results: The Marrago Case Study",
     "subtitle": "See the actual technology we use to help local agencies beat the giants. This isn't a template; it's a custom-engineered booking system.",
@@ -160,115 +148,116 @@
     }
   },
  "AgencyOwnership": {
-    "title": "You Own It All.",
-    "subtitle": "Stop paying monthly rent for your own digital business. We build assets, not liabilities.",
-    "overline": "ASSET SOVEREIGNTY",
-    
+    "title": "The 'Mulk' Model (Total Ownership)",
+    "subtitle": "Your site is a commercial asset, not a monthly expense. We transfer the digital property titles of your infrastructure to you.",
+    "overline": "YOUR DIGITAL WEALTH",
     "comparison": {
-      "othersTitle": "THE OTHERS (WIX/SHOPIFY)",
-      "othersPoint1": "❌ You rent the pixel.",
-      "othersPoint2": "❌ Monthly Fees forever.",
-      "othersPoint3": "❌ They own your data.",
-      "upmerceTitle": "UPMERCE (THE \"MULK\")",
-      "upmercePoint1": "✅ You own the code.",
-      "upmercePoint2": "✅ One-time payment.",
-      "upmercePoint3": "✅ You keep the database."
+      "othersTitle": "RENTAL (WIX/BOOKING)",
+      "othersPoint1": "❌ You rent your visibility by the month.",
+      "othersPoint2": "❌ Forever commissions or subscriptions.",
+      "othersPoint3": "❌ Data controlled by foreign third parties.",
+      "upmerceTitle": "OWNERSHIP (UPMERCE - THE 'MULK')",
+      "upmercePoint1": "✅ You own the source code and the asset.",
+      "upmercePoint2": "✅ One-time payment (Paid off in 2 months).",
+      "upmercePoint3": "✅ Sovereign and CNDP-compliant database."
     },
-    
     "card": {
-      "transferTitle": "Transfer of Ownership",
-      "verifiedBadge": "VERIFIED",
-      "licenseId": "LICENSE ID: UPM-2024-LIFETIME-ACCESS"
+      "transferTitle": "Intellectual Property Transfer",
+      "verifiedBadge": "VERIFIED DEED",
+      "licenseId": "LICENSE ID: UPM-SOVEREIGN-2026-LIFETIME-ACCESS"
     },
-
-    "item1": "Intellectual Property Rights",
-    "item2": "Full Admin Access",
-    "item3": "Database Ownership",
-    "item4": "No Monthly Fees"
+    "item1": "Source Code Ownership Rights",
+    "item2": "Total & Independent Admin Access",
+    "item3": "Client Database Ownership",
+    "item4": "Zero Monthly Maintenance Fees"
   },
   "AgencyPricing": {
-    "title": "Invest Once. Profit Forever.",
-    "subtitle": "Stop renting your technology. One payment, 0% commission, and you own the engine for life. A single direct booking covers your hosting costs.",
-    "popular": "Best ROI",
+    "title": "Turn a Tax into an Investment.",
+    "subtitle": "Every direct booking pays back your engine. Once the installation is amortized, 100% of the profit stays in your till.",
+    "popular": "Strategic Choice",
     "popularPlanLabel": "Recommended: {packageName}",
-    "featuresListLabel": "Features in {packageName}",
-    "choosePlanLabel": "Select {packageName}",
+    "featuresListLabel": "Included in the {packageName} pack",
+    "choosePlanLabel": "Select {packageName} pack",
     "packages": {
       "0": {
-        "name": "Digital Presence",
-        "price": "1,990 Dh",
-        "description": "For new agencies who just need to exist on Google. A professional showcase site to build credibility.",
+        "name": "Digital Presence & Law 80-14",
+        "price": "1 990 Dh",
+        "description": "For establishments requiring an official presence compliant with Ministry standards. Ideal for obtaining or maintaining your rating.",
         "features": [
-          "Professional Next.js Website (5 Pages)",
-          "WhatsApp Redirection Button",
-          "Google-Powered Admin Dashboard",
-          "Free Lifetime Hosting (Your Account)",
-          "Basic SEO Setup",
-          "Mobile-First Design"
+          "High-Performance Next.js Website (5 Pages)",
+          "Compliance with Digitalization Standards (Law 80-14)",
+          "WhatsApp Business 'Fast-Action' Button",
+          "Admin Dashboard (Manage photos/text)",
+          "Free Sovereign Lifetime Hosting",
+          "Local SEO Optimization (Google Maps)"
         ],
-        "cta": "Start Your Presence",
-        "note": "One-time payment. No hidden fees.",
+        "cta": "Launch My Presence",
+        "note": "One-time payment. Compliant with classification audits.",
         "isPopular": false
       },
       "1": {
-        "name": "The Growth Engine",
-        "price": "4,990 Dh",
-        "description": "The OTA-Killer. The exact system used by Marrago to beat Viator and GetYourGuide.",
+        "name": "The Margin Engine",
+        "price": "4 990 Dh",
+        "description": "The lethal weapon to cut commissions. An automated direct booking system to turn your site into a cash machine.",
         "features": [
-          "Everything in Presence, plus:",
-          "0% Commission Booking Engine (Stripe/CMI)",
-          "Sticky Mobile Booking Technology",
-          "The 'Psychological' Trip Wizard",
-          "Mobile Admin App (Manage from phone)",
-          "Automated PDF Invoices & Emails",
-          "Financial Onboarding (Stripe Setup)",
-          "1 Month VIP Support Included"
+          "Everything in Digital Presence, plus:",
+          "0% Commission Booking Engine (Stripe/CMI/Fintech)",
+          "The 'Psychological' Trip Wizard (Assisted selling)",
+          "Mobile Admin App (Manage prices from your smartphone)",
+          "Automated PDF Itineraries & Invoices",
+          "Client Data Security (CNDP Standards)",
+          "Financial Onboarding (Bank bridge setup)",
+          "Priority VIP Support (1 Month)"
         ],
-        "cta": "Get The Engine",
-        "note": "Pays for itself in just ~10 bookings.",
+        "cta": "Activate the Engine",
+        "note": "Amortized on average after just 10 bookings.",
         "isPopular": true
       },
       "2": {
         "name": "Market Leader",
-        "price": "12,990 Dh",
-        "description": "For established hotel groups or large fleets requiring advanced integrations and custom strategy.",
+        "price": "12 990 Dh",
+        "description": "For hotel groups or transport fleets requiring robust infrastructure, multi-language support, and a Google conquest strategy.",
         "features": [
-          "Everything in Growth, plus:",
-          "Channel Manager Integration",
-          "Multi-Language (AR/FR/EN/ES/DE)",
-          "Custom Feature Development",
-          "Priority 24/7 WhatsApp Hotline",
-          "Dedicated Success Manager",
-          "Advanced SEO & Content Strategy"
+          "Everything in The Margin Engine, plus:",
+          "Multi-Language (Arabic, French, English, Spanish, German)",
+          "Channel Manager Integration (Sync with Booking/Expedia)",
+          "Custom Module Development",
+          "Advanced SEO Content Strategy (Aim for page 1)",
+          "Dedicated 24/7 WhatsApp Hotline",
+          "Success Manager (Quarterly revenue analysis)"
         ],
-        "cta": "Contact for Strategy",
-        "note": "Complete digital transformation.",
+        "cta": "Request Strategic Audit",
+        "note": "Complete digital transformation for major accounts.",
         "isPopular": false
       }
     }
   },
   "AgencyObjections": {
-    "title": "Your Fears, Answered (Dhamane)",
-    "subtitle": "We know you've been burned by freelancers before. Here is our promise of independence.",
-    "items": [
-      {
-        "question": "Will I be a 'Prisoner' of the developer?",
-        "answer": "No. We give you 'Autonomie' (Independence). You get a Mobile Dashboard to change prices, photos, and tours yourself in 30 seconds. You own the code."
-      },
-      {
-        "question": "How do I get my money to my Moroccan bank?",
-        "answer": "We set up the 'Stripe-to-Morocco' bridge for you. Funds go from the client -> Stripe -> Your CIH/Attijari account legally and securely."
-      },
-      {
-        "question": "What if the site breaks when you leave?",
-        "answer": "Our 'Dhamane' (Guarantee) includes a 'Suivi' period. We fix any bugs. Plus, the site is hosted on serverless technology (Vercel) that doesn't 'crash' like old servers."
-      },
-      {
-        "question": "Is this just a template?",
-        "answer": "No. It is a custom-engineered Booking Engine. It is your digital property ('Mulk') that builds value for your business asset."
-      }
-    ]
-  },
+  "title": "Your Concerns Are Legitimate. Our Answers Are Contractual.",
+  "subtitle": "Because trust ('Amana') is the pillar of your digital independence, we transparently address your most common concerns.",
+  "items": [
+    {
+      "question": "Will I be dependent on you for every modification?",
+      "answer": "Absolutely not. Unlike classic freelancers, we deliver a 'Pocket Office' (Mobile Admin). You change your rates, availability, and photos in 30 seconds from your smartphone. You are the only master on board, with no intermediaries."
+    },
+    {
+      "question": "How does the money actually reach my bank account in Morocco?",
+      "answer": "We configure the legal financial bridge for you (via Stripe, CMI, or new authorized Fintechs). The client's money goes directly from their credit card to your professional account (CIH, Attijari, etc.). We never touch your revenue: the flow is direct and transparent."
+    },
+    {
+      "question": "Why should I trust you over a cheaper freelancer?",
+      "answer": "Upmerce is not a 'nomadic' freelancer project. We are an entity with an ICE, a legal contract, and a local presence. We don't do WordPress 'DIY'; we build industrial assets compliant with Law 80-14 and armored against extranet phishing."
+    },
+    {
+      "question": "What happens if I have a technical problem after launch?",
+      "answer": "Our 'Dhamane' guarantee includes a rigorous follow-up period. Most importantly, thanks to the 'Mulk' model, you own 100% of the code on your own accounts (Vercel/GitHub). Your site remains your property and stays online, even if you decide to change technical partners."
+    },
+    {
+      "question": "Is this compliant with the Ministry's new regulations (Law 80-14)?",
+      "answer": "Yes. Our engine is designed to meet the digitalization criteria required for classification and maintaining your stars. We secure your client data according to CNDP standards, protecting you against legal risk."
+    }
+  ]
+},
   "FaqHub": {
     "title": "Your Questions, Our Expert Answers",
     "subtitle": "Browse our articles and find clear answers on performance, SEO, and direct bookings.",
@@ -340,24 +329,22 @@
     }
   },
   "AgencyProcess": {
-    "title": "From 'Tenant' to 'Owner' in 4 Steps",
-    "subtitle": "We don't just send you a zip file. We build the engine, install it, and teach you how to drive it.",
     "steps": {
       "0": {
-        "title": "1. The Profit Audit",
-        "description": "We analyze your current 'Commission Bleed'. We look at where you are losing money to OTAs and define the strategy to capture those direct bookings."
+        "title": "1. Hemorrhage Diagnosis",
+        "description": "We calculate precisely what OTAs are costing you and identify the security holes in your current site. This is your free Law 80-14 audit."
       },
       "1": {
-        "title": "2. The Trust Architecture",
-        "description": "We design the 'Trust Grid' and 'Mobile Funnel'. This isn't just about colors; it's about placing the 'Book Now' button in the 'Thumb Zone' for maximum conversion."
+        "title": "2. Deployment of Digital 'Mulk'",
+        "description": "We code your Next.js engine. No templates, no heavy plugins. A pure structure, fast and secure according to 2026 standards."
       },
       "2": {
-        "title": "3. The Engine Build",
-        "description": "We code your platform using Next.js (no WordPress). We integrate the 'Sticky Bar', the 'Trip Wizard', and the Stripe/CMI payment bridge."
+        "title": "3. Direct Bank Connection",
+        "description": "We connect your engine to your bank. Clients pay, the money arrives to you. We configure invoicing automations to free up your time."
       },
       "3": {
-        "title": "4. Training & Handover ('Mulk')",
-        "description": "We don't leave you guessing. We train you how to use your Mobile Admin App, transfer the GitHub code to you, and hand over the keys. You own everything."
+        "title": "4. Total Independence",
+        "description": "Handover of keys. You become the owner of your technology. You pilot your business from your smartphone with total autonomy."
       }
     }
   },
